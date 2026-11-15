@@ -1,0 +1,24 @@
+{
+ "case_id": "c20",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 1.75 for CYP2D6 and No Result for CYP2C19 with regards to taking clomipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Standard use. For a CYP2D6 Normal Metabolizer (activity score 1.75 falls in the 1.25-2.25 range), initiate clomipramine at the usual recommended starting dose, with dose adjustment guided by clinical response and tolerability (therapeutic drug monitoring is optional). With no CYP2C19 result, the CYP2C19 part of the guidance can't be applied. CYP2C19 affects clomipramine's conversion to its active metabolite, desmethylclomipramine, so a CYP2C19 result could refine the recommendation. Without it, the CYP2D6 guidance alone gives no reason to change the dose.\n\n**2. Strength:** Strong for the CYP2D6 normal metabolizer recommendation, as I recall it. I didn't verify this against the current guideline text.\n\n**3. Source:** CPIC Guideline for CYP2D6, CYP2C19, CYP2B6 and Tricyclic Antidepressants (Hicks et al., 2013, updated 2016/2017). DPWG also recommends no action for CYP2D6 normal metabolizers on clomipramine.\n\nI answered from memory without checking the guideline text. Confirm the details at cpicpgx.org or PharmGKB before acting on this.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda dosis inicial estándar, coincide con la referencia; cita CPIC y DPWG, pero 'Hicks 2013, actualizada 2016/2017' y 'fuerte' son dudosos (la guía CPIC de tricíclicos es Hicks 2013 y actualización 2016/2017 es 2016 CYP2D6/CYP2C19; 2B6 no corresponde a esta guía)."
+ }
+}

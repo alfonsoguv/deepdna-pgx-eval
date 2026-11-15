@@ -1,0 +1,78 @@
+{
+ "case_id": "c49",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*58:01 positive for HLA-B with regards to taking allopurinol?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline HLA-B*58:01 allopurinol contraindicated strong recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "20160316 allopurinol",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK127547/bin/20160316_allopurinol.pdf"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/allopurinol/2013/23232549.pdf"
+     },
+     {
+      "title": "Bookshelf NBK127547",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK127547/pdf/Bookshelf_NBK127547.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3564416"
+     },
+     {
+      "title": "Genetic Testing For Allopurinol And The Risk Of Severe Skin Reactions",
+      "url": "https://www.walrus.com/questions/genetic-testing-for-allopurinol-and-the-risk-of-severe-skin-reactions"
+     },
+     {
+      "title": "26094938 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/allopurinol/2015/26094938-supplement.pdf"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK127547/"
+     },
+     {
+      "title": "Allopurinol response",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN160494"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/CN160494"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=565"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: avoid the drug.** If someone carries HLA-B*58:01 (one or two copies), allopurinol is contraindicated. Carriers have a much higher risk of severe skin reactions (SCAR), such as Stevens-Johnson syndrome, toxic epidermal necrolysis and DRESS. A different drug should be used. The Dutch DPWG guideline suggests febuxostat and mentions allopurinol desensitization as another option. People without the allele can take allopurinol at standard doses, but a negative test doesn't completely rule out SCAR.\n\n2. **Strength: strong** (CPIC rating).\n\n3. **Source:** CPIC guideline for HLA-B genotype and allopurinol dosing, published in 2013. A 2015 update kept the same recommendation. The Dutch DPWG guideline also says to avoid allopurinol in carriers. I didn't check whether CPIC has published anything newer than the 2015 update, so it's worth confirming on cpicpgx.org.\n\nSources:\n- [CPIC 2013 guideline (PMC3564416)](https://pmc.ncbi.nlm.nih.gov/articles/PMC3564416)\n- [CPIC 2013 publication PDF](https://files.cpicpgx.org/data/guideline/publication/allopurinol/2013/23232549.pdf)\n- [CPIC 2015 update supplement](https://files.cpicpgx.org/data/guideline/publication/allopurinol/2015/26094938-supplement.pdf)\n- [NCBI Medical Genetics Summaries: Allopurinol therapy and HLA-B*58:01](https://www.ncbi.nlm.nih.gov/books/NBK127547/)\n- [CPIC allopurinol guideline page](https://cpicpgx.org/?p=565)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica que el alopurinol está contraindicado en portadores de HLA-B*58:01, igual que la referencia, y cita CPIC (2013, actualización 2015) y DPWG con datos plausibles."
+ }
+}

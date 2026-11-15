@@ -1,0 +1,24 @@
+{
+ "case_id": "c03",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 2.75 for CYP2D6 with regards to taking fluvoxamine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Standard use. For a CYP2D6 ultrarapid metabolizer (activity score >2.25, so 2.75 qualifies), the guideline advises starting fluvoxamine at the usual recommended dose. No CYP2D6-based dose adjustment or alternative drug is recommended. Evidence is insufficient to show that UM status meaningfully changes fluvoxamine exposure or outcomes. Management is by standard clinical response monitoring.\n\n**2. Strength:** Optional. This is the weaker of CPIC's recommendation levels, and the evidence is limited.\n\n**3. Source:** CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A genotypes and SSRI dosing (Bousman et al., 2023). It updates the 2015 CPIC guideline for CYP2D6/CYP2C19 and SSRIs.\n\nI answered from memory and did not verify against the guideline text, so please confirm the exact wording and classification on cpicpgx.org or PharmGKB before clinical use.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda uso estándar sin ajuste, coherente con la referencia (sin recomendación por falta de evidencia); cita CPIC, pero afirma 'Optional' y que la guía dice usar la dosis habitual, lo cual es dudoso (la guía 2023 no da recomendación para UM con fluvoxamina), y la fecha/autores son inciertos."
+ }
+}

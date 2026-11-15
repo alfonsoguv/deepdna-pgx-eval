@@ -1,0 +1,78 @@
+{
+ "case_id": "c35",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Variable for G6PD with regards to taking dapsone?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC G6PD Variable phenotype dapsone recommendation PharmGKB guideline annotation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "g6pd cpic apr 2022 002",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf"
+     },
+     {
+      "title": "g6pd cpic nov 2021",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "g6pd competency",
+      "url": "https://stjude.org/content/dam/en_US/shared/www/research/g6pd-competency.pdf"
+     },
+     {
+      "title": "Disclaimers and Other Information",
+      "url": "https://pharmcat.org/Disclaimers"
+     },
+     {
+      "title": "Disclaimers and Other Information",
+      "url": "https://markwoon.pharmcat.org/disclaimers/"
+     },
+     {
+      "title": "Guideline overview presentation",
+      "url": "https://cpicpgx.org/?p=3367"
+     },
+     {
+      "title": "EN G6PD Meds v3 March2025",
+      "url": "https://learn.color.com/rs/878-SLQ-748/images/EN_G6PD_Meds_v3_March2025.pdf?version=0"
+     },
+     {
+      "title": "www.peeref.com",
+      "url": "https://www.peeref.com/works/8499332"
+     },
+     {
+      "title": "Gene Definition Exceptions",
+      "url": "https://markwoon.pharmcat.org/methods/Gene-Definition-Exceptions/"
+     },
+     {
+      "title": "Gene Definition Exceptions",
+      "url": "https://markwoon.pharmcat.org/methods/gene-definition-exceptions/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Short answer: I couldn't confirm a specific recommendation for the Variable phenotype with dapsone.**\n\n1. **Recommendation:** Dapsone is on CPIC's list of high-risk drugs to avoid in G6PD deficiency. The sources I found don't separately address the Variable phenotype for dapsone. CPIC treats Variable as an uncertain phenotype, because enzyme activity can range from normal to deficient and can't be predicted from genotype alone. My understanding, which I didn't verify, is that CPIC advises confirming with a quantitative G6PD enzyme activity test. If that shows deficiency, the person should be managed as deficient and dapsone avoided or used only with close hematologic monitoring. If activity is normal, standard use applies.\n\n2. **Strength:** A 2021 CPIC draft rated dapsone as high-risk with a moderate strength of recommendation. I didn't see a final strength rating for the Variable phenotype.\n\n3. **Source:** The CPIC G6PD guideline (2022 update). I didn't retrieve its Table 3, so please check it directly, along with the PharmGKB dapsone annotation, before acting on this.\n\nSources:\n- [CPIC G6PD guideline slides, Apr 2022](https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf)\n- [CPIC G6PD draft slides, Nov 2021](https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf)\n- [St. Jude G6PD competency document](https://stjude.org/content/dam/en_US/shared/www/research/g6pd-competency.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "OTHER",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica confirmar con una prueba cuantitativa de actividad enzimática de G6PD y luego guiar el uso según el resultado, lo que coincide con la referencia (medir la actividad primero); la cita a CPIC es correcta aunque con cautelas."
+ }
+}

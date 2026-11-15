@@ -1,0 +1,78 @@
+{
+ "case_id": "c12",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Indeterminate for CYP2C19 with regards to taking clopidogrel?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC clopidogrel CYP2C19 2022 guideline indeterminate phenotype recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium Guideline for CYP2C19 Genotype and Clopidogrel Therapy: 2022 Update",
+      "url": "https://www.medchemexpress.com/publications/35034351.html"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK84114/"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/4782"
+     },
+     {
+      "title": "git.lsit.ucsb.edu",
+      "url": "https://git.lsit.ucsb.edu/publicdata/nih-gov/raw/commit/16b4b23030b9c25e5a647a69ebd82dc9aecccaad/www.ncbi.nlm.nih.gov/medgen/C2674941/index.html"
+     },
+     {
+      "title": "www.genomicseducation.hee.nhs.uk",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/clopidogrel/"
+     },
+     {
+      "title": "100168817990 0x000001",
+      "url": "https://eld.bl.uk/catalog/100168817990_0x000001"
+     },
+     {
+      "title": "genomics.nshcs.org.uk",
+      "url": "https://genomics.nshcs.org.uk/genotes/knowledge-hub/clopidogrel"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for clopidogrel and CYP2C19",
+      "url": "https://pharmgkb.org/guidelineAnnotation/PA166104948/annotation"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9287492"
+     },
+     {
+      "title": "Back to Search Start Over",
+      "url": "https://searchworks.jioinstitute.edu.in/articles/edb__159787814"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation:** No recommendation. I'm giving this from my recall of the guideline. My search did not retrieve the indeterminate row, so I couldn't confirm it. CPIC does not give a clopidogrel recommendation for an indeterminate CYP2C19 result, which comes from one or two uncertain-function alleles such as *1/*12 or *2/*12. In practice, don't act on the result alone. Consider re-testing, or use clinical judgment and other factors, such as an alternative antiplatelet where indicated. CPIC's actionable advice applies only to defined phenotypes. For intermediate and poor metabolizers with ACS or PCI, it advises avoiding clopidogrel if possible and using prasugrel or ticagrelor if there is no contraindication.\n\n2. **Strength:** None is assigned for this phenotype, because there is no recommendation. The intermediate and poor metabolizer recommendations are rated moderate to strong.\n\n3. **Source:** CPIC Guideline for CYP2C19 Genotype and Clopidogrel Therapy, 2022 update (Lee et al., Clin Pharmacol Ther 2022;112:959-967). Please verify the indeterminate row in the full text or at cpicpgx.org.\n\nSources:\n- [CPIC Guideline for CYP2C19 Genotype and Clopidogrel Therapy: 2022 Update](https://www.medchemexpress.com/publications/35034351.html)\n- [PharmGKB annotation of the CPIC guideline](https://pharmgkb.org/guidelineAnnotation/PA166104948/annotation)\n- [PMC9287492](https://pmc.ncbi.nlm.nih.gov/articles/PMC9287492)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta dice que CPIC no da recomendación para el fenotipo indeterminado, igual que la referencia. Añade cautelas (repetir la prueba, juicio clínico), pero la cita de Lee et al. 2022 es correcta."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "case_id": "c03",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 2.75 for CYP2D6 with regards to taking fluvoxamine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2023 SSRI guideline fluvoxamine CYP2D6 ultrarapid metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "Genetic%20Clues%20to%20Beating%20the%20Blues %20Audience%20Slides",
+      "url": "https://ce.advocatehealth.org/sites/default/files/media/2026-04/Genetic%20Clues%20to%20Beating%20the%20Blues-%20Audience%20Slides.pdf"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9553948"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37032427/"
+     },
+     {
+      "title": "Article UF PharmaNote CYP2D6 and CYP2C19 for SSRIs",
+      "url": "https://dcricollab.dcri.duke.edu/sites/NIHKR/IGNITE%20Documents%20and%20Links%20to%20Content/Article-UF-PharmaNote-CYP2D6-and-CYP2C19-for-SSRIs.pdf"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/5249"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Fluvoxamine in a CYP2D6 ultrarapid metabolizer (activity score 2.75)**\n\n1. **Recommendation:** No recommendation. CPIC gives no genotype-based guidance for this phenotype because there is insufficient evidence. In practice, the usual labeled dosing applies, with monitoring for response. The guideline notes that ultrarapid metabolizers may have lower plasma concentrations, which could raise the chance of treatment failure. The Dutch guideline (DPWG) likewise advises no change from the package insert.\n\n2. **Strength:** CPIC classifies this as \"no recommendation\" because of limited data, so there is no strength rating. By contrast, CPIC does advise an alternative drug for paroxetine in ultrarapid metabolizers.\n\n3. **Source:** CPIC guideline for SSRIs (Bousman et al., *Clin Pharmacol Ther* 2023;114(1):51-68). DPWG was used for comparison.\n\n**Caveat:** I got the fluvoxamine wording for ultrarapid metabolizers from CPIC dosing tables and secondary summaries. I did not read the full primary text, so check the PDF or PharmGKB before relying on the exact classification.\n\nSources:\n- [CPIC 2023 SSRI guideline PDF](https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf)\n- [PubMed: 37032427](https://pubmed.ncbi.nlm.nih.gov/37032427/)\n- [PMC9891304, Table 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica que CPIC no da recomendación por falta de evidencia y aplica la dosificación habitual, coincidiendo con la referencia; cita CPIC 2023 (Bousman et al., PMID 37032427) y DPWG, datos correctos."
+ }
+}

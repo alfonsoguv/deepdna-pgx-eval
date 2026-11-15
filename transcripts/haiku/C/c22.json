@@ -1,0 +1,184 @@
+{
+ "case_id": "c22",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.5 for CYP2C9 with regards to taking piroxicam?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2C9 NSAIDs piroxicam poor metabolizer activity score recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "32189324 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf"
+     },
+     {
+      "title": "CYP2C9 and Piroxicam",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-piroxicam/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK537367"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/piroxicam/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC CYP2C9 activity score poor metabolizer 0 intermediate metabolizer 0.5 1 phenotype table",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "CPIC GUIDELINE UPDATE",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/phenytoin/2020/32779747.pdf"
+     },
+     {
+      "title": "genetics.testcatalog.org",
+      "url": "https://genetics.testcatalog.org/show/2C9QT"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK537367"
+     },
+     {
+      "title": "Allele function assignment SOP and CYP2C9 function assignment 1",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/09/Allele-function-assignment-SOP-and-CYP2C9-function-assignment-1.pdf"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "CYP2C9 NSAID guideline final CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10296543/table/t0001"
+     },
+     {
+      "title": "therapeutics.testcatalog.org",
+      "url": "https://therapeutics.testcatalog.org/show/2C9QT"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC NSAID guideline piroxicam poor metabolizers \"initiate therapy with recommended starting dose\" alternative not predominantly metabolized by CYP2C9 optional",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "drugs.com",
+      "url": "https://www.drugs.com/monograph/piroxicam.html"
+     },
+     {
+      "title": "Piroxicam (Monograph)",
+      "url": "https://www.drugs.com/monograph/Piroxicam.html"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "CYP2C9 and Piroxicam",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-piroxicam/"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "CYP2C9 NSAID guideline final CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "section name header",
+      "url": "https://download.skyscape.com/download/ota/lonestar/362BCE4D-8092-40DD-91EF-8EE1032B1B68/ahfsdi.ed25/content/HTML/g/tu28.htm"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 3,
+ "final_answer": "**1. Recommendation:** Avoid piroxicam. CPIC's guidance for CYP2C9 poor metabolizers is to choose an NSAID that is not predominantly cleared by CYP2C9 (naproxen is the example given), or, if a CYP2C9-cleared NSAID is needed, one with a shorter half-life (ibuprofen is the example). An activity score of 0.5 falls in the poor metabolizer group (AS 0 or 0.5).\n\n**2. Strength:** I could not confirm the strength classification for this recommendation. Secondary sources describe it as \"avoid,\" but I did not find the CPIC strength rating.\n\n**3. Source:** CPIC guideline for CYP2C9 and NSAIDs (Theken et al., 2020), which covers piroxicam. I did not retrieve the primary guideline table itself. The recommendation text comes from a secondary summary of it (Drugs.com piroxicam monograph), and the AS-to-phenotype mapping comes from the CPIC NSAID preprint.\n\nSources:\n- [CPIC NSAID guideline preprint](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf)\n- [Theken et al., 2020, PMC8080882](https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882)\n- [Drugs.com piroxicam monograph](https://www.drugs.com/monograph/piroxicam.html)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar piroxicam y elegir un AINE alternativo no metabolizado por CYP2C9 o con semivida más corta, en línea con la referencia CPIC (Theken et al., 2020); las citas parecen legítimas."
+ }
+}

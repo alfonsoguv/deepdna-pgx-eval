@@ -1,0 +1,24 @@
+{
+ "case_id": "c29",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Decreased Function for SLCO1B1 with regards to taking simvastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** For SLCO1B1 Decreased Function (one decreased-function allele, e.g., *1/*5, *1/*15; intermediate function), CPIC advises a **lower starting dose or an alternative statin**. Specifically, prescribe a lower dose of simvastatin (desired dose is not to exceed 20 mg/day) or consider an alternative statin such as rosuvastatin or pravastatin. Consider routine creatine kinase (CK) surveillance. This is because of increased simvastatin acid exposure and a higher risk of statin-associated musculoskeletal symptoms (myopathy). Note that the FDA label also limits the 80 mg dose.\n\n**2. Strength:** Moderate (CPIC 2022 update). Poor Function (two decreased-function alleles) is a stronger recommendation: avoid simvastatin, or use a much lower dose and an alternative statin.\n\n**3. Source:** CPIC Guideline for SLCO1B1, ABCG2, CYP2C9, and Statins (Cooper-DeHoff et al., Clin Pharmacol Ther, 2022), which updates the 2014 CPIC simvastatin guideline. The DPWG guideline is similar in approach.\n\nI answered from memory and did not check the guideline with a tool, so verify the exact dose thresholds and strength grade against the current CPIC/PharmGKB entries before clinical use.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda principalmente una dosis menor de simvastatina (≤20 mg/día) o alternativa, pero la referencia prioriza una estatina alternativa (EVITAR); además la fuerza 'Moderada' y el ejemplo de alelos (*1/*5, *1/*15) son dudosos, y la mención de limitar la dosis de 80 mg según la FDA es imprecisa."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c13",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer for CYP2C19 with regards to taking citalopram?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation: use an alternative drug.** CPIC advises choosing a clinically appropriate antidepressant that is not mainly metabolized by CYP2C19. Ultrarapid metabolizers clear citalopram faster, which lowers plasma levels and may reduce efficacy. If citalopram is still the best clinical choice and standard maintenance dosing doesn't work well enough, CPIC suggests considering titration to a higher maintenance dose.\n\n**2. Strength: moderate.** I believe the 2023 CPIC update rates this as moderate for ultrarapid metabolizers and optional for rapid metabolizers. I'm less certain about this rating than about the recommendation itself.\n\n**3. Source:** the CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4 and HTR2A Genotypes and SSRIs/SNRIs (Bousman et al., *Clin Pharmacol Ther* 2023), which updates Hicks et al. 2015.\n\nThe Dutch DPWG guideline differs here. As I recall, it gives no dose or drug change for citalopram in CYP2C19 ultrarapid metabolizers, although it does advise against escitalopram in this group. Note also that citalopram carries a dose cap because of QT prolongation, which limits how far the dose can be raised.\n\nI had no lookup tools in this session, so this comes from memory. Please confirm the details on cpicpgx.org or PharmGKB before using it clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda un antidepresivo alternativo no metabolizado principalmente por CYP2C19 y, si se mantiene citalopram, valorar subir la dosis, igual que la referencia CPIC; la cita de Bousman 2023 es correcta."
+ }
+}

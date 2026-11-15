@@ -1,0 +1,131 @@
+{
+ "case_id": "c01",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 3.0 for CYP2D6 with regards to taking nortriptyline?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2D6 tricyclic antidepressants nortriptyline ultrarapid metabolizer activity score recommendation 2024 update",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3689226"
+     },
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425164"
+     },
+     {
+      "title": "Bookshelf NBK425165",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165/pdf/Bookshelf_NBK425165.pdf"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5723247/figure/F2"
+     },
+     {
+      "title": "Bookshelf NBK425164",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425164/pdf/Bookshelf_NBK425164.pdf"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC tricyclic antidepressants CYP2D6 ultrarapid metabolizer \"avoid\" nortriptyline strength of recommendation optional",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5723247/figure/F2"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7080976/table/T4"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "Bookshelf NBK425165",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165/pdf/Bookshelf_NBK425165.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9263441/table/T2"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425164"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/CN176769"
+     },
+     {
+      "title": "Bookshelf NBK425164",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425164/pdf/Bookshelf_NBK425164.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Avoid nortriptyline. CPIC advises against tricyclics in CYP2D6 ultrarapid metabolizers because of the potential lack of efficacy, and suggests a drug not metabolized by CYP2D6 instead. An activity score of 3.0 falls in the ultrarapid range (>2.0 or >2.25, depending on the version cited).\n\n**2. Strength:** Not confirmed. The search results were ambiguous, and the table that would show the classification was garbled. I believe it is a \"Strong\" recommendation, but please verify on the CPIC site before relying on that.\n\n**3. Source:** CPIC Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19 (Hicks et al., original 2016 guideline). I did not find a published 2024 revision. CPIC's page says the authors are updating it, so check cpicpgx.org for the current version.\n\nSources:\n- [CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19](https://cpicpgx.org/?p=571)\n- [PMC summary table (PMC9891304 T3)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar nortriptilina por posible falta de eficacia y usar un fármaco alternativo, igual que la referencia CPIC; la cita a Hicks et al. 2016 es plausible, aunque omite la opción de dosis mayor con monitorización."
+ }
+}

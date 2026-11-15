@@ -1,0 +1,78 @@
+{
+ "case_id": "c13",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer for CYP2C19 with regards to taking citalopram?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2023 SSRI guideline CYP2C19 ultrarapid metabolizer citalopram recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pharmaceuticals 16 01277",
+      "url": "https://cris.unibo.it/retrieve/fb907509-0610-4725-92f4-eba8ddd33ed4/pharmaceuticals-16-01277.pdf"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "Genetic%20Clues%20to%20Beating%20the%20Blues %20Audience%20Slides",
+      "url": "https://ce.advocatehealth.org/sites/default/files/media/2026-04/Genetic%20Clues%20to%20Beating%20the%20Blues-%20Audience%20Slides.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37032427/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/5249"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/citalopram/"
+     },
+     {
+      "title": "core reader",
+      "url": "https://core-prod.cambridgecore.org/core/product/EFC2B0264A8BDEA41E5CC27B04B44326/core-reader"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: use an alternative drug, or raise the dose if citalopram is still the right choice.** For CYP2C19 ultrarapid metabolizers, the guideline says to consider a suitable antidepressant that is not mainly broken down by CYP2C19. These patients clear citalopram faster, so blood levels are lower and the drug may not work as well. If citalopram is still appropriate and standard maintenance doses don't work well enough, consider increasing to a higher maintenance dose.\n\n2. **Strength: Moderate, from memory.** My search did not confirm this. I recall the 2023 update rating it \"Moderate.\" The earlier 2015 CPIC guideline said \"consider an alternative\" and rated it \"Optional.\" Please check the 2023 dosing table before using this clinically.\n\n3. **Source:** CPIC guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4 and HTR2A genotypes and serotonin reuptake inhibitor antidepressants. Bousman CA et al., *Clin Pharmacol Ther* 2023;114(1):51–68. It replaces the 2015 CYP2D6/CYP2C19 SSRI guideline. The Dutch DPWG also has guidance on this.\n\nSources:\n- [CPIC 2023 SSRI guideline (PDF)](https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf)\n- [PubMed 37032427](https://pubmed.ncbi.nlm.nih.gov/37032427/)\n- [CPIC 2015 guideline (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda un antidepresivo alternativo no metabolizado principalmente por CYP2C19 o subir la dosis si se mantiene citalopram, igual que la referencia, y cita correctamente la guía CPIC 2023 (Bousman et al., Clin Pharmacol Ther 2023;114(1):51-68, PMID 37032427)."
+ }
+}

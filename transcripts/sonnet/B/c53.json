@@ -1,0 +1,44 @@
+{
+ "case_id": "c53",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is increased risk of aminoglycoside-induced hearing loss for MT-RNR1 with regards to taking paromomycin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "MT-RNR1",
+    "drug": "paromomycin"
+   },
+   "result": "Unknown gene \"MT-RNR1\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "paromomycin"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[],\"not_covered\":[\"paromomycin\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "I couldn't check this with the tools. The knowledge base doesn't include MT-RNR1, and paromomycin has no curated record in it. Below is what I recall from the CPIC guideline, not something I verified here.\n\n1. **Recommendation:** For people with an MT-RNR1 variant that raises the risk of aminoglycoside-induced hearing loss, CPIC says to avoid aminoglycosides unless the high risk of ototoxicity is outweighed by the severity of the infection and no safe or effective alternative therapy exists. Paromomycin is not on CPIC's list of aminoglycosides, and I'm not certain it is addressed at all. Oral paromomycin is poorly absorbed, so systemic exposure is low. I can't confirm how the guideline treats it, so please check the source.\n\n2. **Strength:** For the aminoglycosides it covers, I recall the recommendation as \"strong\". I can't confirm a strength for paromomycin.\n\n3. **Source:** CPIC Guideline for Aminoglycosides and MT-RNR1 (2021). I recall the DPWG not having an equivalent recommendation, but I haven't checked that.\n\nThe prescriber should confirm this against the published guideline. This is educational information, not medical advice.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Recomienda evitar aminoglucósidos salvo que el riesgo se compense por la gravedad de la infección y falta de alternativas (CPIC 2021), con cautela sobre paromomicina; la base de conocimiento no tenía registro de MT-RNR1 ni paromomicina."
+ }
+}

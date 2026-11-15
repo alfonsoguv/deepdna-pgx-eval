@@ -1,0 +1,24 @@
+{
+ "case_id": "c21",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 2.75 for CYP2D6 and Ultrarapid Metabolizer for CYP2C19 with regards to taking imipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation: Avoid imipramine and use an alternative.**\n- **CYP2D6 ultrarapid metabolizer (activity score >2.25):** Avoid it because of the potential for lack of efficacy. Choose an antidepressant that is not a TCA and is not primarily metabolized by CYP2D6.\n- **CYP2C19 ultrarapid metabolizer:** Avoid tertiary amine TCAs like imipramine because of the potential for sub-optimal response. Choose an alternative not metabolized by CYP2C19.\n- **If imipramine is still warranted:** Consider a higher starting dose and use therapeutic drug monitoring (imipramine plus desipramine levels) to guide dosing.\n\n**2. Strength:** In the 2016 guideline, the CYP2D6 UM recommendation is Moderate and the CYP2C19 UM recommendation is Optional. The guideline doesn't give a separate, formally graded recommendation for this combined phenotype. Both genes point toward reduced exposure, so avoidance is reasonable.\n\n**3. Source:** CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A genotypes and serotonin reuptake inhibitor antidepressants is a separate guideline. The relevant one is the CPIC Guideline for CYP2D6 and CYP2C19 and Tricyclic Antidepressants (Hicks et al., 2016, updating the 2013 version). I answered from memory without checking the current CPIC site, so verify against any later update at cpicpgx.org.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar imipramina y usar monitorización terapéutica si se usa, acorde a la referencia; cita CPIC Hicks 2016 correctamente, pero afirma 'dosis inicial más alta' y niveles de evidencia (Moderate/Optional) dudosos para este caso, y la UM de CYP2C19 en la guía es 'Optional' y no se recomienda evitar."
+ }
+}

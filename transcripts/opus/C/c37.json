@@ -1,0 +1,78 @@
+{
+ "case_id": "c37",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal for G6PD with regards to taking toluidine blue?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC G6PD toluidine blue recommendation normal phenotype",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "g6pd cpic nov 2021",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "g6pd cpic apr 2022 002",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf"
+     },
+     {
+      "title": "g6pd competency",
+      "url": "https://stjude.org/content/dam/en_US/shared/www/research/g6pd-competency.pdf"
+     },
+     {
+      "title": "Bookshelf NBK591356",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK591356/pdf/Bookshelf_NBK591356.pdf"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/chloroquine/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10281211/table/T1"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK562585"
+     },
+     {
+      "title": "Bookshelf NBK592855",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK592855/pdf/Bookshelf_NBK592855.pdf"
+     },
+     {
+      "title": "Guideline overview presentation",
+      "url": "https://cpicpgx.org/?p=3367"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8976699"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation:** Standard use. Under the CPIC G6PD guideline, someone with a normal G6PD phenotype has no reason to avoid toluidine blue because of their G6PD status. Note that my search did not bring up the guideline's actual table row for this drug and phenotype. This answer comes from CPIC's standard wording for G6PD-normal patients on its high-risk drugs, plus my own knowledge of the guideline.\n\n2. **Strength:** Probably moderate, but I couldn't confirm it. A CPIC slide deck lists toluidine blue as \"High-risk / Moderate,\" meaning the drug is high risk in G6PD deficiency and the recommendation strength is moderate. I could not confirm that the normal-phenotype row uses the same strength. Check Table 3 of the guideline or cpicpgx.org/gene/g6pd/.\n\n3. **Source:** CPIC Guideline for G6PD Genotype and Drug Use (Gammal et al., *Clin Pharmacol Ther* 2023; 2022 update). For comparison, people with G6PD deficiency should avoid toluidine blue because it can break down red blood cells (acute hemolytic anemia).\n\nSources:\n- [CPIC G6PD slides (Apr 2022)](https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf)\n- [CPIC G6PD slides (Nov 2021)](https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf)\n- [St. Jude G6PD competency](https://stjude.org/content/dam/en_US/shared/www/research/g6pd-competency.pdf)\n- [CPIC G6PD guideline (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8976699)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Recomienda uso estándar sin evitar el fármaco por G6PD normal, acorde con la referencia y atribuido a CPIC (Gammal et al., 2023 es plausible); admite no haber encontrado la fila exacta de la tabla."
+ }
+}

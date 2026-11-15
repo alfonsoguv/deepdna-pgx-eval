@@ -1,0 +1,43 @@
+{
+ "case_id": "c20",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 1.75 for CYP2D6 and No Result for CYP2C19 with regards to taking clomipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2D6",
+    "drug": "clomipramine"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2D6\",\"drug\":\"clomipramine\",\"guideline\":\"CPIC\",\"level\":\"CPIC B\",\"summary\":\"Tricyclic antidepressant metabolized by CYP2D6 to less active compounds. CPIC extrapolates its amitriptyline and nortriptyline recommendations to clomipramine, noting fewer supporting data, and classifies them as optional except the usual starting dose for normal metabolizers (strong). Assuming CYP2C19 normal metabolism, CPIC suggests avoiding clomipramine in poor and ultra-rapid metabolizers; if it is used, considering a 50% lower starting dose for poor metabolizers or a higher target dose for ultra-rapid metabolizers, and a 25% lower starting dose for intermediate metabolizers, with drug-level monitoring. These recommendations apply to the higher doses used for depression, and other CYP2C19 phenotypes change them.\",\"phenotypes\":[\"Poor metabolizer (PM): activity score 0, two no-function alleles\",\"Intermediate metabolizer (IM): activity score 0.25 to <1.25\",\"Normal metabolizer (NM): activity score 1.25 to 2.25\",\"Ultra-rapid metabolizer (UM): activity score >2.25, typically driven by gene duplication\"],\"sources\":[{\"label\":\"CPIC — CYP2D6 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2d6/\"},{\"label\":\"PharmVar CYP2D6\",\"url\":\"https://www.pharmvar.org/gene/CYP2D6\"},{\"label\":\"PharmGKB CYP2D6 (PA128)\",\"url\":\"https://www.pharmgkb.org/gene/PA128\"},{\"label\":\"Caudle et al., Clin Transl Sci 2020 (CPIC/DPWG consensus on CYP2D6 genotype-to-phenotype translation and activity scores)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/31647186/\"},{\"label\":\"Hicks et al., Clin Pharmacol Ther 2017 (CPIC guideline: CYP2D6, CYP2C19 and tricyclic antidepressants)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/27997040/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2C19",
+    "drug": "clomipramine"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2C19\",\"drug\":\"clomipramine\",\"guideline\":\"CPIC\",\"level\":\"CPIC B\",\"summary\":\"Tricyclic antidepressant (tertiary amine) metabolized by CYP2C19. CPIC extrapolates its amitriptyline recommendations to clomipramine, noting fewer supporting data, and classifies them as optional except the usual starting dose for normal metabolizers (strong). Assuming CYP2D6 normal metabolism, CPIC suggests avoiding clomipramine in poor metabolizers, or considering a 50% lower starting dose with drug-level monitoring if it is used; for rapid and ultra-rapid metabolizers, an alternative not metabolized by CYP2C19, or drug-level monitoring if clomipramine is used; and for intermediate metabolizers, the usual starting dose. These recommendations apply to the higher doses used for depression, and other CYP2D6 phenotypes change them.\",\"phenotypes\":[\"Poor metabolizer (PM): two no-function alleles (e.g. *2/*2, *2/*3)\",\"Intermediate metabolizer (IM): one no-function allele with one normal or increased-function allele (e.g. *1/*2, *2/*17)\",\"Normal metabolizer (NM): two normal-function alleles (*1/*1)\",\"Rapid metabolizer (RM): one normal and one increased-function allele (*1/*17)\",\"Ultra-rapid metabolizer (UM): two increased-function alleles (*17/*17)\"],\"sources\":[{\"label\":\"CPIC — CYP2C19 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2c19/\"},{\"label\":\"PharmGKB CYP2C19 (PA124)\",\"url\":\"https://www.pharmgkb.org/gene/PA124\"},{\"label\":\"PharmVar CYP2C19\",\"url\":\"https://www.pharmvar.org/gene/CYP2C19\"},{\"label\":\"Hicks et al., Clin Pharmacol Ther 2017 (CPIC guideline: CYP2D6, CYP2C19 and tricyclic antidepressants)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/27997040/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**Clinical guidance for CYP2D6 normal metabolizer (activity score 1.75) with no CYP2C19 result, clomipramine**\n\n1. **Recommendation:** Only partly determinable. For CYP2D6 normal metabolizers, CPIC recommends the usual starting dose. That recommendation assumes normal CYP2C19 metabolism, which can't be confirmed without a CYP2C19 result. The CYP2C19 record gives no guidance for a missing result, so I can't state a combined recommendation.\n\n2. **Strength:** CPIC classifies the clomipramine recommendations as optional, except the usual starting dose for normal metabolizers, which is a strong recommendation. CPIC rates the evidence level for clomipramine as B. The guidance is extrapolated from amitriptyline and nortriptyline, with fewer supporting data.\n\n3. **Source:** CPIC guideline for CYP2D6, CYP2C19 and tricyclic antidepressants (Hicks et al., Clin Pharmacol Ther 2017, PMID 27997040). The CYP2D6 record also cites Caudle et al. 2020 on activity scores.\n\nThe prescriber would need the CYP2C19 result to apply the guidance fully. This is educational information, not medical advice; dosing decisions rest with the prescriber.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica que para normal metabolizer de CYP2D6 CPIC recomienda la dosis inicial habitual, aunque matiza que falta CYP2C19; la acción principal coincide con la referencia y cita CPIC (Hicks 2017, PMID 27997040, correcto)."
+ }
+}

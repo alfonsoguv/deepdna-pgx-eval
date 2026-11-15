@@ -1,0 +1,34 @@
+{
+ "case_id": "c09",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥3.5 for CYP2D6 with regards to taking hydrocodone?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2D6",
+    "drug": "hydrocodone"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2D6\",\"drug\":\"hydrocodone\",\"guideline\":\"CPIC\",\"level\":\"CPIC B\",\"summary\":\"Opioid converted by CYP2D6 to its active metabolite hydromorphone. CPIC notes that there is insufficient evidence on whether lower conversion in poor metabolizers reduces pain relief or changes side effects. For poor and intermediate metabolizers it suggests the label's age- or weight-specific dosing and, if there is no response and an opioid is still warranted, considering an opioid other than codeine or tramadol (optional). For normal metabolizers it recommends the label's dosing (strong); it makes no recommendation for ultra-rapid metabolizers because of minimal evidence.\",\"phenotypes\":[\"Poor metabolizer (PM): activity score 0, two no-function alleles\",\"Intermediate metabolizer (IM): activity score 0.25 to <1.25\",\"Normal metabolizer (NM): activity score 1.25 to 2.25\",\"Ultra-rapid metabolizer (UM): activity score >2.25, typically driven by gene duplication\"],\"sources\":[{\"label\":\"CPIC — CYP2D6 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2d6/\"},{\"label\":\"PharmVar CYP2D6\",\"url\":\"https://www.pharmvar.org/gene/CYP2D6\"},{\"label\":\"PharmGKB CYP2D6 (PA128)\",\"url\":\"https://www.pharmgkb.org/gene/PA128\"},{\"label\":\"Caudle et al., Clin Transl Sci 2020 (CPIC/DPWG consensus on CYP2D6 genotype-to-phenotype translation and activity scores)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/31647186/\"},{\"label\":\"Crews et al., Clin Pharmacol Ther 2021 (CPIC guideline: CYP2D6, OPRM1, COMT and opioids)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/33387367/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** There is no recommendation for CYP2D6 ultrarapid metabolizers (activity score >2.25, which includes ≥3.5) taking hydrocodone. The guideline says the evidence is minimal. By contrast, it recommends label-directed dosing for normal metabolizers. For poor and intermediate metabolizers it suggests label-directed dosing, and an optional alternative opioid if the patient doesn't respond.\n\n2. **Strength:** The record is rated CPIC level B. No strength is assigned for the ultrarapid group, because no recommendation was made.\n\n3. **Source:** CPIC guideline for CYP2D6, OPRM1, COMT and opioid therapy (Crews et al., Clin Pharmacol Ther 2021).\n\nHydrocodone is converted by CYP2D6 to hydromorphone. Dosing decisions remain with the prescriber. This is educational information only, not medical advice.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Indica que no hay recomendación por evidencia mínima, coherente con la referencia, y cita CPIC (Crews 2021), pero afirma 'nivel B' y detalles como 'activity score >2.25' y recomendaciones para otros fenotipos que parecen inventados o dudosos."
+ }
+}

@@ -1,0 +1,180 @@
+{
+ "case_id": "c28",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.5 for CYP2C9 and Indeterminate for SLCO1B1 with regards to taking fluvastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline statins CYP2C9 fluvastatin intermediate metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "integration of pharmacistled pharmacogenomics testing in cardiology clinical practice",
+      "url": "https://cm.healio.com/news/cardiology/20240227/integration-of-pharmacistled-pharmacogenomics-testing-in-cardiology-clinical-practice"
+     },
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "medical.23andme.com",
+      "url": "https://medical.23andme.com/?p=23091"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "Commentary|Articles|March 12, 2024",
+      "url": "https://www.pharmacytimes.com/view/don-t-skip-a-beat-familiarize-yourself-with-updates-in-cardiovascular-pharmacogenomics"
+     },
+     {
+      "title": "[bookmark: _Hlk77855202]The Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/10/SLCO1B1-CPIC-Guideline-2021_CPIC-review.docx"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "SLCO1B1, CYP2C9 and Fluvastatin: SLCO1B1 Increased Function",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/slco1b1-cyp2c9-and-fluvastatin/slco1b1-cyp2c9-and-fluvastatin-slco1b1-increased-function/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluvastatin/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC SLCO1B1 statin guideline 2022 indeterminate phenotype recommendation fluvastatin",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/4430"
+     },
+     {
+      "title": "publications-affiliated.scilifelab.se",
+      "url": "https://publications-affiliated.scilifelab.se/publication/260bf9ac2fb84c4fa4b462a2e4cf9dcb"
+     },
+     {
+      "title": "Commentary|Articles|March 12, 2024",
+      "url": "https://www.pharmacytimes.com/view/don-t-skip-a-beat-familiarize-yourself-with-updates-in-cardiovascular-pharmacogenomics"
+     },
+     {
+      "title": "the clinical pharmacogenetics implementation consortium guideline for slco b abcg and cyp",
+      "url": "https://aminer.org/pub/620b85485aee126c0fab9dce/the-clinical-pharmacogenetics-implementation-consortium-guideline-for-slco-b-abcg-and-cyp"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3384438"
+     },
+     {
+      "title": "Results: Patient with known SLCO1B1 genotype requiring statin therapy",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-known-slco1b1-genotype-requiring-statin-therapy/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC fluvastatin SLCO1B1 indeterminate CYP2C9 intermediate metabolizer table 6 dosing recommendation",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for SLCO1B1, ABCG2, and CYP2C9 and statin‐associated musculoskeletal symptoms",
+      "url": "https://www.researchgate.net/publication/358571798_The_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_guideline_for_SLCO1B1_ABCG2_and_CYP2C9_and_statin-associated_musculoskeletal_symptoms"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium Guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and Statin‐Associated Musculoskeletal Symptoms - Cooper‐DeHoff - 2022 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation ...",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/am-pdf/10.1002/cpt.2557"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0_noSplash_ec38d44d0b3c312e84f585ef38f5d267.pdf"
+     },
+     {
+      "title": "Implementation of a Pharmacogenetic Strategy for Statin Therapy in the Spanish National Health System: A Systematic Review and Regulatory Framework Analysis",
+      "url": "https://www.mdpi.com/1424-8247/19/11/1701"
+     },
+     {
+      "title": "SLCO1B1 Phenotype and CYP3A5 Polymorphism Significantly Affect Atorvastatin Bioavailability",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7999651/"
+     },
+     {
+      "title": "Umich",
+      "url": "https://backend.production.deepblue-documents.lib.umich.edu/server/api/core/bitstreams/265af224-889e-44c9-a38f-b9560996471b/content"
+     },
+     {
+      "title": "Fluvastatin Genetic Testing - How Your DNA Affects Drug Response",
+      "url": "https://www.gene2rx.com/drugs/fluvastatin/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 3,
+ "final_answer": "I couldn't confirm the exact recommendation for this combination, so I can't give you a verified answer for the indeterminate SLCO1B1 case.\n\n1. **Recommendation:** For CYP2C9 intermediate metabolizers, CPIC's fluvastatin guidance supports a starting dose of up to 40 mg/day, with higher doses needing reassessment. I could not retrieve the combined SLCO1B1 × CYP2C9 table cell for an indeterminate SLCO1B1 phenotype, so I can't say whether that cell changes the recommendation. The activity score of 1.5 is consistent with the intermediate metabolizer category.\n2. **Strength:** One secondary summary describes the CYP2C9-based fluvastatin recommendation as moderate. I did not confirm this against the primary guideline.\n3. **Source:** CPIC guideline for SLCO1B1, ABCG2, and CYP2C9 and statin-associated musculoskeletal symptoms (Cooper-DeHoff et al., *Clin Pharmacol Ther* 2022; doi 10.1002/cpt.2557). Check Table 6 in the [full text](https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557) or the [CPIC PDF](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf) for the indeterminate SLCO1B1 row. Confirm on [cpicpgx.org](https://cpicpgx.org/?p=3305) that the guideline is still current.\n\nSources:\n- [CPIC statins guideline page](https://cpicpgx.org/?p=3305)\n- [CPIC publication PDF](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [Wiley full text, doi 10.1002/cpt.2557](https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica iniciar con hasta 40 mg/día y reevaluar dosis mayores según CPIC para CYP2C9 intermedio, aunque con cautelas sobre SLCO1B1 indeterminado; la cita (Cooper-DeHoff 2022, CPT) es correcta."
+ }
+}

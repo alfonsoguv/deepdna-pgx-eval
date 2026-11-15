@@ -1,0 +1,180 @@
+{
+ "case_id": "c19",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 0.5 for CYP2D6 and Intermediate Metabolizer for CYP2C19 with regards to taking doxepin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline tricyclic antidepressants CYP2D6 CYP2C19 doxepin intermediate metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/226253/mod_resource/content/2/guideline%20TCA.pdf"
+     },
+     {
+      "title": "TCA CPIC Guideline manuscript update final",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/TCA-CPIC-Guideline-manuscript-update-final.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3689226"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for imipramine and CYP2C19, CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166104999"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2017 update TCA CYP2D6 intermediate metabolizer activity score 0.5 CYP2C19 intermediate metabolizer dosing",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/226253/mod_resource/content/2/guideline%20TCA.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for imipramine and CYP2C19, CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166104999"
+     },
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33967790/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3689226"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5723247/table/T3"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/trimipramine/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC tricyclic guideline \"intermediate metabolizers\" \"25% reduction\" starting dose activity score 0.25-1.0 optional strength",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Amitriptyline Therapy and CYP2D6 and CYP2C19 Genotype",
+      "url": "https://hero.epa.gov/reference/12987423/"
+     },
+     {
+      "title": "Supplement to - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/TCA/2013/23486447-supplement.pdf"
+     },
+     {
+      "title": "Children's Mercy Kansas City Children's Mercy Kansas City",
+      "url": "https://scholarlyexchange.childrensmercy.org/cgi/viewcontent.cgi?article=1524&context=papers"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for <fi>CYP2D6</fi>, <fi>CYP2C19</fi>, <fi>CYP2B6</fi>, <fi>SLC6A4</fi>, and <fi>HTR2A</fi> Genotypes and Serotonin Reuptake Inhibitor Antidepressants - Bousman - 2023 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2903"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium ... - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/TCA/2013/23486447.pdf"
+     },
+     {
+      "title": "CYP2D6 Reduced Function Variants and Genotype/Phenotype Translations of CYP2D6 Intermediate Metabolizers: Implications for Personalized Drug Dosing in Psychiatry",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8100508/"
+     },
+     {
+      "title": "Amitriptyline Therapy and CYP2D6 and CYP2C19 Genotype - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28520380/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium ... - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/atomoxetine/2019/30801677.pdf"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 3,
+ "final_answer": "**Short answer:** CPIC's tricyclic antidepressant guideline most likely supports a **modest starting-dose reduction** for the CYP2D6 intermediate metabolizer status, with **standard dosing** for the CYP2C19 intermediate metabolizer status. I could not confirm a doxepin-specific or combined-phenotype recommendation, so verify before applying it.\n\n1. **Recommendation:** For CYP2D6 IM (activity score 0.5), consider a 25% reduction of the starting dose and titrate to response. For CYP2C19 IM, start at the standard dose and titrate to response.\n\n2. **Strength:** The sources conflict. One describes the CYP2D6 IM dose reduction as optional, another as moderate. I could not confirm which label the current CPIC version uses.\n\n3. **Source:** CPIC Guideline for Tricyclic Antidepressants and CYP2D6/CYP2C19 (2016 update, with later revisions). The guideline covers doxepin, but I could not retrieve its drug-specific table, so check the [CPIC TCA guideline page](https://cpicpgx.org/?p=571) directly.\n\nSources:\n- [CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19](https://cpicpgx.org/?p=571)\n- [CPIC 2013 TCA guideline supplement](https://files.cpicpgx.org/data/guideline/publication/TCA/2013/23486447-supplement.pdf)\n- [PharmGKB annotation of CPIC imipramine/CYP2C19/CYP2D6 guideline](https://www.pharmgkb.org/guidelineAnnotation/PA166104999)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda reducir 25% la dosis inicial (CYP2D6 IM) según CPIC, coincidiendo con la referencia; no menciona TDM pero la acción principal coincide, y las fuentes citadas parecen legítimas."
+ }
+}

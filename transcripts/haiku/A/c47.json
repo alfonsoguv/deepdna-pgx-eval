@@ -1,0 +1,24 @@
+{
+ "case_id": "c47",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for UGT1A1 with regards to taking atazanavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I couldn't verify this against the guideline text in this session, so please confirm on cpicpgx.org before acting on it.\n\n1. **Recommendation:** From my recollection of CPIC's UGT1A1–atazanavir guidance (2016), for poor metabolizers the recommendation is to consider an alternative antiretroviral rather than atazanavir. If atazanavir is used, the guidance calls for closer monitoring of bilirubin. I'm not certain of the exact dosing wording.\n\n2. **Strength:** I don't reliably recall the strength or classification level for this phenotype, so I won't guess.\n\n3. **Source:** Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for UGT1A1 and atazanavir (Gammal RS et al., *Clinical Pharmacology & Therapeutics*, 2016). Check whether a later update has superseded it.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda considerar un antirretroviral alternativo a atazanavir, igual que la referencia; cita CPIC 2016 (Gammal et al., Clin Pharmacol Ther), que es correcta."
+ }
+}

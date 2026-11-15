@@ -1,0 +1,131 @@
+{
+ "case_id": "c17",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for CYP2C19 with regards to taking dexlansoprazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2C19 proton pump inhibitors dexlansoprazole poor metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7868475"
+     },
+     {
+      "title": "view.ncbi.nlm.nih.gov",
+      "url": "https://view.ncbi.nlm.nih.gov/gtr/conditions/CN474477"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN474479"
+     },
+     {
+      "title": "CYP2C19 proton pump inhibitors guideline revised",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/medgen/1137494"
+     },
+     {
+      "title": "Record 0115%20Helix%20Pharmacogenomics%20(PGx)%20Proton%20Pump%20Inhibitors%20Panel",
+      "url": "https://info.helix.com/hubfs/Test%20Descriptions/Record-0115%20Helix%20Pharmacogenomics%20(PGx)%20Proton%20Pump%20Inhibitors%20Panel.pdf"
+     },
+     {
+      "title": "Record 0115%20Helix%20Pharmacogenomics%20(PGx)%20Proton%20Pump%20Inhibitors%20Test",
+      "url": "https://info.helix.com/hubfs/Test%20Descriptions/Record-0115%20Helix%20Pharmacogenomics%20(PGx)%20Proton%20Pump%20Inhibitors%20Test.pdf"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/3433"
+     },
+     {
+      "title": "new proton pump inhibitor dosing recommendations address pediatric patients",
+      "url": "https://transformpeds.childrensmercy.org/new-proton-pump-inhibitor-dosing-recommendations-address-pediatric-patients/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/lansoprazole/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC PPI guideline poor metabolizer dexlansoprazole \"50% reduction\" chronic therapy classification of recommendation optional",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pharmaceuticals 16 00889 t003",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10302140/table/pharmaceuticals-16-00889-t003"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7868475"
+     },
+     {
+      "title": "CYP2C19 and Omeprazole, Pantoprazole, Lansoprazole, Dexlansoprazole",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c19-and-omeprazole-pantoprazole-lansoprazole-dexlansoprazole/"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN474479"
+     },
+     {
+      "title": "Record 0115%20Helix%20Pharmacogenomics%20(PGx)%20Proton%20Pump%20Inhibitors%20Panel",
+      "url": "https://info.helix.com/hubfs/Test%20Descriptions/Record-0115%20Helix%20Pharmacogenomics%20(PGx)%20Proton%20Pump%20Inhibitors%20Panel.pdf"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/medgen/1137494"
+     },
+     {
+      "title": "IB10 1746 Provider ApplyingPGxTestingtoPPI P97196",
+      "url": "https://pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1746_Provider_ApplyingPGxTestingtoPPI_P97196.pdf"
+     },
+     {
+      "title": "464cffdf c092 466c 8e26 71afff5a45d5",
+      "url": "https://scholarworks.indianapolis.iu.edu//signposting/describedby/464cffdf-c092-466c-8e26-71afff5a45d5"
+     },
+     {
+      "title": "Bookshelf NBK100895",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK100895/pdf/Bookshelf_NBK100895.pdf"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK100895"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**Dexlansoprazole in a CYP2C19 poor metabolizer**\n\n1. **Recommendation:** Adjust the dose, but only for long-term use. Start the standard daily dose. For chronic therapy (more than 12 weeks), once healing or efficacy is achieved, consider reducing the daily dose by 50%. Keep monitoring for efficacy. Poor metabolizers have higher drug exposure, which raises the risk of adverse effects with prolonged use. The VA document says dexlansoprazole follows the same CPIC dosing as the other PPIs.\n\n2. **Strength:** I believe the overall strength is \"Moderate\" and the 50% reduction is \"Optional\". The table text I could read was garbled, so I couldn't confirm which label applies to which part for dexlansoprazole. Check the original guideline table before relying on these labels.\n\n3. **Source:** CPIC guideline for CYP2C19 and proton pump inhibitor dosing (Lima et al., Clin Pharmacol Ther 2021;109(6):1417-1423).\n\nSources:\n- [CPIC PPI guideline (PMC7868475)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7868475)\n- [UF Health: CYP2C19 and omeprazole, pantoprazole, lansoprazole, dexlansoprazole](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c19-and-omeprazole-pantoprazole-lansoprazole-dexlansoprazole/)\n- [VA PBM: Applying PGx testing to PPI](https://pbm.va.gov/PBM/AcademicDetailingService/Documents/508/IB10-1746_Provider_ApplyingPGxTestingtoPPI_P97196.pdf)\n- [Pharmaceuticals 2023 CPIC summary table](https://pmc.ncbi.nlm.nih.gov/articles/PMC10302140/table/pharmaceuticals-16-00889-t003)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis estándar inicial y reducir 50% en terapia crónica (>12 semanas), coincidiendo con la referencia CPIC; la cita Lima et al., Clin Pharmacol Ther 2021;109(6):1417-1423 es correcta."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "case_id": "c54",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Malignant Hyperthermia Susceptibility for RYR1 and Uncertain Susceptibility for CACNA1S with regards to taking desflurane?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline RYR1 CACNA1S volatile anesthetics malignant hyperthermia susceptible recommendation strength desflurane",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC RYR1 CACNA1S Guideline CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/06/CPIC-RYR1_CACNA1S_Guideline_CPIC-review.docx"
+     },
+     {
+      "title": "CPIC RYR1 CACNA1S SUPPLEMENT CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/06/CPIC-RYR1_CACNA1S-SUPPLEMENT_CPIC-review.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6513720"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.1319"
+     },
+     {
+      "title": "CPIC® Guideline for Potent Volatile Anesthetic Agents and Succinylcholine and RYR1 and CACNA1S",
+      "url": "https://cpicpgx.org/?p=1724"
+     },
+     {
+      "title": "100083853501 0x000001",
+      "url": "https://eld.bl.uk/catalog/100083853501_0x000001"
+     },
+     {
+      "title": "30499100 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/volatile_anesthetic_succinylcholine/2018/30499100-supplement.pdf"
+     },
+     {
+      "title": "mdl 30499100",
+      "url": "https://pesquisa.bvsalud.org/nicaragua/resource/es/mdl-30499100"
+     },
+     {
+      "title": "CPIC® Guideline for Potent Volatile Anesthetic Agents and Succinylcholine and RYR1 and CACNA1S update",
+      "url": "https://www.altmetric.com/details/52270728/blogs"
+     },
+     {
+      "title": "api-pubmed-ncbi.laibokeji.com",
+      "url": "https://api-pubmed-ncbi.laibokeji.com/30499100"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: avoid the drug.** A Malignant Hyperthermia Susceptible (MHS) result in RYR1 is enough to classify this person as MHS. The Uncertain Susceptibility result for CACNA1S doesn't change that. CPIC says potent volatile anesthetics, including desflurane, and succinylcholine are relatively contraindicated in MHS. It treats all potent inhaled anesthetics as equally likely to trigger malignant hyperthermia, so another volatile agent is not a safe substitute. Clinicians should use non-triggering anesthetics instead, such as total intravenous anesthesia with propofol plus non-depolarizing muscle relaxants. The MH-safe alternatives are standard practice, not something this search confirmed.\n\n2. **Strength: Strong.** This grade is from my knowledge of CPIC's Table 2. My search confirmed the guideline covers desflurane and calls it contraindicated in MHS, but it didn't return the table itself, so please check the grade there.\n\n3. **Source:** the CPIC Guideline for Potent Volatile Anesthetic Agents and Succinylcholine and RYR1 and CACNA1S (Gonsalves et al., *Clin Pharmacol Ther* 2019, DOI 10.1002/cpt.1319). CPIC later added diplotype-to-phenotype tables in line with ClinGen's RYR1 variant classifications.\n\nSources:\n- [CPIC Guideline page](https://cpicpgx.org/?p=1724)\n- [Gonsalves et al. 2019 (PMC6513720)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6513720)\n- [CPIC supplement](https://files.cpicpgx.org/data/guideline/publication/volatile_anesthetic_succinylcholine/2018/30499100-supplement.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar desflurano y succinilcolina en MHS (usar anestesia intravenosa total), acorde con CPIC; cita Gonsalves 2019 Clin Pharmacol Ther, que es correcta."
+ }
+}

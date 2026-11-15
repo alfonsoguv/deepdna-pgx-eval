@@ -1,0 +1,131 @@
+{
+ "case_id": "c23",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.0 for CYP2C9 with regards to taking lornoxicam?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline NSAIDs CYP2C9 lornoxicam poor metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "32189324 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=2351"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "lornoxicam CYP2C9 poor metabolizers \"avoid\" OR \"reduce\" CPIC table 2020 Theken",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "32189324 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf"
+     },
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "CYP2C9 NSAID guideline final CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=2351"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "I couldn't confirm the lornoxicam recommendation for this phenotype, so I won't give you a specific instruction.\n\n1. **Recommendation:** Not verified. The CPIC phenotype table covers lornoxicam, but the sources I could reach only show the table exists and don't include the lornoxicam row. Please don't rely on my memory for the exact wording (avoid, alternative, or dose reduction).\n2. **Strength/level:** Not verified.\n3. **Source:** The CPIC guideline for CYP2C9 and NSAIDs (Theken et al., 2020, *Clin Pharmacol Ther*). Activity score 0 maps to poor metabolizer, which is the phenotype you asked about.\n\nTo get the answer, check Table 2 of the [CPIC NSAID guideline PDF](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf) or the lornoxicam/CYP2C9 annotation on [ClinPGX](https://cpicpgx.org/?p=2351).\n\nSources:\n- [CPIC NSAID guideline PDF](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf)\n- [CPIC NSAID supplement](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf)\n- [CPIC guideline listing](https://cpicpgx.org/?p=2351)\n- [PMC summary of CPIC activity score mapping](https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "La respuesta declina dar una recomendación específica y solo remite a la guía CPIC (Theken 2020) sin indicar la acción; no coincide con AJUSTAR."
+ }
+}

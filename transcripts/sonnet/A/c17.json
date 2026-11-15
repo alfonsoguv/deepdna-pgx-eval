@@ -1,0 +1,24 @@
+{
+ "case_id": "c17",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for CYP2C19 with regards to taking dexlansoprazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Adjust the dose, but only after the usual start. For a CYP2C19 poor metabolizer, start dexlansoprazole at the standard daily dose. For chronic therapy (more than 12 weeks) where efficacy has been achieved, consider reducing the daily dose by about 50% and monitor for continued efficacy. Avoidance is not recommended.\n\n2. **Strength:** Optional. I recall this from memory, and I'm less sure of the exact classification for dexlansoprazole than for the other PPIs. Check it against the guideline tables.\n\n3. **Source:** CPIC Guideline for CYP2C19 and Proton Pump Inhibitor Dosing (Lima et al., Clin Pharmacol Ther, 2021). It covers omeprazole, lansoprazole, pantoprazole, and dexlansoprazole.\n\nI did not check any tools or databases for this answer. Confirm the current wording at cpicpgx.org or PharmGKB before using it clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Coincide con la referencia: dosis inicial estándar y, en terapia crónica con eficacia lograda, reducir la dosis un 50% con seguimiento. La cita de CPIC (Lima et al., 2021) es correcta."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c14",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for CYP2C19 with regards to taking lansoprazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Standard use. For CYP2C19 Normal Metabolizers (*1/*1), the guideline recommends initiating lansoprazole at the standard starting daily dose. No dose adjustment is needed.\n\n**2. Strength:** Strong recommendation for the normal metabolizer phenotype (the classification of recommendation for NMs is \"Strong\" for PPIs in the CPIC guideline, with moderate-to-optional evidence for the underlying pharmacokinetic data). Some caveat: for the PPI guideline, the strength is stated as \"Strong\" for rapid and ultrarapid (increase dose by 50–100%) and for poor metabolizers in chronic therapy (>12 weeks, consider reducing dose by 50%) it is \"Optional.\" Normal metabolizers are on standard dosing, with clinical response monitoring.\n\n**3. Source:** CPIC (Clinical Pharmacogenetics Implementation Consortium) Guideline for CYP2C19 and Proton Pump Inhibitor Dosing (Lima et al., Clin Pharmacol Ther, 2021). Also reflected in PharmGKB/DPWG annotations.\n\n**Caveat:** I didn't use tools to verify this, so I'm answering from memory. The core conclusion (standard dosing for normal metabolizers) is reliable, but I'm less certain about the exact strength wording in the CPIC table, so please confirm it on cpicpgx.org before relying on it clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Indica dosis estándar sin ajuste, pero la referencia añade considerar aumentar 50-100% en H. pylori y esofagitis erosiva (categoría OTRA). La cita Lima et al. 2021 es correcta, pero los niveles de fuerza que da son confusos y probablemente erróneos."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "case_id": "c09",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥3.5 for CYP2D6 with regards to taking hydrocodone?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2D6 ultrarapid metabolizer hydrocodone recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Annotation of CPIC Guideline for hydrocodone and CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166228121"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/438444/mod_resource/content/1/linee%20guida%20farmacogenetica%20oppioidi.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478/table/T4"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "CYP2D6 and Codeine, Hydrocodone, Tramadol",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-codeine-hydrocodone-tramadol/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11004919"
+     },
+     {
+      "title": "PAIN MANAGEMENT   •   Published April 14, 2022",
+      "url": "https://www.uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy-1"
+     },
+     {
+      "title": "HealthUpdatedAugust 05, 2020",
+      "url": "https://www.wolterskluwer.com/en/expert-insights/pharmacogenomics-effect-of-gene-variability-on-pain-management"
+     },
+     {
+      "title": "CPIC opioids PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/opioids/2020/CPIC_opioids_PREPRINT.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** No recommendation. For CYP2D6 ultrarapid metabolizers (activity score ≥3.5), CPIC says the evidence on hydrocodone analgesia and adverse events is too limited to support genotype-based dosing advice. This differs from codeine and tramadol, where CPIC says to avoid use in this phenotype. Clinicians should follow the product label and monitor the patient. If the response is poor, or adverse effects appear, they can consider an opioid not affected by CYP2D6, such as morphine.\n\n**2. Strength:** None assigned. PharmGKB's annotation rates this as CPIC level C (insufficient evidence). The search result was ambiguous on whether CPIC's table gives optional label-dosing advice here. I couldn't confirm that detail.\n\n**3. Source:** CPIC guideline for CYP2D6, OPRM1 and COMT genotypes and select opioid therapy (2021), as summarized in the PharmGKB annotation.\n\nOne University of Florida page says to use a non-opioid or an alternative opioid. I think that wording comes from the codeine and tramadol guidance, so I wouldn't treat it as the CPIC hydrocodone recommendation.\n\nSources:\n- [PharmGKB annotation of CPIC guideline for hydrocodone and CYP2D6](https://www.pharmgkb.org/guidelineAnnotation/PA166228121)\n- [CPIC 2021 guideline (PMC8249478)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478)\n- [UF Health CYP2D6 page](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-codeine-hydrocodone-tramadol/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica que CPIC no hace recomendación genotípica para hidrocodona por evidencia limitada, sugiere seguir la etiqueta y monitorizar (uso habitual), coincidiendo con la referencia; cita CPIC 2021 correctamente."
+ }
+}

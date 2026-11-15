@@ -1,0 +1,78 @@
+{
+ "case_id": "c48",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for UGT1A1 with regards to taking atazanavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline atazanavir UGT1A1 normal metabolizer recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guideline ugt1a1 and",
+      "url": "https://vumc.org/hivclinicaltrials/publication/clinical-pharmacogenetics-implementation-consortium-cpic-guideline-ugt1a1-and"
+     },
+     {
+      "title": "26417955 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/atazanavir/2015/26417955-supplement.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.269"
+     },
+     {
+      "title": "vivo.weill.cornell.edu",
+      "url": "https://vivo.weill.cornell.edu/display/pubid26417955"
+     },
+     {
+      "title": "www.vumc.org",
+      "url": "https://www.vumc.org/hivclinicaltrials/node/71"
+     },
+     {
+      "title": "↓ Skip to main content",
+      "url": "https://cdc.altmetric.com/details/6042356"
+     },
+     {
+      "title": "cts12866 tbl 0002",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7719396/table/cts12866-tbl-0002"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5726942"
+     },
+     {
+      "title": "0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk",
+      "url": "https://0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk/medgen/CN417141"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: standard use.** For a UGT1A1 Normal Metabolizer (for example \\*1/\\*1, \\*1/\\*36 or \\*36/\\*36), the risk of stopping atazanavir because of bilirubin-related jaundice is at the baseline level. There's no reason to avoid atazanavir based on the UGT1A1 result. The guideline adds that the jaundice risk is extremely low, so it may not even be necessary to discuss jaundice with these patients.\n\n2. **Strength: Strong, but not confirmed here.** I remember CPIC rating this recommendation \"Strong.\" My search didn't bring up the table that lists strengths, so check that rating against the full guideline.\n\n3. **Source:** CPIC Guideline for UGT1A1 and Atazanavir Prescribing (Gammal et al., *Clin Pharmacol Ther* 2016;99(4):363–369).\n\nSources:\n- [CPIC atazanavir guideline (PMC4785051)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051)\n- [CPIC guideline supplement](https://files.cpicpgx.org/data/guideline/publication/atazanavir/2015/26417955-supplement.pdf)\n- [VUMC publication listing](https://vumc.org/hivclinicaltrials/publication/clinical-pharmacogenetics-implementation-consortium-cpic-guideline-ugt1a1-and)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda uso estándar de atazanavir sin evitarlo según UGT1A1, igual que la referencia CPIC; la cita (Gammal et al., Clin Pharmacol Ther 2016;99(4):363-369) es correcta."
+ }
+}

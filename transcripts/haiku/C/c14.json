@@ -1,0 +1,127 @@
+{
+ "case_id": "c14",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for CYP2C19 with regards to taking lansoprazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2C19 lansoprazole normal metabolizer recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CYP2C19 proton pump inhibitors guideline revised",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7868475"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10296543"
+     },
+     {
+      "title": "ACCP%20PPI%20Poster%202020 10.13.2020%20(FINAL)",
+      "url": "https://accp.confex.com/accp/2020am/mediafile/Handout/Paper54746/ACCP%20PPI%20Poster%202020_10.13.2020%20(FINAL).pdf"
+     },
+     {
+      "title": "Back to Journals » Pharmacogenomics and Personalized Medicine » Volume 16",
+      "url": "https://www.dovepress.com/a-pharmacogenetics-based-approach-to-managing-gastroesophageal-reflux--peer-reviewed-fulltext-article-PGPM"
+     },
+     {
+      "title": "frontiersin.org",
+      "url": "https://frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2024.1326776/pdf"
+     },
+     {
+      "title": "Scientific article",
+      "url": "https://archive-ouverte.unige.ch/unige:150660"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2C19 and Proton Pump Inhibitor Dosing",
+      "url": "https://scholars.mssm.edu/en/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin-5/"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/3433"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/lansoprazole/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2020 PPI guideline lansoprazole CYP2C19 normal metabolizers \"label-recommended\" dosage strong recommendation",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/PPI/2020/32770672.pdf"
+     },
+     {
+      "title": "CYP2C19 proton pump inhibitors guideline revised - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2C19 and Proton Pump Inhibitor Dosing - Lima - 2021 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2015"
+     },
+     {
+      "title": "(PDF) Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2C19 and Proton Pump Inhibitor Dosing",
+      "url": "https://www.researchgate.net/publication/343534282_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_CYP2C19_and_Proton_Pump_Inhibitor_Dosing"
+     },
+     {
+      "title": "Dexlansoprazole Monograph for Professionals - Drugs.com",
+      "url": "https://www.drugs.com/monograph/dexlansoprazole.html"
+     },
+     {
+      "title": "Pharmacogenetics Portal - 23andMe for Healthcare Professionals",
+      "url": "https://medical.23andme.com/pgt-portal/"
+     },
+     {
+      "title": "Implementation of PPI Medication PGX Testing",
+      "url": "https://clinicaltrials.gov/study/NCT02794844"
+     },
+     {
+      "title": "PharmCAT Report [pharmcat.example]",
+      "url": "https://pharmcat.clinpgx.org/examples/pharmcat.example.report.html"
+     },
+     {
+      "title": "PharmCAT Report [pharmcat.example2]",
+      "url": "https://pharmcat.clinpgx.org/examples/pharmcat.example2.report.html"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Initiate the standard (label-recommended) starting daily dose of lansoprazole. No dose change or alternative drug is advised for normal metabolizers. CPIC notes that normal metabolizers may have a somewhat higher risk of therapeutic failure than intermediate or poor metabolizers. For H. pylori or erosive esophagitis, CPIC suggests optionally considering a 50–100% dose increase.\n\n**2. Strength:** I could not confirm this from the guideline itself. One search summary says the standard-dose recommendation is rated *moderate*, with the dose increase rated optional. I don't trust that summary enough to state it as fact, and my own recollection doesn't settle it. Check the strength in the CPIC table before relying on it.\n\n**3. Source:** CPIC Guideline for CYP2C19 and Proton Pump Inhibitor Dosing (Lima et al., 2020/2021, *Clin Pharmacol Ther*). I did not open the full PDF, so the details above come from search summaries. The guideline is at [files.cpicpgx.org](https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf).\n\nSources:\n- [CYP2C19 proton pump inhibitors guideline revised (CPIC)](https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf)\n- [CPIC PPI guideline, Clinical Pharmacology & Therapeutics](https://files.cpicpgx.org/data/guideline/publication/PPI/2020/32770672.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda la dosis inicial estándar y considera opcionalmente aumentar 50-100% en H. pylori y esofagitis erosiva, igual que la referencia; cita correctamente la guía CPIC de Lima et al. (omite el monitoreo)."
+ }
+}

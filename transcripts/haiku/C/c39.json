@@ -1,0 +1,131 @@
+{
+ "case_id": "c39",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for DPYD with regards to taking fluorouracil?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline DPYD fluoropyrimidines intermediate metabolizer activity score 1 recommendation starting dose 50%",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/medgen/CN077983/"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/CN077963"
+     },
+     {
+      "title": "DPYD Genotyping 2026",
+      "url": "https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2026.pdf"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=581"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8885558/table/Tab4"
+     },
+     {
+      "title": "guideline for fluoropyrimidines and dpyd",
+      "url": "https://goffinmoleculartechnologies.com/wp-content/uploads/2023/04/guideline-for-fluoropyrimidines-and-dpyd.html"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/capecitabine/"
+     },
+     {
+      "title": "fluorouracil 5 fluorouracil",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluorouracil-5-fluorouracil/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "cpicpgx.org DPYD fluoropyrimidines guideline 2025 update intermediate metabolizer dose reduction",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "DPYD Genotyping 2026",
+      "url": "https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2026.pdf"
+     },
+     {
+      "title": "Clinical Chemistry - Podcast",
+      "url": "https://myadlm.org/science-and-research/clinical-chemistry/clinical-chemistry-podcasts/2025/risk-vs-prevalence_weighing-routine-dpyd-variant-testing-prior-to-chemotherapy"
+     },
+     {
+      "title": "Clinical Chemistry - Podcast",
+      "url": "https://myadlm.org/Science-and-Research/Clinical-Chemistry/Clinical-Chemistry-Podcasts/2025/Risk-vs-prevalence_Weighing-routine-DPYD-variant-testing-prior-to-chemotherapy"
+     },
+     {
+      "title": "DPYD Genotyping 2025 11",
+      "url": "https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2025-11.pdf"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "DPYD Genotype-Guided Fluoropyrimidine Dosing: FDA and NCCN Updates to Guide 5-FU and Capecitabine Dosing for Oncologists",
+      "url": "https://arup.utah.edu/education/nelson-dpyd-2026"
+     },
+     {
+      "title": "DPYD Genotype-Guided Fluoropyrimidine Dosing: FDA and NCCN Updates to Guide 5-FU and Capecitabine Dosing for Oncologists",
+      "url": "https://arup.utah.edu/education/nelson-dpyd-2026.php/"
+     },
+     {
+      "title": "www.cancercareontario.ca",
+      "url": "https://www.cancercareontario.ca/en/system/files_force/derivative/DPDGuidanceDocumentSummaryTables.pdf?download=1"
+     },
+     {
+      "title": "fluorouracil 5 fluorouracil",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluorouracil-5-fluorouracil/"
+     },
+     {
+      "title": "guideline for fluoropyrimidines and dpyd",
+      "url": "https://goffinmoleculartechnologies.com/wp-content/uploads/2023/04/guideline-for-fluoropyrimidines-and-dpyd.html"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Adjust the dose. Start fluorouracil at 50% of the standard starting dose, then titrate based on toxicity and, ideally, therapeutic drug monitoring. Secondary summaries of CPIC describe this for intermediate metabolizers with activity score 1 or 1.5. One summary says a homozygous c.2846A>T genotype (activity score 1) may warrant a reduction greater than 50%.\n\n**2. Strength:** I could not confirm the strength of the recommendation. I did not reach the CPIC guideline itself.\n\n**3. Source:** CPIC guidance for DPYD and fluoropyrimidines, as summarized by secondary sources. I could not confirm the current version. Some summaries cite a 2024 update and others a 2025 revision, and older wording suggested a 25–50% reduction for activity score 1.5. Check cpicpgx.org for the current text before applying this clinically.\n\nSources:\n- [ARUP DPYD Genotyping 2026](https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2026.pdf)\n- [UK Clinical Pharmacy fluorouracil handbook](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluorouracil-5-fluorouracil/)\n- [Goffin Molecular Technologies DPYD guideline summary](https://goffinmoleculartechnologies.com/wp-content/uploads/2023/04/guideline-for-fluoropyrimidines-and-dpyd.html)\n- [ARUP DPYD FDA and NCCN updates](https://arup.utah.edu/education/nelson-dpyd-2026)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda reducir al 50% la dosis inicial y titular según toxicidad o monitorización, mencionando la posible reducción mayor en c.2846A>T homocigoto; atribuye a CPIC vía fuentes secundarias sin datos inventados evidentes."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c48",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for UGT1A1 with regards to taking atazanavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Standard use. For UGT1A1 normal metabolizers, there is no genotype-based reason to avoid atazanavir, so use it at the standard label-recommended dose. Hyperbilirubinemia-related discontinuation is unlikely, and the risk of jaundice or scleral icterus is low.\n\n2. **Strength:** Strong. CPIC classifies this as a \"strong\" recommendation for normal metabolizers. The evidence is graded as high for poor metabolizers, and the recommendation for normal metabolizers is based on the same body of evidence.\n\n3. **Source:** CPIC (Clinical Pharmacogenetics Implementation Consortium) Guideline for UGT1A1 and Atazanavir Prescribing (Gammal et al., 2016, *Clin Pharmacol Ther*). The DPWG guidelines are generally consistent with this.\n\nI'm answering from memory and did not check the sources with tools. For poor metabolizers (*28/*28, *37/*37), CPIC advises considering an alternative agent, so confirm the exact wording and any updates on cpicpgx.org or PharmGKB before using it clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda uso estándar de atazanavir sin evitarlo, coincidiendo con la referencia; cita CPIC (Gammal 2016, correcto) y DPWG, pero la afirmación de fuerza 'strong' para metabolizadores normales es dudosa (CPIC lo clasifica como 'optional' para normales), y la evidencia 'high' es cuestionable."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c02",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 with regards to taking atomoxetine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I can't verify this. No lookup tools are available in this session, and I don't have a reliable recollection of a specific guideline recommendation for atomoxetine in CYP2D6 ultrarapid metabolizers.\n\n1. **Recommendation:** Not determined. I'm not confident of a specific recommendation (avoid, alternative, dose adjustment, or standard use) for this phenotype.\n2. **Strength/level:** Unknown.\n3. **Source:** I can't name a guideline with confidence. As I recall, CPIC has not published a dedicated atomoxetine guideline, and the FDA label addresses poor metabolizers more than ultrarapid ones. The Dutch Pharmacogenetics Working Group (DPWG) has addressed atomoxetine, but I can't reliably recall its ultrarapid recommendation.\n\nPlease check the current CPIC guidelines (cpicpgx.org), the DPWG guideline (knmp.nl), and the atomoxetine FDA label directly. Note also that CPIC classifies an activity score above 2.25 as ultrarapid, so a score of ≥5.0 reflects multiple gene copies. Confirm the phenotype assignment against the guideline's own thresholds.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "NONE",
+  "citation_correct": false,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": true,
+  "note_es": "La respuesta no da ninguna recomendación y afirma erróneamente que CPIC no ha publicado una guía de atomoxetina (sí existe), además de remitir a otras fuentes."
+ }
+}

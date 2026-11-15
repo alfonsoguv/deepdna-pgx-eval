@@ -1,0 +1,78 @@
+{
+ "case_id": "c47",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for UGT1A1 with regards to taking atazanavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline UGT1A1 atazanavir poor metabolizer recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051"
+     },
+     {
+      "title": "26417955 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/atazanavir/2015/26417955-supplement.pdf"
+     },
+     {
+      "title": "CPIC call 10022025",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/10/CPIC-call-10022025.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://elbiruniblogspotcom.blogspot.com/2016/12/clinical-pharmacogenetics.html"
+     },
+     {
+      "title": "CPIC update 2019",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/10/CPIC-update-2019.pdf"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=576"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5726942"
+     },
+     {
+      "title": "pharmcat.org",
+      "url": "https://pharmcat.org/examples/pharmcat.example2.report.html"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guideline ugt1a1 and",
+      "url": "https://vumc.org/hivclinicaltrials/publication/clinical-pharmacogenetics-implementation-consortium-cpic-guideline-ugt1a1-and"
+     },
+     {
+      "title": "pharmcat.org",
+      "url": "https://pharmcat.org/examples/pharmcat.example.report.html"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation:** Use an alternative. For UGT1A1 poor metabolizers, CPIC advises considering an alternative agent, especially if jaundice would concern the patient. Poor metabolizers have markedly decreased UGT1A1 activity and a high likelihood of stopping atazanavir because of bilirubin-related effects such as jaundice. If atazanavir is used anyway, expect hyperbilirubinemia.\n\n2. **Strength:** Moderate. My search didn't return the strength for this row, so this comes from my recollection of CPIC's Table 2, not from the retrieved text. Please confirm it against the guideline table.\n\n3. **Source:** CPIC guideline for UGT1A1 and atazanavir (Gammal et al., 2016, Clin Pharmacol Ther). It defines poor metabolizers as carrying two decreased-function alleles (*6, *28, *37) or rs887829 T/T. The guideline notes that the supporting studies all used ritonavir-boosted atazanavir. Later updates changed the function assigned to the *60 allele, and CPIC has flagged the guideline for updating. Check cpicpgx.org for the current version.\n\nSources:\n- https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051\n- https://files.cpicpgx.org/data/guideline/publication/atazanavir/2015/26417955-supplement.pdf",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda considerar una alternativa a atazanavir, coherente con la referencia y atribuida a CPIC (Gammal 2016). Sin embargo, la fuerza 'Moderate' es de memoria y probablemente incorrecta (CPIC la clasifica como Strong/Optional), por lo que se marca sospechosa."
+ }
+}

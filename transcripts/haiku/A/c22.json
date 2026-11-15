@@ -1,0 +1,24 @@
+{
+ "case_id": "c22",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.5 for CYP2C9 with regards to taking piroxicam?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I can't verify this against the guideline text here because I have no lookup tool in this session, so treat the following as recollection, not a confirmed citation.\n\n1. **Recommendation (my recollection):** For a CYP2C9 poor metabolizer, CPIC advises choosing an alternative NSAID that is not predominantly metabolized by CYP2C9, rather than using piroxicam at standard dosing. An activity score of 0.5 falls in the poor metabolizer category under CPIC's CYP2C9 scheme.\n\n2. **Strength:** I'm not certain of the exact classification level (I believe it is moderate, but please confirm).\n\n3. **Source:** CPIC guideline for NSAIDs and CYP2C9 genotype (Theken et al., *Clinical Pharmacology & Therapeutics*, 2020).\n\nPlease check the current CPIC guideline directly for the exact wording and strength before using this clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda un AINE alternativo no metabolizado por CYP2C9 (coincide con EVITAR) y cita CPIC/Theken 2020, correcto; sin embargo el nivel 'moderado' es dudoso (CPIC lo clasifica como fuerte para PM con piroxicam), aunque lo declara con incertidumbre."
+ }
+}

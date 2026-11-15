@@ -1,0 +1,78 @@
+{
+ "case_id": "c34",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Deficient for G6PD with regards to taking tafenoquine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline G6PD tafenoquine primaquine deficient recommendation avoid",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "g6pd cpic apr 2022 002",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf"
+     },
+     {
+      "title": "g6pd cpic nov 2021",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "Bibliographic information",
+      "url": "https://bigg-rec.bvsalud.org/en/recommendations/d7c61ef89daa300b3bbdd85b6a57112d9cb7ac0f"
+     },
+     {
+      "title": "Bibliographic information",
+      "url": "https://bigg-rec.bvsalud.org/en/recommendations/b2bf6e138996f0a4e828291c60e89832eba81e8a"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/05/CPIC-G6PD-Update-SUPPLEMENT_4.27.2022-for-CPIC-review.docx"
+     },
+     {
+      "title": "Guideline overview presentation",
+      "url": "https://cpicpgx.org/?p=3367"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10281211/table/T3"
+     },
+     {
+      "title": "Bibliographic information",
+      "url": "https://bigg-rec.bvsalud.org/en/recommendations/f4794568cf1f9db069e24f4ad7c7a21afc6f656d"
+     },
+     {
+      "title": "Bibliographic information",
+      "url": "https://bigg-rec.bvsalud.org/en/recommendations/f4e2c7aba8b49150040cce31acc0a821a56e2aaf"
+     },
+     {
+      "title": "nejm jw.NA50460",
+      "url": "https://clinician.nejm.org/nejm-jw.NA50460"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** Avoid tafenoquine. CPIC classes tafenoquine as high risk for G6PD deficiency and advises avoiding it in patients with that phenotype.\n\n**2. Strength:** Strong. CPIC's tafenoquine recommendation for G6PD deficiency is graded strong. I could not confirm this from the final published table. The search returned a 2022 draft and a presentation, so treat the grading as likely but unverified.\n\n**3. Source:** Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for G6PD genotype and primaquine/tafenoquine dosing (2018, updated 2021–2022). The draft table is at [CPIC G6PD update, April 2022](https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf). The [CPIC G6PD update, November 2021](https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf) is also relevant.\n\n**Caveat:** WHO uses enzyme-activity thresholds rather than CPIC's phenotype categories. WHO guidance says tafenoquine should not be given without accurate quantitative or semi-quantitative G6PD testing. Check the current CPIC site before relying on the exact grading.\n\nSources:\n- [CPIC G6PD update, April 2022](https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf)\n- [CPIC G6PD update, November 2021](https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar tafenoquina en deficiencia de G6PD, acorde con la referencia, y lo atribuye a la guía CPIC con URLs plausibles y reservas sobre la verificación."
+ }
+}

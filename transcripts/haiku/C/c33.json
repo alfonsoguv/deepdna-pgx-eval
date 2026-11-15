@@ -1,0 +1,131 @@
+{
+ "case_id": "c33",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking pitavastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC SLCO1B1 guideline statin pitavastatin poor function recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072"
+     },
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/10/SLCO1B1-supplement-2021-update-CPIC-review.docx"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3384438"
+     },
+     {
+      "title": "Commentary|Articles|March 12, 2024",
+      "url": "https://www.pharmacytimes.com/view/don-t-skip-a-beat-familiarize-yourself-with-updates-in-cardiovascular-pharmacogenomics"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for atorvastatin and SLCO1B1",
+      "url": "https://pharmgkb.org/guidelineAnnotation/PA166262221"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/uc/item/5f06w9b0"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC statins 2022 pitavastatin SLCO1B1 poor function \"avoid\" OR \"alternative\" OR \"starting dose\" Figure 1",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for SLCO1B1, ABCG2, and CYP2C9 and statin‐associated musculoskeletal symptoms",
+      "url": "https://www.researchgate.net/publication/358571798_The_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_guideline_for_SLCO1B1_ABCG2_and_CYP2C9_and_statin-associated_musculoskeletal_symptoms"
+     },
+     {
+      "title": "1 CPIC guidelines for SLCO1B1 and statin-induced myopathy- Supplement v3.0",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium Guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and Statin‐Associated Musculoskeletal Symptoms - Cooper‐DeHoff - 2022 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "PharmGKB Blog: CPIC Publishes Guideline for SLCO1B1, ABCG2, CYP2C9 and Statin Therapy",
+      "url": "https://pharmgkb.blogspot.com/2022/02/cpic-publishes-guideline-for-slco1b1.html"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0_noSplash_ec38d44d0b3c312e84f585ef38f5d267.pdf"
+     },
+     {
+      "title": "UCSF UC San Francisco Previously Published Works Title",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf"
+     },
+     {
+      "title": "Effect of Genetic Variants on Rosuvastatin Pharmacokinetics in Healthy Volunteers: Involvement of ABCG2, SLCO1B1 and NAT2",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11720188/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072"
+     },
+     {
+      "title": "scholars.duke.edu",
+      "url": "https://scholars.duke.edu/publication/1510820"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Use a reduced dose, not avoidance. CPIC advises a lower starting dose of pitavastatin for poor function. The search snippets I found confirm the ≤2 mg starting dose for the *decreased*-function phenotype. They also mention a 1 mg threshold, which I believe applies to poor function, but I could not confirm which row it belongs to. If a higher dose is needed, CPIC suggests an alternative statin or combination therapy.\n\n**2. Strength:** I could not find the strength-of-recommendation grade in the sources I checked.\n\n**3. Source:** CPIC guideline for SLCO1B1, ABCG2, and CYP2C9 and statin-associated musculoskeletal symptoms (Cooper-DeHoff et al., 2022), Figure 1. The guideline says statins should not be stopped or avoided based on genotype alone.\n\nFor the exact poor-function dose, check Figure 1 of the [full guideline (PMC9035072)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072) or the [CPIC publication PDF](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf). The [CPIC statin guideline page](https://cpicpgx.org/?p=3305) notes a 2025 update, so confirm against the current version.\n\nSources:\n- [PMC9035072](https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072)\n- [CPIC publication PDF](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [CPIC statin guideline page](https://cpicpgx.org/?p=3305)\n- [CPIC supplement](https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis reducida (no evitar) y alternativa estatina o terapia combinada si se necesita dosis mayor, atribuido a la guía CPIC 2022; no confirma con certeza el umbral de 1 mg pero la acción coincide."
+ }
+}

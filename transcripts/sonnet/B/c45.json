@@ -1,0 +1,34 @@
+{
+ "case_id": "c45",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer for CYP3A5 with regards to taking tacrolimus?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP3A5",
+    "drug": "tacrolimus"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP3A5\",\"drug\":\"tacrolimus\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"Calcineurin-inhibitor immunosuppressant used after transplantation, metabolized by CYP3A4 and CYP3A5. CPIC (Birdwell et al. 2015) recommends, for CYP3A5 expressers (normal, intermediate and possible intermediate metabolizers), a starting dose 1.5 to 2 times the recommended starting dose, not exceeding 0.3 mg/kg/day, with therapeutic drug monitoring to guide adjustments (strong); for poor metabolizers (non-expressers), the standard starting dose with drug monitoring (strong). This applies to kidney, heart, lung and hematopoietic stem cell transplant patients, and to liver transplant patients only when donor and recipient genotypes are identical.\",\"phenotypes\":[\"Normal metabolizer (CYP3A5 expresser): two functional alleles (*1/*1); the 2015 guideline calls this group extensive metabolizers\",\"Intermediate metabolizer (CYP3A5 expresser): one functional and one non-functional allele (e.g. *1/*3, *1/*6, *1/*7)\",\"Possible intermediate metabolizer: one functional allele and one allele of unknown function (e.g. *1/*8, *1/*9)\",\"Poor metabolizer (CYP3A5 non-expresser): two non-functional alleles (e.g. *3/*3, *3/*6, *3/*7, *6/*7)\",\"Indeterminate: a non-functional or unknown-function allele together with an unknown-function allele (e.g. *3/*8, *8/*9)\"],\"sources\":[{\"label\":\"CPIC — CYP3A5 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp3a5/\"},{\"label\":\"PharmGKB CYP3A5 (PA131)\",\"url\":\"https://www.pharmgkb.org/gene/PA131\"},{\"label\":\"Birdwell et al., Clin Pharmacol Ther 2015 (CPIC CYP3A5 and tacrolimus guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/25801146/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** For CYP3A5 intermediate metabolizers (CYP3A5 expressers), the guideline says to adjust the dose. It recommends a starting dose 1.5 to 2 times the standard starting dose, not exceeding 0.3 mg/kg/day. Therapeutic drug monitoring should then guide further adjustments.\n\n2. **Strength:** Strong (CPIC level A).\n\n3. **Source:** CPIC guideline on CYP3A5 and tacrolimus (Birdwell et al., Clin Pharmacol Ther 2015).\n\nThe recommendation applies to kidney, heart, lung and hematopoietic stem cell transplant patients. It applies to liver transplant patients only when donor and recipient genotypes are identical.\n\nThis is educational information, not medical advice. The prescriber makes the dosing decision.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda aumentar la dosis inicial 1.5-2 veces (máx 0.3 mg/kg/día) con monitorización terapéutica, igual que la referencia; cita CPIC Birdwell 2015 Clin Pharmacol Ther, que es correcta (nivel A fuerte)."
+ }
+}

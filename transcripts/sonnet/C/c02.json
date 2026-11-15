@@ -1,0 +1,132 @@
+{
+ "case_id": "c02",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 with regards to taking atomoxetine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline atomoxetine CYP2D6 ultrarapid metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6612570"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for atomoxetine and CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166181885"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK315951"
+     },
+     {
+      "title": "CYP2D6 and Atomoxetine",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-atomoxetine/"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=1790"
+     },
+     {
+      "title": "Atomoxetine (Monograph)",
+      "url": "https://www.drugs.com/monograph/strattera.html"
+     },
+     {
+      "title": "30801677 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/atomoxetine/2019/30801677-supplement.pdf"
+     },
+     {
+      "title": "git.lsit.ucsb.edu",
+      "url": "https://git.lsit.ucsb.edu/publicdata/nih-gov/raw/commit/a3492137cada35c1427e5783c176e4344e6cbb56/www.ncbi.nlm.nih.gov/books/NBK315951/index.html%3Freport=reader"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "scholarlypublications.universiteitleiden.nl",
+      "url": "https://scholarlypublications.universiteitleiden.nl/access/item%3A3589942/view"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC atomoxetine CYP2D6 ultrarapid \"classification of recommendation\" optional initiate therapy recommended starting dose peak plasma concentration",
+    "mode": "standard",
+    "allowed_domains": [
+     "pmc.ncbi.nlm.nih.gov",
+     "pharmgkb.org",
+     "cpicpgx.org"
+    ]
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 Genotype and Atomoxetine Therapy - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6612570/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium ... - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/atomoxetine/2019/30801677.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for CYP2D6, OPRM1, and COMT genotype and select opioid therapy - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 and Tamoxifen Therapy - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5931215/"
+     },
+     {
+      "title": "CYP2D6 pharmacogenetics and phenoconversion in personalized medicine - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "1 Supplement to",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/ondansetron/2016/28002639-supplement.pdf"
+     },
+     {
+      "title": "2016 Update - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/TCA/2016/TCA_2016.pdf"
+     },
+     {
+      "title": "CYP2D6 CPIC guidelines",
+      "url": "https://cpicpgx.org/gene/CYP2D6/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** The CPIC guideline does not say to avoid atomoxetine for CYP2D6 ultrarapid metabolizers. It says to start at the standard recommended dose and titrate as usual. Data are very limited, and ultrarapid metabolizers may not reach adequate drug levels at standard doses. If there is no clinical response and no adverse effects after about 2 weeks, consider measuring the peak plasma concentration. A level below the target range (about 200 ng/mL) would suggest a dose increase. If the response is still poor, consider an alternative agent.\n\n**2. Strength:** I believe CPIC rates this \"Optional\", but I could not confirm that from the search snippets. Please check the \"Classification of recommendation\" column in the guideline table.\n\n**3. Source:** CPIC Guideline for CYP2D6 Genotype and Atomoxetine Therapy (Brown et al., 2019). The Dutch DPWG guideline similarly advises extra vigilance for lack of efficacy.\n\n**Caveats:** CPIC defines ultrarapid as an activity score above 2.25, so a score of 5.0 or more is within that group. The guideline has no separate row for very high scores. I did not retrieve the full table, so the details above come from memory and partial search results.\n\nSources:\n- [CPIC Guideline for CYP2D6 Genotype and Atomoxetine Therapy (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6612570/)\n- [CPIC atomoxetine guideline PDF](https://files.cpicpgx.org/data/guideline/publication/atomoxetine/2019/30801677.pdf)\n- [PharmGKB annotation of the CPIC atomoxetine guideline](https://www.pharmgkb.org/guidelineAnnotation/PA166181885)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Mantiene atomoxetina con inicio estándar, titulación y, si no hay respuesta a las 2 semanas, medir la concentración pico y subir la dosis hacia ~400 ng/mL, lo que coincide con la referencia; cita correctamente la guía CPIC (Brown 2019)."
+ }
+}

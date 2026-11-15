@@ -1,0 +1,85 @@
+gene	drug	guideline	level
+MTHFR	methotrexate	None	CPIC C (provisional)
+COMT	entacapone	None	None
+COMT	tolcapone	None	None
+COMT	morphine	None	CPIC C
+CYP2D6	codeine	CPIC	CPIC A
+CYP2D6	tramadol	CPIC	CPIC A
+CYP2D6	tamoxifen	CPIC	CPIC A
+CYP2D6	amitriptyline	CPIC	CPIC A
+CYP2D6	nortriptyline	CPIC	CPIC A
+CYP2D6	paroxetine	CPIC	CPIC A
+CYP2D6	fluvoxamine	CPIC	CPIC B
+CYP2D6	risperidone	DPWG	CPIC B (provisional)
+CYP2D6	aripiprazole	DPWG	CPIC B (provisional)
+CYP2C19	clopidogrel	CPIC	CPIC A
+CYP2C19	omeprazole	CPIC	CPIC A
+CYP2C19	lansoprazole	CPIC	CPIC A
+CYP2C19	pantoprazole	CPIC	CPIC A
+CYP2C19	citalopram	CPIC	CPIC A
+CYP2C19	escitalopram	CPIC	CPIC A
+CYP2C19	sertraline	CPIC	CPIC A
+CYP2C19	voriconazole	CPIC	CPIC A
+CYP2C9	warfarin	CPIC	CPIC A
+CYP2C9	phenytoin	CPIC	CPIC A
+CYP2C9	celecoxib	CPIC	CPIC A
+CYP2C9	ibuprofen	CPIC	CPIC A
+CYP2C9	flurbiprofen	CPIC	CPIC A
+CYP2C9	meloxicam	CPIC	CPIC A
+CYP2C9	siponimod	drug label	CPIC A (provisional)
+SLCO1B1	simvastatin	CPIC	CPIC A
+SLCO1B1	atorvastatin	CPIC	CPIC A
+SLCO1B1	pitavastatin	CPIC	CPIC A
+SLCO1B1	rosuvastatin	CPIC	CPIC A
+SLCO1B1	pravastatin	CPIC	CPIC A
+SLCO1B1	fluvastatin	CPIC	CPIC A
+SLCO1B1	lovastatin	CPIC	CPIC A
+G6PD	rasburicase	CPIC; FDA label	CPIC A
+G6PD	primaquine	CPIC	CPIC A
+G6PD	tafenoquine	CPIC	CPIC A
+G6PD	dapsone	CPIC	CPIC A
+G6PD	nitrofurantoin	CPIC	CPIC A
+G6PD	methylene blue	CPIC	CPIC A
+G6PD	sulfonamides	CPIC	CPIC C
+UGT1A1	irinotecan	DPWG; FDA label	CPIC A (provisional)
+UGT1A1	atazanavir	CPIC	CPIC A
+APOE	lecanemab	drug label	None
+APOE	donanemab	drug label	None
+BRCA1	olaparib	drug label	None
+BRCA1	talazoparib	drug label	None
+BRCA1	niraparib	drug label	None
+BRCA1	rucaparib	drug label	None
+VKORC1	warfarin	CPIC	CPIC A
+CYP2C19	amitriptyline	CPIC	CPIC A
+CYP2C9	piroxicam	CPIC	CPIC A
+CYP2C9	lornoxicam	CPIC	CPIC A
+CYP2C9	tenoxicam	CPIC	CPIC A
+CYP2C9	fosphenytoin	CPIC	CPIC A
+CYP2C9	fluvastatin	CPIC	CPIC A
+CYP2D6	atomoxetine	CPIC	CPIC A
+CYP2C19	dexlansoprazole	CPIC	CPIC B
+CYP2C19	clomipramine	CPIC	CPIC B
+CYP2D6	clomipramine	CPIC	CPIC B
+CYP2C19	imipramine	CPIC	CPIC B
+CYP2D6	imipramine	CPIC	CPIC B
+CYP2C19	doxepin	CPIC	CPIC B
+CYP2D6	doxepin	CPIC	CPIC B
+CYP2C19	trimipramine	CPIC	CPIC B
+CYP2D6	trimipramine	CPIC	CPIC B
+CYP2D6	desipramine	CPIC	CPIC B
+CYP2D6	vortioxetine	CPIC	CPIC A
+CYP2D6	venlafaxine	CPIC	CPIC B
+CYP2D6	metoprolol	CPIC	CPIC B
+CYP2D6	hydrocodone	CPIC	CPIC B
+G6PD	pegloticase	CPIC	CPIC A
+G6PD	toluidine blue	CPIC	CPIC A
+DPYD	fluorouracil	CPIC	CPIC A
+DPYD	capecitabine	CPIC	CPIC A
+TPMT	azathioprine	CPIC	CPIC A
+TPMT	mercaptopurine	CPIC	CPIC A
+TPMT	thioguanine	CPIC	CPIC A
+NUDT15	azathioprine	CPIC	CPIC A
+NUDT15	mercaptopurine	CPIC	CPIC A
+NUDT15	thioguanine	CPIC	CPIC A
+CYP3A5	tacrolimus	CPIC	CPIC A
+CYP4F2	warfarin	CPIC	CPIC A

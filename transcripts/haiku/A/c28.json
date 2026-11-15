@@ -1,0 +1,24 @@
+{
+ "case_id": "c28",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.5 for CYP2C9 and Indeterminate for SLCO1B1 with regards to taking fluvastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I can't give a confident, guideline-backed recommendation for this exact combination, and I couldn't check a source because no lookup tool is available in this session.\n\n1. **Recommendation:** I'm not aware of a CPIC recommendation specific to fluvastatin with CYP2C9 intermediate metabolizer status, and I don't know of one that addresses an indeterminate SLCO1B1 result. The most defensible reading is \"no recommendation\" from the guidelines I know, but I'm not certain.\n\n2. **Strength:** Unknown. I don't believe a graded recommendation exists for this combination.\n\n3. **Source:** I can't confirm one. CPIC's SLCO1B1–statin guideline (2022) covers several statins, and I'm not sure whether fluvastatin is included or how it is graded. CPIC's CYP2C9 guidance focuses on other drugs (such as warfarin, phenytoin, and NSAIDs), and I don't believe it addresses fluvastatin. Check the current CPIC guidelines and PharmGKB directly, and consider DPWG as well.\n\nClinically, an indeterminate SLCO1B1 result usually means the genotype couldn't be fully interpreted, so it shouldn't drive a statin decision by itself. Review the full genotype report with a clinical pharmacist or pharmacogenomics specialist before changing therapy.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "NONE",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": true,
+  "note_es": "La respuesta dice no conocer una recomendación CPIC para fluvastatina con CYP2C9 IM y no da una acción concreta (la referencia indica ≤40 mg/día), por lo que se abstiene."
+ }
+}

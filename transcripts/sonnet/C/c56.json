@@ -1,0 +1,78 @@
+{
+ "case_id": "c56",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for CYP2B6 with regards to taking efavirenz?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2B6 efavirenz poor metabolizer recommendation dose 400 mg strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6739160"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guideline for cyp2b6 and efavirenz containing antiretroviral therapy",
+      "url": "https://www.mentalhealthdataprizeafrica.aphrc.org/repository/paper/43259/clinical-pharmacogenetics-implementation-consortium-cpic-guideline-for-cyp2b6-and-efavirenz-containing-antiretroviral-therapy"
+     },
+     {
+      "title": "repository.li.mahidol.ac.th",
+      "url": "https://repository.li.mahidol.ac.th/entities/publication/2ce04880-19c2-4906-97b4-c72c2cfb9fde/full"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/2668"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.1477"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=1877"
+     },
+     {
+      "title": "b206fdb3 63b7 4e9e 934b 5bed0d848606",
+      "url": "https://scholarworks.indianapolis.iu.edu/items/b206fdb3-63b7-4e9e-934b-5bed0d848606"
+     },
+     {
+      "title": "4.6 Article",
+      "url": "https://peeref.com/works/18355586"
+     },
+     {
+      "title": "Back to Search Start Over",
+      "url": "https://searchworks.jioinstitute.edu.in/articles/cmedm__31006110"
+     },
+     {
+      "title": "cyp2b6 english 2024",
+      "url": "https://knmp.nl/sites/default/files/2025-03/cyp2b6_english_2024.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Short answer:** Adjust the dose. The guideline does not say to avoid efavirenz.\n\n1. **Recommendation:** The CPIC guideline advises considering a reduced efavirenz dose for CYP2B6 poor metabolizers (for example *6/*6). This is a CYP2B6 phenotype with decreased or no function, and these patients have higher efavirenz exposure and more CNS toxicity risk. My recollection is a dose of about 400 mg/day for adults and children ≥40 kg, instead of the standard 600 mg/day. The CPIC guideline also says to consider an alternative agent if there are concerns about toxicity or efficacy.\n\n2. **Strength:** I recall it as \"moderate\", but I couldn't confirm that.\n\n3. **Source:** CPIC guideline for CYP2B6 and efavirenz-containing antiretroviral therapy (Desta et al., *Clin Pharmacol Ther* 2019;106(4):726–733). See Table 2.\n\n**Verification limits:** My search confirmed that the guideline exists. It did not return the Table 2 text, so I couldn't verify the 400 mg figure or the strength rating. Please check Table 2 in the full text before using either.\n\nSources:\n- [CPIC guideline full text (PMC6739160)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6739160)\n- [CPIC guideline page](https://cpicpgx.org/?p=1877)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda reducir la dosis de efavirenz (~400 mg/día) según CPIC, coincidiendo con la referencia; la cita (Desta et al., Clin Pharmacol Ther 2019) es correcta y se advierte la incertidumbre."
+ }
+}

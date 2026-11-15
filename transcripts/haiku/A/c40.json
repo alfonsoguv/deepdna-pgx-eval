@@ -1,0 +1,24 @@
+{
+ "case_id": "c40",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 2.0 for DPYD with regards to taking capecitabine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Standard use. Give capecitabine at the label-recommended, age- or body-surface-area-based starting dose, with routine clinical monitoring for toxicity.\n\n**2. Strength:** Strong. CPIC assigns a strong recommendation for standard dosing in normal metabolizers.\n\n**3. Source:** CPIC guideline for fluoropyrimidine dosing based on DPYD genotype (Amstutz et al., 2023 update; the 2017 guideline gave the same recommendation). DPWG (Dutch Pharmacogenetics Working Group) guidance is broadly consistent.\n\nI had no tools available to check these sources live, so this is from my training knowledge. Please verify against the current CPIC guideline before applying it clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda dosis estándar según etiqueta, coincide con la referencia; cita CPIC (Amstutz 2018 fue la publicación real, la de 2017 es la actualización de 2017 y la de 2023 es una actualización de CPIC) y DPWG de forma plausible."
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "case_id": "c46",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Indeterminate for CYP3A5 with regards to taking tacrolimus?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC tacrolimus CYP3A5 indeterminate phenotype recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guidelin",
+      "url": "https://pure.eur.nl/en/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4481158"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4481158"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.113"
+     },
+     {
+      "title": "repub.eur.nl",
+      "url": "https://repub.eur.nl/pub/90845"
+     },
+     {
+      "title": "100025937632 0x000001",
+      "url": "https://eld.bl.uk/catalog/100025937632_0x000001"
+     },
+     {
+      "title": "CPIC® Guideline for Tacrolimus and CYP3A5",
+      "url": "https://cpicpgx.org/guidelines/guideline-for-tacrolimus-and-CYP3A5/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guidelines for CYP3A5 Genotype and Tacrolimus Dosing",
+      "url": "https://scholarworks.indianapolis.iu.edu/items/6ecbeadc-4f9b-4708-82fb-626c4901185b"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guidelines for CYP3A5 Genotype and Tacrolimus Dosing",
+      "url": "https://scholarworks.indianapolis.iu.edu/items/6ecbeadc-4f9b-4708-82fb-626c4901185b/full"
+     },
+     {
+      "title": "S EPMC4481158",
+      "url": "https://omicsdi.org/dataset/biostudies-literature/S-EPMC4481158"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2019 tacrolimus CYP3A5 genotype dosing table indeterminate phenotype starting dose 0.3 mg/kg/day",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "25801146-supplement.pdf - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/tacrolimus/2015/25801146-supplement.pdf"
+     },
+     {
+      "title": "Efficacy of Achieving Early Target Trough Levels of Tacrolimus Using CYP3A5 Guided Dosing Versus Weight-based Dosing in a Multi-ethnic Population of Kidney Transplant Recipients in Singapore",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/62/NCT04825262/Prot_000.pdf"
+     },
+     {
+      "title": "Results: Patient with a known CYP3A5 genotype requiring tacrolimus — In the Clinic",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp3a5-genotype-requiring-tacrolimus/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC ...",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/tacrolimus/2015/25801146.pdf"
+     },
+     {
+      "title": "Population pharmacokinetics and dosing regimen optimization of tacrolimus in Chinese lung transplant recipients",
+      "url": "https://arxiv.org/pdf/2002.03034"
+     },
+     {
+      "title": "Refining tacrolimus dosing through CYP3A5 pharmacogenetics in Taiwanese renal transplant recipients",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12427442/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC)",
+      "url": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/d059b494-945b-4b5e-af8e-74eb1f890965/content"
+     },
+     {
+      "title": "Impact of Pharmacogenetics on Intravenous Tacrolimus Exposure and Conversions to Oral Therapy - Transplantation and Cellular Therapy, Official Publication of the American Society for Transplantation and Cellular Therapy",
+      "url": "https://www.astctjournal.org/article/S2666-6367(21)01253-7/fulltext"
+     },
+     {
+      "title": "Pharmacogenetics Approach for Personalized Tacrolimus Dosing in Heart Transplantation: A Case Report and Literature Review - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12469574/"
+     },
+     {
+      "title": "Tacrolimus and CYP3A5: Higher Starting Doses for Expressers",
+      "url": "https://www.gene2rx.com/drugs/tacrolimus/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** I couldn't confirm a specific recommendation for an indeterminate CYP3A5 result. A secondary source (Gene2rx) says CPIC gives no phenotype-specific recommendation when alleles can't be assigned a function, and the report falls back to the standard starting dose. That is not from the CPIC document itself, so treat it as unverified. In practice, this would mean standard dosing with therapeutic drug monitoring.\n\n**2. Strength:** Not determined. I found no CPIC strength-of-recommendation grade for this case.\n\n**3. Source:** The CPIC guideline for CYP3A5 genotype and tacrolimus dosing (2015 version, the only one I could find). I did not find a 2019 revision in my searches. Check the current CPIC page and its gene-drug table to confirm the indeterminate row, since I could not read the document directly.\n\nSources:\n- [CPIC® Guideline for Tacrolimus and CYP3A5](https://cpicpgx.org/guidelines/guideline-for-tacrolimus-and-CYP3A5/)\n- [CPIC 2015 tacrolimus guideline PDF](https://files.cpicpgx.org/data/guideline/publication/tacrolimus/2015/25801146.pdf)\n- [Gene2rx: Tacrolimus and CYP3A5](https://www.gene2rx.com/drugs/tacrolimus/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica dosis estándar con monitorización terapéutica, acorde con 'sin recomendación' (NORMAL), y cita la guía CPIC de tacrolimus/CYP3A5 con cautela; la mención de que no encontró la revisión de 2019 no es una cita inventada."
+ }
+}

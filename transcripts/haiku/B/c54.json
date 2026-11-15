@@ -1,0 +1,53 @@
+{
+ "case_id": "c54",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Malignant Hyperthermia Susceptibility for RYR1 and Uncertain Susceptibility for CACNA1S with regards to taking desflurane?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "RYR1",
+    "drug": "desflurane"
+   },
+   "result": "Unknown gene \"RYR1\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CACNA1S",
+    "drug": "desflurane"
+   },
+   "result": "Unknown gene \"CACNA1S\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "desflurane"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[],\"not_covered\":[\"desflurane\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "I couldn't find a curated answer for this combination, so I can't give you the guideline recommendation, its strength, or its source from DeepDNA.\n\n- **RYR1 and CACNA1S are not in the knowledge base.** Lookups for both genes returned \"unknown gene.\" The gene list covers 16 genes (for example CYP2D6, CYP2C19, and TPMT), and neither RYR1 nor CACNA1S is among them.\n- **Desflurane has no curated drug–gene record.** It is listed as \"not covered,\" which means DeepDNA holds no record for it. That does not mean there is no pharmacogenomic interaction.\n\nFrom general clinical knowledge, not from DeepDNA, RYR1-related malignant hyperthermia susceptibility is generally managed by avoiding all triggering agents. Those include potent volatile anesthetics such as desflurane, sevoflurane, and isoflurane, along with succinylcholine, with total intravenous anesthesia usually used instead. I can't confirm the current wording, strength, or source of that recommendation. Please check it against the current expert consensus on RYR1-related malignant hyperthermia, such as the European Malignant Hyperthermia Group guidance, and with the anesthesia team caring for the patient. The CACNA1S \"uncertain\" result would also need the clinician's interpretation.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "OTHER",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Admite que no hay registro en DeepDNA, pero aporta desde conocimiento general evitar desflurano y usar anestesia intravenosa; cita EMHG (no CPIC) como referencia sugerida."
+ }
+}

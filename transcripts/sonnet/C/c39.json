@@ -1,0 +1,78 @@
+{
+ "case_id": "c39",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for DPYD with regards to taking fluorouracil?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC DPYD fluorouracil guideline activity score 1.0 intermediate metabolizer reduce starting dose 50% strength of recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/medgen/CN077983/"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/CN077963"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=581"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for capecitabine and DPYD",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166109594"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8301551"
+     },
+     {
+      "title": "DPYD Testing Prior to Fluoropyrimidine Treatment PQI NCODA",
+      "url": "https://ncoda.org/wp-content/uploads/2024/07/DPYD-Testing-Prior-to-Fluoropyrimidine-Treatment_PQI_NCODA.pdf"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "guideline for fluoropyrimidines and dpyd",
+      "url": "https://goffinmoleculartechnologies.com/wp-content/uploads/2023/04/guideline-for-fluoropyrimidines-and-dpyd.html"
+     },
+     {
+      "title": "fluorouracil 5 fluorouracil",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluorouracil-5-fluorouracil/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** Adjust the dose. Reduce the starting dose of fluorouracil by 50%. Then titrate based on toxicity or therapeutic drug monitoring, if available. If the first doses are well tolerated, escalate the dose cautiously. A patient with the homozygous c.2846A>T genotype (activity score 1.0) may need a reduction of more than 50%.\n\n**2. Strength:** I couldn't confirm this. The sources I found disagree. One summary labels the activity score 1 recommendation \"Strong\" and the activity score 1.5 recommendation \"Moderate\". Older CPIC-derived tables list \"Moderate\" for intermediate metabolizers. Check the current CPIC table for the official label.\n\n**3. Source:** CPIC Guideline for Fluoropyrimidines and DPYD (2017, updated January 2024). The CPIC and DPWG guidelines are broadly consistent on this dose reduction.\n\nSources:\n- [CPIC guideline publication page](https://cpicpgx.org/?p=581)\n- [NCBI Bookshelf: CPIC guideline](https://www.ncbi.nlm.nih.gov/books/NBK395610/)\n- [PharmGKB annotation of the CPIC guideline](https://www.pharmgkb.org/guidelineAnnotation/PA166109594)\n- [NCODA DPYD testing document](https://ncoda.org/wp-content/uploads/2024/07/DPYD-Testing-Prior-to-Fluoropyrimidine-Treatment_PQI_NCODA.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda reducir 50% la dosis inicial y titular según toxicidad o TDM, con posible reducción mayor en c.2846A>T homocigoto, igual que la referencia CPIC; cita CPIC y menciona DPWG sin detalles evidentemente inventados."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c51",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*57:01 positive for HLA-B with regards to taking abacavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Avoid abacavir. For HLA-B*57:01-positive individuals, abacavir should not be used because of the high risk of a hypersensitivity reaction (HSR). Use an alternative antiretroviral agent. If a patient is positive, abacavir hypersensitivity should be recorded in the patient's allergy/medical record.\n\n**2. Strength:** Strong recommendation (CPIC: Strong for the HLA-B*57:01-positive phenotype; high-quality evidence). The DPWG guideline also recommends avoiding it.\n\n**3. Source:** CPIC Guideline for HLA-B and Abacavir Dosing (Martin et al., 2012, updated 2014). It is consistent with the FDA drug label, which recommends HLA-B*57:01 screening before starting abacavir or restarting it after an interruption of therapy, and with DHHS HIV treatment guidelines.\n\nI did not run any tool checks for this answer; it comes from my knowledge of the published guidelines.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar abacavir y usar una alternativa, igual que la referencia; cita CPIC (Martin 2012, actualización 2014, correcto) y DPWG, con fuerza fuerte coherente con CPIC."
+ }
+}

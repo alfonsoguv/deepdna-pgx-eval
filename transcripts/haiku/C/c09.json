@@ -1,0 +1,131 @@
+{
+ "case_id": "c09",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥3.5 for CYP2D6 with regards to taking hydrocodone?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2D6 hydrocodone ultrarapid metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Annotation of CPIC Guideline for hydrocodone and CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166228121"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/438444/mod_resource/content/1/linee%20guida%20farmacogenetica%20oppioidi.pdf"
+     },
+     {
+      "title": "CYP2D6 and Codeine, Hydrocodone, Tramadol",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-codeine-hydrocodone-tramadol/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478"
+     },
+     {
+      "title": "PAIN MANAGEMENT   •   Published April 14, 2022",
+      "url": "https://www.uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy-1"
+     },
+     {
+      "title": "pharmacogenomic considerations in opioid therapy",
+      "url": "https://uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11004919"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478/table/T4"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "HealthUpdatedAugust 05, 2020",
+      "url": "https://www.wolterskluwer.com/en/expert-insights/pharmacogenomics-effect-of-gene-variability-on-pain-management"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2021 CYP2D6 OPRM1 COMT opioid guideline hydrocodone activity score",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478"
+     },
+     {
+      "title": "CPIC opioids PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/opioids/2020/CPIC_opioids_PREPRINT.pdf"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/438444/mod_resource/content/1/linee%20guida%20farmacogenetica%20oppioidi.pdf"
+     },
+     {
+      "title": "Scientific article",
+      "url": "https://archive-ouverte.unige.ch/unige:152592"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33387367/"
+     },
+     {
+      "title": "Please use this identifier to cite or link to this item:",
+      "url": "https://digital.library.adelaide.edu.au/dspace/handle/2440/130030"
+     },
+     {
+      "title": "Please use this identifier to cite or link to this item:",
+      "url": "https://eres.library.adelaide.edu.au/dspace/handle/2440/130030?mode=full"
+     },
+     {
+      "title": "4eaa3515 8965 441a 8aa5 500d78bc0a52",
+      "url": "https://scholarworks.indianapolis.iu.edu//signposting/describedby/4eaa3515-8965-441a-8aa5-500d78bc0a52"
+     },
+     {
+      "title": "Back to Search Start Over",
+      "url": "https://searchworks.jioinstitute.edu.in/articles/cmedm__33387367"
+     },
+     {
+      "title": "Back to Search",
+      "url": "https://searchworks.jioinstitute.edu.in/articles/edsair__edsair.doi.dedup.....5ec025355c1679cbc2986e0e2e94990d"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** No specific CPIC recommendation. CPIC gives no hydrocodone dosing or drug-choice recommendation for CYP2D6 ultrarapid metabolizers. Its actionable CYP2D6 recommendations cover codeine and tramadol only, and it rates the evidence for hydrocodone as limited. Use the hydrocodone label and clinical judgment. Some secondary sources suggest an alternative opioid, but that is not the CPIC position.\n\n**2. Strength:** CPIC classifies this as \"no recommendation\" (evidence level C, per the PharmGKB annotation).\n\n**3. Source:** CPIC Guideline for CYP2D6, OPRM1, and COMT and Opioid Therapy (Crews et al., *Clin Pharmacol Ther* 2021;110(4):888-896), with the hydrocodone annotation on PharmGKB.\n\nYour activity score of ≥3.5 falls in CPIC's ultrarapid category (activity score above 2.25), so the classification applies. I did not read the full guideline text, so check the hydrocodone section in the original paper if precision matters.\n\nSources:\n- [PharmGKB annotation of CPIC guideline for hydrocodone and CYP2D6](https://www.pharmgkb.org/guidelineAnnotation/PA166228121)\n- [CPIC opioids guideline, PMC8249478](https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478)\n- [CPIC opioids preprint](https://files.cpicpgx.org/data/guideline/publication/opioids/2020/CPIC_opioids_PREPRINT.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Indica que CPIC no hace recomendación para hidrocodona y remite a la ficha técnica y juicio clínico (práctica habitual), coincidente con la referencia; el nivel de evidencia 'C' y la cita específica (volumen/páginas, ID de PharmGKB) pueden ser inventados o dudosos."
+ }
+}

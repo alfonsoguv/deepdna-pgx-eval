@@ -1,0 +1,24 @@
+{
+ "case_id": "c54",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Malignant Hyperthermia Susceptibility for RYR1 and Uncertain Susceptibility for CACNA1S with regards to taking desflurane?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Avoid desflurane and use a non-triggering alternative, such as total intravenous anesthesia or regional/local techniques. The RYR1 result (MH susceptible) determines management. The CACNA1S \"uncertain susceptibility\" result does not change it. Succinylcholine should also be avoided.\n\n**2. Strength:** Strong. For the MH susceptible phenotype, CPIC rates the recommendation to avoid volatile anesthetics as strong.\n\n**3. Source:** CPIC Guideline for Ryanodine Receptor 1 (RYR1) and Calcium Voltage-Gated Channel Subunit Alpha1 S (CACNA1S) and Volatile Anesthetics and Succinylcholine (Gonsalves et al., Clin Pharmacol Ther, 2019). The recommendation is consistent with EMHG/MHAUS guidance.\n\nI had no tools to check this live, so this is from memory of the guideline. I'm also less sure of CPIC's exact wording for the uncertain-susceptibility category, though it doesn't affect the answer here.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar el desflurano y usar alternativas no desencadenantes, atribuyéndolo correctamente a la guía CPIC de Gonsalves et al., 2019 (Clin Pharmacol Ther), con fuerza fuerte."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "case_id": "c51",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*57:01 positive for HLA-B with regards to taking abacavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline abacavir HLA-B*57:01 positive avoid recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC Abacavir HLAB Supplement Update MA",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/01/CPIC_Abacavir_HLAB_Supplement_Update_MA.pdf"
+     },
+     {
+      "title": "Abacavir hypersensitivity",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/C1840547"
+     },
+     {
+      "title": "CPIC HLAB Abacavir Update",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/01/CPIC_HLAB_Abacavir_Update.pdf"
+     },
+     {
+      "title": "Bookshelf NBK315783",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK315783/pdf/Bookshelf_NBK315783.pdf"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/abacavir/"
+     },
+     {
+      "title": "CPIC® Guideline for Abacavir and HLA-B",
+      "url": "https://cpicpgx.org/?p=220"
+     },
+     {
+      "title": "aruplab.com",
+      "url": "https://ltd.aruplab.com/api/ltd/pdf/257"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK315783/bin/20150901abacavir.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/abacavir/"
+     },
+     {
+      "title": "Abacavir Therapy and HLA-B*57:01 Genotype",
+      "url": "https://0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk/pubmed/28520363"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** Do not use abacavir. HLA-B*57:01 carriers have a significantly increased risk of abacavir hypersensitivity, so CPIC lists abacavir as \"not recommended\" and suggests an alternative antiretroviral.\n\n**2. Strength:** Strong. The same table recommends standard-dose abacavir for non-carriers, also rated strong.\n\n**3. Source:** CPIC Guideline for HLA-B and Abacavir Dosing. The search results I found were the 2012 guideline and its 2014 update. I'm fairly confident CPIC published a 2022 update that keeps the same recommendation, but my search didn't surface it, so check the current version at cpicpgx.org. The FDA label also warns against abacavir in HLA-B*57:01 carriers.\n\nSources:\n- [CPIC Abacavir HLAB Supplement Update](https://cpicpgx.org/wp-content/uploads/2016/01/CPIC_Abacavir_HLAB_Supplement_Update_MA.pdf)\n- [CPIC HLAB Abacavir Update](https://cpicpgx.org/wp-content/uploads/2016/01/CPIC_HLAB_Abacavir_Update.pdf)\n- [CPIC® Guideline for Abacavir and HLA-B](https://cpicpgx.org/?p=220)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda no usar abacavir y buscar una alternativa, como la referencia, y lo atribuye a la guía CPIC HLA-B/abacavir; los detalles de 2012, actualización de 2014 y 2022 son plausibles."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c02",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 with regards to taking atomoxetine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Adjust or monitor rather than avoid. Start with the standard dose and titrate to the maximum recommended dose if tolerated. If there is no clinical response after at least 2 weeks and no adverse effects, consider therapeutic drug monitoring. A plasma concentration taken 1-2 hours post-dose that is below about 200 ng/mL may support a dose increase. An alternative agent can be considered if the response remains inadequate.\n\n2. **Strength:** Optional. The evidence linking CYP2D6 genotype to clinical outcomes in ultrarapid metabolizers is limited, so CPIC does not make a strong recommendation.\n\n3. **Source:** CPIC Guideline for CYP2D6 and atomoxetine (Brown et al., 2019, *Clin Pharmacol Ther*).\n\n**Caveats:**\n- I answered from memory and did not check the guideline directly, because no lookup tools were used.\n- The ≥5.0 activity score cutoff is not in the 2019 CPIC text, which defined ultrarapid as an activity score above 2.25. I'm assuming the newer consensus CYP2D6 phenotype nomenclature applies. If so, the recommendation is likely the same, but verify against the current CPIC table.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda titular a la dosis máxima y considerar monitorización de concentración (<200 ng/mL → aumentar dosis), coherente con la referencia; cita correcta de CPIC (Brown et al., 2019, Clin Pharmacol Ther). Menciona alternativa solo como opción secundaria."
+ }
+}

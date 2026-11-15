@@ -1,0 +1,127 @@
+{
+ "case_id": "c15",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Indeterminate for CYP2C19 with regards to taking escitalopram?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline SSRI CYP2C19 escitalopram indeterminate phenotype recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/SSRI/2015/25974703.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37032427/"
+     },
+     {
+      "title": "bohrium.dp.tech",
+      "url": "https://bohrium.dp.tech/paper/arxiv/38951961"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/5249"
+     },
+     {
+      "title": "SSRI guideline for CPIC review 11082022",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/11/SSRI_guideline_for-CPIC-review_11082022.docx"
+     },
+     {
+      "title": "www.frontiersin.org",
+      "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2024.1500235/pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "Klein 2023 CPIC serotonin reuptake inhibitor antidepressants CYP2C19 escitalopram \"indeterminate\" dosing recommendation classification strength",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "Supplement to - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427-supplement.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A Genotypes and Serotonin Reuptake Inhibitor Antidepressants - Johns Hopkins University",
+      "url": "https://pure.johnshopkins.edu/en/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for <fi>CYP2D6</fi>, <fi>CYP2C19</fi>, <fi>CYP2B6</fi>, <fi>SLC6A4</fi>, and <fi>HTR2A</fi> Genotypes and Serotonin Reuptake Inhibitor Antidepressants - Bousman - 2023 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2903"
+     },
+     {
+      "title": "(PDF) Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A Genotypes and Serotonin Reuptake Inhibitor Antidepressants",
+      "url": "https://www.researchgate.net/publication/369915420_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_CYP2D6_CYP2C19_CYP2B6_SLC6A4_and_HTR2A_Genotypes_and_Serotonin_Reuptake_Inhibitor_Antidepressants"
+     },
+     {
+      "title": "Your new experience awaits. Try the new design now and help us make it even better",
+      "url": "https://www.frontiersin.org/articles/10.3389/fphar.2025.1711196/full"
+     },
+     {
+      "title": "Frontiers in Pharmacology (Aug 2021)",
+      "url": "https://doaj.org/article/31f309e3bf0e4de282d1e7b127fc4ecb"
+     },
+     {
+      "title": "www.frontiersin.org",
+      "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.730461/epub"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8429954"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "I could not confirm a recommendation for an Indeterminate CYP2C19 phenotype with escitalopram, so I can't give you a reliable answer.\n\n1. **Recommendation:** Not verified. The search results didn't show an \"Indeterminate\" row in the CPIC table for escitalopram. The guideline's published phenotypes are mainly ultrarapid, rapid, normal, intermediate, and poor metabolizers. Indeterminate may be a lab-specific label for an allele of unknown function, so check how your lab maps it.\n2. **Strength:** Unknown. For the poor and ultrarapid metabolizer rows, one summary says to avoid escitalopram or choose an alternative not primarily metabolized by CYP2C19, but I couldn't confirm the exact wording or strength rating.\n3. **Source:** The relevant guideline is the 2023 CPIC guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A genotypes and serotonin reuptake inhibitor antidepressants (Bousman et al., *Clin Pharmacol Ther* 2023;114(1):51-68). Its dosing table (Table 3) and supplementary classification scheme will give the exact answer.\n\nSources:\n- [CPIC 2023 SSRI guideline (PDF)](https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf)\n- [CPIC 2023 supplement (PDF)](https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427-supplement.pdf)\n- [Wiley/CPT record](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2903)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "La respuesta no da una recomendación propia: dice que no halló fila 'Indeterminate' en la tabla CPIC y remite a la guía (CPIC 2023 SSRI, Bousman et al., citada correctamente), por lo que se abstiene."
+ }
+}

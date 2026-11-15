@@ -1,0 +1,180 @@
+{
+ "case_id": "c43",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for TPMT and Indeterminate for NUDT15 with regards to taking mercaptopurine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline thiopurine TPMT NUDT15 mercaptopurine recommendation indeterminate metabolizer",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Thiopurines and TPMT and NUDT15",
+      "url": "https://cpicpgx.org/?p=578"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for mercaptopurine and NUDT15, TPMT",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166104945"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6576267"
+     },
+     {
+      "title": "CPIC meeting August2025 share red",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf"
+     },
+     {
+      "title": "CPIC Thiopurine guideline update 2025 CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC-Thiopurine-guideline-update-2025_CPIC-review.docx"
+     },
+     {
+      "title": "Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/06/CPIC-TPMT-SUPPLEMENT-2018-update-06112018.docx"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30447069/"
+     },
+     {
+      "title": "Thiopurine guideline update draft 06112018",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/06/Thiopurine-guideline-update-draft-06112018.docx"
+     },
+     {
+      "title": "Polymerase Chain Reaction (PCR)/Fluorescence Monitoring",
+      "url": "https://arupconsult.com/ati/TPMT-NUDT15"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC NUDT15 indeterminate phenotype mercaptopurine dosing recommendation 2025 update",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC meeting August2025 share red",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "2106 tpmt indeterminate metabolizer",
+      "url": "https://www.childrensmercy.org/siteassets/media-documents-for-depts-section/departments/pharmacology-and-toxicology/pharmacogenetic-testing/2106-tpmt-indeterminate-metabolizer.pdf"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guidelin",
+      "url": "https://research.regionh.dk/da/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guidelin",
+      "url": "https://researchprofiles.ku.dk/da/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     },
+     {
+      "title": "Severe Thiopurine-Induced Myelosuppression in a Pediatric ALL Patient with the NUDT15 *1/*6 Genotype",
+      "url": "https://scholarlyexchange.childrensmercy.org/posters/477"
+     },
+     {
+      "title": "CPIC Thiopurine guideline update 2025 CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC-Thiopurine-guideline-update-2025_CPIC-review.docx"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30447069/"
+     },
+     {
+      "title": "Mercaptopurine Therapy and TPMT and NUDT15 Genotype",
+      "url": "https://www.biosino.org/ibdkb/research_article/28520348/"
+     },
+     {
+      "title": "www.premera.com",
+      "url": "https://www.premera.com/medicalpolicies/15.01.009.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2025 thiopurines guideline mercaptopurine \"indeterminate\" TPMT normal NUDT15 starting dose recommendation strength",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update - Maillard - 2026 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209?af=R"
+     },
+     {
+      "title": "(PDF) Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update",
+      "url": "https://www.researchgate.net/publication/400290584_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_Thiopurine_Dosing_Based_on_TPMT_and_NUDT15_Genotypes_2025_Update"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC ...",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf"
+     },
+     {
+      "title": "Pharmacogenetic testing for thiopurine drugs in Brazilian acute lymphoblastic leukemia patients",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10193153/"
+     },
+     {
+      "title": "Mercaptopurine (6-MP) - Handbook of Pharmacogenomics",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/mercaptopurine-6-mp/"
+     },
+     {
+      "title": "Update to the CPIC Guideline for Thiopurines Regarding Dual TPMT and NUDT15 Intermediate Metabolizers",
+      "url": "https://blog.clinpgx.org/update-to-cpic-guideline-for/"
+     },
+     {
+      "title": "Azathioprine, TPMT and NUDT15: two genes, one blood count",
+      "url": "https://www.aimosti.com/pharmacogenomics/azathioprine"
+     },
+     {
+      "title": "Azathioprine for Crohn's Disease: A 2026 Patient Guide",
+      "url": "https://crohnzone.com/post/azathioprine-crohns-disease-patient-guide"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 3,
+ "final_answer": "**Answer: I could not confirm the current guideline recommendation for this exact combination.**\n\n1. **Recommendation:** Not verified. The 2020 CPIC addendum for NUDT15 indeterminate status says that if a thiopurine is required and NUDT15 status is unknown, monitor closely for toxicity. It gives no specific dose. The 2025 CPIC update (published 2026) has revised starting-dose tables that I could not read. One third-party site lists this combination as normal leukopenia risk, but I could not confirm that against CPIC.\n2. **Strength:** Unknown. I did not find a verified strength rating for this phenotype.\n3. **Source:** CPIC Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes, 2025 Update ([Maillard et al., *Clin Pharmacol Ther* 2026](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209?af=R)). Check the recommendation tables in the [CPIC PDF](https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf) before applying this.\n\nSources:\n- [CPIC® Guideline for Thiopurines and TPMT and NUDT15](https://cpicpgx.org/?p=578)\n- [Annotation of CPIC Guideline for mercaptopurine and NUDT15, TPMT](https://www.pharmgkb.org/guidelineAnnotation/PA166104945)\n- [CPIC Thiopurine guideline update 2025 (CPIC review)](https://cpicpgx.org/wp-content/uploads/2025/08/CPIC-Thiopurine-guideline-update-2025_CPIC-review.docx)\n- [CPIC August 2025 meeting slides](https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf)\n- [CPIC 2025 Update, Wiley](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209?af=R)\n- [CPIC 2025 Update PDF](https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf)\n- [Azathioprine, TPMT and NUDT15 (aimosti.com)](https://www.aimosti.com/pharmacogenomics/azathioprine)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "OTHER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": true,
+  "note_es": "La respuesta no da una recomendación propia (dice no verificada), solo menciona 'monitorizar de cerca' del addendum de 2020 sin comprometerse con dosis normal según TPMT; se abstiene aunque cita CPIC correctamente."
+ }
+}

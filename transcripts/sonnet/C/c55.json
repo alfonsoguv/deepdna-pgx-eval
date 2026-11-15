@@ -1,0 +1,131 @@
+{
+ "case_id": "c55",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is ivacaftor non-responsive in CF patients for CFTR with regards to taking ivacaftor?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline ivacaftor CFTR non-responsive recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt48r4255k/qt48r4255k.pdf?t=rsg9ns"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/uc/item/48r4255k"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4026598"
+     },
+     {
+      "title": "cdc.altmetric.com",
+      "url": "https://cdc.altmetric.com/details/2171599"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1038/clpt.2014.54"
+     },
+     {
+      "title": "S EPMC4026598",
+      "url": "https://omicsdi.org/dataset/biostudies-literature/S-EPMC4026598"
+     },
+     {
+      "title": "www.altmetric.com",
+      "url": "https://www.altmetric.com/details/2171599"
+     },
+     {
+      "title": "CPIC guideline for ivacaftor based on CFTR genotype",
+      "url": "https://cpicpgx.org/?p=2781"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29342367/"
+     },
+     {
+      "title": "Cystic fibrosis (CF) therapy has traditionally been based on",
+      "url": "https://pharmgkb.blogspot.com/2014/03/cpic-guideline-for-ivacaftor-therapy.html"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC ivacaftor \"not recommended\" F508del homozygous \"moderate\" recommendation Clancy 2014 table",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CFTR Modulator Therapy Care Guidelines Executive Summary",
+      "url": "https://www.cff.org/cftr-modulator-therapy-care-guidelines"
+     },
+     {
+      "title": "premera.com",
+      "url": "https://www.premera.com/medicalpolicies/5.01.539.pdf"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt48r4255k/qt48r4255k.pdf?t=rsg9ns"
+     },
+     {
+      "title": "CFTR Modulator Therapy Care Guidelines",
+      "url": "https://www.cff.org/medical-professionals/cftr-modulator-therapy-care-guidelines"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4026598"
+     },
+     {
+      "title": "Yisctua%20film coated%20tablet%20ENG%20SmPC 09001bee85146023",
+      "url": "https://docetp.mpa.se/LMF/Yisctua%20film-coated%20tablet%20ENG%20SmPC_09001bee85146023.pdf"
+     },
+     {
+      "title": "vchcp.venturacounty.gov",
+      "url": "https://vchcp.venturacounty.gov/wp-content/uploads/2023/03/Trikafta.pdf"
+     },
+     {
+      "title": "Cystic Fibrosis CFTR 2020 0319",
+      "url": "https://www.medicaid.nv.gov/Downloads/provider/Cystic_Fibrosis_CFTR_2020-0319.pdf"
+     },
+     {
+      "title": "Cystic Fibrosis CFTR 2020 0319",
+      "url": "https://portaluat.medicaid.nv.gov/Downloads/provider/Cystic_Fibrosis_CFTR_2020-0319.pdf"
+     },
+     {
+      "title": "1.2. Pediatrics",
+      "url": "https://www.txvendordrug.com/node/12548661"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**Unconfirmed.** My searches didn't return the CPIC recommendation table, so what follows is from memory and not checked against the guideline.\n\n1. **Recommendation:** Avoid ivacaftor. For ivacaftor non-responsive CFTR genotypes, such as homozygous F508del without a responsive variant, CPIC says ivacaftor is not recommended. Patients should be considered for other CF management.\n\n2. **Strength:** I recall it as \"moderate\". I couldn't verify this, so treat it as uncertain.\n\n3. **Source:** CPIC guideline for ivacaftor therapy based on CFTR genotype (Clancy et al., *Clin Pharmacol Ther* 2014, doi 10.1038/clpt.2014.54). Check the current version on cpicpgx.org before relying on this.\n\nThe Cystic Fibrosis Foundation and payer documents that came up in my searches are separate from CPIC. Insurers also treat ivacaftor alone as not medically necessary for F508del homozygotes.\n\nSources:\n- [CPIC guideline for ivacaftor based on CFTR genotype](https://cpicpgx.org/?p=2781)\n- [Clancy et al. 2014, PMC4026598](https://pmc.ncbi.nlm.nih.gov/articles/PMC4026598)\n- [CFF CFTR Modulator Therapy Care Guidelines](https://www.cff.org/medical-professionals/cftr-modulator-therapy-care-guidelines)\n- [Premera medical policy](https://www.premera.com/medicalpolicies/5.01.539.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar ivacaftor según CPIC, coincide con la referencia; la fuerza 'moderate' es dudosa (el original no lo indica así) y el ejemplo de F508del homocigoto es discutible, aunque la cita Clancy 2014 es real."
+ }
+}

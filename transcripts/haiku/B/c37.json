@@ -1,0 +1,44 @@
+{
+ "case_id": "c37",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal for G6PD with regards to taking toluidine blue?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "G6PD",
+    "drug": "toluidine blue"
+   },
+   "result": "{\"pair\":{\"gene\":\"G6PD\",\"drug\":\"toluidine blue\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"CPIC 2023 classifies toluidine blue as high risk for hemolysis: avoid in G6PD-deficient phenotypes (moderate recommendation; strong with CNSHA), with strength extrapolated from methylene blue data; for the variable or indeterminate phenotype, enzyme activity must be measured.\",\"phenotypes\":[\"Normal\",\"Deficient\",\"Deficient with CNSHA (chronic non-spherocytic hemolytic anemia)\",\"Variable: one deficient and one non-deficient allele in people with more than one X chromosome; activity can range from normal to deficient, so enzyme activity must be measured\",\"Indeterminate\",\"Alleles grouped by historical WHO classes, from Class I (severe, with CNSHA) to Class IV (normal activity)\"],\"sources\":[{\"label\":\"CPIC — G6PD gene page\",\"url\":\"https://cpicpgx.org/gene/g6pd/\"},{\"label\":\"PharmGKB G6PD (PA28469)\",\"url\":\"https://www.pharmgkb.org/gene/PA28469\"},{\"label\":\"Gammal et al., Clin Pharmacol Ther 2023 (CPIC G6PD guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/36049896/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "toluidine blue"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[{\"drug\":\"toluidine blue\",\"genes\":[{\"gene\":\"G6PD\",\"basis\":\"CPIC guideline\",\"guideline\":\"CPIC\",\"summary\":\"CPIC 2023 classifies toluidine blue as high risk for hemolysis: avoid in G6PD-deficient phenotypes (moderate recommendation; strong with CNSHA), with strength extrapolated from methylene blue data; for the variable or indeterminate phenotype, enzyme activity must be measured.\",\"sources\":[{\"label\":\"CPIC — G6PD gene page\",\"url\":\"https://cpicpgx.org/gene/g6pd/\"},{\"label\":\"PharmGKB G6PD (PA28469)\",\"url\":\"https://www.pharmgkb.org/gene/PA28469\"},{\"label\":\"Gammal et al., Clin Pharmacol Ther 2023 (CPIC G6PD guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/36049896/\"}]}]}],\"not_covered\":[],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**Guideline recommendation (Normal G6PD activity):** The record doesn't state a recommendation for the Normal phenotype. It says to avoid toluidine blue in G6PD-deficient phenotypes and to measure enzyme activity for variable or indeterminate results. Normal is not in the avoid group, so the implied reading is standard use, but I can't confirm that from the record.\n\n**Strength:** The avoid recommendation is moderate (strong with CNSHA). It is extrapolated from methylene blue data, so it is not based on toluidine blue studies.\n\n**Source:** CPIC 2023 G6PD guideline (Gammal et al., Clin Pharmacol Ther 2023; PMID 36049896). CPIC A level.\n\nThis is educational information. Confirm with the prescriber or the CPIC guideline's full Normal-phenotype table before relying on it.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Infiere uso estándar (Normal no está en el grupo a evitar) aunque dice no poder confirmarlo; cita CPIC 2023 con PMID y nivel A que parecen dudosos (el PMID 36049896 y 'Gammal 2023' probablemente no son correctos)."
+ }
+}

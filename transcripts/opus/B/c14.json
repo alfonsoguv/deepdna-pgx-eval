@@ -1,0 +1,34 @@
+{
+ "case_id": "c14",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for CYP2C19 with regards to taking lansoprazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2C19",
+    "drug": "lansoprazole"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2C19\",\"drug\":\"lansoprazole\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"Proton-pump inhibitor inactivated by CYP2C19. CPIC suggests considering a 50–100% higher dose for normal and rapid metabolizers treated for H. pylori or erosive esophagitis, and a 100% higher starting dose for ultra-rapid metabolizers. Intermediate and poor metabolizers reach higher drug levels; for chronic therapy (>12 weeks) CPIC suggests considering a 50% dose reduction once efficacy is achieved.\",\"phenotypes\":[\"Poor metabolizer (PM): two no-function alleles (e.g. *2/*2, *2/*3)\",\"Intermediate metabolizer (IM): one no-function allele with one normal or increased-function allele (e.g. *1/*2, *2/*17)\",\"Normal metabolizer (NM): two normal-function alleles (*1/*1)\",\"Rapid metabolizer (RM): one normal and one increased-function allele (*1/*17)\",\"Ultra-rapid metabolizer (UM): two increased-function alleles (*17/*17)\"],\"sources\":[{\"label\":\"CPIC — CYP2C19 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2c19/\"},{\"label\":\"PharmGKB CYP2C19 (PA124)\",\"url\":\"https://www.pharmgkb.org/gene/PA124\"},{\"label\":\"PharmVar CYP2C19\",\"url\":\"https://www.pharmvar.org/gene/CYP2C19\"},{\"label\":\"Lima et al., Clin Pharmacol Ther 2021 (CPIC CYP2C19 and proton pump inhibitor guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/32770672/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation: adjust the dose.** CPIC recommends starting lansoprazole at the standard daily dose for a CYP2C19 normal metabolizer. When treating *H. pylori* infection or erosive esophagitis, it suggests considering a dose 50–100% higher. The reason is that CYP2C19 breaks down and inactivates lansoprazole, so normal metabolizers clear it fairly quickly. Doses can be split through the day to help effectiveness.\n\n2. **Strength:** The tool lists **CPIC Level A** for the CYP2C19–lansoprazole pair. That level is for the drug–gene pair, not for this phenotype's recommendation. I recall the 2020 guideline rating the normal-metabolizer recommendation **\"Moderate,\"** but I couldn't check that with the tool.\n\n3. **Source:** CPIC Guideline for CYP2C19 and Proton Pump Inhibitor Dosing (Lima et al., *Clin Pharmacol Ther* 2021; PMID 32770672), via DeepDNA/CPIC/PharmGKB.\n\nThis is educational information that restates what the guideline says. Dosing decisions belong to the prescriber.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Indica la dosis estándar inicial y considerar aumentar 50-100% en H. pylori y esofagitis erosiva, igual que la referencia; cita CPIC (Lima et al., 2021, PMID 32770672) de forma correcta."
+ }
+}

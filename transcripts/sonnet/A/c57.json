@@ -1,0 +1,24 @@
+{
+ "case_id": "c57",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥4.0 for CYP2D6 with regards to taking ondansetron?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Use an alternative. CPIC suggests selecting an antiemetic that is not predominantly metabolized by CYP2D6, such as granisetron. If ondansetron is still warranted, use standard label dosing and monitor for efficacy. Ultrarapid metabolizers may have lower ondansetron exposure and a higher risk of treatment failure.\n\n**2. Strength:** Optional. This is the weaker classification, reflecting limited clinical outcome evidence. The activity score of ≥4.0 falls within the ultrarapid metabolizer category, which CPIC defines as >3.0, so no further stratification applies.\n\n**3. Source:** CPIC guideline for CYP2D6 and CYP2C19 genotypes and dosing of ondansetron and tropisetron (Bell et al., 2017, *Clin Pharmacol Ther*).\n\nI had no tools to check this, so it is from memory. Confirm against the current CPIC entry at cpicpgx.org for any updates.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda alternativa como granisetron (coincide con la referencia) y cita CPIC Bell 2017, pero la clasificación 'Optional' es dudosa (CPIC la da como Moderate) y la mención de dosis estándar es secundaria."
+ }
+}

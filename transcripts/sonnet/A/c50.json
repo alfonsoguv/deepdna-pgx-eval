@@ -1,0 +1,24 @@
+{
+ "case_id": "c50",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*15:02 positive for HLA-B with regards to taking oxcarbazepine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** For oxcarbazepine-naïve patients who are HLA-B*15:02 positive, avoid oxcarbazepine as the first-line choice and use an alternative anticonvulsant, because of the greatly increased risk of Stevens-Johnson syndrome/toxic epidermal necrolysis (SJS/TEN). Patients who have taken oxcarbazepine continuously for more than 3 months without developing a cutaneous reaction can be considered to have a low risk, and may continue it.\n\n**2. Strength:** Strong for carbamazepine. For oxcarbazepine, the CPIC guideline rates the recommendation as moderate, since the evidence is less extensive and the SJS/TEN risk is somewhat lower than with carbamazepine. Note that the recommendation applies to adults and pediatric patients alike.\n\n**3. Source:** CPIC® Guideline for HLA Genes and Carbamazepine and Oxcarbazepine (Phillips et al., 2018 update, Clin Pharmacol Ther). The FDA labeling for oxcarbazepine also mentions the HLA-B*15:02 association and recommends considering avoidance in positive patients unless the benefit clearly outweighs the risk.\n\nI did not check these against the live sources with tools, so please verify the details in the current CPIC guideline or on PharmGKB before using this clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar oxcarbazepina en pacientes naïve y permitir continuar si lleva más de 3 meses sin reacción, acorde con la referencia; atribuye a CPIC, pero la actualización 2018 es de Phillips et al. y la afirmación de fuerza 'moderada' para oxcarbazepina es dudosa (CPIC la clasifica como fuerte)."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c31",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Increased Function for SLCO1B1 with regards to taking lovastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**Caveat:** I have no lookup tools in this session, so this is from memory and not verified against the current guideline text.\n\n1. **Recommendation:** I don't believe the CPIC SLCO1B1 guideline (Cooper-DeHoff et al., *Clin Pharmacol Ther* 2022) defines an \"Increased Function\" phenotype. Its categories are Normal, Decreased, and Poor function. If the patient is classed as increased function, the closest practical interpretation is likely standard use of lovastatin, since increased transporter activity would not be expected to raise myopathy risk. Confirm the phenotype assignment with the lab report or a pharmacogenomics pharmacist.\n\n2. **Strength:** I can't reliably state the classification strength for this case. For the Decreased and Poor function categories, CPIC's lovastatin recommendations are more cautious (for Poor function, avoid lovastatin or use an alternative not affected by SLCO1B1), but I'm not certain of the exact strength labels.\n\n3. **Source:** CPIC guideline for SLCO1B1 and statin-induced myopathy (2022 update). Please check the current version on cpicpgx.org.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta sugiere uso estándar de lovastatina, coincidente con la referencia, y cita CPIC 2022 (Cooper-DeHoff); sin embargo afirma erróneamente que no existe el fenotipo 'Increased function' en CPIC, lo cual es un detalle dudoso."
+ }
+}

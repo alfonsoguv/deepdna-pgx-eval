@@ -1,0 +1,131 @@
+{
+ "case_id": "c07",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥3.5 for CYP2D6 with regards to taking codeine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline codeine CYP2D6 ultrarapid metabolizer activity score recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/C1837160/"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/230992/mod_resource/content/1/guideline%20codeine.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3289963"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/codeine/"
+     },
+     {
+      "title": "pharmacogenomic considerations in opioid therapy",
+      "url": "https://uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK100662/"
+     },
+     {
+      "title": "PAIN MANAGEMENT   •   Published April 14, 2022",
+      "url": "https://www.uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy-1"
+     },
+     {
+      "title": "CYP2D6 Genotype to Phenotype Standardization Project consensus",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4925073"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2021 CYP2D6 codeine ultrarapid metabolizer \"avoid codeine use\" strong recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/C1837160/"
+     },
+     {
+      "title": "pharmacogenomic considerations in opioid therapy",
+      "url": "https://uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy"
+     },
+     {
+      "title": "PAIN MANAGEMENT   •   Published April 14, 2022",
+      "url": "https://www.uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy-1"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/codeine/"
+     },
+     {
+      "title": "stjude.org",
+      "url": "https://www.stjude.org/content/dam/en_US/shared/www/research/pharmaceutical-sciences/CYP2D6%20Competency%20Advanced.pdf"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK100662/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4925073"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/C1837160"
+     },
+     {
+      "title": "codeine phosphate",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/codeine-phosphate/"
+     },
+     {
+      "title": "Back to Search Start Over",
+      "url": "https://searchworks.jioinstitute.edu.in/articles/cmedm__28520350"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Avoid codeine. CPIC advises that CYP2D6 ultrarapid metabolizers avoid codeine because of the risk of serious toxicity, such as sedation and respiratory depression from excess morphine. An activity score of ≥3.5 is above CPIC's ultrarapid cutoff of >2.25, so this patient falls in that category. Non-codeine analgesics are the suggested alternative.\n\n**2. Strength:** I could not confirm the strength label. I believe CPIC rates this as a strong recommendation, but I did not verify it in the guideline text, so please check the CPIC page before relying on that.\n\n**3. Source:** CPIC guideline for codeine and CYP2D6 (Crews et al., *Clin Pharmacol Ther* 2021;110(4):888-896). One older NCBI table lists a different UM recommendation, so use the current CPIC version as the authority.\n\nSources:\n- [CPIC 2021 CYP2D6/OPRM1/COMT opioid guideline (PMC8249478)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478)\n- [CPIC codeine guideline page](https://cpicpgx.org/guidelines/guideline-for-codeine-and-cyp2d6/)\n- [St. Jude CYP2D6 competency document](https://www.stjude.org/content/dam/en_US/shared/www/research/pharmaceutical-sciences/CYP2D6%20Competency%20Advanced.pdf)\n- [NCBI Bookshelf codeine/CYP2D6 table](https://www.ncbi.nlm.nih.gov/books/NBK100662/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar la codeína en metabolizadores ultrarrápidos de CYP2D6 y lo atribuye a CPIC (Crews 2021, CPT 110(4):888-896), lo que coincide con la referencia; la fuerza de la recomendación se deja sin confirmar."
+ }
+}

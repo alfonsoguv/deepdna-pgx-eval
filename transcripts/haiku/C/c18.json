@@ -1,0 +1,131 @@
+{
+ "case_id": "c18",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 and No Result for CYP2C19 with regards to taking amitriptyline?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline tricyclic antidepressants amitriptyline CYP2D6 ultrarapid metabolizer activity score CYP2C19 recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for imipramine and CYP2C19, CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166104999"
+     },
+     {
+      "title": "TCA CPIC Guideline manuscript update final",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/TCA-CPIC-Guideline-manuscript-update-final.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7080976/table/T4"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "core.ac.uk",
+      "url": "https://core.ac.uk/works/44145077"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27997040/"
+     },
+     {
+      "title": "CPIC Guidelines",
+      "url": "https://elbiruniblogspotcom.blogspot.no/2013/04/clinical-pharmacology-therapeutics.html"
+     },
+     {
+      "title": "Bookshelf NBK425165",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165/pdf/Bookshelf_NBK425165.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC tricyclic antidepressant guideline update 2025 CYP2D6 ultrarapid metabolizer amitriptyline avoid alternative strength",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "2016 Update - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/TCA/2016/TCA_2016.pdf"
+     },
+     {
+      "title": "Clinical pharmacogenetics implementation consortium guideline (CPIC) for CYP2D6 and CYP2C19 genotypes and dosing of tricyclic antidepressants: 2016 update - Hicks - 2017 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.597"
+     },
+     {
+      "title": "Supplement to - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/TCA/2013/23486447-supplement.pdf"
+     },
+     {
+      "title": "Children's Mercy Kansas City Children's Mercy Kansas City",
+      "url": "https://scholarlyexchange.childrensmercy.org/cgi/viewcontent.cgi?article=1524&context=papers"
+     },
+     {
+      "title": "CPIC Guidelines nature publishing group",
+      "url": "https://moodle2.units.it/pluginfile.php/141059/mod_resource/content/1/linee%20guida%20antidepressivi.pdf"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for <fi>CYP2D6</fi>, <fi>CYP2C19</fi>, <fi>CYP2B6</fi>, <fi>SLC6A4</fi>, and <fi>HTR2A</fi> Genotypes and Serotonin Reuptake Inhibitor Antidepressants - Bousman - 2023 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2903"
+     },
+     {
+      "title": "Frontiers",
+      "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2022.939313/full"
+     },
+     {
+      "title": "CYP2D6 and Antidepressants: Which Drugs Are Affected? — DecodeMyBio",
+      "url": "https://decodemybio.com/learn/cyp2d6-antidepressants-list"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Avoid amitriptyline and consider an alternative drug not primarily metabolized by CYP2D6. CPIC's 2016 TCA guideline says tricyclics may lack efficacy in CYP2D6 ultrarapid metabolizers. The CYP2D6 phenotype drives this, so the missing CYP2C19 result doesn't change it. If a tricyclic is still considered, the guideline says there are insufficient data for a starting dose, and therapeutic drug monitoring is strongly recommended. Note that CPIC's ultrarapid category is typically AS >2.25, so an AS of ≥5.0 falls within it.\n\n**2. Strength:** I couldn't confirm the formal strength grade from the sources I found.\n\n**3. Source:** CPIC Guideline for CYP2D6 and CYP2C19 Genotypes and Dosing of Tricyclic Antidepressants: 2016 Update ([Hicks et al., 2017](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.597); [CPIC 2016 PDF](https://files.cpicpgx.org/data/guideline/publication/TCA/2016/TCA_2016.pdf)). I found no 2025 revision, but CPIC has said it is updating this guideline, so check the current version on the [CPIC site](https://cpicpgx.org/?p=571) before relying on this.\n\nSources:\n- [CPIC TCA guideline page](https://cpicpgx.org/?p=571)\n- [Hicks et al. 2017, CPT](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.597)\n- [CPIC 2016 TCA PDF](https://files.cpicpgx.org/data/guideline/publication/TCA/2016/TCA_2016.pdf)\n- [PharmGKB annotation for imipramine/CYP2C19/CYP2D6](https://www.pharmgkb.org/guidelineAnnotation/PA166104999)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar amitriptilina y usar una alternativa no metabolizada por CYP2D6, con monitorización terapéutica si se usa; cita correctamente la guía CPIC 2016 de TCA (Hicks et al., 2017)."
+ }
+}

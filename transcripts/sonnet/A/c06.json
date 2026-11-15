@@ -1,0 +1,24 @@
+{
+ "case_id": "c06",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 with regards to taking venlafaxine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** No recommendation. CPIC found insufficient evidence that CYP2D6 ultrarapid metabolizer status (activity score >2.25) changes venlafaxine outcomes. Standard care applies: start at the label dose, titrate to response and tolerability, and use clinical judgment or therapeutic drug monitoring (venlafaxine plus the active metabolite O-desmethylvenlafaxine) if the response is inadequate. Ultrarapid metabolism could in theory shift the parent-to-metabolite ratio, but the clinical effect is unproven.\n\n2. **Strength:** Classified as \"no recommendation,\" meaning the evidence was insufficient. There is no strength rating for action.\n\n3. **Source:** CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A and Serotonin Reuptake Inhibitor Antidepressants (Bousman et al., 2023). I answered from memory, since I did not check the source with a tool. The DPWG guideline may word this differently, so verify there and on the current PharmGKB/CPIC pages before clinical use.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica que no hay recomendación por falta de evidencia y se aplica la atención estándar, igual que la referencia; cita la guía CPIC de antidepresivos ISRS (Bousman et al., 2023) correctamente."
+ }
+}

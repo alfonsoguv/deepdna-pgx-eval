@@ -1,0 +1,24 @@
+{
+ "case_id": "c53",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is increased risk of aminoglycoside-induced hearing loss for MT-RNR1 with regards to taking paromomycin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I can't verify this against a live source here, so this is from memory and should be checked against the guideline itself.\n\n1. **Recommendation:** For patients with a pathogenic MT-RNR1 variant (such as m.1555A>G), CPIC advises avoiding aminoglycosides. Paromomycin is an aminoglycoside, so the same avoidance logic applies, though I'm not certain CPIC explicitly names paromomycin. Because it is poorly absorbed orally, systemic ototoxicity is less likely, but absorption rises with intestinal mucosal damage or renal impairment.\n\n2. **Strength:** I believe CPIC rates the avoidance recommendation as strong. I'm less sure of the exact classification wording.\n\n3. **Source:** CPIC guideline for aminoglycosides and MT-RNR1 genotype (published around 2024). Please confirm the current version and whether paromomycin is covered.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar los aminoglucósidos (incluida la paromomicina) según CPIC, coincidiendo con la referencia; el año 2024 es aproximadamente correcto y expresa incertidumbre, sin detalles inventados evidentes."
+ }
+}

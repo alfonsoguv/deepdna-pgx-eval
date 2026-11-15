@@ -1,0 +1,78 @@
+{
+ "case_id": "c19",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 0.5 for CYP2D6 and Intermediate Metabolizer for CYP2C19 with regards to taking doxepin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline tricyclic antidepressants doxepin CYP2D6 intermediate metabolizer CYP2C19 recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for imipramine and CYP2C19, CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166104999"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37032427/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3716458"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "TCA CPIC Guideline manuscript update final",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/TCA-CPIC-Guideline-manuscript-update-final.docx"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27997040/"
+     },
+     {
+      "title": "core.ac.uk",
+      "url": "https://core.ac.uk/works/44145077"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/226253/mod_resource/content/2/guideline%20TCA.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Short answer:** I could not confirm the exact doxepin wording from the sources I could open. What follows is partly my recall of the guideline.\n\n1. **Recommendation:** Use doxepin, but with a possible dose adjustment. For CYP2D6 intermediate metabolizers (activity score 0.5), the 2016 CPIC tricyclic table says to consider a 25% reduction of the recommended starting dose and to use therapeutic drug monitoring. For CYP2C19 intermediate metabolizers, I recall no change from standard dosing. The guideline has no separate combined 2D6 and 2C19 recommendation. PharmGKB notes that the amitriptyline recommendations may reasonably extend to doxepin. Someone with both phenotypes has two reasons for reduced clearance, so clinical judgment and drug-level monitoring matter.\n\n2. **Strength:** Optional. The CPIC page says the 25% reduction for intermediate metabolizers is now optional for activity score 1, and it says the guideline is being updated. I couldn't verify the strength for activity score 0.5 specifically.\n\n3. **Source:** CPIC Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19 (Hicks et al., 2016 update). Check Table 2 and the pending update to confirm.\n\nSources:\n- [CPIC TCA guideline page](https://cpicpgx.org/?p=571)\n- [PharmGKB annotation](https://www.pharmgkb.org/guidelineAnnotation/PA166104999)\n- [PubMed: 2016 CPIC update](https://pubmed.ncbi.nlm.nih.gov/27997040/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda considerar reducir 25% la dosis inicial con monitorización de fármaco, según CPIC 2016 (Hicks et al.), coincidiendo con la referencia; citas plausibles y no inventadas."
+ }
+}

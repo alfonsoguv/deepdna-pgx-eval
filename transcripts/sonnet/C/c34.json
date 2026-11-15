@@ -1,0 +1,78 @@
+{
+ "case_id": "c34",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Deficient for G6PD with regards to taking tafenoquine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline G6PD tafenoquine deficient recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "g6pd cpic apr 2022 002",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf"
+     },
+     {
+      "title": "g6pd cpic nov 2021",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "Bibliographic information",
+      "url": "https://bigg-rec.bvsalud.org/en/recommendations/b2bf6e138996f0a4e828291c60e89832eba81e8a"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN262925"
+     },
+     {
+      "title": "Bibliographic information",
+      "url": "https://bigg-rec.bvsalud.org/en/recommendations/d7c61ef89daa300b3bbdd85b6a57112d9cb7ac0f"
+     },
+     {
+      "title": "nejm jw.NA50460",
+      "url": "https://clinician.nejm.org/nejm-jw.NA50460"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/05/CPIC-G6PD-Update-SUPPLEMENT_4.27.2022-for-CPIC-review.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10281211/table/T3"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6804407"
+     },
+     {
+      "title": "Guideline overview presentation",
+      "url": "https://cpicpgx.org/?p=3367"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: avoid tafenoquine.** G6PD-deficient patients are at high risk of acute hemolytic anemia. Use an alternative antimalarial, and choose it with G6PD status in mind. Tafenoquine is labeled for use only when G6PD activity is ≥70% of normal, and G6PD testing is required before it is prescribed.\n\n2. **Strength: strong.** CPIC classes tafenoquine as a high-risk drug for G6PD deficiency.\n\n3. **Source:** CPIC Guideline for Rasburicase and Other Medications in G6PD Deficiency (2022 update). The FDA label and WHO guidance are consistent with it.\n\nMy search found the CPIC document and its high-risk, strong classification. It did not return the exact tafenoquine row of the drug table, so check the final CPIC table on cpicpgx.org for the precise wording.\n\nSources:\n- [CPIC G6PD guideline (Apr 2022)](https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf)\n- [CPIC G6PD (Nov 2021)](https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar tafenoquina en deficiencia de G6PD y lo atribuye a la guía CPIC 2022 sobre G6PD, coherente con la referencia; las URLs y el año son plausibles."
+ }
+}

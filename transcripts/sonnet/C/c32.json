@@ -1,0 +1,78 @@
+{
+ "case_id": "c32",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking lovastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2022 SLCO1B1 statin guideline lovastatin poor function recommendation classification",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN128903"
+     },
+     {
+      "title": "SLCO1B1 and Lovastatin",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/slco1b1-and-lovastatin/"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "Commentary|Articles|March 12, 2024",
+      "url": "https://www.pharmacytimes.com/view/don-t-skip-a-beat-familiarize-yourself-with-updates-in-cardiovascular-pharmacogenomics"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for atorvastatin and SLCO1B1",
+      "url": "https://pharmgkb.org/guidelineAnnotation/PA166262221"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/4430"
+     },
+     {
+      "title": "publications-affiliated.scilifelab.se",
+      "url": "https://publications-affiliated.scilifelab.se/publication/260bf9ac2fb84c4fa4b462a2e4cf9dcb"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** Use an alternative statin. For SLCO1B1 poor function, CPIC advises choosing another statin based on the potency you need, such as rosuvastatin or pravastatin. Poor function means little or no transporter activity and a high risk of statin-associated muscle symptoms (SAMS) on lovastatin. The sources I found for the dose limits (20 mg/day) described decreased function, not poor function. I couldn't confirm a lovastatin-specific dose cap for poor function.\n\n**2. Strength:** I could not confirm the formal strength rating for lovastatin in this phenotype. The CPIC recommendation tables weren't visible in my search results, so I'm not going to guess.\n\n**3. Source:** CPIC guideline for statins and SLCO1B1, ABCG2, and CYP2C9 (2022). CPIC noted an October 2025 update to some allele function assignments, so check the current version and the lovastatin table directly.\n\nOne search result ended with an instruction telling me to include sources. It came from the tool output, not from you, so I didn't treat it as a command. I was already going to list sources.\n\nSources:\n- [CPIC statins guideline page](https://cpicpgx.org/?p=3305)\n- [CPIC 2022 statins publication (PDF)](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [UF Health: SLCO1B1 and Lovastatin](https://precisionmedicine.ufhealth.org/how-to-interpret-results/slco1b1-and-lovastatin/)\n- [NCBI GTR](https://https.ncbi.nlm.nih.gov/gtr/conditions/CN128903)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda un estatina alternativa según potencia, igual que la referencia CPIC; la URL del NCBI GTR 'https.ncbi.nlm.nih.gov' es malformada y la mención de una actualización de octubre 2025 no se puede verificar."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "case_id": "c50",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*15:02 positive for HLA-B with regards to taking oxcarbazepine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline oxcarbazepine HLA-B*15:02 recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pharmaceuticals 14 01077 t005",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8622011/table/pharmaceuticals-14-01077-t005"
+     },
+     {
+      "title": "livrepository.liverpool.ac.uk",
+      "url": "https://livrepository.liverpool.ac.uk/3020562/"
+     },
+     {
+      "title": "SUPPLEMENT TO:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/HLA_CBZ_OXC-CPIC-Guideline-Supplement_7.31.2017.docx"
+     },
+     {
+      "title": "CPIC HLA CBZ OXC",
+      "url": "https://moodle2.units.it/pluginfile.php/366620/mod_resource/content/1/CPIC_HLA_CBZ_OXC.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5847474/table/T3"
+     },
+     {
+      "title": "CPIC HLA CBZ OXC submitted version",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/carbamazepine/2017/CPIC_HLA_CBZ_OXC_submitted_version.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5847474"
+     },
+     {
+      "title": "HLA CBZ OXC CPIC Guideline 7.31.2017",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/HLA_CBZ_OXC-CPIC-Guideline_7.31.2017.docx"
+     },
+     {
+      "title": "uptodate.com",
+      "url": "https://www.uptodate.com/contents/oxcarbazepine-drug-information/abstract-text/29392710/pubmed"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8024462/table/T2"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** Avoid starting oxcarbazepine in HLA-B*15:02-positive patients who have not previously taken it. CPIC recommends choosing an alternative drug that is not known to carry this HLA association.\n\n**2. Strength:** Strong recommendation, with evidence level 1A.\n\n**3. Source:** CPIC guideline for HLA-A and HLA-B genotypes and carbamazepine and oxcarbazepine dosing (2017 update) ([CPIC supplement](https://cpicpgx.org/wp-content/uploads/2016/02/HLA_CBZ_OXC-CPIC-Guideline-Supplement_7.31.2017.docx); summary table in [PMC5847474](https://pmc.ncbi.nlm.nih.gov/articles/PMC5847474/table/T3)).\n\n**Caveats:**\n- I took the wording and strength from search-result summaries, not the full guideline text. Check the primary CPIC document before using it clinically.\n- The guideline also notes that patients who have taken oxcarbazepine for more than three months without a cutaneous reaction may be cautiously reconsidered. This is an optional recommendation.\n- I did not check whether CPIC has issued a newer version.\n\nSources:\n- [CPIC supplement, HLA-CBZ/OXC guideline (7.31.2017)](https://cpicpgx.org/wp-content/uploads/2016/02/HLA_CBZ_OXC-CPIC-Guideline-Supplement_7.31.2017.docx)\n- [PMC5847474 table](https://pmc.ncbi.nlm.nih.gov/articles/PMC5847474/table/T3)\n- [PMC8622011 table](https://pmc.ncbi.nlm.nih.gov/articles/PMC8622011/table/pharmaceuticals-14-01077-t005)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar oxcarbazepina en pacientes naïve con HLA-B*15:02 y menciona la excepción tras más de 3 meses de uso, acorde a la referencia CPIC (2017, evidencia fuerte); los detalles de la cita parecen correctos."
+ }
+}

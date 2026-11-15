@@ -1,0 +1,24 @@
+{
+ "case_id": "c39",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for DPYD with regards to taking fluorouracil?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Adjust the dose. For an intermediate metabolizer with DPYD activity score 1.0, reduce the starting dose of fluorouracil by 50%. Then titrate based on toxicity or therapeutic drug monitoring, increasing the dose in patients who tolerate it and reducing it further if toxicity appears. The same advice applies to capecitabine.\n\n2. **Strength:** Moderate. I'm recalling this from memory, not from a live check, so confirm the grade on the guideline page.\n\n3. **Source:** CPIC (Clinical Pharmacogenetics Implementation Consortium) guideline for DPYD and fluoropyrimidines, 2017 with the 2024 update. The DPWG (Dutch) guideline gives similar advice, recommending a 50% reduced starting dose for activity score 1.0.\n\n**Caveat:** This is a starting-dose recommendation and doesn't replace clinical judgment. The treating oncology team should confirm it against the current guideline and the patient's regimen.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda reducir 50% la dosis inicial y titular según toxicidad o monitorización, igual que la referencia CPIC; cita CPIC (2017, actualización 2024) y DPWG con datos plausibles, aunque omite la salvedad sobre c.2846A>T homocigoto."
+ }
+}

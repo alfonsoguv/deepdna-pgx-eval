@@ -1,0 +1,24 @@
+{
+ "case_id": "c35",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Variable for G6PD with regards to taking dapsone?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I can't verify this against the source guideline here, so I can't give you a confident answer for the \"Variable\" phenotype.\n\n1. **Recommendation:** I don't know the exact recommendation. My best recollection is that the CPIC dapsone/G6PD guidance treats intermediate G6PD activity differently from normal and deficient activity, with dose or use decisions that call for caution and monitoring. Please check the actual text before relying on this.\n2. **Strength of recommendation:** Unknown to me.\n3. **Source:** Most likely the CPIC guideline for dapsone (and related drugs) based on G6PD genotype, which has been updated since its original publication. Check the current CPIC version at cpicpgx.org.\n\nAlso confirm that \"Variable\" maps to the guideline's \"intermediate\" category, since phenotype terminology differs across guidelines and labs. For a patient-specific decision, check with a clinical pharmacist or the current guideline.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": true,
+  "note_es": "La respuesta admite no conocer la recomendación, solo ofrece una vaga idea de cautela y monitoreo sin la acción de medir la actividad enzimática; menciona CPIC como fuente probable."
+ }
+}

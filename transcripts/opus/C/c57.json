@@ -1,0 +1,127 @@
+{
+ "case_id": "c57",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥4.0 for CYP2D6 with regards to taking ondansetron?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline ondansetron CYP2D6 ultrarapid metabolizer recommendation strength granisetron",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Ondansetron and Tropisetron and CYP2D6 Genotype",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/CYP2D6_ondansetron-final-draft_for-CPIC-review.docx"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/ondansetron/2016/28002639.pdf"
+     },
+     {
+      "title": "www.genomicseducation.hee.nhs.uk",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/ondansetron/"
+     },
+     {
+      "title": "genomics.nshcs.org.uk",
+      "url": "https://genomics.nshcs.org.uk/genotes/knowledge-hub/ondansetron"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for tropisetron and CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166161955"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/12/CYP2D6-5HT3-Receptor-Antagonist-Supplement-Update-2025-All-Authors-V.4-11.24.2025.docx"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/ondansetron/2026/41979467.pdf"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/CYP2D6_ondansetron-supplement-for-CPIC-review.docx"
+     },
+     {
+      "title": "CPIC update 2019",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/10/CPIC-update-2019.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5479760/table/T2"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2026 5-HT3 receptor antagonist CYP2D6 guideline update ondansetron ultrarapid activity score",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "(PDF) Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 Genotype and Use of 5‐HT3 Receptor Antagonists: 2026 Update",
+      "url": "https://www.researchgate.net/publication/403809093_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_CYP2D6_Genotype_and_Use_of_5-HT3_Receptor_Antagonists_2026_Update"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 Genotype and Use of Ondansetron and Tropisetron",
+      "url": "https://www.researchgate.net/publication/311867657_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_CYP2D6_Genotype_and_Use_of_Ondansetron_and_Tropisetron"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/ondansetron/2026/41979467.pdf"
+     },
+     {
+      "title": "1 Supplement to - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/ondansetron/2026/41979467-supplement.pdf"
+     },
+     {
+      "title": "CYP2D6 genotype and associated 5‐HT3 receptor antagonist outcomes: A systematic review and meta‐analysis - Moore - 2025 - Clinical and Translational Science - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/full/10.1111/cts.70108"
+     },
+     {
+      "title": "dolasetron journal articles from PubMed",
+      "url": "https://www.unboundmedicine.com/medline/research/dolasetron"
+     },
+     {
+      "title": "The Implementation Imperative in Clinical Pharmacology - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13357567/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cpt.598"
+     },
+     {
+      "title": "PanACEA DElpazolid Dose-finding and COmbination DEvelopment (DECODE)",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/32/NCT04550832/Prot_000.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "1. **Recommendation: use an alternative drug.** CPIC advises against ondansetron for CYP2D6 ultrarapid metabolizers. Instead, use an antiemetic that CYP2D6 doesn't mainly metabolize, such as granisetron. These patients break down ondansetron faster, so it works less well and they're more likely to vomit. An activity score of ≥4.0 is well above CPIC's ultrarapid cutoff (>2.25), so this guidance applies.\n\n2. **Strength: moderate.** The original CPIC guideline rated the ultrarapid recommendation \"Moderate.\" I read that from search-result text whose table layout was unclear, so check it against the original table. A source says the 2026 update kept the ondansetron table unchanged. I couldn't open the full 2026 text to confirm the current wording or rating, or to see whether it treats activity score ≥4.0 differently.\n\n3. **Source:** CPIC Guideline for CYP2D6 Genotype and Use of Ondansetron and Tropisetron (Bell et al., 2017). The 2026 update covering all 5-HT3 receptor antagonists is Moore et al., *Clin Pharmacol Ther* 2026.\n\nSources:\n- [CPIC ondansetron guideline (2016/2017)](https://files.cpicpgx.org/data/guideline/publication/ondansetron/2016/28002639.pdf)\n- [CPIC 2026 update](https://files.cpicpgx.org/data/guideline/publication/ondansetron/2026/41979467.pdf)\n- [ResearchGate: 2026 update](https://www.researchgate.net/publication/403809093_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_CYP2D6_Genotype_and_Use_of_5-HT3_Receptor_Antagonists_2026_Update)\n- [PharmGKB tropisetron annotation](https://www.pharmgkb.org/guidelineAnnotation/PA166161955)\n- [Moore 2025 meta-analysis](https://ascpt.onlinelibrary.wiley.com/doi/full/10.1111/cts.70108)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar ondansetrón y usar una alternativa como granisetrón, igual que la referencia CPIC; la cita (Bell et al., 2017, CPIC) es plausible y coherente."
+ }
+}

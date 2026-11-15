@@ -1,0 +1,127 @@
+{
+ "case_id": "c36",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Deficient with CNSHA for G6PD with regards to taking rasburicase?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline rasburicase G6PD deficient CNSHA recommendation avoid",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "g6pd cpic apr 2022 002",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf"
+     },
+     {
+      "title": "go.drugbank.com",
+      "url": "https://go.drugbank.com/articles/A19056"
+     },
+     {
+      "title": "www.altmetric.com",
+      "url": "https://www.altmetric.com/details/2544136"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/CN078005"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1038/clpt.2014.97"
+     },
+     {
+      "title": "100025099536 0x000001",
+      "url": "https://eld.bl.uk/catalog/100025099536_0x000001"
+     },
+     {
+      "title": "www.peeref.com",
+      "url": "https://www.peeref.com/works/8499332"
+     },
+     {
+      "title": "Tuesday, May 6, 2014",
+      "url": "https://pharmgkb.blogspot.com/2014/05/new-cpic-guideline-g6pd-rasburicase.html"
+     },
+     {
+      "title": "Guideline overview presentation",
+      "url": "https://cpicpgx.org/?p=3367"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK562585"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC G6PD 2022 guideline phenotype \"CNSHA\" rasburicase avoid strong recommendation",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Expanded Clinical Pharmacogenetics Implementation Consortium ( CPIC ) Guideline for Medication Use in the Context of G6PD Genotype",
+      "url": "https://www.researchgate.net/publication/363216791_Expanded_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_Medication_Use_in_the_Context_of_G6PD_Genotype"
+     },
+     {
+      "title": "Rasburicase response - NIH Genetic Testing Registry (GTR) - NCBI",
+      "url": "https://www.ncbi.nlm.nih.gov/gtr/conditions/CN078005/"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896.pdf"
+     },
+     {
+      "title": "Expanded Clinical Pharmacogenetics Implementation Consortium Guideline for Medication Use in the Context of G6PD Genotype - Gammal - 2023 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2735"
+     },
+     {
+      "title": "1 Supplement to - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896-supplement.pdf"
+     },
+     {
+      "title": "G6PD CPIC guideline update goals",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "Rasburicase response (Concept Id: CN078005) - MedGen - NCBI",
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/450477"
+     },
+     {
+      "title": "CPIC Guidelines nature publishing group",
+      "url": "https://botplusweb.farmaceuticos.com/documentos/2018/7/2/125247.pdf"
+     },
+     {
+      "title": "PharmCAT Report [pharmcat.example2]",
+      "url": "https://pharmcat.clinpgx.org/examples/pharmcat.example2.report.html"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Avoid rasburicase. CPIC's guidance says it is contraindicated in G6PD-deficient patients, with or without hemolytic anemia. Rasburicase can cause severe, potentially fatal hemolysis in this group. I could not confirm the exact table row that maps the \"CNSHA\" label to rasburicase, so check the full phenotype table before relying on that specific label.\n\n**2. Strength:** Strong. The 2022 CPIC table lists rasburicase as high risk with a strong recommendation.\n\n**3. Source:** CPIC Expanded Guideline for Medication Use in the Context of G6PD Genotype (Gammal et al., 2022, *Clinical Pharmacology & Therapeutics*). It supersedes the 2014 CPIC rasburicase guideline.\n\nSources:\n- [CPIC G6PD guideline (2022), Clin Pharmacol Ther](https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896.pdf)\n- [Expanded CPIC Guideline for G6PD Genotype (Gammal, 2023), Wiley](https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2735)\n- [CPIC G6PD guideline supplement](https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896-supplement.pdf)\n- [PharmGKB 2014 rasburicase CPIC summary](https://pharmgkb.blogspot.com/2014/05/new-cpic-guideline-g6pd-rasburicase.html)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar rasburicasa en deficiencia de G6PD, acorde con CPIC; la cita (Gammal 2022, CPT) es plausible y coherente."
+ }
+}

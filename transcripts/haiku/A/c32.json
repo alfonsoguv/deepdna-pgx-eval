@@ -1,0 +1,24 @@
+{
+ "case_id": "c32",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking lovastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I can't verify this. No lookup tools are available in this session, so this is from memory and may be out of date.\n\n1. **Recommendation:** I don't know of a drug-specific CPIC recommendation for lovastatin with SLCO1B1 poor function. The closest guidance is for simvastatin, where poor function calls for avoiding the drug or using an alternative statin. Applying that caution to lovastatin would be an extrapolation, not a documented recommendation.\n\n2. **Strength/level:** Not known for lovastatin. For simvastatin, CPIC's classification is strong, with a moderate-to-strong evidence basis.\n\n3. **Source:** The most likely source is the CPIC SLCO1B1 guideline (Cooper-DeHoff et al., 2022). Verify whether it addresses lovastatin, and check the Dutch DPWG guidance as well, at cpicpgx.org and cpicpgx.org/guidelines.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": true,
+  "note_es": "La respuesta dice no conocer una recomendación específica para lovastatina y solo extrapola desde simvastatina, sin dar una recomendación propia; menciona la guía CPIC 2022 como fuente probable, que es correcta."
+ }
+}

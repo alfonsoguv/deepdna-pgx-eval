@@ -1,0 +1,24 @@
+{
+ "case_id": "c32",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking lovastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**Note:** I answered from memory of the guideline and did not check it with a tool.\n\n1. **Recommendation:** Adjust the dose or use an alternative. For SLCO1B1 Poor Function, CPIC advises prescribing a lower dose of lovastatin or considering an alternative statin that is less dependent on SLCO1B1, such as rosuvastatin or pravastatin. The aim is to lower the risk of statin-associated musculoskeletal symptoms (myopathy). If a higher intensity is needed to reach the LDL-C goal, consider an alternative statin or combination therapy, and follow disease-specific guidelines for dose adjustment. Routine creatine kinase monitoring is not a substitute for these steps.\n\n2. **Strength:** Moderate, as I recall it. The simvastatin recommendation for the same phenotype is rated stronger. I'm less certain of the lovastatin rating than of the recommendation itself.\n\n3. **Source:** CPIC (Clinical Pharmacogenetics Implementation Consortium) Guideline for SLCO1B1, ABCG2, CYP2C9, and CYP2C19 genotypes and statin-associated musculoskeletal symptoms (Cooper-DeHoff et al., 2022, *Clin Pharmacol Ther*). It updates the 2014 simvastatin-only CPIC guideline.\n\nPlease verify the exact strength rating on cpicpgx.org before using it clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta prioriza reducir la dosis de lovastatina y solo después menciona una estatina alternativa, mientras que la referencia indica prescribir una alternativa; además la fuerza 'moderada' parece errónea, aunque la cita a CPIC 2022 es correcta."
+ }
+}

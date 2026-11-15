@@ -1,0 +1,24 @@
+{
+ "case_id": "c14",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for CYP2C19 with regards to taking lansoprazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**CYP2C19 Normal Metabolizer and lansoprazole**\n\nI had no lookup tools in this session, so this comes from my knowledge of the guideline and was not checked against a live source.\n\n1. **Recommendation: standard use, with an optional dose increase for some conditions.**\n   - Start at the standard daily dose.\n   - For *H. pylori* infection or erosive esophagitis, consider raising the dose by 50–100%. The daily dose may be split into divided doses.\n   - Monitor for efficacy.\n   - Reason: normal metabolizers clear lansoprazole fairly quickly, so drug levels are lower than in intermediate or poor metabolizers. That can reduce effectiveness in conditions that need strong acid suppression.\n\n2. **Strength:** Moderate.\n\n3. **Source:** CPIC Guideline for CYP2C19 and Proton Pump Inhibitor Dosing (Lima et al., *Clin Pharmacol Ther* 2021; 109(6):1417–1423). It covers omeprazole, lansoprazole, pantoprazole and dexlansoprazole. The Dutch DPWG guideline gives no specific recommendation for normal metabolizers, since they are its reference phenotype.\n\nPlease confirm against the current CPIC guideline at cpicpgx.org or on PharmGKB before using this clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "OTHER",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta coincide con la referencia: dosis inicial estándar, considerar aumentar 50-100% en H. pylori y esofagitis erosiva, y monitorizar eficacia; cita bien la guía CPIC (Lima et al. 2021)."
+ }
+}

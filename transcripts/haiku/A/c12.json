@@ -1,0 +1,24 @@
+{
+ "case_id": "c12",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Indeterminate for CYP2C19 with regards to taking clopidogrel?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I can't verify this against the current guideline text because I have no lookup tools here, so this is from memory and may be outdated.\n\n1. **Recommendation:** I don't believe CPIC assigns a specific clopidogrel recommendation to an \"Indeterminate\" CYP2C19 result. That category usually means the genotype can't be mapped to a metabolizer phenotype, for example because of novel or incompletely characterized alleles or missing data. The practical step is to clarify the diplotype with the lab or a pharmacogenomics service and use clinical judgment in the meantime.\n\n2. **Strength:** I don't know of a graded recommendation for this category.\n\n3. **Source:** CPIC guideline for clopidogrel and CYP2C19 (Lee et al., *Clin Pharmacol Ther*, 2022), with the CPIC CYP2C19 general genotype-to-phenotype guidance. Please check cpicpgx.org for the current wording, since I may be missing an update.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Indica que CPIC no da recomendación específica para CYP2C19 indeterminado y sugiere juicio clínico, coincidiendo con 'sin recomendación'; la cita Lee et al. 2022 es correcta."
+ }
+}

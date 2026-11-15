@@ -1,0 +1,131 @@
+{
+ "case_id": "c04",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 1.75 for CYP2D6 with regards to taking tamoxifen?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC tamoxifen CYP2D6 guideline normal metabolizer activity score recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Bookshelf NBK247013",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK247013/pdf/Bookshelf_NBK247013.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 and Tamoxifen Therapy",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/CPIC-tamoxifen-guideline-draft-final-10122017.docx"
+     },
+     {
+      "title": "scholarlypublications.universiteitleiden.nl",
+      "url": "https://scholarlypublications.universiteitleiden.nl/access/item%3A3005188/download"
+     },
+     {
+      "title": "CPIC® Guideline for Tamoxifen based on CYP2D6 genotype",
+      "url": "https://cpicpgx.org/guidelines/cpic-guideline-for-tamoxifen-based-on-cyp2d6-genotype/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6 and Tamoxifen Therapy",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/CPIC-tamoxifen-guideline-draft-final-10042017.docx"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/CYP2D6_tamoxifen-supplement-final.docx"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK247013"
+     },
+     {
+      "title": "CYP2D6 and Tamoxifen",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-tamoxifen/"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/230997/mod_resource/content/1/linee%20guida%20tamossifene.pdf"
+     },
+     {
+      "title": "encyclopedia.pub",
+      "url": "https://encyclopedia.pub/entry/7823"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC CYP2D6 activity score 1.75 normal metabolizer phenotype",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8404400"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6951851"
+     },
+     {
+      "title": "cts12692 tbl 0001",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6951851/table/cts12692-tbl-0001"
+     },
+     {
+      "title": "www.nature.com",
+      "url": "https://www.nature.com/articles/gim201680"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5292679"
+     },
+     {
+      "title": "30801677 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/atomoxetine/2019/30801677-supplement.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5723247/table/T3"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6951848"
+     },
+     {
+      "title": "CYP2D6 Genotype to Phenotype Standardization Project consensus",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK574601/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Initiate tamoxifen at standard dosing (20 mg/day). Avoid concurrent moderate or strong CYP2D6 inhibitors. A CYP2D6 activity score of 1.75 falls in the normal metabolizer range (1.5–2.0) of CPIC's tamoxifen guideline, which expects therapeutic endoxifen concentrations.\n\n**2. Strength:** The guideline table I found labels this group \"Strong,\" but I couldn't confirm from the primary document whether that refers to the recommendation strength or the evidence level.\n\n**3. Source:** CPIC Guideline for Tamoxifen based on CYP2D6 genotype (2018, with a supplement). Per the CPIC CYP2D6 standardization work, 1.75 also counts as normal metabolizer under the newer 1.25–2.25 range. I didn't open the full guideline text, so check the current CPIC page before clinical use.\n\nSources:\n- [CPIC® Guideline for Tamoxifen based on CYP2D6 genotype](https://cpicpgx.org/guidelines/cpic-guideline-for-tamoxifen-based-on-cyp2d6-genotype/)\n- [CPIC Guideline for CYP2D6 and Tamoxifen Therapy (supplement)](https://cpicpgx.org/wp-content/uploads/2016/02/CYP2D6_tamoxifen-supplement-final.docx)\n- [CYP2D6 Genotype to Phenotype Standardization Project consensus](https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda dosis estándar de 20 mg/día y evitar inhibidores moderados/fuertes de CYP2D6, igual que la referencia CPIC; sin embargo, la afirmación de que 1.75 es normal bajo un rango 'más nuevo' de 1.25–2.25 y la etiqueta 'Strong' son dudosas, y la URL del suplemento puede no ser exacta."
+ }
+}

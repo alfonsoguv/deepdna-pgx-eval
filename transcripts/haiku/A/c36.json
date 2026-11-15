@@ -1,0 +1,24 @@
+{
+ "case_id": "c36",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Deficient with CNSHA for G6PD with regards to taking rasburicase?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**Caveat:** \"CNSHA\" isn't a standard G6PD phenotype term. I'm assuming it refers to WHO Class I severity (chronic non-spherocytic hemolytic anemia), so I'm answering for severe G6PD deficiency. I have no tools available to verify against the current guideline text.\n\n1. **Recommendation:** Avoid rasburicase. Use an alternative agent, typically allopurinol for tumor lysis prophylaxis, since rasburicase can cause severe hemolysis and methemoglobinemia in G6PD-deficient patients.\n\n2. **Strength:** CPIC classifies this as a strong recommendation, but I'm not certain of the exact evidence level. Please check the current guideline table.\n\n3. **Source:** CPIC guideline for G6PD genotype and rasburicase therapy (Relling et al., 2014, with the 2017 update).\n\nIf you can confirm what \"CNSHA\" refers to in your context, I can refine this answer. For individual patient decisions, verify against the current CPIC guideline and consult a clinical pharmacist.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar la rasburicasa y usar una alternativa, coincidiendo con la referencia; atribuye a CPIC (Relling 2014, actualización 2017), cita plausible y correcta."
+ }
+}

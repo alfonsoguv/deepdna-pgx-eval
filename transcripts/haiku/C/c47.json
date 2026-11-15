@@ -1,0 +1,131 @@
+{
+ "case_id": "c47",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for UGT1A1 with regards to taking atazanavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline UGT1A1 atazanavir poor metabolizer recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051"
+     },
+     {
+      "title": "26417955 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/atazanavir/2015/26417955-supplement.pdf"
+     },
+     {
+      "title": "CPIC call 10022025",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/10/CPIC-call-10022025.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://elbiruniblogspotcom.blogspot.com/2016/12/clinical-pharmacogenetics.html"
+     },
+     {
+      "title": "CPIC update 2019",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/10/CPIC-update-2019.pdf"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=576"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5726942"
+     },
+     {
+      "title": "pharmcat.org",
+      "url": "https://pharmcat.org/examples/pharmcat.example2.report.html"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guideline ugt1a1 and",
+      "url": "https://vumc.org/hivclinicaltrials/publication/clinical-pharmacogenetics-implementation-consortium-cpic-guideline-ugt1a1-and"
+     },
+     {
+      "title": "pharmcat.org",
+      "url": "https://pharmcat.org/examples/pharmcat.example.report.html"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "Gammal CPIC guideline UGT1A1 atazanavir prescribing poor metabolizers \"alternative\" classification strong optional",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051"
+     },
+     {
+      "title": "pharmcat.org",
+      "url": "https://pharmcat.org/examples/pharmcat.example.report.html"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5726942"
+     },
+     {
+      "title": "cts12866 tbl 0002",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7719396/table/cts12866-tbl-0002"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://elbiruniblogspotcom.blogspot.com/2016/12/clinical-pharmacogenetics.html"
+     },
+     {
+      "title": "EN UGT1A1 Meds v3 March2025",
+      "url": "https://learn.color.com/rs/878-SLQ-748/images/EN_UGT1A1_Meds_v3_March2025.pdf?version=0"
+     },
+     {
+      "title": "vivo.weill.cornell.edu",
+      "url": "https://vivo.weill.cornell.edu/display/pubid26417955"
+     },
+     {
+      "title": "www.frontiersin.org",
+      "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.660965/epub"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guideline ugt1a1 and",
+      "url": "https://vumc.org/hivclinicaltrials/publication/clinical-pharmacogenetics-implementation-consortium-cpic-guideline-ugt1a1-and"
+     },
+     {
+      "title": "0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk",
+      "url": "https://0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk/medgen/CN417141"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** CPIC advises that prescribers *consider an alternative antiretroviral* to atazanavir for UGT1A1 poor metabolizers, particularly when jaundice (hyperbilirubinemia) would be a concern for the patient. This is an alternative-agent suggestion, not a hard avoid.\n\n**2. Strength:** I could not confirm it. The search snippets did not show the classification for the poor metabolizer row. One source suggested \"optional,\" but I couldn't verify that, so check Table 2 of the guideline.\n\n**3. Source:** CPIC Guideline for UGT1A1 and Atazanavir Prescribing (Gammal et al., *Clin Pharmacol Ther*, 2016).\n\nSources:\n- [PMC4785051](https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051)\n- [CPIC 2015 supplement](https://files.cpicpgx.org/data/guideline/publication/atazanavir/2015/26417955-supplement.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda considerar un agente alternativo a atazanavir (EVITAR), coincide con la referencia CPIC; cita Gammal et al., Clin Pharmacol Ther 2016 (PMC4785051), plausible y correcta."
+ }
+}

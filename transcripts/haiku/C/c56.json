@@ -1,0 +1,127 @@
+{
+ "case_id": "c56",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for CYP2B6 with regards to taking efavirenz?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2B6 efavirenz poor metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6739160"
+     },
+     {
+      "title": "repository.li.mahidol.ac.th",
+      "url": "https://repository.li.mahidol.ac.th/entities/publication/2ce04880-19c2-4906-97b4-c72c2cfb9fde/full"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/2668"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.1477"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guideline for cyp2b6 and efavirenz containing antiretroviral therapy",
+      "url": "https://www.mentalhealthdataprizeafrica.aphrc.org/repository/paper/43259/clinical-pharmacogenetics-implementation-consortium-cpic-guideline-for-cyp2b6-and-efavirenz-containing-antiretroviral-therapy"
+     },
+     {
+      "title": "4.6 Article",
+      "url": "https://peeref.com/works/18355586"
+     },
+     {
+      "title": "b206fdb3 63b7 4e9e 934b 5bed0d848606",
+      "url": "https://scholarworks.indianapolis.iu.edu/items/b206fdb3-63b7-4e9e-934b-5bed0d848606"
+     },
+     {
+      "title": "Back to Search Start Over",
+      "url": "https://searchworks.jioinstitute.edu.in/articles/cmedm__31006110"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=1877"
+     },
+     {
+      "title": "cyp2b6 genetic test efavirenz methadone bupropion results",
+      "url": "https://vitalibrary.com/cyp2b6-genetic-test-efavirenz-methadone-bupropion-results/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2019 efavirenz CYP2B6 poor metabolizers \"400 mg\" alternative antiretroviral not predominantly metabolized by CYP2B6 Table",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2B6 and Efavirenz‐Containing Antiretroviral Therapy",
+      "url": "https://www.researchgate.net/publication/332552307_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_CYP2B6_and_Efavirenz-Containing_Antiretroviral_Therapy"
+     },
+     {
+      "title": "PharmVar GeneFocus: CYP2B6 - IU Indianapolis ScholarWorks",
+      "url": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/8ecc2866-de29-438d-9fd8-3706575ba3a7/content"
+     },
+     {
+      "title": "1 Supplement to:",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/efavirenz/2019/31006110-supplement.pdf"
+     },
+     {
+      "title": "Efavirenz Monograph for Professionals - Drugs.com",
+      "url": "https://www.drugs.com/monograph/efavirenz.html"
+     },
+     {
+      "title": "CYP2B6 - RPRDx",
+      "url": "https://www.rprdx.com/gene-description/cyp2b6/"
+     },
+     {
+      "title": "CYP2B6 Genotype‐Dependent Inhibition of CYP1A2 and Induction of CYP2A6 by the Antiretroviral Drug Efavirenz in Healthy Volunteers - Metzger - 2019 - Clinical and Translational Science - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1111/cts.12671"
+     },
+     {
+      "title": "Nature Index Pharmacogenetics of Efavirenz in HIV Therapy",
+      "url": "https://www.nature.com/nature-index/topics/l4/pharmacogenetics-of-efavirenz-in-hiv-therapy"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC ...",
+      "url": "https://scholarworks.indianapolis.iu.edu/bitstreams/cced49fb-f6f9-450e-8f64-a55571cd1075/download"
+     },
+     {
+      "title": "Application of Physiologically Based Pharmacokinetic (PBPK) Modeling Within a Bayesian Framework to Identify Poor Metabolizers of Efavirenz (PM), Using a Test Dose of Efavirenz",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5881162/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Use an alternative, or if efavirenz is used, reduce the dose. The CPIC guideline advises considering an alternative antiretroviral not predominantly metabolized by CYP2B6. If efavirenz is still used, the suggested starting dose is 200–400 mg/day, instead of the standard 600 mg. I could not retrieve the primary dosing table to confirm the exact wording.\n\n**2. Strength:** The 200–400 mg/day suggestion is a moderate recommendation, according to the Drugs.com summary. I could not confirm the strength for the alternative-drug recommendation.\n\n**3. Source:** CPIC Guideline for CYP2B6 and Efavirenz-Containing Antiretroviral Therapy (Desta et al., 2019, *Clin Pharmacol Ther*). For the primary table, see the [CPIC guideline on PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC6739160) or [cpicpgx.org](https://cpicpgx.org). The dose range is from a secondary summary, [Drugs.com efavirenz monograph](https://www.drugs.com/monograph/efavirenz.html), which I did not verify against the guideline itself.\n\nSources:\n- [PMC6739160](https://pmc.ncbi.nlm.nih.gov/articles/PMC6739160)\n- [Drugs.com efavirenz monograph](https://www.drugs.com/monograph/efavirenz.html)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta prioriza una alternativa a efavirenz y solo como segunda opción reducir la dosis, mientras la referencia es ajustar la dosis a 400 o 200 mg/día."
+ }
+}

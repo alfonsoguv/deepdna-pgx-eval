@@ -1,0 +1,24 @@
+{
+ "case_id": "c05",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for CYP2D6 with regards to taking desipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**Note:** I did not verify this against the source, so please confirm it in the CPIC tables or on PharmGKB.\n\n1. **Recommendation:** This is a dosing adjustment rather than avoidance. For CYP2D6 intermediate metabolizers (activity score 1.0), my recollection is that desipramine can be started at the standard recommended dose, with therapeutic drug monitoring (TDM) used to guide later dose adjustments. I'm not certain whether the 2023 update instead suggests a modest starting-dose reduction (about 25%) for this phenotype. The 2016 version suggested a 50% reduction, and the later update softened this.\n\n2. **Strength:** I believe it is rated \"Optional\" for desipramine in IMs, but I can't confirm this from memory.\n\n3. **Source:** CPIC Guideline for Tricyclic Antidepressants and CYP2D6/CYP2C19 (Hicks et al., 2016, updated by Bousman et al., 2023).",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recuerda principalmente iniciar con dosis estándar (NORMAL), contrario a la referencia de reducir 25%; menciona la reducción solo como duda. Atribuye a CPIC correctamente, pero detalles como la reducción del 50% en 2016 y el nivel 'Optional' parecen dudosos."
+ }
+}

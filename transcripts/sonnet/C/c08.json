@@ -1,0 +1,131 @@
+{
+ "case_id": "c08",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for CYP2D6 with regards to taking paroxetine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline SSRI paroxetine CYP2D6 intermediate metabolizer recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11141156/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9553948"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304"
+     },
+     {
+      "title": "Pediatric SSRI PGx Cheat Sheet Educator",
+      "url": "https://dcricollab.dcri.duke.edu/sites/NIHKR/IGNITE%20Documents%20and%20Links%20to%20Content/Pediatric-SSRI-PGx-Cheat-Sheet-Educator.pdf"
+     },
+     {
+      "title": "CYP2D6 Genotype to Phenotype Standardization Project consensus",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf"
+     },
+     {
+      "title": "stjude.org",
+      "url": "https://www.stjude.org/content/dam/en_US/shared/www/research/pharmaceutical-sciences/CYP2D6%20Competency%20Advanced.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/paroxetine/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2023 serotonin reuptake inhibitor antidepressants paroxetine CYP2D6 intermediate metabolizer \"lower starting dose\" slower titration optional",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Genetic%20Clues%20to%20Beating%20the%20Blues %20Audience%20Slides",
+      "url": "https://ce.advocatehealth.org/sites/default/files/media/2026-04/Genetic%20Clues%20to%20Beating%20the%20Blues-%20Audience%20Slides.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11141156/"
+     },
+     {
+      "title": "Article UF PharmaNote CYP2D6 and CYP2C19 for SSRIs",
+      "url": "https://dcricollab.dcri.duke.edu/sites/NIHKR/IGNITE%20Documents%20and%20Links%20to%20Content/Article-UF-PharmaNote-CYP2D6-and-CYP2C19-for-SSRIs.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/paroxetine/"
+     },
+     {
+      "title": "Pediatric SSRI PGx Cheat Sheet Educator",
+      "url": "https://dcricollab.dcri.duke.edu/sites/NIHKR/IGNITE%20Documents%20and%20Links%20to%20Content/Pediatric-SSRI-PGx-Cheat-Sheet-Educator.pdf"
+     },
+     {
+      "title": "Impact of CYP2D6 Genotype on Paroxetine Serum Concentration",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37012633/"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/citalopram/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "1. **Recommendation:** Adjust the dose. Consider a lower starting dose and slower titration than you would use in a normal metabolizer. Paroxetine is not avoided for this phenotype. An activity score of 1.0 falls in the CYP2D6 intermediate metabolizer range under the CPIC/DPWG consensus.\n\n2. **Strength:** I believe CPIC rates this \"Optional\", but I couldn't confirm that label in my searches. The search results showed \"Strong\" for the ultrarapid metabolizer tier (alternative drug), but they didn't show the label for the intermediate tier. Check the guideline table before citing it.\n\n3. **Source:** CPIC 2023 guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4 and HTR2A genotypes and serotonin reuptake inhibitor antidepressants (Bousman et al., *Clin Pharmacol Ther* 2023). The wording of the recommendation matches a CPIC-attributed summary table and the UK Clinical Pharmacy PGx handbook, which cites the CPIC guideline.\n\nSources:\n- [CPIC 2023 SSRI guideline PDF](https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf)\n- [UK Clinical Pharmacy PGx handbook: paroxetine](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/paroxetine/)\n- [PMC11141156](https://pmc.ncbi.nlm.nih.gov/articles/PMC11141156/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis inicial más baja y titulación más lenta, igual que la referencia CPIC, y cita la guía CPIC 2023 de ISRS (Bousman et al., Clin Pharmacol Ther), que es correcta; la duda sobre el nivel de la recomendación es honesta y no inventada."
+ }
+}

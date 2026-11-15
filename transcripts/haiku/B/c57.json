@@ -1,0 +1,44 @@
+{
+ "case_id": "c57",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥4.0 for CYP2D6 with regards to taking ondansetron?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2D6",
+    "drug": "ondansetron"
+   },
+   "result": "No guidance curated for CYP2D6 and \"ondansetron\". Curated drugs: codeine, tramadol, tamoxifen, amitriptyline, nortriptyline, paroxetine, fluvoxamine, risperidone, aripiprazole, atomoxetine, clomipramine, imipramine, doxepin, trimipramine, desipramine, vortioxetine, venlafaxine, metoprolol, hydrocodone.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "ondansetron"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[],\"not_covered\":[\"ondansetron\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**Result: no guidance found.** I can't give a recommendation for this phenotype.\n\n1. **Recommendation:** None. The DeepDNA knowledge base has no CYP2D6–ondansetron record. Its CYP2D6 records cover codeine, tramadol, tamoxifen, several tricyclic antidepressants, paroxetine, risperidone, aripiprazole, atomoxetine, metoprolol, hydrocodone and a few others.\n2. **Strength/level:** Not applicable, since no guideline or label was found for this pair.\n3. **Source:** None returned by DeepDNA. Ondansetron is not in its pharmacogenomic coverage.\n\nThis doesn't mean ondansetron has no CYP2D6 relevance. Ondansetron is metabolized mainly by CYP3A4, with minor contributions from CYP1A2 and CYP2D6. Any clinical decision about it should come from the prescriber or a pharmacist, who can check the current CPIC and FDA label content directly.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "NONE",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "La respuesta dice que la base de datos no tiene registro de CYP2D6-ondansetrón y no ofrece recomendación; la referencia indica evitar y usar granisetrón."
+ }
+}

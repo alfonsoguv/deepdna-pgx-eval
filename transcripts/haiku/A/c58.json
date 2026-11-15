@@ -1,0 +1,24 @@
+{
+ "case_id": "c58",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Variable for G6PD with regards to taking mafenide?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I can't give a sourced answer. I have no tools here to check a guideline, and I don't know of a guideline recommendation for mafenide in G6PD variant or deficient patients.\n\n1. **Recommendation:** Not determined. To my knowledge, mafenide is not among the drugs covered by the CPIC G6PD guideline, which addresses agents such as rasburicase, pegloticase, and dapsone. Sulfonamides are sometimes listed as drugs to use cautiously in G6PD deficiency, but I can't confirm a phenotype-specific recommendation for mafenide.\n2. **Strength of recommendation:** Not known.\n3. **Source:** None identified. Check the CPIC guideline library (cpicpgx.org), PharmGKB drug pages, and the mafenide prescribing information. For a patient, involve a clinical pharmacist or hematologist. Also consider the clinical context: mafenide is used topically for burns, and any G6PD-related hemolysis risk should be weighed against the wound-care need.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "NONE",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": true,
+  "note_es": "La respuesta no da una recomendación concreta: dice que no puede determinarla y remite a otras fuentes, mientras que la referencia indica uso normal sin evitar el fármaco."
+ }
+}

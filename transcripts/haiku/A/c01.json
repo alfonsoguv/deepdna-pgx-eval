@@ -1,0 +1,24 @@
+{
+ "case_id": "c01",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 3.0 for CYP2D6 with regards to taking nortriptyline?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Consider an alternative antidepressant not metabolized by CYP2D6. If nortriptyline is still used, the CPIC guidance is to start at the standard dose and monitor response and plasma levels closely, since UM patients can have subtherapeutic levels and poor response.\n\n**2. Strength:** I believe the CPIC recommendation is rated moderate, but I'm not certain of the exact classification. I couldn't verify it because no lookup tools were available in this session.\n\n**3. Source:** CPIC guideline for CYP2D6 and tricyclic antidepressants (Hicks et al., *Clinical Pharmacology & Therapeutics*, 2017). The activity score of 3.0 falls in the ultrarapid range (>2.25) under CPIC's activity-score framework, so the UM recommendation applies.\n\nPlease confirm the exact wording and strength on the CPIC website (cpicpgx.org) and check whether the guideline has been updated, since my knowledge may be out of date.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda como acción principal un antidepresivo alternativo no metabolizado por CYP2D6, igual que la referencia, y cita CPIC (Hicks 2017). Sin embargo, indica iniciar con la dosis estándar, mientras que la referencia sugiere una dosis objetivo más alta, y afirma una fuerza 'moderada' que es probablemente incorrecta (la guía CPIC la califica como opcional), por lo que el detalle es sospechoso."
+ }
+}

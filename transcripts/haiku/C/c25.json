@@ -1,0 +1,131 @@
+{
+ "case_id": "c25",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for CYP2C9 with regards to taking tenoxicam?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline NSAIDs CYP2C9 tenoxicam piroxicam meloxicam intermediate metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for meloxicam and CYP2C9",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166192301"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=2351"
+     },
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "CYP2C9 NSAID guideline final CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx"
+     },
+     {
+      "title": "cyp2c9 polymorphism and use of oral nonsteroidal antiinflammatory drugs",
+      "url": "https://uspharmacist.com/article/cyp2c9-polymorphism-and-use-of-oral-nonsteroidal-antiinflammatory-drugs"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC tenoxicam CYP2C9 activity score",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CYP2C9 NSAID guideline final CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://genomicseducation.hee.nhs.uk/genotes/knowledge-hub/non-steroidal-anti-inflammatory-drugs-nsaids"
+     },
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "Identifying individuals who may be at risk for altered metabolism of drugs that are modified by cytochrome P450 2C9",
+      "url": "https://test.mayocliniclabs.com/test-catalog/Overview/610044"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "Bookshelf NBK537367",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537367/pdf/Bookshelf_NBK537367.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** For an intermediate metabolizer with CYP2C9 activity score 1.0, CPIC advises choosing an alternative NSAID not primarily cleared by CYP2C9 (such as naproxen), or a CYP2C9-cleared NSAID with a shorter half-life. This is an alternative-therapy recommendation, not a dose adjustment.\n\n**2. Strength:** I couldn't confirm the classification level from the search snippets. The CPIC guideline's evidence and strength grading for tenoxicam should be checked in the full document. CPIC notes that the tenoxicam evidence is scarce.\n\n**3. Source:** CPIC guideline for NSAIDs and CYP2C9 (2020), piroxicam and tenoxicam table. I got this from search snippets and didn't open the full guideline, so verify the exact wording there. The snippets also mention that the NHS-adapted table gives no change to starting dose at activity score 1.5, which is a different case from 1.0.\n\nSources:\n- [CPIC NSAID preprint](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf)\n- [CYP2C9 NSAID guideline final CPIC review](https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx)\n- [Annotation of CPIC Guideline for meloxicam and CYP2C9 (PharmGKB)](https://www.pharmgkb.org/guidelineAnnotation/PA166192301)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda una alternativa (AINE no metabolizado por CYP2C9 o con vida media más corta), igual que la referencia CPIC; cita correctamente la guía CPIC de AINEs 2020 sin detalles inventados."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c20",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 1.75 for CYP2D6 and No Result for CYP2C19 with regards to taking clomipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Standard use. For CYP2D6 normal metabolizers, CPIC advises the usual starting dose with clinical monitoring. The CYP2C19 result is missing, so this is only a partial answer. Clomipramine is metabolized by both enzymes, and CPIC's recommendations are written for combined phenotypes. Obtaining CYP2C19 genotyping would allow a complete recommendation.\n\n**2. Strength:** CPIC classifies standard dosing for normal metabolizers as an optional recommendation. I'm not certain of the exact current wording.\n\n**3. Source:** CPIC Guideline for CYP2D6, CYP2C19 and Tricyclic Antidepressants (Hicks et al., 2016, with later updates). I had no tools to check the live guideline, so verify against the current CPIC version before clinical use.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda uso estándar con dosis inicial habitual, coincide con la referencia; cita CPIC Hicks 2016 (plausible), con salvedad por falta de resultado de CYP2C19."
+ }
+}

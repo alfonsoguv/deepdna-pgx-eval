@@ -1,0 +1,131 @@
+{
+ "case_id": "c11",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Rapid Metabolizer for CYP2C19 with regards to taking omeprazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2C19 rapid metabolizer omeprazole dosing recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7868475"
+     },
+     {
+      "title": "ACCP%20PPI%20Poster%202020 10.13.2020%20(FINAL)",
+      "url": "https://accp.confex.com/accp/2020am/mediafile/Handout/Paper54746/ACCP%20PPI%20Poster%202020_10.13.2020%20(FINAL).pdf"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK100895"
+     },
+     {
+      "title": "view.ncbi.nlm.nih.gov",
+      "url": "https://view.ncbi.nlm.nih.gov/gtr/conditions/CN474477"
+     },
+     {
+      "title": "CYP2C19 proton pump inhibitors guideline revised",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf"
+     },
+     {
+      "title": "464cffdf c092 466c 8e26 71afff5a45d5",
+      "url": "https://scholarworks.indianapolis.iu.edu//signposting/describedby/464cffdf-c092-466c-8e26-71afff5a45d5"
+     },
+     {
+      "title": "Bookshelf NBK100895",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK100895/pdf/Bookshelf_NBK100895.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10296543"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/omeprazole/"
+     },
+     {
+      "title": "Omeprazole Therapy and CYP2C19 Genotype",
+      "url": "https://0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk/pubmed/28520353"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2020 PPI guideline CYP2C19 \"rapid metabolizer\" \"increase starting daily dose by 100%\" omeprazole \"optional\"",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7868475"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK100895"
+     },
+     {
+      "title": "CYP2C19 proton pump inhibitors guideline revised",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10296543"
+     },
+     {
+      "title": "Bookshelf NBK100895",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK100895/pdf/Bookshelf_NBK100895.pdf"
+     },
+     {
+      "title": "ACCP%20PPI%20Poster%202020 10.13.2020%20(FINAL)",
+      "url": "https://accp.confex.com/accp/2020am/mediafile/Handout/Paper54746/ACCP%20PPI%20Poster%202020_10.13.2020%20(FINAL).pdf"
+     },
+     {
+      "title": "Scientific article",
+      "url": "https://archive-ouverte.unige.ch/unige:150660"
+     },
+     {
+      "title": "dovepress.com",
+      "url": "https://dovepress.com/article/download/84660"
+     },
+     {
+      "title": "pharmaceuticals 16 00889 t003",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10302140/table/pharmaceuticals-16-00889-t003"
+     },
+     {
+      "title": "Omeprazole Therapy and CYP2C19 Genotype",
+      "url": "https://0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk/pubmed/28520353"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**Short answer:** For CYP2C19 rapid metabolizers (*1/*17), CPIC's guidance is a dose adjustment, not avoidance. I could not confirm the exact wording from the primary document, and my two searches gave conflicting summaries.\n\n1. **Recommendation:** Consider increasing the starting daily omeprazole dose by roughly 50–100% when treating H. pylori infection or erosive esophagitis. One source says this is for rapid metabolizers, and a second says the standard starting dose applies. The 100% increase is clearly the ultrarapid (*17/*17) recommendation.\n2. **Strength:** One summary lists the PPI recommendation as \"Moderate\" with dosing as \"Optional.\" I could not verify this against the original guideline.\n3. **Source:** CPIC Guideline for CYP2C19 and Proton Pump Inhibitor Dosing (Lima et al., 2021, *Clin Pharmacol Ther*). The [CPIC PDF](https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf) is the primary source to check the rapid metabolizer row.\n\nSources:\n- [CPIC PPI guideline PDF](https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf)\n- [PMC7868475](https://pmc.ncbi.nlm.nih.gov/articles/PMC7868475)\n- [PMC10296543](https://pmc.ncbi.nlm.nih.gov/articles/PMC10296543)\n- [ACCP PPI poster 2020](https://accp.confex.com/accp/2020am/mediafile/Handout/Paper54746/ACCP%20PPI%20Poster%202020_10.13.2020%20(FINAL).pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda considerar aumentar la dosis un 50-100% en H. pylori y esofagitis erosiva, en línea con la referencia, y cita correctamente la guía CPIC (Lima 2021), aunque con cierta incertidumbre."
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "case_id": "c27",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.0 for CYP2C9 and Poor Function for SLCO1B1 with regards to taking fluvastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2C9",
+    "drug": "fluvastatin"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2C9\",\"drug\":\"fluvastatin\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"Statin cleared mainly by CYP2C9. CPIC 2022, with normal SLCO1B1 function: a starting dose of ≤40 mg/day for intermediate metabolizers and ≤20 mg/day for poor metabolizers (moderate), considering an alternative statin or combination therapy if a higher dose is needed. When decreased or poor SLCO1B1 function is also present, CPIC lowers these limits or suggests an alternative statin (optional).\",\"phenotypes\":[\"Normal metabolizer (NM): two normal-function alleles (*1/*1)\",\"Intermediate metabolizer (IM): activity score 1.0–1.5 (e.g. *1/*2, *1/*3, *2/*2)\",\"Poor metabolizer (PM): activity score 0–0.5 (e.g. *2/*3, *3/*3)\"],\"sources\":[{\"label\":\"CPIC — CYP2C9 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2c9/\"},{\"label\":\"PharmGKB CYP2C9 (PA126)\",\"url\":\"https://www.pharmgkb.org/gene/PA126\"},{\"label\":\"PharmVar CYP2C9\",\"url\":\"https://www.pharmvar.org/gene/CYP2C9\"},{\"label\":\"Cooper-DeHoff et al., Clin Pharmacol Ther 2022 (CPIC SLCO1B1/ABCG2/CYP2C9–statin guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/35152405/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "SLCO1B1",
+    "drug": "fluvastatin"
+   },
+   "result": "{\"pair\":{\"gene\":\"SLCO1B1\",\"drug\":\"fluvastatin\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"CPIC 2022: for SLCO1B1 decreased function, the desired starting dose, with possible increased myopathy risk especially above 40 mg/day; for poor function, a starting dose of ≤40 mg/day (moderate, with normal CYP2C9 function). CYP2C9 genotype also modifies the fluvastatin recommendation.\",\"phenotypes\":[\"Increased function (*14/*14)\",\"Normal function (e.g. *1/*1, *1/*14; rs4149056 T/T)\",\"Decreased function (one no-function allele, e.g. *1/*5, *1/*15; rs4149056 T/C)\",\"Possible decreased function (one no-function plus one uncertain-function allele)\",\"Poor function (two no-function alleles, e.g. *5/*5, *5/*15, *15/*15; rs4149056 C/C)\",\"Indeterminate\"],\"sources\":[{\"label\":\"CPIC — SLCO1B1 gene page\",\"url\":\"https://cpicpgx.org/gene/slco1b1/\"},{\"label\":\"PharmGKB SLCO1B1 (PA134865839)\",\"url\":\"https://www.pharmgkb.org/gene/PA134865839\"},{\"label\":\"Cooper-DeHoff et al., Clin Pharmacol Ther 2022 (CPIC SLCO1B1/ABCG2/CYP2C9–statin guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/35152405/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Adjust the dose, and consider an alternative statin. CPIC's combined guidance for CYP2C9 poor metabolizer plus SLCO1B1 poor function is to lower the fluvastatin dose limits or suggest an alternative statin. The records I retrieved don't give an exact combined dose. The separate limits are ≤20 mg/day for CYP2C9 PM with normal SLCO1B1 function, and ≤40 mg/day for SLCO1B1 poor function with normal CYP2C9 function. Combining both risk factors would call for a lower dose than either alone, but the specific figure isn't in these records.\n\n**2. Strength:** CPIC level A for both gene–drug pairs. The \"lower the limit or switch statin\" step for combined CYP2C9 and SLCO1B1 status is marked optional in the CYP2C9 record.\n\n**3. Source:** CPIC 2022 SLCO1B1/ABCG2/CYP2C9–statin guideline (Cooper-DeHoff et al., Clin Pharmacol Ther 2022; PMID 35152405). Also the CPIC gene pages for CYP2C9 and SLCO1B1.\n\nThis is educational information. The prescriber makes the final decision on the drug and dose.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda ajustar la dosis y solo 'considerar' una alternativa, mientras que la referencia indica prescribir una estatina alternativa (EVITAR); la cita CPIC 2022 PMID 35152405 es correcta."
+ }
+}

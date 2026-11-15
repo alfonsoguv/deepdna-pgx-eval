@@ -1,0 +1,24 @@
+{
+ "case_id": "c18",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 and No Result for CYP2C19 with regards to taking amitriptyline?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** For a CYP2D6 ultrarapid metabolizer (activity score ≥5.0 is how the CPIC 2023 update frames it), the guideline advises **avoiding amitriptyline**. Reduced plasma levels of amitriptyline and its active metabolite nortriptyline make therapeutic failure likely. If a tricyclic is still considered, use therapeutic drug monitoring to guide dosing, or choose a non-TCA alternative not predominantly metabolized by CYP2D6.\n\n**2. Strength:** Optional for CYP2D6 ultrarapid metabolizers in the CPIC tables, I believe. Strength was \"Moderate\" for the 2016 version and \"Optional\" for the 2D6 UM/ 2C19 combined contexts. I'm not fully certain of the exact grading wording, so verify it against the current table.\n\n**3. Source:** CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A genotypes and serotonin reuptake inhibitor antidepressants... more precisely, the **CPIC Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19 (Hicks et al., 2016/2023 update)**.\n\n**Note on CYP2C19 \"No Result\":** There is no CYP2C19 phenotype, so the combined CYP2D6/CYP2C19 recommendation cannot be applied. The CYP2D6-based advice (avoid) stands on its own, but CYP2C19 status (which affects demethylation to nortriptyline) remains unknown. Consider testing it if amitriptyline is still being considered.\n\nI didn't run any tools to verify this, so please confirm against the current CPIC/PharmGKB table.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar amitriptilina (coincide con la referencia) y cita CPIC, pero afirma detalles dudosos: fuerza 'Optional' y 'Moderate' inventadas, el año 2023 como actualización y una confusión inicial con la guía de SSRIs; la guía de TCAs es Hicks 2016 (actualización 2023 no confirmada)."
+ }
+}

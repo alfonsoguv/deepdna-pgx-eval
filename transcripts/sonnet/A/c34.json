@@ -1,0 +1,24 @@
+{
+ "case_id": "c34",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Deficient for G6PD with regards to taking tafenoquine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Avoid tafenoquine in G6PD-deficient individuals. Tafenoquine is an 8-aminoalkaloid oxidant, so it carries a risk of acute hemolytic anemia. It also has a long half-life, so hemolysis can't be stopped quickly once the drug is given. For malaria, use an alternative non-oxidant regimen. For *P. vivax* radical cure in deficient patients, the alternative would be chosen with specialist input.\n\n2. **Strength:** Strong (for the Deficient phenotype, including deficient with chronic non-spherocytic hemolytic anemia).\n\n3. **Source:** CPIC guideline for G6PD genotype and use of rasburicase and other medications associated with hemolysis (2022 update, Gammal et al.). The FDA labels for tafenoquine (Krintafel, Arakoda) also contraindicate its use in patients with G6PD deficiency. They require quantitative G6PD testing before dosing.\n\nI couldn't check these sources with a tool in this session, so this is from memory. Please confirm the strength rating and the exact wording against the current CPIC/PharmGKB entry.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar tafenoquina en deficientes de G6PD, igual que la referencia, y lo atribuye a la guía CPIC 2022 (Gammal et al.), que es correcta."
+ }
+}

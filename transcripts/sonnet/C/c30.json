@@ -1,0 +1,127 @@
+{
+ "case_id": "c30",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking pravastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2022 guideline SLCO1B1 poor function pravastatin recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "the clinical pharmacogenetics implementation consortium guideline for slco b abcg and cyp",
+      "url": "https://aminer.org/pub/620b85485aee126c0fab9dce/the-clinical-pharmacogenetics-implementation-consortium-guideline-for-slco-b-abcg-and-cyp"
+     },
+     {
+      "title": "Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/10/SLCO1B1-supplement-2021-update-CPIC-review.docx"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "publications-affiliated.scilifelab.se",
+      "url": "https://publications-affiliated.scilifelab.se/publication/260bf9ac2fb84c4fa4b462a2e4cf9dcb"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/4430"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluvastatin/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/pravastatin/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "pravastatin SLCO1B1 poor function \"consider a lower dose\" CPIC statin dosing recommendation Table 2 moderate",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "Statins — Knowledge Hub",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/statins/"
+     },
+     {
+      "title": "Two for the heart: Dutch Pharmacogenetic Working Group prescribing guidance on statins and sulfonylureas to reduce cardiometabolic risk - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11986010/"
+     },
+     {
+      "title": "1 CPIC guidelines for SLCO1B1 and simvastatin-induced ...",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/simvastatin/2014/24918167-supplement.pdf"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium Guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and Statin‐Associated Musculoskeletal Symptoms - Cooper‐DeHoff - 2022 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2557"
+     },
+     {
+      "title": "(PDF) The Clinical Pharmacogenomics Implementation Consortium: CPIC Guideline for SLCO1B1 and Simvastatin-Induced Myopathy",
+      "url": "https://www.researchgate.net/publication/225055969_The_Clinical_Pharmacogenomics_Implementation_Consortium_CPIC_Guideline_for_SLCO1B1_and_Simvastatin-Induced_Myopathy"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0_noSplash_ec38d44d0b3c312e84f585ef38f5d267.pdf"
+     },
+     {
+      "title": "Is Mevacor Affected by Genetics?",
+      "url": "https://www.gene2rx.com/drug-genetics/mevacor/"
+     },
+     {
+      "title": "Genetically Guided Statin Therapy on Statin Perceptions, Adherence, and Cholesterol Lowering: A Pilot Implementation Study in Primary Care Patients",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4263970/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**Phenotype:** SLCO1B1 Poor Function, pravastatin\n\n1. **Recommendation:** Adjust the dose. Prescribe a starting dose of 40 mg or less, then adjust based on disease-specific guidelines. Pravastatin exposure is increased in poor function. The guidance is a dose cap with titration, not avoidance of the drug.\n\n2. **Strength:** I could not confirm the strength rating for this row. The search results did not show it, and I don't want to guess. It is listed in Table 2 and the supplement's strength-of-recommendation section of the publication.\n\n3. **Source:** CPIC guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and statin-associated musculoskeletal symptoms (Cooper-DeHoff et al., *Clin Pharmacol Ther* 2022). This replaces the earlier simvastatin-only guideline.\n\nThe dose wording comes from a search summary of the CPIC table, not from my reading the table itself. Check Table 2 of the publication before using it clinically.\n\nSources:\n- [CPIC statin guideline page](https://cpicpgx.org/?p=3305)\n- [CPIC 2022 statin publication (PDF)](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [Cooper-DeHoff et al. 2022, Clin Pharmacol Ther](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2557)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda iniciar con ≤40 mg y ajustar según guías específicas de la enfermedad, atribuido a la guía CPIC 2022 (Cooper-DeHoff), coherente con la referencia."
+ }
+}

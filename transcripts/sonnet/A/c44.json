@@ -1,0 +1,24 @@
+{
+ "case_id": "c44",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for TPMT and Normal Metabolizer for NUDT15 with regards to taking azathioprine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Adjust the dose, and consider an alternative agent. For a TPMT poor metabolizer with normal NUDT15 metabolism, the CPIC guideline advises:\n\n- **Non-malignant conditions (e.g., autoimmune, IBD, transplant):** Consider an alternative non-thiopurine immunosuppressant. If azathioprine is used, give a drastically reduced dose, about 10-fold lower than standard (e.g., 0.2 mg/kg/day, or about 3 days per week instead of daily). Adjust the dose based on close monitoring of myelosuppression (CBC) and disease response.\n- **Malignant conditions (e.g., ALL):** Start at drastically reduced doses (about 10-fold lower, given 3 times per week rather than daily) and adjust based on myelosuppression and disease-specific guidelines.\n\n**2. Strength:** Strong. The strength of the recommendation for TPMT poor metabolizers is \"strong\" for both the non-malignant and malignant settings.\n\n**3. Source:** CPIC (Clinical Pharmacogenetics Implementation Consortium) Guideline for Thiopurines and TPMT/NUDT15 (Relling et al., 2018 update to the 2013 guideline, Clin Pharmacol Ther 2019). The DPWG (Dutch Pharmacogenetics Working Group) similarly recommends considering an alternative or a substantial dose reduction for TPMT poor metabolizers.\n\nI answered from my knowledge of the guideline and did not check it against the source in this session, so confirm the specific dosing details at cpicpgx.org before applying them clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Para enfermedades no malignas propone primero una alternativa no tiopurínica y, para malignas, una dosis reducida 10 veces con pauta tres veces por semana, lo que coincide con CPIC; la cita (Relling 2019, actualización 2018) es correcta."
+ }
+}

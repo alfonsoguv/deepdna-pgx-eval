@@ -1,0 +1,78 @@
+{
+ "case_id": "c07",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥3.5 for CYP2D6 with regards to taking codeine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2D6 codeine ultrarapid metabolizer activity score recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/medgen/C1837160/"
+     },
+     {
+      "title": "pharmacogenomic considerations in opioid therapy",
+      "url": "https://uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/codeine/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3289963"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/230992/mod_resource/content/1/guideline%20codeine.pdf"
+     },
+     {
+      "title": "CYP2D6 Genotype to Phenotype Standardization Project consensus",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK100662/"
+     },
+     {
+      "title": "PAIN MANAGEMENT   •   Published April 14, 2022",
+      "url": "https://www.uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy-1"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/438444/mod_resource/content/1/linee%20guida%20farmacogenetica%20oppioidi.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** Avoid codeine. Ultrarapid metabolizers convert codeine to morphine too quickly and too extensively. That raises the risk of morphine toxicity, including respiratory depression, even at standard doses. If an opioid is needed, use a non-codeine, non-tramadol alternative that doesn't depend on CYP2D6 activation, such as morphine or a non-opioid analgesic. Tramadol is also CYP2D6-dependent and should be avoided too.\n\n**2. Strength:** Strong. The CPIC grading applies to this phenotype and drug pair.\n\n**3. Source:** CPIC guideline for CYP2D6, OPRM1 and COMT genotypes and opioid therapy (2021 update of the 2014 codeine guideline). The CPIC-endorsed CYP2D6 phenotype standardization defines ultrarapid metabolizer as an activity score >2.25. A score of ≥3.5 is therefore well within that category. The FDA codeine labeling and DPWG guidance are consistent with this.\n\nOne caveat: the search results didn't confirm the exact cutoff in the most current CPIC version, so check cpicpgx.org if the threshold matters for your use.\n\nSources:\n- [CPIC CYP2D6 Genotype to Phenotype Standardization Project consensus](https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf)\n- [PMC8249478](https://pmc.ncbi.nlm.nih.gov/articles/PMC8249478)\n- [US Pharmacist: Pharmacogenomic considerations in opioid therapy](https://uspharmacist.com/article/pharmacogenomic-considerations-in-opioid-therapy)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar codeína y usar un opioide alternativo no tramadol, igual que la referencia; atribuye a CPIC, pero sugiere morfina como alternativa (CPIC la admite) y cita 'OPRM1 y COMT' y un umbral AS >2.25 y un 2021 dudosos (la guía de opioides CPIC es 2014/2021 sobre CYP2D6 y codeína/tramadol, sin OPRM1/COMT)."
+ }
+}

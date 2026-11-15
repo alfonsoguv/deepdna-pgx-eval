@@ -1,0 +1,78 @@
+{
+ "case_id": "c57",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥4.0 for CYP2D6 with regards to taking ondansetron?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC CYP2D6 ondansetron ultrarapid metabolizer recommendation activity score",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5479760"
+     },
+     {
+      "title": "CYP2D6 and Ondansetron",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-ondansetron/"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/ondansetron/2016/28002639.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Ondansetron and Tropisetron and CYP2D6 Genotype",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/CYP2D6_ondansetron-final-draft_for-CPIC-review.docx"
+     },
+     {
+      "title": "stjude.org",
+      "url": "https://www.stjude.org/content/dam/en_US/shared/www/research/pharmaceutical-sciences/CYP2D6%20Competency%20Advanced.pdf"
+     },
+     {
+      "title": "CPIC® Guideline for Ondansetron and Tropisetron based on CYP2D6 genotype",
+      "url": "https://cpicpgx.org/?p=882"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/ondansetron/2026/41979467.pdf"
+     },
+     {
+      "title": "CYP2D6 Genotype to Phenotype Standardization Project consensus",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf"
+     },
+     {
+      "title": "academic.oup.com",
+      "url": "https://academic.oup.com/view-large/231861290"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/CYP2D6_ondansetron-supplement-for-CPIC-review.docx"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation:** Select an alternative drug that CYP2D6 doesn't predominantly metabolize, such as granisetron. Ondansetron is expected to be less effective in ultrarapid metabolizers because they clear it faster. An activity score ≥4.0 falls well within the ultrarapid category, which starts above 2.25.\n\n2. **Strength:** Moderate, per my recollection of the 2016 guideline. I did not see the strength stated in the search results.\n\n3. **Source:** CPIC Guideline for Ondansetron and Tropisetron and CYP2D6 Genotype (Bell et al., 2017, *Clin Pharmacol Ther*).\n\n**Caveat:** The search results showed a 2026 CPIC update to the ondansetron guideline. I could only see its activity score and copy-number content, not its ultrarapid recommendation. I'm therefore confident in the 2016 wording but couldn't confirm the update leaves it unchanged. Check the update before applying this clinically.\n\nSources:\n- [CPIC® Guideline for Ondansetron and Tropisetron based on CYP2D6 genotype](https://cpicpgx.org/?p=882)\n- [CPIC 2016 guideline PDF](https://files.cpicpgx.org/data/guideline/publication/ondansetron/2016/28002639.pdf)\n- [CPIC 2026 update PDF](https://files.cpicpgx.org/data/guideline/publication/ondansetron/2026/41979467.pdf)\n- [UF Health: CYP2D6 and Ondansetron](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-ondansetron/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda un fármaco alternativo no metabolizado principalmente por CYP2D6 (granisetrón), igual que la referencia, y lo atribuye a la guía CPIC de ondansetrón; los detalles de la cita (Bell et al., Clin Pharmacol Ther, fuerza moderada) son plausibles."
+ }
+}

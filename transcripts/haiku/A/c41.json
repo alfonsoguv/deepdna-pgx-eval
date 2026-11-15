@@ -1,0 +1,24 @@
+{
+ "case_id": "c41",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for TPMT and Poor Metabolizer for NUDT15 with regards to taking azathioprine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Adjust the dose, or use an alternative. Because NUDT15 deficiency severely reduces thiopurine tolerance, CPIC advises considering a non-thiopurine immunosuppressant. If azathioprine is still used, start at a substantially reduced dose (roughly 10% of standard, per my recollection), titrate cautiously, and monitor CBC closely.\n\n**2. Strength:** I believe CPIC rates this as a strong recommendation, but I'm not certain of the exact classification or dose percentage.\n\n**3. Source:** CPIC guideline for thiopurines and TPMT/NUDT15 (Relling et al., *Clinical Pharmacology & Therapeutics*, 2019 update). I had no tools available to check the live guideline, so please confirm the exact dosing figures and strength in the current CPIC table before applying them clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta aconseja considerar un inmunosupresor no tiopurínico y, si se usa azatioprina, reducir la dosis a ~10%, lo que coincide con la referencia; cita CPIC (Relling 2019) correctamente."
+ }
+}

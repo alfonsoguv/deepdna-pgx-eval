@@ -1,0 +1,5 @@
+id	new_category	added_text	reason
+c04	NORMAL		PGxQA labels it "Avoid" because the text starts with "Avoid moderate and strong CYP2D6 inhibitors", but the recommendation about tamoxifen is the standard dose (20 mg/day).
+c14	OTHER		Normal metabolizer: the CPIC text says standard dose and, only for H. pylori or erosive esophagitis, consider increasing it. Neither "normal" nor "adjust" describes it well; serious error is not assessed.
+c35	OTHER		"Variable" phenotype: the text asks for enzyme activity to be measured before deciding; that is not "normal use". Serious error is not assessed.
+c50	AVOID	If patient is oxcarbazepine-naïve, do not use oxcarbazepine.	PGxQA has two rows with the same question (HLA-B*15:02 positive): "do not use if the patient has not taken it before" and the exception for patients who have taken it for more than 3 months. The question does not say the patient has taken it; the two texts are joined and the category becomes AVOID.

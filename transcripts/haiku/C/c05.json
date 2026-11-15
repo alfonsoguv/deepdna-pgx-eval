@@ -1,0 +1,78 @@
+{
+ "case_id": "c05",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for CYP2D6 with regards to taking desipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline tricyclic antidepressants CYP2D6 intermediate metabolizer desipramine recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425164"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3689226"
+     },
+     {
+      "title": "Bookshelf NBK425164",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425164/pdf/Bookshelf_NBK425164.pdf"
+     },
+     {
+      "title": "Bookshelf NBK425165",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165/pdf/Bookshelf_NBK425165.pdf"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/226253/mod_resource/content/2/guideline%20TCA.pdf"
+     },
+     {
+      "title": "core.ac.uk",
+      "url": "https://core.ac.uk/works/44145077"
+     },
+     {
+      "title": "CPIC Guidelines",
+      "url": "https://elbiruniblogspotcom.blogspot.no/2013/04/clinical-pharmacology-therapeutics.html"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27997040/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Recommendation:** For CYP2D6 intermediate metabolizers (activity score 1.0), CPIC advises that you *consider* starting with a dose about 25% lower than the usual starting dose of desipramine. Standard dosing is otherwise acceptable, and you should monitor the patient's response. Desipramine is affected by CYP2D6 alone, so no CYP2C19 adjustment applies.\n\n**Strength:** Optional. CPIC rates this recommendation as optional, meaning the dose reduction is a judgment call rather than a firm requirement.\n\n**Source:** CPIC Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19 (Hicks et al., 2017 update; Clin Pharmacol Ther 2017;102(1):37-44). I found the guideline page and the 2016 update in search, but I could not retrieve the full desipramine dosing table, so I'm relying on the guideline summary for the 25% reduction and the optional rating. The authors said an update was in progress, so check cpicpgx.org for the current version.\n\nSources:\n- [CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19](https://cpicpgx.org/?p=571)\n- [PMC5478479](https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479)\n- [PubMed 27997040](https://pubmed.ncbi.nlm.nih.gov/27997040/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda reducir 25% la dosis inicial, igual que la referencia CPIC; la cita (Hicks 2017, Clin Pharmacol Ther 102(1):37-44, PMC5478479, PMID 27997040) mezcla datos de la actualización 2016/2017 y es dudosa, y la calificación 'opcional' no está respaldada."
+ }
+}

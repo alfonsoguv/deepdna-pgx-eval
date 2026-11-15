@@ -1,0 +1,24 @@
+{
+ "case_id": "c42",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for TPMT and Possible Intermediate Metabolizer for NUDT15 with regards to taking thioguanine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I did not check this against the live guideline text, so the dose range is from memory.\n\n1. **Recommendation: adjust the dose.** For a TPMT normal metabolizer who is an NUDT15 (possible) intermediate metabolizer, CPIC recommends starting thioguanine at a reduced dose, roughly 50-80% of the normal starting dose. Titrate based on myelosuppression and disease-specific guidelines. Allow 2-4 weeks to reach steady state after each dose change. In non-malignant conditions, consider an alternative agent. The \"possible\" label usually means the genotype includes an uncertain-function allele, so the dosing recommendation is the same as for a standard intermediate metabolizer.\n\n2. **Strength: moderate.**\n\n3. **Source:** CPIC Guideline for Thiopurines and TPMT and NUDT15 (Relling et al., 2018/2019 update, *Clin Pharmacol Ther*), also on PharmGKB. The DPWG guideline is a separate source.\n\nConfirm the exact percentage against the current CPIC table before prescribing.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda reducir la dosis al 50-80% con titulación y 2-4 semanas para estado estable, coincidiendo con la referencia CPIC; la cita (Relling et al., Clin Pharmacol Ther, 2018/2019) es plausible, aunque la mención de 'considerar agente alternativo en enfermedad no maligna' es un añadido menor."
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "case_id": "c30",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking pravastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline SLCO1B1 pravastatin poor function recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072"
+     },
+     {
+      "title": "Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/10/SLCO1B1-supplement-2021-update-CPIC-review.docx"
+     },
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "The Statin-Intolerant Patient: Is it Really the Muscles? The Role of SLCO1B1",
+      "url": "https://residents-medicine.blogspot.com/2025/11/the-statin-intolerant-patient-is-it.html"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/uc/item/5f06w9b0"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "Commentary|Articles|March 12, 2024",
+      "url": "https://www.pharmacytimes.com/view/don-t-skip-a-beat-familiarize-yourself-with-updates-in-cardiovascular-pharmacogenomics"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/pravastatin/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluvastatin/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2022 statin SLCO1B1 pravastatin \"poor function\" \"initiate therapy\" starting dose table",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium Guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and Statin‐Associated Musculoskeletal Symptoms - Cooper‐DeHoff - 2022 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557"
+     },
+     {
+      "title": "Statins — Knowledge Hub",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/statins/"
+     },
+     {
+      "title": "Rosuvastatin Pharmacogenetics - Genetic Drug Testing Gene2Rx",
+      "url": "https://www.gene2rx.com/drugs/rosuvastatin/"
+     },
+     {
+      "title": "Umich",
+      "url": "https://backend.production.deepblue-documents.lib.umich.edu/server/api/core/bitstreams/265af224-889e-44c9-a38f-b9560996471b/content"
+     },
+     {
+      "title": "Effect of Genetic Variants on Rosuvastatin Pharmacokinetics in Healthy Volunteers: Involvement of ABCG2, SLCO1B1 and NAT2",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11720188/"
+     },
+     {
+      "title": "SLCO1B1: statin muscle side effects and your raw DNA file",
+      "url": "https://www.aimosti.com/genes/slco1b1"
+     },
+     {
+      "title": "Pravastatin Genetic Testing - How Your DNA Affects Drug Response",
+      "url": "https://www.gene2rx.com/drugs/pravastatin/"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0_noSplash_ec38d44d0b3c312e84f585ef38f5d267.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Use with a dose cap. For SLCO1B1 poor function, CPIC's 2022 statin guideline says to prescribe a pravastatin starting dose of **≤40 mg** and adjust the dose based on disease-specific guidelines. Pravastatin exposure is higher in this group, so the cap limits myopathy risk. Avoidance is not recommended. I could not confirm the exact wording in the official CPIC figure, and one secondary source gives a 10–20 mg preference that does not match CPIC's text.\n\n**2. Strength:** I could not confirm the classification strength from the sources I reviewed.\n\n**3. Source:** CPIC guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and statin-associated musculoskeletal symptoms (Cooper-DeHoff et al., *Clin Pharmacol Ther* 2022). Check Figure 1 of the publication (PMID 35152405) to confirm the exact wording and strength.\n\nSources:\n- [CPIC statin guideline publication (PDF)](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [Cooper-DeHoff et al. 2022, Wiley](https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557)\n- [Gene2Rx pravastatin pharmacogenetics](https://www.gene2rx.com/drugs/pravastatin/)\n- [CPIC guideline page](https://cpicpgx.org/?p=3305)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda mantener pravastatina con dosis inicial ≤40 mg según CPIC 2022 (Cooper-DeHoff, PMID 35152405), coincidiendo con la referencia; la cita es correcta."
+ }
+}

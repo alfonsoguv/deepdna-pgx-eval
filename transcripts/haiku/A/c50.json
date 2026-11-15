@@ -1,0 +1,24 @@
+{
+ "case_id": "c50",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*15:02 positive for HLA-B with regards to taking oxcarbazepine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Avoid oxcarbazepine when possible and consider an alternative antiseizure medication. Oxcarbazepine is structurally similar to carbamazepine, and the HLA-B*15:02 risk for carbamazepine-induced SJS/TEN is applied to it by extension. Oxcarbazepine-specific data are more limited. If the drug must be used, the patient needs close monitoring for early rash and mucosal symptoms, and the drug should be stopped at the first sign of severe skin reaction.\n\n**2. Strength:** I can't confirm the exact strength label from a source in this session. The CPIC carbamazepine guideline (2017) gives a strong \"avoid\" recommendation for carbamazepine in HLA-B*15:02 carriers. For oxcarbazepine, the recommendation is generally weaker or more qualified, reflecting the limited evidence.\n\n**3. Source:** CPIC Guideline for Carbamazepine and HLA-B genotype (Phillips et al., *Clin Pharmacol Ther*, 2017), which addresses oxcarbazepine. I had no tools available to check the current version, so please verify the wording and strength on the CPIC website (cpicpgx.org). The DPWG guideline is another reference to consult.\n\nThis risk is most relevant in patients of Han Chinese, other East Asian, or South/Southeast Asian ancestry.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar oxcarbazepina y usar una alternativa, igual que la referencia (EVITAR), y cita la guía CPIC de carbamazepina/HLA-B (Phillips 2017, Clin Pharmacol Ther), que es correcta; no menciona la excepción de uso previo >3 meses, pero la acción principal coincide."
+ }
+}

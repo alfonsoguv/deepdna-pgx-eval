@@ -1,0 +1,24 @@
+{
+ "case_id": "c33",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking pitavastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**Note:** I had no tools to check this, so this is from memory of the guideline and should be verified against the CPIC text.\n\n1. **Recommendation:** For SLCO1B1 Poor Function, the guidance is to adjust the dose rather than avoid the drug. Prescribe the desired starting dose and adjust it according to disease-specific and population-specific guidelines. Consider a lower dose, or an alternative statin, because of the higher risk of statin-associated musculoskeletal symptoms (SAMS) from increased exposure. The guideline's wording for pitavastatin in this phenotype is the part I am least sure of.\n\n2. **Strength:** I recall it as \"Optional\", the weakest tier, because the evidence for pitavastatin is more limited than for simvastatin. I'm not fully certain of this.\n\n3. **Source:** CPIC Guideline for Statins and SLCO1B1, ABCG2, and CYP2C9 (Cooper-DeBoer et al., *Clin Pharmacol Ther*, 2022). It updates the 2014 CPIC simvastatin guideline.\n\nCheck the current recommendation table at cpicpgx.org before using this clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda ajustar la dosis (dosis menor o estatina alternativa), coherente con la referencia, y cita la guía CPIC de estatinas 2022; sin embargo la fuerza 'Optional' es dudosa (la referencia no lo indica así) y la autoría se da como 'Cooper-DeBoer', lo que es sospechoso."
+ }
+}

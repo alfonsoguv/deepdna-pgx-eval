@@ -1,0 +1,78 @@
+{
+ "case_id": "c58",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Variable for G6PD with regards to taking mafenide?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "mafenide G6PD deficiency PharmGKB guideline annotation CPIC Variable phenotype",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "g6pd cpic nov 2021",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "g6pd cpic apr 2022 002",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for aspirin and G6PD",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166279561"
+     },
+     {
+      "title": "Guideline overview presentation",
+      "url": "https://cpicpgx.org/?p=3367"
+     },
+     {
+      "title": "Disclaimers and Other Information",
+      "url": "https://pharmcat.org/Disclaimers"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/05/CPIC-G6PD-Update-SUPPLEMENT_4.27.2022-for-CPIC-review.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10281211"
+     },
+     {
+      "title": "pharmcat.org",
+      "url": "https://pharmcat.org/examples/pharmcat.example.report.html"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3382019"
+     },
+     {
+      "title": "EN G6PD Meds v3 March2025",
+      "url": "https://learn.color.com/rs/878-SLQ-748/images/EN_G6PD_Meds_v3_March2025.pdf?version=0"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "I couldn't confirm a guideline recommendation for mafenide in people with a G6PD \"Variable\" phenotype.\n\n1. **Recommendation:** I found no explicit recommendation for this phenotype, so I'd call it \"no recommendation\" rather than guess. The CPIC G6PD guideline's formal drug recommendations cover a few drugs, such as rasburicase, pegloticase, primaquine and tafenoquine. As far as I know, mafenide isn't one of them. I couldn't open the final Table 2, so I can't say how it classifies mafenide.\n\n2. **Strength:** Unknown. The search results were drafts and slide decks, not the final guideline.\n   - A November 2021 CPIC slide deck reportedly put mafenide in a low-to-no hemolysis risk group with an optional recommendation.\n   - An April 2022 draft listed an FDA \"caution\" for mafenide.\n   - Both are drafts, so don't rely on them.\n\n3. **Source:** The CPIC G6PD guideline (2022 update) is the relevant document. Check its final Table 2 and PharmGKB directly. The mafenide label's G6PD warning is also relevant. For a patient, check these before prescribing. If mafenide is needed, monitor for hemolysis.\n\nSources:\n- [CPIC G6PD slides, Nov 2021](https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf)\n- [CPIC G6PD draft, Apr 2022](https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf)\n- [PharmGKB annotation of CPIC guideline for aspirin and G6PD](https://www.pharmgkb.org/guidelineAnnotation/PA166279561)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "La respuesta no da una recomendación (dice 'no recommendation' y que no pudo confirmarla), y sólo remite a revisar la guía CPIC y vigilar hemólisis, sin afirmar uso estándar."
+ }
+}

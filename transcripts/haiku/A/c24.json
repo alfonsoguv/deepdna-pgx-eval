@@ -1,0 +1,24 @@
+{
+ "case_id": "c24",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.5 for CYP2C9 with regards to taking flurbiprofen?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Standard use. Start at the label-recommended dose and monitor for response and adverse effects. No dose reduction or alternative drug is required for this phenotype.\n\n**2. Strength:** CPIC classifies this as an optional recommendation for intermediate metabolizers. I'm not certain of the exact wording, so please verify it.\n\n**3. Source:** CPIC Guideline for CYP2C9 and NSAIDs (Theken et al., *Clinical Pharmacology & Therapeutics*, 2020). This is from memory. I had no tool access to check the guideline or the CPIC website, so confirm against the current version before using this clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis estándar sin ajuste, igual que la referencia, y cita correctamente la guía CPIC CYP2C9/AINE (Theken 2020), aunque advierte que lo hace de memoria."
+ }
+}

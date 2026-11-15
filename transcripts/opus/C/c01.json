@@ -1,0 +1,78 @@
+{
+ "case_id": "c01",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 3.0 for CYP2D6 with regards to taking nortriptyline?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline tricyclic antidepressants CYP2D6 ultrarapid metabolizer nortriptyline recommendation update",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425164"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3689226"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9263441"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "Bookshelf NBK425165",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165/pdf/Bookshelf_NBK425165.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5723247/figure/F2"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "Bookshelf NBK425164",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425164/pdf/Bookshelf_NBK425164.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: avoid nortriptyline and use an alternative.** An activity score of 3.0 counts as an ultrarapid metabolizer under both the 2016 cutoff (above 2.0) and the newer CYP2D6 scoring. These patients may get too little drug for it to work. CPIC says to avoid tricyclics and consider a drug that CYP2D6 doesn't break down. If a tricyclic is still needed, it says to aim for a higher target dose than for normal metabolizers and use blood-level monitoring (therapeutic drug monitoring) to adjust the dose.\n\n2. **Strength: Strong**, according to my memory of the 2016 guideline. The search results didn't show the strength label, so I couldn't check it.\n\n3. **Source:** The CPIC guideline for tricyclic antidepressants and CYP2D6/CYP2C19 (Hicks et al., 2016 update). Nortriptyline was one of its model drugs. CPIC says an update is in progress, and I couldn't confirm whether a newer version has been published. Check cpicpgx.org for the latest version.\n\nSources:\n- [CPIC Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19](https://cpicpgx.org/?p=571)\n- [PMC5478479 – Hicks et al. 2016 (CPIC TCA guideline)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479)\n- [NCBI Bookshelf NBK425165](https://ncbi.nlm.nih.gov/books/NBK425165)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar la nortriptilina y usar una alternativa, con dosis mayor y monitorización si se usa, igual que la referencia CPIC; cita CPIC Hicks 2016 de forma plausible."
+ }
+}

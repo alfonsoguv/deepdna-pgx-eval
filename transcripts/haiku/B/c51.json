@@ -1,0 +1,44 @@
+{
+ "case_id": "c51",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*57:01 positive for HLA-B with regards to taking abacavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "HLA-B",
+    "drug": "abacavir"
+   },
+   "result": "Unknown gene \"HLA-B\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "abacavir"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[],\"not_covered\":[\"abacavir\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**Result: HLA-B and abacavir are not in the DeepDNA knowledge base.** Neither the gene lookup nor the drug check returned a curated record, so the answer below is from my general knowledge, not from the tool, and should be verified against the guideline.\n\n1. **Recommendation:** Avoid abacavir. Someone who carries HLA-B*57:01 should not receive abacavir, and an alternative antiretroviral should be used. This applies whether the person is a carrier or the allele was found by testing.\n\n2. **Strength:** Strong recommendation, Level A evidence, per CPIC.\n\n3. **Source:** CPIC guideline for HLA-B genotype and abacavir dosing (original 2012 guideline by Hughes et al., updated 2022). Abacavir hypersensitivity reactions in HLA-B*57:01 carriers are a well-established risk, and this is the basis for the recommendation.\n\nThis is educational information. Treatment decisions belong to the prescribing clinician.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Recomienda evitar abacavir, igual que la referencia, y lo atribuye a CPIC. Dice que la herramienta no tiene registro. Los datos de 'actualizada en 2022' y 'Hughes et al. 2012' son dudosos: la guía original de 2012 es de Martin et al., y la actualización fue en 2014."
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "case_id": "c54",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Malignant Hyperthermia Susceptibility for RYR1 and Uncertain Susceptibility for CACNA1S with regards to taking desflurane?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline RYR1 CACNA1S volatile anesthetics desflurane uncertain susceptibility recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Potent Volatile Anesthetic Agents and Succinylcholine and RYR1 and CACNA1S",
+      "url": "https://cpicpgx.org/?p=1724"
+     },
+     {
+      "title": "CPIC RYR1 CACNA1S SUPPLEMENT CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/06/CPIC-RYR1_CACNA1S-SUPPLEMENT_CPIC-review.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6513720"
+     },
+     {
+      "title": "CPIC RYR1 CACNA1S Guideline CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/06/CPIC-RYR1_CACNA1S_Guideline_CPIC-review.docx"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.1319"
+     },
+     {
+      "title": "100083853501 0x000001",
+      "url": "https://eld.bl.uk/catalog/100083853501_0x000001"
+     },
+     {
+      "title": "30499100 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/volatile_anesthetic_succinylcholine/2018/30499100-supplement.pdf"
+     },
+     {
+      "title": "mdl 30499100",
+      "url": "https://pesquisa.bvsalud.org/nicaragua/resource/es/mdl-30499100"
+     },
+     {
+      "title": "cpic guideline potent volatile anesthetic agents",
+      "url": "https://arupconsult.com/reference/cpic-guideline-potent-volatile-anesthetic-agents"
+     },
+     {
+      "title": "CPIC® Guideline for Potent Volatile Anesthetic Agents and Succinylcholine and RYR1 and CACNA1S update",
+      "url": "https://www.altmetric.com/details/52270728/blogs"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC RYR1 CACNA1S \"uncertain susceptibility\" avoid potent volatile anesthetics succinylcholine table recommendation strength",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC GUIDELINE",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/volatile_anesthetic_succinylcholine/2018/30499100.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for the Use of Potent Volatile Anesthetic Agents and Succinylcholine in the Context of RYR1 or CACNA1S Genotypes - Gonsalves - 2019 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.1319"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for the Use of Potent Volatile Anesthetic Agents and Succinylcholine in the Context of RYR1 or CACNA1S Genotypes - PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30499100/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for the Use of Potent Volatile Anesthetic Agents and Succinylcholine in the Context of RYR1 or CACNA1S Genotypes",
+      "url": "https://www.researchgate.net/publication/329313591_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_the_Use_of_Potent_Volatile_Anesthetic_Agents_and_Succinylcholine_in_the_Context_of_RYR1_or_CACNA1S_Genotypes"
+     },
+     {
+      "title": "Succinylcholine: BCHE, RYR1, and CACNA1S Gene2Rx",
+      "url": "https://www.gene2rx.com/drugs/succinylcholine/"
+     },
+     {
+      "title": "Ryanodine Receptor Isoform 1 (RYR1)",
+      "url": "https://www.stjude.org/research/departments/pharmacy-pharmaceutical-sciences/pharmaceutical-sciences/pharmacogenomics-program/pg4kds-implementation/ryr1.html"
+     },
+     {
+      "title": "CACNA1S: what a clear malignant hyperthermia result misses",
+      "url": "https://www.aimosti.com/genes/cacna1s"
+     },
+     {
+      "title": "PharmCAT Report [pharmcat.example]",
+      "url": "https://pharmcat.clinpgx.org/examples/pharmcat.example.report.html"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6513720"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Avoid desflurane. The RYR1 MHS result governs this combined case. CPIC classes MHS as a susceptibility to triggering volatile anesthetics, including desflurane, and recommends alternatives such as TIVA. The CACNA1S uncertain result doesn't change that, since it doesn't rule out susceptibility. CPIC's wording for MHS is \"relatively contraindicated,\" so the guideline allows some clinical judgment.\n\n**2. Strength:** CPIC rates the MHS recommendation as strong. I could not verify the strength label for the uncertain-susceptibility category. One source quotes it as (A), but I couldn't confirm that against the original table.\n\n**3. Source:** CPIC Guideline for Potent Volatile Anesthetic Agents and Succinylcholine in the Context of RYR1 or CACNA1S Genotypes (Gonsalves et al., 2019; updated 2023). I could not access the full table, so check the original guideline for the exact entry.\n\nSources:\n- [CPIC guideline page](https://cpicpgx.org/?p=1724)\n- [Gonsalves et al., CPIC guideline (PubMed)](https://pubmed.ncbi.nlm.nih.gov/30499100/)\n- [CPIC guideline PDF](https://files.cpicpgx.org/data/guideline/publication/volatile_anesthetic_succinylcholine/2018/30499100.pdf)\n- [St. Jude PG4KDS RYR1 page](https://www.stjude.org/research/departments/pharmacy-pharmaceutical-sciences/pharmaceutical-sciences/pharmacogenomics-program/pg4kds-implementation/ryr1.html)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar el desflurano y usar alternativas como TIVA, en línea con la guía CPIC (Gonsalves 2019, PMID 30499100); los detalles citados son plausibles y no parecen inventados."
+ }
+}

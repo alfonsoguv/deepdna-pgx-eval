@@ -1,0 +1,53 @@
+{
+ "case_id": "c54",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Malignant Hyperthermia Susceptibility for RYR1 and Uncertain Susceptibility for CACNA1S with regards to taking desflurane?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "RYR1",
+    "drug": "desflurane"
+   },
+   "result": "Unknown gene \"RYR1\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CACNA1S",
+    "drug": "desflurane"
+   },
+   "result": "Unknown gene \"CACNA1S\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "desflurane"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[],\"not_covered\":[\"desflurane\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "The knowledge base I have access to doesn't cover RYR1, CACNA1S or desflurane, so I couldn't look this up. Below is what I recall from general knowledge. It is not a tool-verified result.\n\n1. **Recommendation:** The CPIC guideline on RYR1/CACNA1S and volatile anesthetics (2018 guideline, updated since) says to avoid volatile anesthetics, including desflurane, and succinylcholine in people with malignant hyperthermia susceptibility (MHS). A non-triggering technique such as total intravenous anesthesia is the alternative. For an uncertain CACNA1S result, the guideline treats the RYR1 MHS result as decisive. The overall recommendation is therefore to avoid desflurane.\n\n2. **Strength:** I recall this as \"strong\" for people with MHS. Please confirm the grade in the current CPIC document.\n\n3. **Source:** CPIC guideline for ryanodine receptor 1 (RYR1) and voltage-dependent L-type calcium channel subunit alpha-1S (CACNA1S) and volatile anesthetics and succinylcholine. The EMHG and MHAUS also give similar advice.\n\nThe prescriber and anesthesiology team make the final decision.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Recomienda evitar desflurano y succinilcolina y usar anestesia no desencadenante (TIVA), acorde con CPIC; atribuye a CPIC sin detalles inventados, aunque aclara que su base de conocimiento no tenía registro de estos genes."
+ }
+}

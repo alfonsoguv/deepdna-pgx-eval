@@ -1,0 +1,78 @@
+{
+ "case_id": "c06",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 with regards to taking venlafaxine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "venlafaxine CYP2D6 ultrarapid metabolizer guideline recommendation DPWG CPIC PharmGKB",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Annotation of CPIC Guideline for venlafaxine and CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166288201"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK305561"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK305561/bin/20150727venlafaxine.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/venlafaxine/"
+     },
+     {
+      "title": "Key Takeaways",
+      "url": "https://www.psychiatrist.com/news/cyp2d6-poor-metabolizer-status-venlafaxine-treatment-failure-real-world-cohorts/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5723247"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/226253/mod_resource/content/2/guideline%20TCA.pdf"
+     },
+     {
+      "title": "Pediatric SSRI PGx Cheat Sheet Educator",
+      "url": "https://dcricollab.dcri.duke.edu/sites/NIHKR/IGNITE%20Documents%20and%20Links%20to%20Content/Pediatric-SSRI-PGx-Cheat-Sheet-Educator.pdf"
+     },
+     {
+      "title": "katalog.lib.cas.cz",
+      "url": "https://katalog.lib.cas.cz/KNAV/EdsRecord/edo,ejs66823828"
+     },
+     {
+      "title": "pgs 2017 0142",
+      "url": "https://informahealthcare.com/doi/ref/10.2217/pgs-2017-0142?scroll=top"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Venlafaxine in CYP2D6 ultrarapid metabolizers (activity score ≥5.0)**\n\n1. **Recommendation:** The two guidelines differ.\n   - **CPIC:** It gives no dosing recommendation for ultrarapid metabolizers. It only advises considering an alternative antidepressant for poor metabolizers.\n   - **DPWG:** According to my search, it advises increasing the dose up to 150% of standard, guided by therapeutic drug monitoring. If that isn't feasible, use an alternative drug. I couldn't open the DPWG text itself. The same sources say the ultrarapid phenotype has no significant effect on venlafaxine efficacy or side effects, which doesn't fit with a dose increase. One secondary summary also lists the DPWG poor and intermediate metabolizer advice differently from the DPWG text. Please check the primary DPWG guideline before acting on this.\n\n2. **Strength:** CPIC states no recommendation, so there is no strength rating for this phenotype. I couldn't confirm a strength rating for the DPWG advice.\n\n3. **Source:** CPIC (via PharmGKB annotation) and DPWG (2019 guideline on CYP2D6/CYP2C19 and non-SSRI/non-TCA antidepressants).\n\nSources:\n- [PharmGKB: Annotation of CPIC Guideline for venlafaxine and CYP2D6](https://www.pharmgkb.org/guidelineAnnotation/PA166288201)\n- [NCBI Bookshelf: NBK305561](https://ncbi.nlm.nih.gov/books/NBK305561)\n- [UK Clinical Pharmacy pharmacogenomics handbook: venlafaxine](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/venlafaxine/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Dice que CPIC no da recomendación para ultrarrápidos (coincide con la referencia), aunque añade una recomendación DPWG incierta de aumentar la dosis, que el propio texto pide verificar."
+ }
+}

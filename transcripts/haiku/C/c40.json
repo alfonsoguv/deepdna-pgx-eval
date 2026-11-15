@@ -1,0 +1,131 @@
+{
+ "case_id": "c40",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 2.0 for DPYD with regards to taking capecitabine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC DPYD guideline 2023 update normal metabolizer activity score 2 capecitabine recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "DPYD Genotyping 2025 11",
+      "url": "https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2025-11.pdf"
+     },
+     {
+      "title": "FDA and NCCN Updates to DPYD-Guided 5-FU and Capecitabine Dosing for Oncologists",
+      "url": "https://arup.utah.edu/education/nelson-dypdupdate-2026"
+     },
+     {
+      "title": "Hertz DPYD CPIC 2023 2 2 share",
+      "url": "https://cpicpgx.org/wp-content/uploads/2023/02/Hertz_DPYD_CPIC_2023_2_2_share.pdf"
+     },
+     {
+      "title": "DPYD Genotyping 2026",
+      "url": "https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2026.pdf"
+     },
+     {
+      "title": "DPYD Genotype-Guided Fluoropyrimidine Dosing: FDA and NCCN Updates to Guide 5-FU and Capecitabine Dosing for Oncologists",
+      "url": "https://arup.utah.edu/education/nelson-dpyd-2026.php/"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for capecitabine and DPYD",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166109594"
+     },
+     {
+      "title": "DPYD Genotype-Guided Fluoropyrimidine Dosing: FDA and NCCN Updates to Guide 5-FU and Capecitabine Dosing for Oncologists",
+      "url": "https://arup.utah.edu/education/nelson-dpyd-2026"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11371106"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/capecitabine/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "cpicpgx DPYD fluoropyrimidine guideline \"normal metabolizer\" \"label-recommended\" starting dose classification strong",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "A Guide for Implementing DPYD Genotyping for Systemic Fluoropyrimidines into Clinical Practice - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11993294/"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/fluoropyrimidines/2017/29152729.pdf"
+     },
+     {
+      "title": "1 Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/fluoropyrimidines/2017/DPYD_preprint.pdf"
+     },
+     {
+      "title": "Importance of and Strategies for Implementing DPYD Testing to Prevent Severe Fluoropyrimidine Chemotherapy Toxicity in Health Care Systems",
+      "url": "https://ascopubs.org/doi/10.1200/EDBK-26-521184"
+     },
+     {
+      "title": "Capecitabine Therapy and DPYD Genotype - Medical Genetics Summaries - NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK385155/"
+     },
+     {
+      "title": "A Guide for Implementing <fi>DPYD</fi> Genotyping for Systemic Fluoropyrimidines into Clinical Practice - Ho - 2025 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.3567"
+     },
+     {
+      "title": "Response to the FDA Decision Regarding DPYD Testing Prior to Fluoropyrimidine Chemotherapy - Hertz - 2023 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2978"
+     },
+     {
+      "title": "Fluoropyrimidine chemotherapy: recommendations for DPYD genotyping and therapeutic drug monitoring of the Swiss Group of Pharmacogenomics and Personalised Therapy",
+      "url": "https://smw.ch/index.php/smw/article/download/2899/4749?inline=1"
+     },
+     {
+      "title": "DPYD Testing Before 5-FU and Capecitabine: How Genotype-Guided Dosing Prevents Severe Toxicity",
+      "url": "https://jtojjar.com/library/dpyd-testing-fluoropyrimidine/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5760397/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Use capecitabine at the standard, label-recommended starting dose. No dose change is needed for a Normal Metabolizer with activity score 2.0, since two normal-function alleles mean no genotype-based reason to change dosing.\n\n**2. Strength:** Strong. The 2017 CPIC table classifies this normal-metabolizer recommendation as Strong. I could not retrieve the current CPIC page, so I can't confirm whether the 2024 update changed this wording.\n\n**3. Source:** CPIC Guideline for Dihydropyrimidine Dehydrogenase Genotype and Fluoropyrimidine Dosing (2017, with a 2024 update). The 2017 text is in the [CPIC PDF](https://files.cpicpgx.org/data/guideline/publication/fluoropyrimidines/2017/29152729.pdf). An [ASCO education resource](https://ascopubs.org/doi/10.1200/EDBK-26-521184) maps activity score 2.0 to \"label-recommended dose\" and notes a possible CPIC update in 2026 for the intermediate and poor tiers. Check [cpicpgx.org](https://cpicpgx.org) for the current version before applying this clinically.\n\nSources:\n- [CPIC 2017 DPYD guideline (PDF)](https://files.cpicpgx.org/data/guideline/publication/fluoropyrimidines/2017/29152729.pdf)\n- [ASCO Educational Book: DPYD testing](https://ascopubs.org/doi/10.1200/EDBK-26-521184)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda dosis estándar según etiqueta, igual que la referencia, y la atribuye a CPIC; sin embargo, la URL del ASCO Educational Book (EDBK-26-521184) y la mención de una posible actualización CPIC en 2026 parecen inventadas o dudosas."
+ }
+}

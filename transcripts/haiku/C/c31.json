@@ -1,0 +1,127 @@
+{
+ "case_id": "c31",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Increased Function for SLCO1B1 with regards to taking lovastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC SLCO1B1 guideline increased function lovastatin recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN128903"
+     },
+     {
+      "title": "SLCO1B1 and Lovastatin",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/slco1b1-and-lovastatin/"
+     },
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/10/SLCO1B1-supplement-2021-update-CPIC-review.docx"
+     },
+     {
+      "title": "medical.23andme.com",
+      "url": "https://medical.23andme.com/?p=23091"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/uc/item/5f06w9b0"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC statins 2022 lovastatin SLCO1B1 increased function \"standard dose\" optional recommendation strength",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for SLCO1B1, ABCG2, and CYP2C9 and statin‐associated musculoskeletal symptoms",
+      "url": "https://www.researchgate.net/publication/358571798_The_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_guideline_for_SLCO1B1_ABCG2_and_CYP2C9_and_statin-associated_musculoskeletal_symptoms"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "Effect of Genetic Variants on Rosuvastatin Pharmacokinetics in Healthy Volunteers: Involvement of ABCG2, SLCO1B1 and NAT2",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11720188/"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium Guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and Statin‐Associated Musculoskeletal Symptoms - Cooper‐DeHoff - 2022 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557"
+     },
+     {
+      "title": "PharmGKB Blog: CPIC Publishes Guideline for SLCO1B1, ABCG2, CYP2C9 and Statin Therapy",
+      "url": "https://pharmgkb.blogspot.com/2022/02/cpic-publishes-guideline-for-slco1b1.html"
+     },
+     {
+      "title": "UCSF UC San Francisco Previously Published Works Title",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf"
+     },
+     {
+      "title": "SLCO1B1 Phenotype and CYP3A5 Polymorphism Significantly Affect Atorvastatin Bioavailability",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7999651/"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0_noSplash_ec38d44d0b3c312e84f585ef38f5d267.pdf"
+     },
+     {
+      "title": "Umich",
+      "url": "https://backend.production.deepblue-documents.lib.umich.edu/server/api/core/bitstreams/265af224-889e-44c9-a38f-b9560996471b/content"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Standard use. The UF Health summary of CPIC's statin guidance says to start lovastatin at the standard dose for increased function. A CPIC table excerpt also reads \"Prescribe desired starting dose,\" but it is garbled and I could not confirm that it is the lovastatin row.\n\n**2. Strength:** Not confirmed. The lovastatin decreased- and poor-function rows are rated Moderate, but I could not find a strength rating for the increased-function row.\n\n**3. Source:** CPIC guideline for SLCO1B1, ABCG2, CYP2C9 and statin-associated musculoskeletal symptoms (2022). I did not access the full lovastatin table, so please check it directly before relying on this.\n\nSources:\n- [UF Health: SLCO1B1 and Lovastatin](https://precisionmedicine.ufhealth.org/how-to-interpret-results/slco1b1-and-lovastatin/)\n- [CPIC statin guideline (2022) publication](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [CPIC guideline page](https://cpicpgx.org/?p=3305)\n- [CPIC statin guideline supplement](https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis inicial estándar de lovastatina para función aumentada de SLCO1B1, coherente con la referencia, y cita la guía CPIC 2022 de estatinas con cautelas sobre la confirmación."
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "case_id": "c23",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.0 for CYP2C9 with regards to taking lornoxicam?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "lornoxicam CYP2C9 poor metabolizer guideline recommendation DPWG CPIC",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "32189324 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "Most recent guideline publication:",
+      "url": "https://cpicpgx.org/?p=2351"
+     },
+     {
+      "title": "0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk",
+      "url": "https://0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk/medgen/CN258139/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC NSAID lornoxicam activity score 0.5 or 0 \"25-50% of the lowest recommended starting dose\" poor metabolizer recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "32189324 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf"
+     },
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "Bookshelf NBK537367",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537367/pdf/Bookshelf_NBK537367.pdf"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**Not fully verified.** My searches didn't return the lornoxicam row of the CPIC table. The answer below relies partly on memory.\n\n1. **Recommendation (adjust the dose):** Lornoxicam is grouped with celecoxib, flurbiprofen and ibuprofen in the CPIC guideline. For a CYP2C9 poor metabolizer (activity score 0 or 0.5), the advice is to start at 25–50% of the lowest recommended starting dose. Then titrate cautiously to clinical effect, or up to 25–50% of the maximum recommended dose. Poor metabolizers clear the drug more slowly, so they are at higher risk of adverse events. The guideline's alternative approach, choosing an NSAID not metabolized by CYP2C9, is stated for the longer half-life oxicams (meloxicam, piroxicam, tenoxicam), not for lornoxicam. I didn't confirm this either.\n\n2. **Strength:** I believe it is \"moderate\". I couldn't confirm this from the text.\n\n3. **Source:** CPIC Guideline for CYP2C9 and NSAIDs (Theken et al., Clin Pharmacol Ther, 2020). I found no DPWG guidance for lornoxicam.\n\nPlease check the lornoxicam row in Table 2 of the CPIC guideline or on ClinPGX before using this clinically.\n\nSources:\n- [CPIC NSAID guideline (2020)](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf)\n- [CPIC NSAID supplement](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf)\n- [NHS Genomics Education: NSAIDs](https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/non-steroidal-anti-inflammatory-drugs-nsaids/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda iniciar con 25-50% de la dosis inicial más baja y titular con cautela, igual que la referencia CPIC (AJUSTAR); cita correctamente la guía CPIC de NSAIDs (Theken 2020, Clin Pharmacol Ther) con la advertencia de que no se verificó."
+ }
+}

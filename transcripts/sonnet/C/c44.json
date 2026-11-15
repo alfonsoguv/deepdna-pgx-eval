@@ -1,0 +1,78 @@
+{
+ "case_id": "c44",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for TPMT and Normal Metabolizer for NUDT15 with regards to taking azathioprine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC thiopurine guideline TPMT poor metabolizer NUDT15 normal metabolizer azathioprine recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/229708/mod_resource/content/1/Linee%20Guida%20Farmacogenetiche%20Mercaptopurina%20TPMT%20NUDT15.pdf"
+     },
+     {
+      "title": "CPIC® Guideline for Thiopurines and TPMT and NUDT15",
+      "url": "https://cpicpgx.org/?p=578"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30447069/"
+     },
+     {
+      "title": "CPIC Thiopurine guideline update 2025 CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC-Thiopurine-guideline-update-2025_CPIC-review.docx"
+     },
+     {
+      "title": "Thiopurine guideline update draft 06112018",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/06/Thiopurine-guideline-update-draft-06112018.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6576267"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guidelin",
+      "url": "https://researchprofiles.ku.dk/da/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/438445/mod_resource/content/1/linee%20guida%20farmacogenetica%20tiopurine.pdf"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guidelin",
+      "url": "https://research.regionh.dk/da/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "For TPMT poor metabolizer with NUDT15 normal metabolizer, I couldn't confirm the wording in the 2025 CPIC update. The search results didn't show the azathioprine table. The answer below is from the 2018 CPIC guideline (Relling et al., 2019), which I know from memory.\n\n1. **Recommendation: use an alternative drug or adjust the dose.**\n   - For non-malignant conditions such as IBD or transplant, consider an alternative non-thiopurine immunosuppressant.\n   - If azathioprine is used, give a drastically reduced dose. That means cutting the daily dose about 10-fold and giving it three times weekly instead of daily.\n   - For malignancy, the same drastic reduction applies. In both settings, adjust the dose based on degree of myelosuppression and disease-specific guidelines.\n   - Without a dose reduction, this phenotype carries a high risk of severe, life-threatening myelosuppression.\n\n2. **Strength:** Strong.\n\n3. **Source:** CPIC Guideline for Thiopurines and TPMT/NUDT15 (2018 update). A 2025 update exists, so check it for any changes to this phenotype.\n\nSources:\n- [CPIC Guideline for Thiopurines and TPMT and NUDT15](https://cpicpgx.org/?p=578)\n- [CPIC 2026 thiopurine guideline update (PDF)](https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf)\n- [PMC6576267](https://pmc.ncbi.nlm.nih.gov/articles/PMC6576267)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda como acción principal una alternativa no tiopurínica en condiciones no malignas, con reducción drástica de dosis si se usa, igual que la referencia CPIC; sin embargo, menciona una 'actualización 2025' y una URL 'CPIC 2026' con PMID inconsistentes, y la respuesta es dudosa en esos detalles."
+ }
+}

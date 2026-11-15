@@ -1,0 +1,131 @@
+{
+ "case_id": "c53",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is increased risk of aminoglycoside-induced hearing loss for MT-RNR1 with regards to taking paromomycin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline MT-RNR1 aminoglycosides paromomycin recommendation avoid",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Aminoglycosides and MT-RNR1",
+      "url": "https://cpicpgx.org/?p=3024"
+     },
+     {
+      "title": "CPIC Guidelines McDermott2022",
+      "url": "https://ugc.futurelearn.com/uploads/files/70/be/70be0023-b0bd-4cc9-af8d-b23fe2b15259/CPIC_Guidelines_McDermott2022.pdf"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.2309"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/medgen/374074"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium Guideline for the Use of Aminoglycosides Based on MT-RNR1 Genotype",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34032273/"
+     },
+     {
+      "title": "researchworks.creighton.edu",
+      "url": "https://researchworks.creighton.edu/esploro/outputs/journalArticle/Clinical-Pharmacogenetics-Implementation-Consortium-Guideline-for/991005929523602656"
+     },
+     {
+      "title": "Aminoglycoside-induced deafness",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/C1838854"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/aminoglycosides/2021/34032273.pdf"
+     },
+     {
+      "title": "RNR1 Working Draft Final for CPIC review RG",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/02/RNR1_Working_Draft_Final_for-CPIC-review_RG.docx"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/374074"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC aminoglycosides MT-RNR1 guideline paromomycin m.1555A>G strong recommendation avoid",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "RNR1 Working Draft Final for CPIC review RG",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/02/RNR1_Working_Draft_Final_for-CPIC-review_RG.docx"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8613315"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/aminoglycosides/2021/34032273.pdf"
+     },
+     {
+      "title": "CPIC® Guideline for Aminoglycosides and MT-RNR1",
+      "url": "https://cpicpgx.org/?p=3024"
+     },
+     {
+      "title": "CPIC Guidelines McDermott2022",
+      "url": "https://ugc.futurelearn.com/uploads/files/70/be/70be0023-b0bd-4cc9-af8d-b23fe2b15259/CPIC_Guidelines_McDermott2022.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium Guideline for the Use of Aminoglycosides Based on MT-RNR1 Genotype",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34032273/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/CN184225"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.2309"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK285956"
+     },
+     {
+      "title": "Bookshelf NBK285956",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK285956/pdf/Bookshelf_NBK285956.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Avoid. For carriers of m.1555A>G (and the other predisposing variants, m.1095T>C and m.1494C>T), CPIC advises avoiding aminoglycosides, including paromomycin. The exception is when the risk of infection outweighs the risk of permanent hearing loss and no safe or effective alternative exists.\n\n**2. Strength:** Strong. I didn't find a separate strength rating for paromomycin, so this is the class-level rating for aminoglycosides.\n\n**3. Source:** CPIC Guideline for Aminoglycosides and MT-RNR1 (Clin Pharmacol Ther 2022;111(2):366-372; Pubmed 34032273). Its drug list includes paromomycin.\n\nSources:\n- [CPIC® Guideline for Aminoglycosides and MT-RNR1](https://cpicpgx.org/?p=3024)\n- [CPIC guideline, PubMed 34032273](https://pubmed.ncbi.nlm.nih.gov/34032273/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar los aminoglucósidos, incluida la paromomicina, salvo que el riesgo de la infección supere el de sordera y no haya alternativas, como indica la guía CPIC; la cita (Clin Pharmacol Ther 2022, PMID 34032273) es plausible."
+ }
+}

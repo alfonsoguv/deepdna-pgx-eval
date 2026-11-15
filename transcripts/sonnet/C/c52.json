@@ -1,0 +1,24 @@
+{
+ "case_id": "c52",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is No HLA-A Result for HLA-A and HLA-B*15:02 positive for HLA-B with regards to taking carbamazepine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Avoid carbamazepine if the patient has not taken it before. HLA-B*15:02 positivity carries a high risk of Stevens-Johnson syndrome/toxic epidermal necrolysis (SJS/TEN). The missing HLA-A result doesn't change this, because the HLA-B*15:02 result alone drives the recommendation. Use an alternative anticonvulsant that is not strongly linked to HLA-B*15:02, such as levetiracetam. Phenytoin and fosphenytoin should also be avoided, and oxcarbazepine and eslicarbazepine carry a similar caution. If the patient has taken carbamazepine continuously for more than 3 months without a cutaneous reaction, the risk is low and the drug can be cautiously continued. This is because SJS/TEN usually appears within the first few months of therapy.\n\n2. **Strength:** Strong, for carbamazepine in carbamazepine-naïve patients.\n\n3. **Source:** CPIC (Clinical Pharmacogenetics Implementation Consortium) Guideline for HLA-A/HLA-B genotypes and carbamazepine and oxcarbazepine dosing (Phillips et al., 2017/2018 update). It is consistent with the FDA label boxed warning for patients of Asian ancestry.\n\nI answered from my knowledge of these guidelines and didn't run a search. I haven't checked whether CPIC has issued a newer revision.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar carbamazepina en pacientes sin exposición previa con HLA-B*15:02 positivo, igual que la referencia, y cita la guía CPIC (Phillips et al. 2017/2018) correctamente."
+ }
+}

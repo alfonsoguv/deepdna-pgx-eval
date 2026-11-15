@@ -1,0 +1,131 @@
+{
+ "case_id": "c08",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for CYP2D6 with regards to taking paroxetine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2D6 paroxetine intermediate metabolizer activity score 1.0 recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "stjude.org",
+      "url": "https://www.stjude.org/content/dam/en_US/shared/www/research/pharmaceutical-sciences/CYP2D6%20Competency%20Advanced.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11141156/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304"
+     },
+     {
+      "title": "CYP2D6 Genotype to Phenotype Standardization Project consensus",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/paroxetine/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9553948"
+     },
+     {
+      "title": "go.drugbank.com",
+      "url": "https://go.drugbank.com/articles/A19091"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2023 SSRI SNRI guideline paroxetine CYP2D6 intermediate metabolizer \"initiate therapy\" recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Genetic%20Clues%20to%20Beating%20the%20Blues %20Audience%20Slides",
+      "url": "https://ce.advocatehealth.org/sites/default/files/media/2026-04/Genetic%20Clues%20to%20Beating%20the%20Blues-%20Audience%20Slides.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11141156/"
+     },
+     {
+      "title": "www.frontiersin.org",
+      "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2024.1500235/pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "www.peeref.com",
+      "url": "https://www.peeref.com/works/27255446"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/paroxetine/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "I couldn't confirm the current guideline recommendation for this phenotype, and the sources I found disagree.\n\n1. **Recommendation:** Two versions appear. The 2015 CPIC table says to start at the recommended dose and monitor, because higher plasma levels can increase side effects. A 2023 slide summary says to consider a lower starting dose with slower titration. I could not verify the 2023 wording from the primary document. Neither version recommends avoiding paroxetine.\n\n2. **Strength:** One source lists the 2015 recommendation as Moderate. I found no confirmed strength for the 2023 version.\n\n3. **Source:** CPIC SSRI/SNRI guideline (2015, and the 2023 update by Bousman et al., *Clin Pharmacol Ther* 2023). The 2023 update is the current one.\n\nA score of 1.0 is also near the boundary between intermediate and normal metabolizer, and sources define that cutoff differently. Check the classification and the exact recommendation in the primary 2023 CPIC guideline at cpicpgx.org before applying it.\n\nSources:\n- [CPIC 2023 SSRI/SNRI guideline PDF](https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf)\n- [CPIC CYP2D6 genotype-to-phenotype consensus](https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf)\n- [UK Clinical Pharmacy PGx handbook: paroxetine](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/paroxetine/)\n- [PMC4512908 (2015 CPIC SSRI guideline)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908)\n- [Advocate Health slide deck on the 2023 CPIC guideline](https://ce.advocatehealth.org/sites/default/files/media/2026-04/Genetic%20Clues%20to%20Beating%20the%20Blues-%20Audience%20Slides.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "OTHER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta no se compromete: presenta dos versiones (2015 dosis estándar y 2023 dosis menor con titulación lenta) y remite a verificar la guía primaria, sin una acción principal clara; atribuye correctamente a CPIC."
+ }
+}

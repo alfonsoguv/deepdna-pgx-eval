@@ -1,0 +1,43 @@
+{
+ "case_id": "c43",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for TPMT and Indeterminate for NUDT15 with regards to taking mercaptopurine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "TPMT",
+    "drug": "mercaptopurine"
+   },
+   "result": "{\"pair\":{\"gene\":\"TPMT\",\"drug\":\"mercaptopurine\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"Thiopurine inactivated by TPMT, used in leukemia and in non-malignant conditions. CPIC's 2025 update (Maillard et al. 2026) recommends, for TPMT poor metabolizers, a 10-fold lower starting dose given three times a week instead of daily in malignancy, and an alternative non-thiopurine immunosuppressant in non-malignant conditions (strong). For TPMT intermediate or possible intermediate metabolizers with normal NUDT15 it recommends starting at 30–80% of the standard dose when that dose is at least 75 mg/m²/day (malignancy) or 1.5 mg/kg/day (non-malignancy), and 20–50% for people who are intermediate metabolizers for both genes (both strong), then adjusting to myelosuppression. Normal metabolizers: standard starting dose (strong). NUDT15 phenotype also changes the recommendation. A consumer raw file or a limited variant panel with no variant found does not establish normal-metabolizer status: these recommendations apply to a phenotype from validated clinical TPMT and NUDT15 testing (genotyping and, for TPMT, enzyme activity), ordered by the prescriber.\",\"phenotypes\":[\"Normal metabolizer (NM): two normal-function alleles, or one normal-function plus one decreased-function allele (e.g. *1/*1)\",\"Intermediate metabolizer (IM): one normal-function plus one no-function allele, two decreased-function alleles, or one no-function plus one decreased-function allele (e.g. *1/*2, *1/*3A, *1/*3B, *1/*3C)\",\"Possible intermediate metabolizer: one uncertain/unknown-function allele plus one no-function allele\",\"Poor metabolizer (PM): two no-function alleles (e.g. *3A/*3A, *2/*3A, *3A/*3C, *3B/*3C)\",\"Indeterminate: one normal-function or decreased-function allele plus one uncertain-function allele, or two uncertain/unknown-function alleles\"],\"sources\":[{\"label\":\"CPIC — TPMT gene page\",\"url\":\"https://cpicpgx.org/gene/tpmt/\"},{\"label\":\"PharmGKB TPMT (PA356)\",\"url\":\"https://www.pharmgkb.org/gene/PA356\"},{\"label\":\"Maillard et al., Clin Pharmacol Ther 2026 (CPIC thiopurine guideline, TPMT and NUDT15: 2025 update)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/41618934/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "NUDT15",
+    "drug": "mercaptopurine"
+   },
+   "result": "{\"pair\":{\"gene\":\"NUDT15\",\"drug\":\"mercaptopurine\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"Thiopurine whose active metabolite NUDT15 inactivates. CPIC's 2025 update (Maillard et al. 2026) recommends, for NUDT15 poor metabolizers, a 10-fold lower starting dose given three times a week instead of daily in malignancy, and an alternative non-thiopurine immunosuppressant in non-malignant conditions (strong). For NUDT15 intermediate or possible intermediate metabolizers with normal TPMT it recommends starting at 30–80% of the standard dose when that dose is at least 75 mg/m²/day (malignancy) or 1.5 mg/kg/day (non-malignancy), and 20–50% for people who are intermediate metabolizers for both genes (both strong), then adjusting to myelosuppression. Normal metabolizers: standard starting dose (strong). TPMT phenotype also changes the recommendation. A consumer raw file or a limited variant panel with no variant found does not establish normal-metabolizer status: these recommendations apply to a phenotype from validated clinical TPMT and NUDT15 testing (genotyping and, for TPMT, enzyme activity), ordered by the prescriber.\",\"phenotypes\":[\"Normal metabolizer (NM): two normal-function alleles, or one normal-function plus one decreased-function allele (e.g. *1/*1)\",\"Intermediate metabolizer (IM): one normal-function plus one no-function allele, or two decreased-function alleles (e.g. *1/*3)\",\"Possible intermediate metabolizer: one uncertain-function allele plus one no-function allele\",\"Poor metabolizer (PM): two no-function alleles, or one no-function plus one decreased-function allele (e.g. *3/*3)\",\"Indeterminate: one normal-function or decreased-function allele plus one uncertain-function allele, or two uncertain/unknown-function alleles\"],\"sources\":[{\"label\":\"CPIC — NUDT15 gene page\",\"url\":\"https://cpicpgx.org/gene/nudt15/\"},{\"label\":\"PharmGKB NUDT15 (PA134963132)\",\"url\":\"https://www.pharmgkb.org/gene/PA134963132\"},{\"label\":\"Maillard et al., Clin Pharmacol Ther 2026 (CPIC thiopurine guideline, TPMT and NUDT15: 2025 update)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/41618934/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**TPMT Normal Metabolizer with NUDT15 Indeterminate, taking mercaptopurine**\n\n1. **Recommendation:** The curated records don't give a recommendation for this combination. They cover these groups:\n   - Normal metabolizers: standard starting dose.\n   - Intermediate or possible intermediate metabolizers: reduced starting doses.\n   - Poor metabolizers: a much lower dose, or an alternative drug.\n\n   An indeterminate NUDT15 result (one normal- or decreased-function allele plus one uncertain-function allele) is defined, but no dosing is listed for it. I can't confirm what the guideline says here, so I'm not inferring one. Standard dosing for the TPMT normal result alone doesn't carry over, because NUDT15 status also changes the recommendation. Whether the NUDT15 result can be clarified (for example, by resolving the uncertain allele) and how to dose in the meantime is for the prescriber to decide, with attention to monitoring for myelosuppression.\n\n2. **Strength:** Not applicable to this phenotype. The related recommendations (CPIC level A) are rated strong.\n\n3. **Source:** CPIC thiopurine guideline, 2025 update (Maillard et al., Clin Pharmacol Ther 2026), via the DeepDNA records for TPMT and NUDT15.\n\nThis is educational information, not medical advice.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "La respuesta no da una recomendación concreta (dice que no la infiere y lo deja al prescriptor), y además afirma que la dosis estándar no aplica, contra la referencia (dosis normal con monitorización estrecha); la cita 'Maillard et al., Clin Pharmacol Ther 2026' parece inventada."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "case_id": "c05",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.0 for CYP2D6 with regards to taking desipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline tricyclic antidepressants CYP2D6 intermediate metabolizer desipramine recommendation activity score 1.0",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/226253/mod_resource/content/2/guideline%20TCA.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3689226"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/TCA/2013/23486447-supplement.pdf"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425164"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "scholarlypublications.universiteitleiden.nl",
+      "url": "https://scholarlypublications.universiteitleiden.nl/access/item%3A3503841/download"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304"
+     },
+     {
+      "title": "CYP2D6 and Secondary Amine Tricyclic Antidepressants (TCAs): Nortriptyline, Desipramine",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-secondary-amine-tricyclic-antidepressants-tcas-nortriptyline-desipramine/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Short answer:** Use a modestly reduced starting dose with therapeutic drug monitoring. I could not confirm the exact CPIC wording from the pages I retrieved.\n\n1. **Recommendation:** For a CYP2D6 intermediate metabolizer, the CPIC tricyclic guidance (as I recall it, not verified) is to consider a ~25% reduction of the usual starting dose. Use therapeutic drug monitoring to guide further adjustment. A UF Health lab summary gives the same advice, but it is not CPIC text.\n2. **Strength:** I recall this as \"Optional\" in CPIC's grading, but I couldn't verify that from the retrieved sources.\n3. **Source:** CPIC Guideline for Tricyclic Antidepressants and CYP2D6/CYP2C19 (Hicks et al., 2016 update).\n\n**Activity score caveat:** The classification of AS 1.0 depends on the version used. The 2016 CPIC text placed AS 1.0 under normal metabolizers. CPIC's current page says AS 1.0 is now classed as intermediate. DPWG also treats AS 1.0 as intermediate. Before relying on this, check the dosing table on cpicpgx.org.\n\nSources:\n- [CPIC Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19](https://cpicpgx.org/?p=571)\n- [CPIC TCA guideline (PMC5478479)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479)\n- [UF Health: CYP2D6 and secondary amine TCAs](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-and-secondary-amine-tricyclic-antidepressants-tcas-nortriptyline-desipramine/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda reducir ~25% la dosis inicial con monitorización terapéutica, igual que la referencia CPIC; la cita 'Hicks et al., 2016 update' y la fuerza 'Optional' son dudosas, y la afirmación sobre la clasificación de AS 1.0 en la guía de 2016 es incierta."
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "case_id": "c44",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for TPMT and Normal Metabolizer for NUDT15 with regards to taking azathioprine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline thiopurines azathioprine TPMT poor metabolizer NUDT15 normal metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "Thiopurine guideline update draft 06112018",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/06/Thiopurine-guideline-update-draft-06112018.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6576267"
+     },
+     {
+      "title": "CPIC® Guideline for Thiopurines and TPMT and NUDT15",
+      "url": "https://cpicpgx.org/?p=578"
+     },
+     {
+      "title": "CPIC Thiopurine guideline update 2025 CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC-Thiopurine-guideline-update-2025_CPIC-review.docx"
+     },
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30447069/"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guidelin",
+      "url": "https://researchprofiles.ku.dk/da/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/229708/mod_resource/content/1/Linee%20Guida%20Farmacogenetiche%20Mercaptopurina%20TPMT%20NUDT15.pdf"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/438445/mod_resource/content/1/linee%20guida%20farmacogenetica%20tiopurine.pdf"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guidelin",
+      "url": "https://research.regionh.dk/da/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC thiopurine 2025 update TPMT poor metabolizer azathioprine start 10% of standard dose alternative agent strength of recommendation",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "(PDF) Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update",
+      "url": "https://www.researchgate.net/publication/400290584_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_Thiopurine_Dosing_Based_on_TPMT_and_NUDT15_Genotypes_2025_Update"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "1 St. Jude - Confidential Supplemental Material",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934-supplement.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update - Maillard - 2026 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209?af=R"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC ...",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf"
+     },
+     {
+      "title": "Correction to “Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update” - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13652152"
+     },
+     {
+      "title": "Correction to “Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update” - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70298?af=R"
+     },
+     {
+      "title": "CPIC Guideline Update for TPMT, NUDT15 and Thiopurines",
+      "url": "https://blog.clinpgx.org/cpic-guideline-for/"
+     },
+     {
+      "title": "Azathioprine, TPMT and NUDT15: two genes, one blood count",
+      "url": "https://www.aimosti.com/pharmacogenomics/azathioprine"
+     },
+     {
+      "title": "Azathioprine for Crohn's Disease: A 2026 Patient Guide",
+      "url": "https://crohnzone.com/post/azathioprine-crohns-disease-patient-guide"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** The 2025 CPIC thiopurine update says to consider an alternative immunosuppressant for TPMT poor metabolizers rather than simply lowering the azathioprine dose. The rationale is that standard-dose azathioprine can produce very high thioguanine nucleotide levels and potentially fatal myelosuppression. Because the patient is NUDT15 normal, the TPMT status drives the recommendation. I could not confirm the exact dose-reduction wording for this phenotype, so I can't say whether a reduced-dose trial is still listed as an option.\n\n**2. Strength:** I could not verify the CPIC strength-of-recommendation grade.\n\n**3. Source:** CPIC Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update (Maillard et al., *Clin Pharmacol Ther*, 2026). I reviewed secondary summaries, not the full text. Please check the primary guideline before clinical use.\n\nSources:\n- [CPIC 2025 thiopurine guideline PDF](https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf)\n- [CPIC thiopurine guideline page](https://cpicpgx.org/?p=578)\n- [Wiley/ASCPT record of the 2025 update](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209?af=R)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda considerar un inmunosupresor alternativo (coincide con EVITAR) y cita CPIC, pero la cita especifica (actualización 2025, Maillard et al., Clin Pharmacol Ther 2026, URL/PDF con ID 41618934) parece dudosa o inventada; no menciona la opción de dosis reducida en malignidad."
+ }
+}

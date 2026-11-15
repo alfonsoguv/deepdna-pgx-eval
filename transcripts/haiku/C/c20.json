@@ -1,0 +1,131 @@
+{
+ "case_id": "c20",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 1.75 for CYP2D6 and No Result for CYP2C19 with regards to taking clomipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline tricyclic antidepressants CYP2D6 CYP2C19 clomipramine recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium 4j1xaz8ezc",
+      "url": "https://typeset.io/papers/clinical-pharmacogenetics-implementation-consortium-4j1xaz8ezc"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7080976/table/T4"
+     },
+     {
+      "title": "TCA CPIC Guideline manuscript update final",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/TCA-CPIC-Guideline-manuscript-update-final.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "scholarlypublications.universiteitleiden.nl",
+      "url": "https://scholarlypublications.universiteitleiden.nl/access/item%3A3001028/download"
+     },
+     {
+      "title": "scispace - formally typeset",
+      "url": "https://typeset.io/papers/clinical-pharmacogenetics-implementation-consortium-2dpjlg8c4h"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5723247/table/T4"
+     },
+     {
+      "title": "CPIC Guidelines",
+      "url": "https://elbiruniblogspotcom.blogspot.no/2013/04/clinical-pharmacology-therapeutics.html"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC CYP2D6 activity score 1.75 normal metabolizer clomipramine",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304"
+     },
+     {
+      "title": "TCA CPIC Guideline manuscript update final",
+      "url": "https://cpicpgx.org/wp-content/uploads/2016/02/TCA-CPIC-Guideline-manuscript-update-final.docx"
+     },
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425164"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425165"
+     },
+     {
+      "title": "cyp2d6 cyp2c19 and tertiary amine tricyclic antidepressants tcas amitriptyline clomipramine doxepin imipramine trimipramine",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2d6-cyp2c19-and-tertiary-amine-tricyclic-antidepressants-tcas-amitriptyline-clomipramine-doxepin-imipramine-trimipramine/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9891304/table/T3"
+     },
+     {
+      "title": "AUS Psychotropic Mental Health",
+      "url": "https://www.mydna.life/wp-content/uploads/AUS-Psychotropic-Mental-Health.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** I could not verify the exact CPIC entry for clomipramine at CYP2D6 normal metabolizer. From my knowledge of the CPIC tricyclic guideline, a CYP2D6 normal metabolizer would get standard use (the recommended starting dose). The CYP2C19 result is missing, so no CYP2C19-based adjustment can be made. Clomipramine is affected by both enzymes, so the combined recommendation is incomplete without CYP2C19.\n\n**2. Strength:** Not confirmed. I believe the CYP2D6 normal-metabolizer recommendation is \"strong,\" but I did not verify this.\n\n**3. Source:** CPIC Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19 ([CPIC](https://cpicpgx.org/?p=571); [2016 manuscript](https://cpicpgx.org/wp-content/uploads/2016/02/TCA-CPIC-Guideline-manuscript-update-final.docx)). The search results were garbled and did not show the normal-metabolizer entry, so please check the current guideline table directly.\n\n**Activity score:** An activity score of 1.75 falls within the normal range (1.25–2.25) under the newer scoring scheme, and within 1.0–2.0 under the 2016 table.\n\nSources:\n- [CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19](https://cpicpgx.org/?p=571)\n- [TCA CPIC Guideline manuscript (2016)](https://cpicpgx.org/wp-content/uploads/2016/02/TCA-CPIC-Guideline-manuscript-update-final.docx)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica uso estándar con dosis inicial recomendada para CYP2D6 normal, coincidiendo con la referencia, y cita CPIC; sin embargo, los rangos de puntuación de actividad (1.25–2.25) y los enlaces/URL específicos parecen dudosos o inventados."
+ }
+}

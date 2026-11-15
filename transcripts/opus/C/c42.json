@@ -1,0 +1,131 @@
+{
+ "case_id": "c42",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for TPMT and Possible Intermediate Metabolizer for NUDT15 with regards to taking thioguanine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC thioguanine NUDT15 \"possible intermediate metabolizer\" recommendation optional reduced dose",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Bookshelf NBK100663",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK100663/pdf/Bookshelf_NBK100663.pdf"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN078017"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6576267"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6576267/table/T3"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK100663"
+     },
+     {
+      "title": "CPIC® Guideline for Thiopurines and TPMT and NUDT15",
+      "url": "https://cpicpgx.org/?p=578"
+     },
+     {
+      "title": "CPIC meeting August2025 share red",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf"
+     },
+     {
+      "title": "Bookshelf NBK100660",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK100660/pdf/Bookshelf_NBK100660.pdf"
+     },
+     {
+      "title": "CPIC Thiopurine guideline update 2025 CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC-Thiopurine-guideline-update-2025_CPIC-review.docx"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/mercaptopurine/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "thioguanine NUDT15 intermediate metabolizer \"50% to 80%\" \"Moderate\" CPIC 2018 table",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN078017"
+     },
+     {
+      "title": "CPIC meeting August2025 share red",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf"
+     },
+     {
+      "title": "CPIC Thiopurine guideline update 2025 CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC-Thiopurine-guideline-update-2025_CPIC-review.docx"
+     },
+     {
+      "title": "Bookshelf NBK100663",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK100663/pdf/Bookshelf_NBK100663.pdf"
+     },
+     {
+      "title": "CPIC® Guideline for Thiopurines and TPMT and NUDT15",
+      "url": "https://cpicpgx.org/?p=578"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6576267"
+     },
+     {
+      "title": "pharmacogenetic testing report methodology",
+      "url": "https://www.cmh.edu/contentassets/851fc5266b0b465c8dc3e679444a6330/pharmacogenetic-testing-report-methodology.pdf"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "pharmacogenetic testing report methodology",
+      "url": "https://www.childrensmercy.org/contentassets/851fc5266b0b465c8dc3e679444a6330/pharmacogenetic-testing-report-methodology.pdf"
+     },
+     {
+      "title": "Bookshelf NBK100660",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK100660/pdf/Bookshelf_NBK100660.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "1. **Recommendation: adjust the dose.** The CPIC 2018 thiopurine guideline puts NUDT15 possible intermediate metabolizers in the same group as NUDT15 intermediate metabolizers. A TPMT normal metabolizer result doesn't change this, so the NUDT15 result sets the dose. From memory, the guidance is:\n   - Start at a reduced thioguanine dose, about 50–80% of normal, if the usual starting dose is 40–60 mg/m²/day. If the planned dose is already below that, a reduction may not be needed.\n   - Change the dose based on blood counts (myelosuppression) and allow time to reach steady state after each change.\n   - In combination chemotherapy, reduce the thioguanine dose before cutting the other drugs.\n\n2. **Strength: Moderate**, as I recall from the 2018 thioguanine table. My searches didn't confirm this; one search summary said \"strong.\" I also couldn't confirm the exact 50–80% range, because the matching table row was cut off in the results.\n\n3. **Source:** the CPIC Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes (2018 update). CPIC revised it in 2024–2025 and republished it in 2026. The revision adds a combined TPMT/NUDT15 intermediate category and new 20–50% starting doses for patients intermediate for both genes. I couldn't confirm whether the newest version changes the wording for this phenotype, so check the current CPIC thioguanine table.\n\nSources:\n- [CPIC Guideline for Thiopurines and TPMT and NUDT15](https://cpicpgx.org/?p=578)\n- [CPIC 2018 update (PMC6576267)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6576267)\n- [CPIC 2026 publication](https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf)\n- [CPIC August 2025 meeting](https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf)\n- [NCBI Bookshelf NBK100663](https://ncbi.nlm.nih.gov/books/NBK100663)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda reducir la dosis al 50–80% con ajuste según mielosupresión, coherente con la referencia; la mención de una revisión CPIC 2024–2025 y republicación en 2026 con URL específica es dudosa y no verificable, y la fuerza 'Moderate' es incierta."
+ }
+}

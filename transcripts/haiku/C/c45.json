@@ -1,0 +1,131 @@
+{
+ "case_id": "c45",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer for CYP3A5 with regards to taking tacrolimus?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline tacrolimus CYP3A5 intermediate metabolizer dosing recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4481158"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4481158"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guidelines for CYP3A5 Genotype and Tacrolimus Dosing",
+      "url": "https://scholarworks.indianapolis.iu.edu/items/6ecbeadc-4f9b-4708-82fb-626c4901185b"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guidelines for CYP3A5 Genotype and Tacrolimus Dosing",
+      "url": "https://scholarworks.indianapolis.iu.edu/items/6ecbeadc-4f9b-4708-82fb-626c4901185b/full"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guidelin",
+      "url": "https://pure.eur.nl/en/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     },
+     {
+      "title": "repub.eur.nl",
+      "url": "https://repub.eur.nl/pub/90845"
+     },
+     {
+      "title": "100025937632 0x000001",
+      "url": "https://eld.bl.uk/catalog/100025937632_0x000001"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.113"
+     },
+     {
+      "title": "mdl 25801146",
+      "url": "https://pesquisa.bvsalud.org/bvsms/resource/pt/mdl-25801146"
+     },
+     {
+      "title": "atcmeetingabstracts.com",
+      "url": "https://atcmeetingabstracts.com/?p=29134"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC CYP3A5 tacrolimus guideline 2015 Birdwell \"intermediate metabolizer\" 1.5 mg/kg/day starting dose",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guidelines for CYP3A5 Genotype and Tacrolimus Dosing - Birdwell - 2015 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.113"
+     },
+     {
+      "title": "Tacrolimus Monograph for Professionals - Drugs.com",
+      "url": "https://www.drugs.com/monograph/tacrolimus.html"
+     },
+     {
+      "title": "25801146-supplement.pdf - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/tacrolimus/2015/25801146-supplement.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC)",
+      "url": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/d059b494-945b-4b5e-af8e-74eb1f890965/content"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC ...",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/tacrolimus/2015/25801146.pdf"
+     },
+     {
+      "title": "Results: Patient with a known CYP3A5 genotype requiring tacrolimus — In the Clinic",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp3a5-genotype-requiring-tacrolimus/"
+     },
+     {
+      "title": "Efficacy of Achieving Early Target Trough Levels of Tacrolimus Using CYP3A5 Guided Dosing Versus Weight-based Dosing in a Multi-ethnic Population of Kidney Transplant Recipients in Singapore",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/62/NCT04825262/Prot_000.pdf"
+     },
+     {
+      "title": "Refining tacrolimus dosing through CYP3A5 pharmacogenetics in Taiwanese renal transplant recipients",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12427442/"
+     },
+     {
+      "title": "Tacrolimus and CYP3A5: Higher Starting Doses for Expressers",
+      "url": "https://www.gene2rx.com/drugs/tacrolimus/"
+     },
+     {
+      "title": "Is Prograf Affected by Genetics?",
+      "url": "https://www.gene2rx.com/drug-genetics/prograf/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Dose adjustment. For CYP3A5 intermediate metabolizers, CPIC advises increasing the tacrolimus starting dose to 1.5–2 times the standard recommended starting dose. The total starting dose should not exceed 0.3 mg/kg/day. Therapeutic drug monitoring should guide later dosing.\n\n**2. Strength:** Strong, per the CPIC classification in the secondary source I found. I could not confirm this from the guideline text itself.\n\n**3. Source:** CPIC guideline for CYP3A5 genotype and tacrolimus dosing (Birdwell et al., *Clin Pharmacol Ther* 2015), [doi:10.1002/cpt.113](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.113). The CPIC PDF is at [files.cpicpgx.org](https://files.cpicpgx.org/data/guideline/publication/tacrolimus/2015/25801146.pdf).\n\nI could not retrieve the full recommendation table, so the exact wording and the strength rating should be checked against the original guideline. I also found no post-2015 CPIC update.\n\nSources:\n- [Birdwell et al., CPIC guideline, Wiley](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.113)\n- [CPIC guideline PDF](https://files.cpicpgx.org/data/guideline/publication/tacrolimus/2015/25801146.pdf)\n- [Gene2Rx: Tacrolimus and CYP3A5 higher starting doses for expressers](https://www.gene2rx.com/drugs/tacrolimus/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda aumentar la dosis inicial 1.5-2 veces con máximo 0.3 mg/kg/día y monitorización terapéutica, acorde a la referencia CPIC (Birdwell 2015, DOI y PDF plausibles)."
+ }
+}

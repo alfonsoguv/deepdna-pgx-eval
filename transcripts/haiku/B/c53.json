@@ -1,0 +1,55 @@
+{
+ "case_id": "c53",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is increased risk of aminoglycoside-induced hearing loss for MT-RNR1 with regards to taking paromomycin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "MT-RNR1",
+    "drug": "paromomycin"
+   },
+   "result": "Unknown gene \"MT-RNR1\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "MT-RNR1"
+   },
+   "result": "Unknown gene \"MT-RNR1\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "paromomycin",
+     "gentamicin",
+     "amikacin",
+     "tobramycin"
+    ]
+   },
+   "result": "{\"checked\":4,\"with_curated_records\":[],\"not_covered\":[\"paromomycin\",\"gentamicin\",\"amikacin\",\"tobramycin\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "I could not find guidance for this in the DeepDNA knowledge base, so I can't give you a sourced answer.\n\n- **Gene:** MT-RNR1 is not in the knowledge base. The 17 genes it covers don't include it.\n- **Drug:** Paromomycin has no curated drug–gene record. Gentamicin, amikacin and tobramycin are also not covered.\n\nFrom my general knowledge, not verified here, CPIC has published an aminoglycoside guideline covering MT-RNR1 variants such as m.1555A>G, with a recommendation to avoid aminoglycosides when alternatives exist. I'm not certain of its exact wording or strength, and I haven't confirmed whether it extends to paromomycin specifically. Check the current CPIC guideline directly.\n\nAny decision about this drug should be made with the prescriber, who can weigh the genetic result against the clinical situation.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "Declara no tener registro en la base de conocimiento y no da una recomendación propia; solo menciona de forma vaga y no verificada que CPIC sugiere evitar aminoglucósidos, sin comprometerse."
+ }
+}

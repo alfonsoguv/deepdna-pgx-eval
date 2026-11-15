@@ -1,0 +1,24 @@
+{
+ "case_id": "c10",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Rapid Metabolizer for CYP2C19 with regards to taking voriconazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Standard use. For a CYP2C19 rapid metabolizer (e.g., *1/*17), start voriconazole at the standard-of-care dose. If the patient doesn't respond, consider an alternative antifungal that doesn't depend on CYP2C19 metabolism. Therapeutic drug monitoring is also reasonable, since levels may run lower. This differs from ultrarapid metabolizers (*17/*17), for whom CPIC advises choosing an alternative agent.\n\n**2. Strength:** Moderate for adults. For pediatric patients, I recall it as \"optional,\" but I'm less sure of that.\n\n**3. Source:** CPIC Guideline for CYP2C19 and Voriconazole Therapy (Moriyama et al., Clin Pharmacol Ther 2017). I answered from memory and didn't check it against the current CPIC site, so verify at cpicpgx.org, since an update may exist.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis estándar de voriconazol, mientras que la referencia indica elegir un agente alternativo (evitar); la cita a CPIC (Moriyama 2017) es plausible."
+ }
+}

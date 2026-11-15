@@ -1,0 +1,34 @@
+{
+ "case_id": "c23",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.0 for CYP2C9 with regards to taking lornoxicam?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2C9",
+    "drug": "lornoxicam"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2C9\",\"drug\":\"lornoxicam\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"NSAID inactivated by CYP2C9. CPIC recommends 25–50% of the lowest recommended starting dose, or an alternative, for poor metabolizers, and the lowest recommended starting dose with monitoring of blood pressure and kidney function for intermediate metabolizers with activity score 1.0.\",\"phenotypes\":[\"Normal metabolizer (NM): two normal-function alleles (*1/*1)\",\"Intermediate metabolizer (IM): activity score 1.0–1.5 (e.g. *1/*2, *1/*3, *2/*2)\",\"Poor metabolizer (PM): activity score 0–0.5 (e.g. *2/*3, *3/*3)\"],\"sources\":[{\"label\":\"CPIC — CYP2C9 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2c9/\"},{\"label\":\"PharmGKB CYP2C9 (PA126)\",\"url\":\"https://www.pharmgkb.org/gene/PA126\"},{\"label\":\"PharmVar CYP2C9\",\"url\":\"https://www.pharmvar.org/gene/CYP2C9\"},{\"label\":\"Theken et al., Clin Pharmacol Ther 2020 (CPIC CYP2C9 and NSAID guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/32189324/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**Lornoxicam in a CYP2C9 poor metabolizer (activity score 0.0)**\n\n1. **Recommendation:** Adjust the dose or use an alternative. The record says CPIC recommends 25–50% of the lowest recommended starting dose, or an alternative drug, for poor metabolizers. Lornoxicam is inactivated by CYP2C9, so exposure is higher in these patients.\n\n2. **Strength:** The record lists this as CPIC level A.\n\n3. **Source:** CPIC guideline for CYP2C9 and NSAIDs (Theken et al., Clin Pharmacol Ther 2020). The DeepDNA record cites it.\n\nThis is educational information only. Any decision about dosing or switching drugs belongs to the prescriber.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda reducir al 25-50% de la dosis inicial más baja (o alternativa), coherente con AJUSTAR; atribuye a CPIC (Theken 2020, correcto), pero el 'nivel A' no se puede verificar y es dudoso, ya que lornoxicam no figura claramente en esa guía."
+ }
+}

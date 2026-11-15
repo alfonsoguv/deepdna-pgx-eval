@@ -1,0 +1,8 @@
+{question}
+
+Answer briefly (under 200 words) with:
+1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).
+2. The strength or level of the recommendation, if known.
+3. The source (which guideline).
+
+If you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.

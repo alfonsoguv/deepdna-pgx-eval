@@ -1,0 +1,78 @@
+{
+ "case_id": "c26",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.5 for CYP2C9 with regards to taking celecoxib?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC CYP2C9 NSAID guideline celecoxib poor metabolizer activity score 0.5 25-50% lowest starting dose moderate",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/celecoxib/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "Bookshelf NBK379478",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK379478/pdf/Bookshelf_NBK379478.pdf"
+     },
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "git.lsit.ucsb.edu",
+      "url": "https://git.lsit.ucsb.edu/publicdata/nih-gov/raw/commit/a3492137cada35c1427e5783c176e4344e6cbb56/www.ncbi.nlm.nih.gov/books/NBK379478/index.html%3Freport=reader"
+     },
+     {
+      "title": "32189324 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/celecoxib/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: adjust the dose.** A CYP2C9 poor metabolizer (activity score 0 or 0.5) breaks down celecoxib much more slowly. Drug levels stay higher for longer, which may raise the chance or severity of side effects. CPIC advises:\n   - Start at 25–50% of the lowest recommended starting dose.\n   - Increase the dose cautiously to clinical effect, or up to 25–50% of the maximum recommended dose.\n   - Don't increase until the drug reaches steady state, at least about 8 days for celecoxib in poor metabolizers.\n   - Use the lowest effective dose for the shortest time.\n   - Alternatively, consider a drug not metabolized by CYP2C9 or not significantly affected by its variants (CPIC gives aspirin, ketorolac, naproxen and sulindac as examples).\n\n2. **Strength:** CPIC rates this recommendation \"Moderate.\" The search results confirmed the dose advice but not the strength, so \"Moderate\" is from my memory of the guideline.\n\n3. **Source:** CPIC Guideline for CYP2C9 and NSAIDs (Theken et al., *Clin Pharmacol Ther* 2020). The FDA label is narrower: for known or suspected poor metabolizers (e.g., *3/*3, *2/*3), start at half the lowest recommended dose. It also says to consider other treatments for children who are poor metabolizers.\n\nSources:\n- [CPIC NSAID guideline (PDF)](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf)\n- [PMC8080882](https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882)\n- [Medical Genetics Summaries – Celecoxib (NBK379478)](https://https.ncbi.nlm.nih.gov/books/NBK379478/pdf/Bookshelf_NBK379478.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda iniciar con 25-50% de la dosis mínima, titular con cautela tras el estado estacionario y considerar alternativas, igual que CPIC; sin embargo, una URL (https.ncbi.nlm.nih.gov) tiene un dominio malformado y parece errónea."
+ }
+}

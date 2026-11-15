@@ -1,0 +1,24 @@
+{
+ "case_id": "c04",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 1.75 for CYP2D6 with regards to taking tamoxifen?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Standard use. Start tamoxifen at the label-recommended dose (20 mg/day for breast cancer treatment or prevention). No alternative drug or dose adjustment is needed based on CYP2D6 for a Normal Metabolizer. Activity score 1.75 falls within the normal metabolizer range (1.25-2.25) under the consensus CYP2D6 phenotype standardization.\n\n2. **Strength:** Strong, for normal metabolizers. This is CPIC's classification for initiating standard dosing in this phenotype.\n\n3. **Source:** CPIC Guideline for CYP2D6 and Tamoxifen Therapy (Goetz et al., 2018, Clin Pharmacol Ther), using the CPIC/DPWG consensus CYP2D6 phenotype definitions. I answered from memory and did not check the guideline text with a tool. Also consider other factors, such as strong CYP2D6-inhibiting co-medications (e.g., paroxetine, fluoxetine, bupropion), which can lower activation of tamoxifen to endoxifen. CPIC advises avoiding them where possible.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda dosis estándar de 20 mg/día y evitar inhibidores fuertes de CYP2D6, igual que la referencia CPIC; la cita (Goetz 2018, Clin Pharmacol Ther) es correcta."
+ }
+}

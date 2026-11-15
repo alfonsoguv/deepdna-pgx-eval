@@ -1,0 +1,34 @@
+{
+ "case_id": "c57",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥4.0 for CYP2D6 with regards to taking ondansetron?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2D6",
+    "drug": "ondansetron"
+   },
+   "result": "No guidance curated for CYP2D6 and \"ondansetron\". Curated drugs: codeine, tramadol, tamoxifen, amitriptyline, nortriptyline, paroxetine, fluvoxamine, risperidone, aripiprazole, atomoxetine, clomipramine, imipramine, doxepin, trimipramine, desipramine, vortioxetine, venlafaxine, metoprolol, hydrocodone.",
+   "is_error": true
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "I couldn't confirm this with my tools. The DeepDNA database has no curated CYP2D6–ondansetron record; its CYP2D6 drug list doesn't include ondansetron. What follows is from my own knowledge, so please check it against the guideline itself.\n\n1. **Recommendation: use an alternative drug.** For CYP2D6 ultrarapid metabolizers, the guideline says to choose an antiemetic that isn't mainly broken down by CYP2D6, such as granisetron. These patients clear ondansetron faster, so it may work less well against nausea and vomiting.\n2. **Strength: moderate.**\n3. **Source:** the CPIC guideline for CYP2D6 with ondansetron and tropisetron (Bell et al., *Clin Pharmacol Ther* 2017). Its phenotype definitions may have been updated since, so check that an activity score of ≥4.0 still falls in the ultrarapid group.\n\nThe Dutch DPWG guideline may say something different for this phenotype, but I'm not sure what, so I haven't included it. This is educational information, not medical advice; any change to a medication is the prescriber's decision.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Recomienda un antiemético alternativo (granisetron) como en la referencia CPIC; cita Bell et al. 2017 CPT, que es correcta, y aclara que la base de datos consultada no tenía registro."
+ }
+}

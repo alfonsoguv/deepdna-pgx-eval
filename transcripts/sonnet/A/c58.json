@@ -1,0 +1,24 @@
+{
+ "case_id": "c58",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Variable for G6PD with regards to taking mafenide?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** I can't identify a guideline recommendation for the G6PD \"Variable\" phenotype with mafenide, so this is effectively **no recommendation**. The CPIC G6PD guideline (2022 update) gives drug-specific advice for agents such as rasburicase, pegloticase, primaquine, tafenoquine, dapsone and methylene blue. To my knowledge, mafenide is not among them. I couldn't verify this against the current CPIC or PharmGKB pages, because I had no lookup tool here.\n\n2. **Strength:** Not applicable, since there is no CPIC recommendation to grade.\n\n3. **Source:** The only related information I know of is the FDA label for mafenide acetate (Sulfamylon). It warns of hemolytic anemia and hemolysis in patients with G6PD deficiency, which is a label caution rather than a phenotype-specific pharmacogenomic guideline.\n\n**Practical note:** \"Variable\" usually means a heterozygous female with unpredictable enzyme activity. Confirm the phenotype with a quantitative enzyme assay. If mafenide is needed, consider the label warning, monitor for hemolysis, and consult a pharmacist or burn specialist. Please check the current CPIC and PharmGKB pages in case this has been updated.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "OTHER",
+  "action_correct": false,
+  "guideline_cited": "NONE",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Dice que CPIC no tiene recomendación para mafenida y aconseja confirmar el fenotipo con ensayo enzimático y vigilar hemólisis por la advertencia de la etiqueta, en vez de indicar uso estándar sin cambios como la referencia."
+ }
+}

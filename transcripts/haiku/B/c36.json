@@ -1,0 +1,34 @@
+{
+ "case_id": "c36",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Deficient with CNSHA for G6PD with regards to taking rasburicase?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "G6PD",
+    "drug": "rasburicase"
+   },
+   "result": "{\"pair\":{\"gene\":\"G6PD\",\"drug\":\"rasburicase\",\"guideline\":\"CPIC; FDA label\",\"level\":\"CPIC A\",\"summary\":\"Contraindicated in G6PD deficiency: can cause severe acute hemolysis and methemoglobinemia. The FDA label recommends screening higher-risk patients before use.\",\"phenotypes\":[\"Normal\",\"Deficient\",\"Deficient with CNSHA (chronic non-spherocytic hemolytic anemia)\",\"Variable: one deficient and one non-deficient allele in people with more than one X chromosome; activity can range from normal to deficient, so enzyme activity must be measured\",\"Indeterminate\",\"Alleles grouped by historical WHO classes, from Class I (severe, with CNSHA) to Class IV (normal activity)\"],\"sources\":[{\"label\":\"CPIC — G6PD gene page\",\"url\":\"https://cpicpgx.org/gene/g6pd/\"},{\"label\":\"PharmGKB G6PD (PA28469)\",\"url\":\"https://www.pharmgkb.org/gene/PA28469\"},{\"label\":\"Gammal et al., Clin Pharmacol Ther 2023 (CPIC G6PD guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/36049896/\"},{\"label\":\"Elitek (rasburicase) prescribing information, FDA/DailyMed (boxed warning: hemolysis in G6PD deficiency)\",\"url\":\"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0ae10bc4-6b65-402f-9db5-2d7753054922\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Avoid. The CPIC guideline lists rasburicase as contraindicated in G6PD deficiency, including the Deficient with CNSHA phenotype. Rasburicase can cause severe acute hemolysis and methemoglobinemia. The FDA label recommends screening higher-risk patients before use.\n\n**2. Strength:** CPIC level A.\n\n**3. Sources:**\n- CPIC G6PD guideline: Gammal et al., *Clin Pharmacol Ther* 2023 (PMID 36049896), and the CPIC G6PD gene page (cpicpgx.org/gene/g6pd/)\n- Elitek (rasburicase) prescribing information, FDA/DailyMed (boxed warning on hemolysis in G6PD deficiency)\n\nThis is educational information. Any decision about rasburicase belongs to the prescribing clinician.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar rasburicasa en deficiencia de G6PD con CNSHA, atribuida a CPIC (Gammal 2023, PMID correcto), coherente con la referencia."
+ }
+}

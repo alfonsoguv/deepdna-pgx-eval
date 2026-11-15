@@ -1,0 +1,78 @@
+{
+ "case_id": "c26",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.5 for CYP2C9 with regards to taking celecoxib?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2C9 NSAIDs celecoxib poor metabolizer activity score recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "Bookshelf NBK379478",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK379478/pdf/Bookshelf_NBK379478.pdf"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "git.lsit.ucsb.edu",
+      "url": "https://git.lsit.ucsb.edu/publicdata/nih-gov/raw/commit/a3492137cada35c1427e5783c176e4344e6cbb56/www.ncbi.nlm.nih.gov/books/NBK379478/index.html%3Freport=reader"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/celecoxib/"
+     },
+     {
+      "title": "CYP2C9 and Celecoxib, Flurbiprofen, Ibuprofen",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-celecoxib-flurbiprofen-ibuprofen/"
+     },
+     {
+      "title": "32189324 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/celecoxib/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Recommendation:** Start celecoxib at 25–50% of the lowest recommended starting dose. Avoiding the drug is not required. The guideline notes that drug selection depends on the individual's treatment goals and toxicity risk.\n\n**Strength:** I could not confirm the formal CPIC evidence or strength rating from the sources I reached.\n\n**Source:** CPIC guideline for NSAIDs based on CYP2C9 genotype (Theken et al., 2020). The search returned the 2020 guideline and secondary summaries, not the live CPIC page, so I could not check whether it has been updated.\n\nNote that CPIC's 2020 guideline classifies activity scores of 0 or 0.5 as poor metabolizer, so an AS of 0.5 falls in this category.\n\nSources:\n- [CPIC NSAID preprint (2020)](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf)\n- [CPIC guideline page](https://cpicpgx.org/guidelines/cpic-guideline-for-nsaids-based-on-cyp2c9-genotype/)\n- [UF Health precision medicine summary of CYP2C9 and celecoxib](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-celecoxib-flurbiprofen-ibuprofen/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda iniciar con 25-50% de la dosis inicial más baja, coherente con la referencia (AJUSTAR), y cita correctamente la guía CPIC de AINEs 2020 (Theken et al.)."
+ }
+}

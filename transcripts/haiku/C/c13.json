@@ -1,0 +1,127 @@
+{
+ "case_id": "c13",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer for CYP2C19 with regards to taking citalopram?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline SSRI CYP2C19 ultrarapid metabolizer citalopram escitalopram recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/4512908"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/mid/NIHMS689584"
+     },
+     {
+      "title": "Article UF PharmaNote CYP2D6 and CYP2C19 for SSRIs",
+      "url": "https://dcricollab.dcri.duke.edu/sites/NIHKR/IGNITE%20Documents%20and%20Links%20to%20Content/Article-UF-PharmaNote-CYP2D6-and-CYP2C19-for-SSRIs.pdf"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/SSRI/2015/25974703.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6925627"
+     },
+     {
+      "title": "Genotype influences antidepressant discontinuation in a pre-emptive pharmacogenetic testing population",
+      "url": "https://paperity.org/p/371414020/genotype-influences-antidepressant-discontinuation-in-a-pre-emptive-pharmacogenetic"
+     },
+     {
+      "title": "nii.ac.jp",
+      "url": "https://cir.nii.ac.jp/crid/1364233269188050048?lang=en"
+     },
+     {
+      "title": "Subscribe to RSS",
+      "url": "https://thieme-connect.de/products/ejournals/html/10.1055/a-1288-1061"
+     },
+     {
+      "title": "cir.nii.ac.jp",
+      "url": "https://cir.nii.ac.jp/crid/1364233269188050048?lang=ja"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2023 update SSRI CYP2C19 ultrarapid citalopram escitalopram \"consider a clinically appropriate alternative\" strength",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC Update March 2, 2023",
+      "url": "https://cpicpgx.org/wp-content/uploads/2023/03/CPIC-update-03022023.pdf"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for <fi>CYP2D6</fi>, <fi>CYP2C19</fi>, <fi>CYP2B6</fi>, <fi>SLC6A4</fi>, and <fi>HTR2A</fi> Genotypes and Serotonin Reuptake Inhibitor Antidepressants - Bousman - 2023 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2903"
+     },
+     {
+      "title": "Pharmacogenetics Portal - 23andMe for Healthcare Professionals",
+      "url": "https://medical.23andme.com/pgt-portal/"
+     },
+     {
+      "title": "(PDF) Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A Genotypes and Serotonin Reuptake Inhibitor Antidepressants",
+      "url": "https://www.researchgate.net/publication/369915420_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_CYP2D6_CYP2C19_CYP2B6_SLC6A4_and_HTR2A_Genotypes_and_Serotonin_Reuptake_Inhibitor_Antidepressants"
+     },
+     {
+      "title": "CYP2C19 and Your SSRIs: When Citalopram, Escitalopram or Sertraline Needs a Different Dose",
+      "url": "https://psychiatryeducationforum.com/cyp2c19-ssris/"
+     },
+     {
+      "title": "23andMe & AncestryDNA Raw Data Analysis for Medication Response",
+      "url": "https://decodemybio.com/learn/pharmacogenomics-for-depression"
+     },
+     {
+      "title": "CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4 and HTR2A Genotypes and Serotonin Reuptake Inhibitor Antidepressants",
+      "url": "https://blog.clinpgx.org/cpic-guideline-for-cyp2d6-cyp2c19/"
+     },
+     {
+      "title": "BOOK PART",
+      "url": "https://www.cambridge.org/core/product/identifier/9781009049719%23CT-BP-2/type/BOOK_PART"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Consider an alternative antidepressant that is not predominantly metabolized by CYP2C19, rather than starting citalopram or escitalopram at the usual dose. Citalopram and escitalopram exposure is lower in ultrarapid metabolizers, which may reduce response. If citalopram or escitalopram is still chosen, the guideline's dosing advice is the reference point, and the choice should be clinically justified.\n\n**2. Strength:** I could not confirm this. Sources disagree: one describes it as \"moderate,\" another as \"optional,\" and a psychiatry education site as \"strong\" for escitalopram. Check the \"Classification of Recommendation\" column in the CPIC table before relying on any grade.\n\n**3. Source:** CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A Genotypes and Serotonin Reuptake Inhibitor Antidepressants (Bousman et al., 2023, *Clin Pharmacol Ther*). The 2015 CPIC SSRI guideline gave the same direction for CYP2C19 ultrarapid metabolizers.\n\nSources:\n- [CPIC 2023 SSRI guideline (Wiley)](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2903)\n- [CPIC 2023 PDF](https://files.cpicpgx.org/data/guideline/publication/serotonin_reuptake_inhibitor_antidepressants/2023/37032427.pdf)\n- [CPIC 2015 SSRI guideline (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4512908)\n- [CPIC/ClinPGx blog summary](https://blog.clinpgx.org/cpic-guideline-for-cyp2d6-cyp2c19/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda un antidepresivo alternativo no metabolizado principalmente por CYP2C19, igual que la referencia CPIC, y cita la guía CPIC 2023 (Bousman et al., Clin Pharmacol Ther) correctamente."
+ }
+}

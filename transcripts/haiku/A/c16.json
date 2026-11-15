@@ -1,0 +1,24 @@
+{
+ "case_id": "c16",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for CYP2C19 with regards to taking voriconazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Choose an alternative agent that is not predominantly metabolized by CYP2C19. Voriconazole exposure is expected to be substantially higher in poor metabolizers, which raises the risk of toxicity.\n\n**2. Strength:** CPIC rates this as a strong recommendation. I'm recalling this from memory and could not check the current text, so confirm the evidence level against the source.\n\n**3. Source:** CPIC Guideline for CYP2C19 and Voriconazole Therapy (Moriyama et al., 2016/2017, *Clinical Pharmacology & Therapeutics*). I did not verify this against the live guideline, so check the current CPIC version before applying it clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda un agente alternativo, igual que la referencia, y cita correctamente la guía CPIC (Moriyama 2017). Pero afirma que la fuerza es 'strong', cuando CPIC la clasifica como 'moderate' para poor metabolizers, y no menciona la opción de voriconazol a dosis reducida con monitorización."
+ }
+}

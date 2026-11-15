@@ -1,0 +1,24 @@
+{
+ "case_id": "c07",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥3.5 for CYP2D6 with regards to taking codeine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Avoid codeine. An activity score of ≥3.5 falls in the ultrarapid metabolizer category, where codeine can produce excessive morphine exposure and risk of toxicity. Use a non-CYP2D6-dependent opioid instead.\n\n2. **Strength:** CPIC classifies this as a strong recommendation with strong evidence.\n\n3. **Source:** CPIC guideline for CYP2D6 and codeine (Crews et al., Clinical Pharmacology & Therapeutics, updated 2019 with a 2021 CYP2D6 update). I did not check the live guideline. I'm working from memory, and I'm not certain of the exact version or the activity score cutoffs, so please confirm against the current CPIC publication.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar la codeína en metabolizador ultrarrápido y atribuye a CPIC (Crews et al., 2021 es la actualización real); la fuerza 'strong' es correcta y no hay datos inventados evidentes."
+ }
+}

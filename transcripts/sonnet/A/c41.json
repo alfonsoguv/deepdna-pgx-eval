@@ -1,0 +1,24 @@
+{
+ "case_id": "c41",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for TPMT and Poor Metabolizer for NUDT15 with regards to taking azathioprine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Reduce the dose. For a TPMT normal metabolizer / NUDT15 poor metabolizer (a combined TPMT/NUDT15 phenotype), the CPIC guideline treats the patient according to the NUDT15 poor metabolizer status. Because azathioprine is used in non-malignant conditions (e.g., autoimmune disease, transplant), the guidance is to consider a drastically reduced starting dose (about 10-fold lower than standard, e.g., 0.2-0.3 mg/kg/day, given three times weekly rather than daily) and adjust based on myelosuppression and disease-specific guidelines. Where this is not feasible or appropriate, choose an alternative non-thiopurine immunosuppressant. This is especially relevant for NUDT15 poor metabolizers, who have a very high risk of severe, life-threatening myelosuppression on standard doses.\n\n**2. Strength:** Strong (for NUDT15 poor metabolizers in non-malignant disease).\n\n**3. Source:** CPIC Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes (2018 update; Relling et al., Clin Pharmacol Ther 2019). \n\nNote: I did not have a tool to verify this live against the CPIC database, so this is from my recall of the guideline. Please confirm against the current CPIC/PharmGKB entry before clinical use.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda como acción principal reducir la dosis unas 10 veces en enfermedad no maligna y deja el fármaco alternativo como opción secundaria, mientras que CPIC indica considerar un inmunosupresor alternativo (EVITAR) en condiciones no malignas."
+ }
+}

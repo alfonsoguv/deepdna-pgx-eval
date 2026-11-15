@@ -1,0 +1,24 @@
+{
+ "case_id": "c21",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 2.75 for CYP2D6 and Ultrarapid Metabolizer for CYP2C19 with regards to taking imipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I couldn't check this with tools, so the answer below comes from my knowledge of the guideline. Please confirm it against the current CPIC guideline at cpicpgx.org, since the TCA guideline may have been updated.\n\n1. **Recommendation: avoid imipramine and use an alternative drug.** For a CYP2D6 ultrarapid metabolizer (activity score above 2.25, so 2.75 qualifies) who is also a CYP2C19 ultrarapid or rapid metabolizer, CPIC advises avoiding the tertiary-amine TCA. This is because faster metabolism may leave drug levels too low to work. Choose an alternative not metabolized by CYP2D6 or CYP2C19. If a TCA is still clinically necessary, use therapeutic drug monitoring to guide dose adjustments.\n\n2. **Strength: Optional.** The CPIC guideline's dosing recommendations for the combined CYP2D6/CYP2C19 phenotypes come mainly from amitriptyline data. They are applied to other tertiary-amine TCAs, including imipramine, by extrapolation, and this rationale is behind the \"Optional\" classification. The CYP2D6 ultrarapid recommendation on its own is rated \"Strong\" for amitriptyline and nortriptyline.\n\n3. **Source:** CPIC Guideline for CYP2D6 and CYP2C19 Genotypes and Dosing of Tricyclic Antidepressants (Hicks et al., *Clin Pharmacol Ther* 2017; 2016 update).",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar imipramino y usar monitorización terapéutica si es necesario, acorde a la referencia; la cita CPIC es correcta, pero la fuerza 'Optional' es dudosa (la referencia indica recomendación fuerte de TDM) y se menciona una 'actualización 2016' dudosa."
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "case_id": "c16",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer for CYP2C19 with regards to taking voriconazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline voriconazole CYP2C19 poor metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5474211"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guidelines for CYP2C19 and Voriconazole Therapy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27981572/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN077957"
+     },
+     {
+      "title": "100047870294 0x000001",
+      "url": "https://eld.bl.uk/catalog/100047870294_0x000001"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK552035"
+     },
+     {
+      "title": "4.6 Article",
+      "url": "https://peeref.com/works/46847191"
+     },
+     {
+      "title": "Voriconazole Supplement 2016",
+      "url": "https://cpicpgx.org/content/guideline/publication/voriconazole/2016/Voriconazole_Supplement_2016.pdf"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic 2dhd9771gm",
+      "url": "https://typeset.io/papers/clinical-pharmacogenetics-implementation-consortium-cpic-2dhd9771gm"
+     },
+     {
+      "title": "CYP2C19 and Voriconazole",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c19-and-voriconazole/"
+     },
+     {
+      "title": "Bookshelf NBK552035",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK552035/pdf/Bookshelf_NBK552035.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC voriconazole CYP2C19 poor metabolizer \"alternative agent\" strong recommendation classification 2016 Moriyama",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN077957"
+     },
+     {
+      "title": "CYP2C19 and Voriconazole",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c19-and-voriconazole/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4764088"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5474211"
+     },
+     {
+      "title": "Bookshelf NBK552035",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK552035/pdf/Bookshelf_NBK552035.pdf"
+     },
+     {
+      "title": "100047870294 0x000001",
+      "url": "https://eld.bl.uk/catalog/100047870294_0x000001"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guidelines for CYP2C19 and Voriconazole Therapy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27981572/"
+     },
+     {
+      "title": "S EPMC5474211",
+      "url": "https://omicsdi.org/dataset/biostudies-literature/S-EPMC5474211"
+     },
+     {
+      "title": "Voriconazole Supplement 2016",
+      "url": "https://cpicpgx.org/content/guideline/publication/voriconazole/2016/Voriconazole_Supplement_2016.pdf"
+     },
+     {
+      "title": "s12281 015 0219 0",
+      "url": "https://springerlink.bibliotecabuap.elogim.com/content/pdf/10.1007/s12281-015-0219-0.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Avoid voriconazole as first-line therapy if possible and use an agent not dependent on CYP2C19, such as isavuconazole, liposomal amphotericin B, or posaconazole. If voriconazole is still the best choice, use a lower-than-standard dose with careful therapeutic drug monitoring. Poor metabolizers have higher voriconazole trough levels and more adverse events.\n\n**2. Strength:** Reported as \"Moderate\" in one summary of the CPIC table. I could not confirm this against the full guideline, so check the classification there.\n\n**3. Source:** CPIC guideline for CYP2C19 and voriconazole therapy (Moriyama et al., Clin Pharmacol Ther 2017;102(1):45-51; PMID 27981572). The [CPIC voriconazole supplement](https://cpicpgx.org/content/guideline/publication/voriconazole/2016/Voriconazole_Supplement_2016.pdf) and the [NCBI Bookshelf summary](https://ncbi.nlm.nih.gov/books/NBK552035) were also consulted.\n\nSources:\n- [PMC5474211](https://pmc.ncbi.nlm.nih.gov/articles/PMC5474211)\n- [PubMed 27981572](https://pubmed.ncbi.nlm.nih.gov/27981572/)\n- [CPIC Voriconazole Supplement 2016](https://cpicpgx.org/content/guideline/publication/voriconazole/2016/Voriconazole_Supplement_2016.pdf)\n- [NCBI Bookshelf NBK552035](https://ncbi.nlm.nih.gov/books/NBK552035)\n- [UF Health CYP2C19 and Voriconazole](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c19-and-voriconazole/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar voriconazol y usar una alternativa (anfotericina B liposomal, posaconazol), con dosis menor y monitorización si se usa; cita correctamente la guía CPIC de Moriyama 2017 con PMID válido."
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "case_id": "c43",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for TPMT and Indeterminate for NUDT15 with regards to taking mercaptopurine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** No recommendation. TPMT normal metabolizer alone would mean standard starting doses (e.g., 75 mg/m²/day, or 1.5 mg/kg/day in the usual ALL maintenance setting), with dose adjustments guided by myelosuppression and disease-specific protocols. But the indeterminate NUDT15 result (an uncertain or unclassified genotype) means the combined phenotype can't be assigned a genotype-directed recommendation. In practice, clinicians would typically start at the standard dose and monitor closely, but that isn't a formal guideline recommendation. Confirming or re-testing NUDT15 may help, especially in patients of East Asian, Hispanic, or other ancestry where NUDT15 risk variants are more common.\n\n2. **Strength:** None assigned (\"no recommendation\"). This is from my recall of the guideline's lookup table, not a live check.\n\n3. **Source:** CPIC Guideline for Thiopurines and TPMT and NUDT15 (Relling et al., 2018 update, *Clin Pharmacol Ther* 2019), plus the CPIC allele and diplotype-to-phenotype resources. I haven't verified this against the current online version, so please confirm at cpicpgx.org.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Aunque dice 'sin recomendación formal', indica en la práctica dosis estándar con monitorización estrecha, coherente con la referencia (dosis normal, vigilar toxicidad); cita CPIC Relling 2018/2019 correcta."
+ }
+}

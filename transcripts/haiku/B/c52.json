@@ -1,0 +1,53 @@
+{
+ "case_id": "c52",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is No HLA-A Result for HLA-A and HLA-B*15:02 positive for HLA-B with regards to taking carbamazepine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "HLA-B",
+    "drug": "carbamazepine"
+   },
+   "result": "Unknown gene \"HLA-B\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "HLA-A",
+    "drug": "carbamazepine"
+   },
+   "result": "Unknown gene \"HLA-A\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "carbamazepine"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[],\"not_covered\":[\"carbamazepine\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "I can't give you a guideline answer for this from the DeepDNA knowledge base.\n\n- **Carbamazepine is not covered.** The knowledge base has no curated drug–gene record for it, so it has no guideline recommendation for HLA-B*15:02 or for HLA-A.\n- **HLA-A and HLA-B are not in the knowledge base.** The 16 genes it covers are MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, and CYP3A5 (plus CYP4F2). I can't look up HLA-B*15:02 or any HLA result there.\n\nFor carbamazepine and HLA-B*15:02, the relevant guidance is outside this tool. CPIC has published a guideline on HLA-B genotype and carbamazepine, and it is the usual source for this question. I'm not confident enough in its exact wording or strength to quote it from memory, so please check the current CPIC guideline directly. A prescriber or pharmacist can also interpret the result, including the missing HLA-A result.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "La respuesta declina dar una recomendación, indica que la base de conocimiento no tiene registro de carbamazepina ni HLA, y solo remite a la guía CPIC sin citar su contenido."
+ }
+}

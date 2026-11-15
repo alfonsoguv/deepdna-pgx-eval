@@ -1,0 +1,78 @@
+{
+ "case_id": "c21",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 2.75 for CYP2D6 and Ultrarapid Metabolizer for CYP2C19 with regards to taking imipramine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC tricyclic antidepressants CYP2D6 CYP2C19 guideline imipramine ultrarapid metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19",
+      "url": "https://cpicpgx.org/?p=571"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for imipramine and CYP2C19, CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166104999"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3689226"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/CN221257"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK425164"
+     },
+     {
+      "title": "Bookshelf NBK425164",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK425164/pdf/Bookshelf_NBK425164.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7080976/table/T4"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/226253/mod_resource/content/2/guideline%20TCA.pdf"
+     },
+     {
+      "title": "Imipramine Therapy and CYP2D6 and CYP2C19 Genotype",
+      "url": "https://0-www-ncbi-nlm-nih-gov.brum.beds.ac.uk/pubmed/28520379"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: avoid imipramine and use an alternative.** CPIC's combined table for a person who is ultrarapid for both CYP2D6 and CYP2C19 says to avoid the drug because it may not work. Choose a drug that neither enzyme breaks down. An activity score of 2.75 counts as CYP2D6 ultrarapid under either cutoff: above 2 in the 2016 guideline, or above 2.25 after the 2019 update. If a tricyclic is still needed, therapeutic drug monitoring (blood level checks) should guide the dose. A CYP2D6-only ultrarapid result would point to a higher target dose instead, so the CYP2C19 result is what makes this a firm \"avoid.\"\n\n2. **Strength: optional.** CPIC wrote the combined CYP2D6 plus CYP2C19 recommendation for amitriptyline and says it can be applied to other tricyclics, including imipramine. Because imipramine has less supporting evidence, the rating is optional. On their own, CYP2D6 ultrarapid status for a tricyclic is rated strong and CYP2C19 ultrarapid status for a tertiary amine is rated optional. The strength ratings come from my memory of the guideline, and I didn't confirm the latest version on the CPIC site.\n\n3. **Source:** the CPIC Guideline for Tricyclic Antidepressants and CYP2D6 and CYP2C19 (Hicks et al., 2016; updated in 2019). The PharmGKB annotation for imipramine summarizes it.\n\nSources:\n- [CPIC TCA Guideline](https://cpicpgx.org/?p=571)\n- [PharmGKB imipramine annotation](https://www.pharmgkb.org/guidelineAnnotation/PA166104999)\n- [Medical Genetics Summaries – Imipramine](https://ncbi.nlm.nih.gov/books/NBK425164)\n- [CPIC 2016 guideline (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar imipramina y usar alternativa, con monitorización terapéutica si se usa, conforme a CPIC; la fuerza 'optional' es un detalle menor y las citas parecen plausibles."
+ }
+}

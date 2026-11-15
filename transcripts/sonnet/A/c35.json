@@ -1,0 +1,24 @@
+{
+ "case_id": "c35",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Variable for G6PD with regards to taking dapsone?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** For the \"Variable\" G6PD phenotype, CPIC says the phenotype is uncertain and should be resolved with a quantitative G6PD enzyme activity test before dapsone is given. If the test shows deficiency, treat the patient as G6PD deficient, which means avoiding dapsone or using an alternative. If activity is normal, use dapsone as usual. Whenever dapsone is used in someone with possible deficiency, monitor closely for hemolysis.\n\n**2. Strength:** I couldn't check this with tools, so I'm going from memory. I believe the dapsone recommendation for deficient phenotypes is \"moderate\", and the \"Variable\" advice follows the same logic: test, then act. Please confirm the exact grade in the guideline table.\n\n**3. Source:** CPIC Guideline for Rasburicase and G6PD Deficiency, with the 2022 update (Gammal et al., *Clin Pharmacol Ther*) covering G6PD genotype and drugs including dapsone. The guideline's \"Variable\" phenotype mainly covers heterozygous females, whose enzyme activity can range from deficient to normal.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "OTHER",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La acción principal (medir la actividad enzimática de G6PD antes de decidir) coincide con la referencia. Sin embargo, la cita mezcla la guía de rasburicasa con la actualización de 2022 de Gammal et al. y afirma una fuerza 'moderada' de memoria, lo que resulta dudoso."
+ }
+}

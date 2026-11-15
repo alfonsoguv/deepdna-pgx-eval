@@ -1,0 +1,24 @@
+{
+ "case_id": "c26",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.5 for CYP2C9 with regards to taking celecoxib?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Adjust the dose. For CYP2C9 poor metabolizers (activity score 0 or 0.5), CPIC advises starting celecoxib at 25-50% of the lowest recommended starting dose. Titrate upward carefully to clinical effect, not exceeding 25-50% of the maximum recommended dose. Exposure is markedly increased because clearance is reduced, so the risk of GI and cardiovascular adverse events is higher. The FDA label similarly recommends starting at half the lowest dose in known or suspected poor metabolizers. An alternative NSAID not metabolized by CYP2C9 is reasonable if this dosing doesn't work or isn't appropriate.\n\n**2. Strength:** Moderate.\n\n**3. Source:** CPIC Guideline for CYP2C9 and NSAIDs (Theken et al., *Clin Pharmacol Ther* 2020), consistent with the FDA celecoxib label.\n\nI answered from memory and didn't check it against the guideline text, so please verify the exact dosing wording and strength grade at cpicpgx.org before applying it clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda iniciar con 25-50% de la dosis mínima y titular con cautela, igual que la referencia CPIC; cita Theken et al., Clin Pharmacol Ther 2020, que es correcta."
+ }
+}

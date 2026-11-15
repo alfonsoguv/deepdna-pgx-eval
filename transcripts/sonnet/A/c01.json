@@ -1,0 +1,24 @@
+{
+ "case_id": "c01",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = 3.0 for CYP2D6 with regards to taking nortriptyline?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I answered from memory without checking a source, so please verify the strength rating against the current CPIC tables.\n\n1. **Recommendation:** Avoid nortriptyline, because the ultrarapid phenotype (activity score >2.25) risks subtherapeutic drug levels and treatment failure. If nortriptyline is still considered necessary, use an alternative not primarily metabolized by CYP2D6 (e.g., an SSRI or other non-CYP2D6 antidepressant where clinically appropriate). Alternatively, use therapeutic drug monitoring to guide dosing. Do not use a simple empiric dose increase.\n\n2. **Strength:** Moderate in the 2023 CPIC update, as I recall it. The 2016 version rated this \"optional.\"\n\n3. **Source:** CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLCO1B1, and TPMT genotypes and tricyclic antidepressant dosing (Bousman et al., 2023 update of the 2016 Hicks et al. guideline). The recommendation is consistent with DPWG guidance, which also advises an alternative or TDM-guided dosing for ultrarapid metabolizers.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La acción principal es evitar nortriptilina y usar una alternativa, igual que la referencia. Atribuye la recomendación a CPIC y DPWG, pero el título citado de la guía (con TPMT y SLCO1B1) parece inventado, y 'no aumentar la dosis empíricamente' contradice en parte a la referencia."
+ }
+}

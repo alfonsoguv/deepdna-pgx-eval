@@ -1,0 +1,24 @@
+{
+ "case_id": "c19",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 0.5 for CYP2D6 and Intermediate Metabolizer for CYP2C19 with regards to taking doxepin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** Adjust the dose. Use doxepin with a reduced starting dose.\n- **CYP2D6 intermediate metabolizer (AS 0.5):** Consider about a 25% reduction in the recommended starting dose, and use therapeutic drug monitoring to guide further adjustments.\n- **CYP2C19 intermediate metabolizer:** No change. Start at the standard dose.\n- **Combined phenotypes:** The guideline gives no separate recommendation for this pairing. The CYP2D6 recommendation is the one that changes dosing. Both enzymes contribute to doxepin and its active metabolite, so close clinical monitoring is reasonable.\n\n**2. Strength:** Optional. This is the CPIC classification for the CYP2D6 intermediate metabolizer recommendation for tertiary amine TCAs. The CYP2C19 intermediate metabolizer recommendation is standard dosing.\n\n**3. Source:** CPIC Guideline for CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A genotypes and serotonin reuptake inhibitor antidepressants is a different guideline. The relevant one is the CPIC Guideline for Tricyclic Antidepressants and CYP2D6/CYP2C19 (Hicks et al., 2013; updated 2016, published 2017).\n\nI answered from memory and did not check the current CPIC text with tools. Please confirm against cpicpgx.org, since CPIC has updated its phenotype terminology and may have revised the tricyclic guideline.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda reducir 25% la dosis inicial con TDM, igual que la referencia; cita CPIC TCA correctamente, pero los detalles 'Hicks 2013; actualizada 2016, publicada 2017' y la fuerza 'Optional' son dudosos (la actualización fue Hicks 2016/2017, y la fuerza para IM de CYP2D6 es opcional), además de un texto confuso sobre otra guía."
+ }
+}

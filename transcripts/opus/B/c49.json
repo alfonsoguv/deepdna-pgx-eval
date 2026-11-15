@@ -1,0 +1,34 @@
+{
+ "case_id": "c49",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*58:01 positive for HLA-B with regards to taking allopurinol?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "HLA-B",
+    "drug": "allopurinol"
+   },
+   "result": "Unknown gene \"HLA-B\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**The tool doesn't cover this.** HLA-B isn't in the DeepDNA knowledge base, so it has no curated record for allopurinol. The answer below is from my own knowledge of the published guidelines and wasn't checked with a tool.\n\n1. **Recommendation: avoid allopurinol and use another drug.** In people who carry HLA-B*58:01, CPIC says allopurinol should not be used. The reason is a much higher risk of severe skin and whole-body reactions: Stevens-Johnson syndrome, toxic epidermal necrolysis, and DRESS (a severe drug reaction with fever, rash and organ involvement). Prescribers should pick a different treatment based on the clinical situation.\n2. **Strength: Strong** under CPIC's grading system.\n3. **Source:** CPIC Guideline for HLA-B Genotype and Allopurinol Dosing (Hershfield et al. 2013, updated by Saito et al., *Clin Pharmacol Ther* 2016). DPWG (the Dutch pharmacogenetics group) also recommends choosing an alternative for HLA-B*58:01 carriers. The FDA and other drug labels mention this risk, and some countries recommend testing before starting allopurinol, especially for people of Asian ancestry.\n\nPlease check these details against the current CPIC guideline at cpicpgx.org. This is general information, not medical advice, and any decision about medication belongs with the prescriber.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Recomienda evitar alopurinol en portadores de HLA-B*58:01, coherente con CPIC (Hershfield 2013, actualización Saito 2016, correctas) y DPWG; indica que la herramienta no tenía registro y responde con su conocimiento."
+ }
+}

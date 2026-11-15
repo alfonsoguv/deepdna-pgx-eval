@@ -1,0 +1,78 @@
+{
+ "case_id": "c06",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 with regards to taking venlafaxine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2D6 venlafaxine ultrarapid metabolizer recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Annotation of CPIC Guideline for venlafaxine and CYP2D6",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166288201"
+     },
+     {
+      "title": "CYP2D6 Genotype to Phenotype Standardization Project consensus",
+      "url": "https://cpicpgx.org/wp-content/uploads/2018/09/CYP2D6-Genotype-to-Phenotype-Standardization-Project_consensus.pdf"
+     },
+     {
+      "title": "CPIC update 2019",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/10/CPIC-update-2019.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5723247"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/12/CYP2D6-5HT3-Receptor-Antagonist-Supplement-Update-2025-All-Authors-V.4-11.24.2025.docx"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/226253/mod_resource/content/2/guideline%20TCA.pdf"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK305561/bin/20150727venlafaxine.pdf"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK574601/"
+     },
+     {
+      "title": "www.mdedge.com",
+      "url": "https://www.mdedge.com/currentpsychiatry/article/155036/practice-management/using-pharmacogenetics-guidelines-when/page/0/1"
+     },
+     {
+      "title": "www.mdedge.com",
+      "url": "https://www.mdedge.com/content/using-pharmacogenetics-guidelines-when-prescribing-whats-available/page/0/1"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** No recommendation. CPIC does not give a dosing or drug-choice recommendation for venlafaxine in CYP2D6 ultrarapid metabolizers (UM). Only poor metabolizers get a specific recommendation (consider a non-CYP2D6-dependent antidepressant). An activity score ≥5.0 is above the UM cutoff (>2.25), so this patient is a UM.\n\n**2. Strength:** None, because CPIC issues no recommendation for this phenotype.\n\n**3. Source:** CPIC guideline for CYP2D6 and serotonin reuptake inhibitor antidepressants, as summarized in the [PharmGKB annotation of the CPIC guideline for venlafaxine and CYP2D6](https://www.pharmgkb.org/guidelineAnnotation/PA166288201). I did not open the full CPIC guideline, so this is based on that summary.\n\nFor comparison, the Dutch Pharmacogenetics Working Group (DPWG) does address this group. Per an [older NCBI Bookshelf venlafaxine document](https://ncbi.nlm.nih.gov/books/NBK305561/bin/20150727venlafaxine.pdf), it suggests increasing the venlafaxine dose up to 150% of normal or using an alternative drug. I did not verify this against the current DPWG guideline, so check that before relying on it.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica que CPIC no da recomendación para venlafaxina en UM (equivale a uso estándar), coincidiendo con la referencia; la mención de DPWG es solo comparativa y con advertencia."
+ }
+}

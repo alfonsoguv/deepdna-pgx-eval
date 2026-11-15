@@ -1,0 +1,24 @@
+{
+ "case_id": "c33",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking pitavastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**SLCO1B1 Poor Function and pitavastatin**\n\n1. **Recommendation: adjust the dose.** Increased pitavastatin exposure raises the risk of myopathy. Start at **≤1 mg daily**. If more than 1 mg is needed for the desired efficacy, consider an alternative statin (for example, rosuvastatin or pravastatin, guided by the CPIC dose limits) or combination therapy (for example, with ezetimibe or a PCSK9 inhibitor). Also consider other myopathy risk factors, such as drug interactions, renal or hepatic impairment, hypothyroidism, and age.\n\n2. **Strength: moderate.**\n\n3. **Source:** the CPIC Guideline for SLCO1B1, ABCG2, and CYP2C9 Genotypes and Statin-Associated Musculoskeletal Symptoms (Cooper-DeHoff et al., *Clin Pharmacol Ther* 2022). As far as I know, the Dutch DPWG does not have a pitavastatin recommendation for SLCO1B1.\n\nI had no lookup tools, so this comes from memory of the 2022 CPIC guideline. Please confirm against the current CPIC or PharmGKB pages before clinical use.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda iniciar con ≤1 mg y considerar otra estatina o terapia combinada si se necesita más, igual que la referencia CPIC (Cooper-DeHoff 2022, Clin Pharmacol Ther, cita correcta)."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "case_id": "c22",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.5 for CYP2C9 with regards to taking piroxicam?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC NSAID CYP2C9 piroxicam poor metabolizer activity score 0.5 choose alternative recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CYP2C9 and Piroxicam",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-piroxicam/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "drugs.com",
+      "url": "https://www.drugs.com/monograph/piroxicam.html"
+     },
+     {
+      "title": "Piroxicam (Monograph)",
+      "url": "https://www.drugs.com/monograph/Piroxicam.html"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "section name header",
+      "url": "https://download.skyscape.com/download/ota/lonestar/362BCE4D-8092-40DD-91EF-8EE1032B1B68/ahfsdi.ed25/content/HTML/g/tu28.htm"
+     },
+     {
+      "title": "section name header",
+      "url": "https://download.skyscape.com/download/ota/lonestar/362BCE4D-8092-40DD-91EF-8EE1032B1B68/ahfsdi.ed25/content/HTML/7/tn28.htm"
+     },
+     {
+      "title": "section name header",
+      "url": "https://download.skyscape.com/download/ota/lonestar/362BCE4D-8092-40DD-91EF-8EE1032B1B68/ahfsdi.ed26/content/HTML/n/tu28.htm"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK537367"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation: use an alternative drug.** For CYP2C9 poor metabolizers, including those with an activity score of 0 or 0.5, CPIC advises against piroxicam. Instead, choose an alternative that CYP2C9 does not metabolize or that CYP2C9 variants do not significantly affect. Examples are aspirin, ketorolac, naproxen or sulindac. Another option is a CYP2C9-metabolized NSAID with a short half-life, such as celecoxib, ibuprofen, flurbiprofen or lornoxicam, at a reduced dose. The reason is that piroxicam has a very long half-life, and poor metabolizers clear it even more slowly. This raises drug exposure and the risk of gastrointestinal bleeding, heart and kidney side effects.\n\n2. **Strength: Moderate.** This comes from my recall of the guideline. The search results did not show the strength rating or mention the 0.5 score, so please confirm both on cpicpgx.org or ClinPGx. For comparison, the FDA label is weaker: it only says to consider a lower dose in known or suspected poor metabolizers.\n\n3. **Source:** the CPIC Guideline for CYP2C9 and NSAIDs (Theken et al., *Clin Pharmacol Ther* 2020).\n\nSources:\n- [UF Health – CYP2C9 and Piroxicam](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-piroxicam/)\n- [NHS GeNotes – CYP2C9 and NSAIDs](https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/)\n- [Drugs.com – Piroxicam monograph](https://www.drugs.com/monograph/piroxicam.html)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda un fármaco alternativo o un AINE con vida media más corta, acorde con la referencia y atribuido a CPIC (Theken 2020). Sin embargo, la lista de ejemplos incluye naproxeno y sulindac, que son dudosos, y la 'fuerza Moderada' se declara como recuerdo propio no verificado."
+ }
+}

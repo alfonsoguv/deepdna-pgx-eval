@@ -1,0 +1,78 @@
+{
+ "case_id": "c48",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for UGT1A1 with regards to taking atazanavir?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline UGT1A1 atazanavir normal metabolizer recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051"
+     },
+     {
+      "title": "clinical pharmacogenetics implementation consortium cpic guideline ugt1a1 and",
+      "url": "https://vumc.org/hivclinicaltrials/publication/clinical-pharmacogenetics-implementation-consortium-cpic-guideline-ugt1a1-and"
+     },
+     {
+      "title": "pharmcat.org",
+      "url": "https://pharmcat.org/examples/pharmcat.example2.report.html"
+     },
+     {
+      "title": "vivo.weill.cornell.edu",
+      "url": "https://vivo.weill.cornell.edu/display/pubid26417955"
+     },
+     {
+      "title": "pharmcat.org",
+      "url": "https://pharmcat.org/examples/pharmcat.example.report.html"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1002/cpt.269"
+     },
+     {
+      "title": "26417955 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/atazanavir/2015/26417955-supplement.pdf"
+     },
+     {
+      "title": "EN UGT1A1 Meds v3 March2025",
+      "url": "https://learn.color.com/rs/878-SLQ-748/images/EN_UGT1A1_Meds_v3_March2025.pdf?version=0"
+     },
+     {
+      "title": "↓ Skip to main content",
+      "url": "https://cdc.altmetric.com/details/6042356"
+     },
+     {
+      "title": "cts12866 tbl 0002",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7719396/table/cts12866-tbl-0002"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** Standard use. No UGT1A1-based change is needed. CPIC's PharmCAT output lists reference UGT1A1 activity with very low likelihood of bilirubin-related atazanavir discontinuation, and says there is no need to avoid prescribing atazanavir based on the result.\n\n**2. Strength:** I could not confirm the formal strength or classification for this row. The PharmCAT summary doesn't state it, and I didn't open the full guideline text.\n\n**3. Source:** CPIC guideline for UGT1A1 and atazanavir (Gammal et al., *Clinical Pharmacology & Therapeutics*, 2016; PMID 26417955). Normal metabolizers are defined as two reference (*1) and/or increased-function (*36) alleles.\n\nSources:\n- [PharmCAT example report](https://pharmcat.org/examples/pharmcat.example2.report.html)\n- [PMC4785051](https://pmc.ncbi.nlm.nih.gov/articles/PMC4785051)\n- [CPIC UGT1A1 and atazanavir supplement](https://files.cpicpgx.org/data/guideline/publication/atazanavir/2015/26417955-supplement.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda uso estándar de atazanavir sin cambios por UGT1A1, igual que la referencia CPIC; la cita (Gammal 2016, PMID 26417955, Clin Pharmacol Ther) es correcta."
+ }
+}

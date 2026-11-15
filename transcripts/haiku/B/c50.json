@@ -1,0 +1,44 @@
+{
+ "case_id": "c50",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is HLA-B*15:02 positive for HLA-B with regards to taking oxcarbazepine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "HLA-B",
+    "drug": "oxcarbazepine"
+   },
+   "result": "Unknown gene \"HLA-B\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "oxcarbazepine"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[],\"not_covered\":[\"oxcarbazepine\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "I couldn't get a guideline recommendation for this from DeepDNA. Its knowledge base has no HLA-B gene record and no oxcarbazepine record, so I can't give you the guideline's recommendation, its strength, or its source for this combination.\n\nFrom my general knowledge, which I could not verify with the tool: HLA-B*15:02 is linked to carbamazepine-induced SJS/TEN, mainly in Han Chinese and Thai populations. Oxcarbazepine is a structural analog, and I believe CPIC's HLA-B/carbamazepine guideline addresses it, but I'm not certain of the exact recommendation or its strength.\n\nPlease check the current CPIC guideline for HLA-B and carbamazepine directly (cpicpgx.org), and the oxcarbazepine drug label, before acting on this. The prescriber should make any medication decision.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "La respuesta indica que no encontró registro de HLA-B ni oxcarbazepina y no da recomendación concreta; solo menciona de forma incierta que CPIC podría abordarlo y remite a consultar la guía."
+ }
+}

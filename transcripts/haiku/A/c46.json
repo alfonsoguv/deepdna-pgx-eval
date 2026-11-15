@@ -1,0 +1,24 @@
+{
+ "case_id": "c46",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Indeterminate for CYP3A5 with regards to taking tacrolimus?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** I'm not certain of the exact wording. From memory, CPIC's tacrolimus/CYP3A5 guidance doesn't assign a specific dose adjustment for an indeterminate phenotype. The usual practice is to use the label-recommended starting dose and guide dosing with therapeutic drug monitoring (trough levels), rather than to avoid the drug or make a genotype-based change.\n\n**2. Strength:** I don't know of an assigned strength for this category. I can't confirm one.\n\n**3. Source:** CPIC guideline for tacrolimus and CYP3A5 (Birdwell et al., 2015; updated 2019). I'm working from memory and couldn't check the current text, so please verify against the CPIC website before using this clinically.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Indica que CPIC no asigna ajuste para fenotipo indeterminado y se usa dosis estándar con monitorización, coherente con la referencia; cita Birdwell 2015 y actualización 2019, que son correctas."
+ }
+}

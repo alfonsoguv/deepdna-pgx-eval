@@ -1,0 +1,131 @@
+{
+ "case_id": "c38",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.5 for DPYD with regards to taking capecitabine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC DPYD guideline 2023 activity score poor metabolizer intermediate metabolizer capecitabine recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Hertz DPYD CPIC 2023 2 2 share",
+      "url": "https://cpicpgx.org/wp-content/uploads/2023/02/Hertz_DPYD_CPIC_2023_2_2_share.pdf"
+     },
+     {
+      "title": "DPYD Genotyping 2025 11",
+      "url": "https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2025-11.pdf"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "universiteitleiden.nl",
+      "url": "https://scholarlypublications.universiteitleiden.nl/access/item%3A2910332/view"
+     },
+     {
+      "title": "moodle2.units.it",
+      "url": "https://moodle2.units.it/pluginfile.php/230995/mod_resource/content/1/guideline%20fluorouracil.pdf"
+     },
+     {
+      "title": "DPYD Genotyping 2026",
+      "url": "https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2026.pdf"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for capecitabine and DPYD",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166109594"
+     },
+     {
+      "title": "DPYD Testing Prior to Fluoropyrimidine Treatment PQI NCODA",
+      "url": "https://ncoda.org/wp-content/uploads/2024/07/DPYD-Testing-Prior-to-Fluoropyrimidine-Treatment_PQI_NCODA.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/capecitabine/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2024 DPYD fluoropyrimidines guideline activity score 0.5 intermediate metabolizer poor metabolizer 0 definition",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "DPYD Testing Prior to Fluoropyrimidine Treatment PQI NCODA",
+      "url": "https://ncoda.org/wp-content/uploads/2024/07/DPYD-Testing-Prior-to-Fluoropyrimidine-Treatment_PQI_NCODA.pdf"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for capecitabine and DPYD",
+      "url": "https://www.pharmgkb.org/guidelineAnnotation/PA166109594"
+     },
+     {
+      "title": "genes 17 00741",
+      "url": "https://mdpi-res.com/d_attachment/genes/genes-17-00741/article_deploy/genes-17-00741.pdf"
+     },
+     {
+      "title": "DPYD Genotyping 2026",
+      "url": "https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2026.pdf"
+     },
+     {
+      "title": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "Dihydropyrimidine dehydrogenase (DPD) deficiency",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/dihydropyrimidine-dehydrogenase-dpd-deficiency/"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK395610/"
+     },
+     {
+      "title": "Dihydropyrimidine dehydrogenase (DPD) deficiency",
+      "url": "https://genomics.nshcs.org.uk/genotes/knowledge-hub/dihydropyrimidine-dehydrogenase-dpd-deficiency"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/capecitabine/"
+     },
+     {
+      "title": "fluorouracil 5 fluorouracil",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluorouracil-5-fluorouracil/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**Short answer: I couldn't confirm this with certainty, because sources disagree on how activity score 0.5 is classified.**\n\n1. **Recommendation:** The CPIC annotation summary on PharmGKB, as reported in search results, says that for a DPYD poor metabolizer with activity score 0.5, an alternative drug is recommended. If no suitable alternative exists, capecitabine may be given at a strongly reduced dose with early therapeutic drug monitoring. I did not open the full guideline text to confirm this wording.\n\n2. **Strength:** I couldn't determine the CPIC strength-of-recommendation grade from what I found.\n\n3. **Source:** CPIC guideline for fluoropyrimidines and DPYD, January 2024 update, as summarized on [PharmGKB](https://www.pharmgkb.org/guidelineAnnotation/PA166109594). Some older or secondary sources, such as an [NCBI table](https://www.ncbi.nlm.nih.gov/books/NBK395610/) and [NHS Genomics Education](https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/dihydropyrimidine-dehydrogenase-dpd-deficiency/), place 0.5 under poor metabolizer and advise avoiding 5-FU or its prodrugs. Others place it under intermediate metabolizer, where CPIC recommends a 50% starting-dose reduction followed by titration.\n\nPlease check the current CPIC guideline page directly before applying this, since the phenotype boundary at 0.5 is the key point.\n\nSources:\n- [Annotation of CPIC Guideline for capecitabine and DPYD (PharmGKB)](https://www.pharmgkb.org/guidelineAnnotation/PA166109594)\n- [NCBI table (NBK395610)](https://www.ncbi.nlm.nih.gov/books/NBK395610/)\n- [NHS Genomics Education, DPD deficiency](https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/dihydropyrimidine-dehydrogenase-dpd-deficiency/)\n- [ARUP DPYD Genotyping 2026](https://www.aruplab.com/files/images/topics/DPYD_Genotyping_2026.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta indica como recomendación principal usar un fármaco alternativo (con dosis muy reducida y TDM solo si no hay alternativa), acorde a la referencia, y la atribuye a CPIC, aunque expresa cierta incertidumbre sobre el límite de fenotipo."
+ }
+}

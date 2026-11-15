@@ -1,0 +1,34 @@
+{
+ "case_id": "c04",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 1.75 for CYP2D6 with regards to taking tamoxifen?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2D6",
+    "drug": "tamoxifen"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2D6\",\"drug\":\"tamoxifen\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"CYP2D6 converts tamoxifen to its active metabolite endoxifen, which is lower in poor and intermediate metabolizers. CPIC recommends alternative hormonal therapy such as an aromatase inhibitor for poor metabolizers (strong) and considering it for intermediate metabolizers (moderate); if aromatase inhibitors are contraindicated, a higher FDA-approved tamoxifen dose can be considered. Lower endoxifen was linked to higher recurrence risk in some studies.\",\"phenotypes\":[\"Poor metabolizer (PM): activity score 0, two no-function alleles\",\"Intermediate metabolizer (IM): activity score 0.25 to <1.25\",\"Normal metabolizer (NM): activity score 1.25 to 2.25\",\"Ultra-rapid metabolizer (UM): activity score >2.25, typically driven by gene duplication\"],\"sources\":[{\"label\":\"CPIC — CYP2D6 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2d6/\"},{\"label\":\"PharmVar CYP2D6\",\"url\":\"https://www.pharmvar.org/gene/CYP2D6\"},{\"label\":\"PharmGKB CYP2D6 (PA128)\",\"url\":\"https://www.pharmgkb.org/gene/PA128\"},{\"label\":\"Caudle et al., Clin Transl Sci 2020 (CPIC/DPWG consensus on CYP2D6 genotype-to-phenotype translation and activity scores)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/31647186/\"},{\"label\":\"Goetz et al., Clin Pharmacol Ther 2018 (CPIC guideline: CYP2D6 and tamoxifen)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/29385237/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** The DeepDNA record does not state an explicit recommendation for Normal Metabolizers. It covers only the PM and IM recommendations (alternative therapy or, if needed, a higher tamoxifen dose). Your activity score of 1.75 falls in the CPIC Normal Metabolizer range (1.25–2.25), so the CPIC guideline's NM category applies. From my knowledge of the guideline, which the record does not confirm, that category calls for standard tamoxifen therapy.\n\n**2. Strength:** The drug–gene pair is CPIC Level A. I could not retrieve the strength for the NM category from the record.\n\n**3. Source:** CPIC guideline for CYP2D6 and tamoxifen (Goetz et al., Clin Pharmacol Ther 2018, PMID 29385237). Activity-score ranges come from Caudle et al., Clin Transl Sci 2020 (PMID 31647186).\n\nThis is educational information, not medical advice. Tamoxifen decisions should be made by the prescribing clinician.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Indica terapia estándar de tamoxifeno para metabolizador normal (AS 1.75), lo que coincide con la referencia; cita CPIC con PMID correctos, aunque omite evitar inhibidores de CYP2D6."
+ }
+}

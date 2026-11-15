@@ -1,0 +1,43 @@
+{
+ "case_id": "c18",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 and No Result for CYP2C19 with regards to taking amitriptyline?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2D6",
+    "drug": "amitriptyline"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2D6\",\"drug\":\"amitriptyline\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"Tricyclic antidepressant inactivated by CYP2D6. CPIC recommends avoiding amitriptyline in poor and ultra-rapid metabolizers; if it is used, CPIC suggests considering a 50% lower starting dose for poor metabolizers or a higher target dose for ultra-rapid metabolizers, with drug-level monitoring, and a 25% lower starting dose for intermediate metabolizers. CYP2C19 phenotype also changes the recommendation.\",\"phenotypes\":[\"Poor metabolizer (PM): activity score 0, two no-function alleles\",\"Intermediate metabolizer (IM): activity score 0.25 to <1.25\",\"Normal metabolizer (NM): activity score 1.25 to 2.25\",\"Ultra-rapid metabolizer (UM): activity score >2.25, typically driven by gene duplication\"],\"sources\":[{\"label\":\"CPIC — CYP2D6 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2d6/\"},{\"label\":\"PharmVar CYP2D6\",\"url\":\"https://www.pharmvar.org/gene/CYP2D6\"},{\"label\":\"PharmGKB CYP2D6 (PA128)\",\"url\":\"https://www.pharmgkb.org/gene/PA128\"},{\"label\":\"Caudle et al., Clin Transl Sci 2020 (CPIC/DPWG consensus on CYP2D6 genotype-to-phenotype translation and activity scores)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/31647186/\"},{\"label\":\"Hicks et al., Clin Pharmacol Ther 2017 (CPIC guideline: CYP2D6, CYP2C19 and tricyclic antidepressants)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/27997040/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2C19",
+    "drug": "amitriptyline"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2C19\",\"drug\":\"amitriptyline\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"Tricyclic antidepressant converted by CYP2C19 to nortriptyline. CPIC recommends avoiding amitriptyline in poor metabolizers; if it is used, CPIC suggests considering a 50% lower starting dose with drug-level monitoring (moderate). For rapid and ultra-rapid metabolizers it suggests considering an alternative not metabolized by CYP2C19, or drug-level monitoring if amitriptyline is used (optional); normal and intermediate metabolizers start at the recommended dose. These recommendations apply to the higher doses used for depression, and CYP2D6 phenotype also changes the recommendation.\",\"phenotypes\":[\"Poor metabolizer (PM): two no-function alleles (e.g. *2/*2, *2/*3)\",\"Intermediate metabolizer (IM): one no-function allele with one normal or increased-function allele (e.g. *1/*2, *2/*17)\",\"Normal metabolizer (NM): two normal-function alleles (*1/*1)\",\"Rapid metabolizer (RM): one normal and one increased-function allele (*1/*17)\",\"Ultra-rapid metabolizer (UM): two increased-function alleles (*17/*17)\"],\"sources\":[{\"label\":\"CPIC — CYP2C19 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2c19/\"},{\"label\":\"PharmGKB CYP2C19 (PA124)\",\"url\":\"https://www.pharmgkb.org/gene/PA124\"},{\"label\":\"PharmVar CYP2C19\",\"url\":\"https://www.pharmvar.org/gene/CYP2C19\"},{\"label\":\"Hicks et al., Clin Pharmacol Ther 2017 (CPIC guideline: CYP2D6, CYP2C19 and tricyclic antidepressants)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/27997040/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**CYP2D6 (ultrarapid metabolizer):** CPIC recommends avoiding amitriptyline in ultrarapid metabolizers. If it is used, CPIC suggests considering a higher target dose than usual, with drug-level monitoring, or an alternative not metabolized by CYP2D6.\n\n**Strength:** The CYP2D6–amitriptyline pair is CPIC Level A. My lookup did not give a separate strength for the ultrarapid category, so I can't confirm it.\n\n**CYP2C19 (no result):** Because CYP2C19 has no result, the CYP2C19 recommendation can't be applied. CPIC's CYP2C19 guidance for amitriptyline (also Level A) would add a suggestion to consider an alternative not metabolized by CYP2C19, or drug-level monitoring, for rapid and ultrarapid metabolizers. Without that result, the CYP2C19 side is unknown.\n\n**Source:** CPIC guideline for CYP2D6, CYP2C19 and tricyclic antidepressants (Hicks et al., Clin Pharmacol Ther 2017; PubMed 27997040).\n\nThis is educational information. Any change to amitriptyline should be decided with the prescriber.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar amitriptilina en metabolizadores ultrarrápidos de CYP2D6 (o dosis mayor con monitoreo y alternativa), acorde con CPIC; la cita Hicks et al. 2017, PMID 27997040 es correcta."
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "case_id": "c41",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for TPMT and Poor Metabolizer for NUDT15 with regards to taking azathioprine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline azathioprine TPMT NUDT15 poor metabolizer recommendation normal metabolizer",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30447069/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN077959"
+     },
+     {
+      "title": "files.cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "CPIC meeting August2025 share red",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf"
+     },
+     {
+      "title": "www.premera.com",
+      "url": "https://www.premera.com/medicalpolicies/15.01.009.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8678305"
+     },
+     {
+      "title": "CPIC® Guideline for Thiopurines and TPMT and NUDT15",
+      "url": "https://cpicpgx.org/?p=578"
+     },
+     {
+      "title": "Vanderbilt University Logo",
+      "url": "https://medschool.vanderbilt.edu/mph/?p=14405"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/azathioprine/"
+     },
+     {
+      "title": "Back to Search Start Over",
+      "url": "https://searchworks.jioinstitute.edu.in/articles/edb__154273144"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2025 thiopurines update azathioprine dosing table NUDT15 poor metabolizer TPMT normal metabolizer starting dose",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "(PDF) Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update",
+      "url": "https://www.researchgate.net/publication/400290584_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_Thiopurine_Dosing_Based_on_TPMT_and_NUDT15_Genotypes_2025_Update"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on <fi>TPMT</fi> and <fi>NUDT15</fi> Genotypes: 2025 Update - Maillard - 2026 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update - The Capital Region of Denmark's Research Portal",
+      "url": "https://research.regionh.dk/en/publications/clinical-pharmacogenetics-implementation-consortium-cpic-guidelin/"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update - Maillard - 2026 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209?af=R"
+     },
+     {
+      "title": "1 St. Jude - Confidential Supplemental Material",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934-supplement.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC ...",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/08/CPIC_meeting_August2025_share_red.pdf"
+     },
+     {
+      "title": "Update to the CPIC Guideline for Thiopurines Regarding Dual TPMT and NUDT15 Intermediate Metabolizers",
+      "url": "https://blog.clinpgx.org/update-to-cpic-guideline-for/"
+     },
+     {
+      "title": "Azathioprine for Crohn's Disease: A 2026 Patient Guide",
+      "url": "https://crohnzone.com/post/azathioprine-crohns-disease-patient-guide"
+     },
+     {
+      "title": "Azathioprine, TPMT and NUDT15: two genes, one blood count",
+      "url": "https://www.aimosti.com/pharmacogenomics/azathioprine"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**Recommendation (CPIC 2025 update, as far as I could verify):** For a NUDT15 poor metabolizer, CPIC advises considering an alternative immunosuppressant rather than a reduced azathioprine dose. This applies whether or not TPMT is normal, so TPMT normal metabolizer status doesn't change the advice. I could not confirm the exact cell for this phenotype pair in the full table.\n\n**Strength:** Not confirmed. I could not find CPIC's strength-of-recommendation rating in the sources I reached.\n\n**Source:** [CPIC Guideline for Thiopurine Dosing Based on TPMT and NUDT15 Genotypes: 2025 Update (Clin Pharmacol Ther, 2026)](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209). The [CPIC thiopurine PDF](https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf) is the full text to check. The search snippets only summarized the azathioprine poor-metabolizer wording, so verify it there before acting on it.\n\nSources:\n- https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70209\n- https://files.cpicpgx.org/data/guideline/publication/thiopurines/2026/41618934.pdf",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda considerar un inmunosupresor alternativo, lo que coincide con EVITAR y con CPIC, pero la cita de una actualización 2025 con DOI y PDF específicos (2026/41618934) no se puede verificar y parece sospechosa."
+ }
+}

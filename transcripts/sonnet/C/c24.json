@@ -1,0 +1,78 @@
+{
+ "case_id": "c24",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.5 for CYP2C9 with regards to taking flurbiprofen?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2C9 NSAIDs flurbiprofen intermediate metabolizer activity score 1.5 recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "section name header",
+      "url": "https://download.skyscape.com/download/ota/lonestar/362BCE4D-8092-40DD-91EF-8EE1032B1B68/ahfsdi.ed25/content/HTML/p/tl2.htm"
+     },
+     {
+      "title": "CYP2C9 and Celecoxib, Flurbiprofen, Ibuprofen",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-celecoxib-flurbiprofen-ibuprofen/"
+     },
+     {
+      "title": "CYP2C9 NSAID guideline final CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9171570/table/UT1"
+     },
+     {
+      "title": "cyp2c9 polymorphism and use of oral nonsteroidal antiinflammatory drugs",
+      "url": "https://uspharmacist.com/article/cyp2c9-polymorphism-and-use-of-oral-nonsteroidal-antiinflammatory-drugs"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/flurbiprofen/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** Use standard dosing. For CYP2C9 intermediate metabolizers with an activity score of 1.5, CPIC advises starting flurbiprofen at the usual dose. As with any NSAID, use the lowest effective dose for the shortest duration needed. This group has only mildly reduced metabolism. Activity score 1.0 is different: the advice there is to start at a lower dose.\n\n**2. Strength:** I couldn't confirm the exact strength rating for this phenotype from the sources I read. I didn't open the full CPIC text, so please check the guideline table for the formal grade.\n\n**3. Source:** CPIC Guideline for CYP2C9 and NSAIDs (Theken et al., 2020). Supporting summaries came from the UK pharmacogenomics handbook and UF Health.\n\nSources:\n- [CPIC NSAID guideline (PDF)](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf)\n- [PMC8080882](https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882)\n- [UK pharmacogenomics handbook: flurbiprofen](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/flurbiprofen/)\n- [UF Health: CYP2C9 and celecoxib, flurbiprofen, ibuprofen](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-celecoxib-flurbiprofen-ibuprofen/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis estándar con la dosis efectiva más baja, igual que la referencia CPIC; cita Theken et al. 2020 correctamente y no inventa detalles."
+ }
+}

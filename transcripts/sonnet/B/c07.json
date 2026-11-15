@@ -1,0 +1,34 @@
+{
+ "case_id": "c07",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥3.5 for CYP2D6 with regards to taking codeine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CYP2D6",
+    "drug": "codeine"
+   },
+   "result": "{\"pair\":{\"gene\":\"CYP2D6\",\"drug\":\"codeine\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"Prodrug converted to morphine by CYP2D6. CPIC recommends avoiding codeine in poor metabolizers (diminished analgesia) and in ultra-rapid metabolizers (risk of serious toxicity). The FDA label carries a boxed warning on ultra-rapid metabolism and life-threatening respiratory depression in children, contraindicates codeine under 12 years, and states that breastfeeding is not recommended during treatment.\",\"phenotypes\":[\"Poor metabolizer (PM): activity score 0, two no-function alleles\",\"Intermediate metabolizer (IM): activity score 0.25 to <1.25\",\"Normal metabolizer (NM): activity score 1.25 to 2.25\",\"Ultra-rapid metabolizer (UM): activity score >2.25, typically driven by gene duplication\"],\"sources\":[{\"label\":\"CPIC — CYP2D6 gene page\",\"url\":\"https://cpicpgx.org/gene/cyp2d6/\"},{\"label\":\"PharmVar CYP2D6\",\"url\":\"https://www.pharmvar.org/gene/CYP2D6\"},{\"label\":\"PharmGKB CYP2D6 (PA128)\",\"url\":\"https://www.pharmgkb.org/gene/PA128\"},{\"label\":\"Caudle et al., Clin Transl Sci 2020 (CPIC/DPWG consensus on CYP2D6 genotype-to-phenotype translation and activity scores)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/31647186/\"},{\"label\":\"Crews et al., Clin Pharmacol Ther 2021 (CPIC guideline: CYP2D6, OPRM1, COMT and opioids)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/33387367/\"},{\"label\":\"FDA label, codeine sulfate tablets (DailyMed: boxed warning, contraindications, lactation)\",\"url\":\"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=010905f9-3bcb-4b50-9fe8-a3ad0010f14c\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Avoid codeine. For CYP2D6 ultrarapid metabolizers (activity score >2.25, which includes ≥3.5), CPIC says to avoid codeine because it converts to morphine faster than usual. This raises the risk of serious toxicity, including respiratory depression. A non-codeine, non-tramadol analgesic is the usual alternative, and the prescriber should choose it.\n\n2. **Strength:** CPIC level A. The record I retrieved doesn't give a separate strength grade for the ultrarapid group. As I recall, the CPIC guideline rates this recommendation \"strong\".\n\n3. **Source:** Crews et al., Clin Pharmacol Ther 2021 (CPIC guideline for CYP2D6, OPRM1, COMT and opioids). The FDA codeine label also carries a boxed warning on ultra-rapid metabolism and life-threatening respiratory depression in children. It contraindicates codeine under 12 years and says breastfeeding is not recommended during treatment.\n\nThis is educational information only. Any change to medication is for the prescriber to decide.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar la codeína y usar un opioide alternativo que no sea tramadol, igual que la referencia CPIC; la cita de Crews et al. 2021 en Clin Pharmacol Ther es correcta."
+ }
+}

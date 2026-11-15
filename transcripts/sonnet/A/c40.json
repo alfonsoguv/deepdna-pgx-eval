@@ -1,0 +1,24 @@
+{
+ "case_id": "c40",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer and activity score = 2.0 for DPYD with regards to taking capecitabine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "I didn't run any tools to check this. The answer below comes from my knowledge of the CPIC guideline.\n\n1. **Recommendation:** Standard use. For a DPYD Normal Metabolizer (activity score 2.0), use capecitabine at the label-recommended starting dose with no DPYD-based adjustment. Continue usual clinical monitoring and toxicity management.\n\n2. **Strength:** Strong. CPIC classifies this recommendation as strong for fluoropyrimidines (capecitabine, 5-fluorouracil) in normal metabolizers.\n\n3. **Source:** CPIC Guideline for Fluoropyrimidines and DPYD (Amstutz et al., 2018, with the 2024 update). The DPWG (Dutch Pharmacogenetics Working Group) guidance is consistent, with no dose adjustment for a normal DPYD activity score.\n\n**Caveats:** A normal DPYD genotype does not eliminate the risk of fluoropyrimidine toxicity, because other factors can contribute. I haven't verified this against the current CPIC database, so check cpicpgx.org for any updates.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "BOTH",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis estándar sin ajuste, igual que la referencia CPIC; cita CPIC (Amstutz 2018, actualización 2024) y DPWG de forma plausible."
+ }
+}

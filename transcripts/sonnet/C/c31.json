@@ -1,0 +1,78 @@
+{
+ "case_id": "c31",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Increased Function for SLCO1B1 with regards to taking lovastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC statin guideline 2022 SLCO1B1 increased function lovastatin recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN128903"
+     },
+     {
+      "title": "publications-affiliated.scilifelab.se",
+      "url": "https://publications-affiliated.scilifelab.se/publication/260bf9ac2fb84c4fa4b462a2e4cf9dcb"
+     },
+     {
+      "title": "scholarlyexchange.childrensmercy.org",
+      "url": "https://scholarlyexchange.childrensmercy.org/papers/4430"
+     },
+     {
+      "title": "SLCO1B1 and Lovastatin",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/slco1b1-and-lovastatin/"
+     },
+     {
+      "title": "the clinical pharmacogenetics implementation consortium guideline for slco b abcg and cyp",
+      "url": "https://aminer.org/pub/620b85485aee126c0fab9dce/the-clinical-pharmacogenetics-implementation-consortium-guideline-for-slco-b-abcg-and-cyp"
+     },
+     {
+      "title": "hee.nhs.uk",
+      "url": "https://genomicseducation.hee.nhs.uk/genotes/knowledge-hub/statins"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Increased function SLCO1B1 and lovastatin**\n\n1. **Recommendation:** Use standard use. Start lovastatin at the usual dose and adjust it as clinically needed. Increased function is expected to carry a normal risk of statin-associated muscle symptoms. SLCO1B1 results don't call for a change from the standard approach.\n\n2. **Strength:** I couldn't confirm the strength rating for this phenotype. I didn't retrieve the CPIC lovastatin table, so I can't state the grade.\n\n3. **Source:** CPIC guideline for statins and SLCO1B1, ABCG2, and CYP2C9 (Cooper-DeHoff et al., Clin Pharmacol Ther 2022). I got the increased-function recommendation from a University of Florida summary of the CPIC guidance, not from the guideline text. Please check the CPIC table before acting on it.\n\nSources:\n- [CPIC guideline for statins and SLCO1B1, ABCG2, and CYP2C9](https://cpicpgx.org/?p=3305)\n- [SLCO1B1 and Lovastatin (UF Health Precision Medicine)](https://precisionmedicine.ufhealth.org/how-to-interpret-results/slco1b1-and-lovastatin/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda dosis inicial habitual y ajuste clínico según necesidad, igual que la referencia; cita la guía CPIC de estatinas 2022 (Cooper-DeHoff), que es correcta."
+ }
+}

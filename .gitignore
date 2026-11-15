@@ -1,0 +1,4 @@
+# raw `claude -p` output: contains machine and session metadata, never commit it
+raw/
+__pycache__/
+.DS_Store

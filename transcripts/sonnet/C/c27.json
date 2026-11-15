@@ -1,0 +1,78 @@
+{
+ "case_id": "c27",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.0 for CYP2C9 and Poor Function for SLCO1B1 with regards to taking fluvastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2022 statin guideline fluvastatin CYP2C9 poor metabolizer SLCO1B1 poor function recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9",
+      "url": "https://cpicpgx.org/?p=3305"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "Commentary|Articles|March 12, 2024",
+      "url": "https://www.pharmacytimes.com/view/don-t-skip-a-beat-familiarize-yourself-with-updates-in-cardiovascular-pharmacogenomics"
+     },
+     {
+      "title": "hee.nhs.uk",
+      "url": "https://genomicseducation.hee.nhs.uk/genotes/knowledge-hub/statins"
+     },
+     {
+      "title": "Results: Patient with known SLCO1B1 genotype requiring statin therapy",
+      "url": "https://genomics.nshcs.org.uk/genotes/in-the-clinic/results-patient-with-known-slco1b1-genotype-requiring-statin-therapy"
+     },
+     {
+      "title": "Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/10/SLCO1B1-supplement-2021-update-CPIC-review.docx"
+     },
+     {
+      "title": "Results: Patient with known SLCO1B1 genotype requiring statin therapy",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-known-slco1b1-genotype-requiring-statin-therapy/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluvastatin/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Phenotype:** CYP2C9 poor metabolizer (activity score 0.0) plus SLCO1B1 poor function, taking fluvastatin.\n\n1. **Recommendation:** Use an alternative statin. CPIC's combined SLCO1B1/CYP2C9 fluvastatin table points toward a statin that these genes affect less, such as rosuvastatin, pravastatin or pitavastatin. Both genes raise fluvastatin exposure, which increases the risk of statin-associated muscle symptoms (SAMS). If fluvastatin is still used, the guidance is a lower dose, with a maximum of about 20 mg twice daily. Check the monitoring and dosing wording in CPIC's Table 6 before relying on this. CPIC does not say to avoid statins altogether, so therapy should not be stopped or withheld on genotype alone.\n\n2. **Strength:** I couldn't confirm the strength rating for this exact combination. The search returned only secondary summaries, not CPIC's own table. Check the strength in the CPIC table itself.\n\n3. **Source:** CPIC guideline for statins and SLCO1B1, ABCG2, and CYP2C9 (2022 update). The combined recommendation for this phenotype pair comes from a UK pharmacogenomics handbook summarizing CPIC.\n\nSources:\n- [CPIC® guideline for statins and SLCO1B1, ABCG2, and CYP2C9](https://cpicpgx.org/?p=3305)\n- [CPIC statin guideline publication (2022)](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [UK Pharmacogenomics Handbook: fluvastatin](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/fluvastatin/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda usar una estatina alternativa (rosuvastatina, pravastatina, pitavastatina) como acción principal, igual que la referencia CPIC; la opción de reducir la dosis es secundaria."
+ }
+}

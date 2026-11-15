@@ -1,0 +1,24 @@
+{
+ "case_id": "c55",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is ivacaftor non-responsive in CF patients for CFTR with regards to taking ivacaftor?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Avoid ivacaftor. For a CF patient whose CFTR genotype is ivacaftor non-responsive, such as two non-responsive variants (e.g., F508del homozygous) or no ivacaftor-responsive variant, ivacaftor monotherapy is not recommended. The expected benefit is minimal. Other CFTR modulator regimens, such as elexacaftor/tezacaftor/ivacaftor for F508del, are evaluated separately, based on their own labeling and genotype eligibility.\n\n2. **Strength:** Moderate, as I recall it. I couldn't verify this against the guideline text, so confirm it on CPIC's site.\n\n3. **Source:** CPIC (Clinical Pharmacogenetics Implementation Consortium) guideline for ivacaftor therapy in the context of CFTR genotype (Clancy et al., 2014, with a later update).\n\nI answered from memory and did not check the source, so please verify the strength rating and the details of the update.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar ivacaftor, coincide con la referencia y la atribuye a CPIC; sin embargo, la cita incluye detalles dudosos (Clancy 2014 con 'actualización posterior', fuerza 'moderada' no verificada) y el ejemplo de F508del homocigoto como no respondedor es discutible."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "case_id": "c36",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Deficient with CNSHA for G6PD with regards to taking rasburicase?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline G6PD rasburicase Deficient with chronic nonspherocytic hemolytic anemia recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "g6pd cpic apr 2022 002",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10281211"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/books/NBK562585"
+     },
+     {
+      "title": "www.altmetric.com",
+      "url": "https://www.altmetric.com/details/2544136"
+     },
+     {
+      "title": "g6pd cpic nov 2021",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "zendy.io",
+      "url": "https://zendy.io/title/10.1038/clpt.2014.97"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/CN078005"
+     },
+     {
+      "title": "100025099536 0x000001",
+      "url": "https://eld.bl.uk/catalog/100025099536_0x000001"
+     },
+     {
+      "title": "Guideline overview presentation",
+      "url": "https://cpicpgx.org/?p=3367"
+     },
+     {
+      "title": "livrepository.liverpool.ac.uk",
+      "url": "https://livrepository.liverpool.ac.uk/id/eprint/3170528"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Guidance for G6PD Deficient with CNSHA and rasburicase**\n\n1. **Recommendation:** Avoid rasburicase. It is contraindicated because of the risk of acute hemolytic anemia and methemoglobinemia. Use an alternative such as allopurinol. People with CNSHA have hemolysis even without a trigger, and their G6PD activity is usually below 10%.\n\n2. **Strength:** Strong. CPIC rates rasburicase as high-risk for G6PD-deficient patients.\n\n3. **Source:** The CPIC guideline for medication use in the context of G6PD genotype (2022 update), which replaced the 2014 CPIC rasburicase guideline. The rasburicase label also carries a G6PD contraindication.\n\n**Caveat:** The explicit wording for the \"Deficient with CNSHA\" row came from a secondary NCBI Bookshelf page, not directly from the CPIC PDF. Check the primary document if you need exact wording.\n\nSources:\n- [CPIC G6PD guideline (April 2022)](https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf)\n- [PMC10281211](https://pmc.ncbi.nlm.nih.gov/articles/PMC10281211)\n- [NCBI Bookshelf NBK562585](https://ncbi.nlm.nih.gov/books/NBK562585)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar la rasburicasa (contraindicada) y la atribuye a la guía CPIC de G6PD 2022, coincidiendo con la referencia; los detalles citados son plausibles."
+ }
+}

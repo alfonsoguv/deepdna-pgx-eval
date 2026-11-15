@@ -1,0 +1,24 @@
+{
+ "case_id": "c18",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Ultrarapid Metabolizer and activity score = ≥5.0 for CYP2D6 and No Result for CYP2C19 with regards to taking amitriptyline?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation:** For a CYP2D6 ultrarapid metabolizer, CPIC advises considering a clinically appropriate alternative that is not predominantly metabolized by CYP2D6. If amitriptyline is still used, start at the standard dose, titrate to response, and use therapeutic drug monitoring if available. The CYP2C19 \"No Result\" doesn't change this, since the recommendation rests on CYP2D6 and the CYP2C19 component can't be applied.\n\n**2. Strength:** I believe this is a moderate-strength, optional recommendation, but I'm not certain of the exact grade.\n\n**3. Source:** CPIC guideline for CYP2D6, CYP2C19, and tricyclic antidepressants (Hicks et al., 2015; updated in *Clinical Pharmacology & Therapeutics*, 2017).\n\nI have no tools available in this session, so I couldn't check the current CPIC guideline or PharmGKB. Please verify the wording and strength there before applying it clinically. Also note that an activity score of ≥5.0 is higher than the usual CPIC ultrarapid cutoff, so confirm how your lab reports the score.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda considerar un alternativo no metabolizado por CYP2D6 (EVITAR), coherente con la referencia, aunque sugiere dosis estándar si se usa; cita CPIC con detalles dudosos (Hicks 2015, 'actualizado 2017' en CPT, cuando la actualización fue 2016/2017 y la fuerza se describe como moderada/opcional)."
+ }
+}

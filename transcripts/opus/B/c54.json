@@ -1,0 +1,43 @@
+{
+ "case_id": "c54",
+ "model": "opus",
+ "model_id": "claude-opus-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Malignant Hyperthermia Susceptibility for RYR1 and Uncertain Susceptibility for CACNA1S with regards to taking desflurane?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "RYR1",
+    "drug": "desflurane"
+   },
+   "result": "Unknown gene \"RYR1\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  },
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "CACNA1S",
+    "drug": "desflurane"
+   },
+   "result": "Unknown gene \"CACNA1S\". Known genes: MTHFR, COMT, CYP2D6, CYP2C19, CYP2C9, SLCO1B1, G6PD, UGT1A1, HFE, APOE, BRCA1, VKORC1, DPYD, TPMT, NUDT15, CYP3A5, CYP4F2.",
+   "is_error": true
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "My lookup tool doesn't cover RYR1 or CACNA1S, so I couldn't check this against a source. The answer below comes from my own knowledge of the CPIC guideline. Please confirm it against the guideline itself.\n\n1. **Recommendation: avoid desflurane and use an alternative.** The RYR1 result drives the guidance; the uncertain CACNA1S result doesn't change it. CPIC says potent volatile anesthetics like desflurane, and the muscle relaxant succinylcholine, are \"relatively contraindicated\" for people with malignant hyperthermia susceptibility. It recommends anesthesia that doesn't trigger malignant hyperthermia instead, such as total intravenous anesthesia with non-triggering drugs.\n2. **Strength: strong.**\n3. **Source:** the CPIC guideline for RYR1 and CACNA1S genotypes and the use of volatile anesthetics and succinylcholine (Gonsalves et al., *Clin Pharmacol Ther* 2019). It's posted on cpicpgx.org and PharmGKB.\n\nThis is educational information only. The choice of anesthetic belongs to the anesthesiologist, who should know about any malignant hyperthermia susceptibility before a procedure.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": false,
+  "note_es": "Recomienda evitar el desflurano y usar alternativas (p. ej. TIVA), acorde con la guía CPIC; la cita Gonsalves et al., Clin Pharmacol Ther 2019 es correcta. Indica que su herramienta no cubre RYR1/CACNA1S."
+ }
+}

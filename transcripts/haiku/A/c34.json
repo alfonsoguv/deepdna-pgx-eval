@@ -1,0 +1,24 @@
+{
+ "case_id": "c34",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "A",
+ "arm_description": "no tools",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Deficient for G6PD with regards to taking tafenoquine?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [],
+ "web_search_requests": 0,
+ "final_answer": "1. **Recommendation:** Avoid tafenoquine. CPIC's G6PD guideline (2024 update) recommends against tafenoquine in G6PD-deficient patients because of the risk of hemolytic anemia. The FDA label for tafenoquine (Krintafel/Arakoda) likewise contraindicates it in G6PD deficiency.\n\n2. **Strength:** CPIC is a strong recommendation, and the FDA label is a contraindication. I'm not certain of the exact CPIC evidence-level and strength labels, so please confirm them on the CPIC website.\n\n3. **Source:** Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for G6PD genotype and drugs including primaquine and tafenoquine (Relling et al., *Clinical Pharmacology & Therapeutics*, 2024), plus the tafenoquine US prescribing information.\n\nI have no tools available in this session, so I couldn't check these sources live. This answer is from my training knowledge, so verify it against the current guideline before making a clinical decision.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda evitar tafenoquina en deficiencia de G6PD, coincidiendo con la referencia CPIC; la cita (Relling et al., CPT 2024) es plausible y no se ve inventada."
+ }
+}

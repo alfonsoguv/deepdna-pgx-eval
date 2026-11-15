@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this evaluation, please cite it as below, and cite PGxQA, from which the cases are derived."
+title: "DeepDNA PGx eval: Claude models answering PGxQA pharmacogenomics questions with no tools, with the DeepDNA MCP server, and with web search"
+type: dataset
+authors:
+  - name: "DeepDNA"
+    email: "hello@deepdna.ai"
+    website: "https://deepdna.ai"
+date-released: "2026-11-15"
+license: MIT
+repository-code: "https://github.com/alfonsoguv/deepdna-pgx-eval"
+url: "https://github.com/alfonsoguv/deepdna-pgx-eval"
+abstract: "A small self-run comparison: 58 questions from PGxQA answered by three Claude models in three arms (no tools, DeepDNA MCP server only, web search only), graded by an automatic judge. Designed, run, graded and written up by an AI agent working for the DeepDNA project, which is an interested party."

@@ -1,0 +1,131 @@
+{
+ "case_id": "c24",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Intermediate Metabolizer and activity score = 1.5 for CYP2C9 with regards to taking flurbiprofen?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline NSAIDs CYP2C9 intermediate metabolizer activity score 1.5 flurbiprofen recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "section name header",
+      "url": "https://download.skyscape.com/download/ota/lonestar/362BCE4D-8092-40DD-91EF-8EE1032B1B68/ahfsdi.ed25/content/HTML/p/tl2.htm"
+     },
+     {
+      "title": "Flurbiprofen (Monograph)",
+      "url": "https://www.drugs.com/monograph/flurbiprofen.html"
+     },
+     {
+      "title": "CYP2C9 NSAID guideline final CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx"
+     },
+     {
+      "title": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://genomicseducation.hee.nhs.uk/genotes/knowledge-hub/non-steroidal-anti-inflammatory-drugs-nsaids"
+     },
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/flurbiprofen/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/piroxicam/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "Cooper-DeHoff CPIC 2020 NSAID guideline CYP2C9 \"intermediate metabolizers\" \"activity score of 1.5\" starting dose optional recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "Results: Patient with a known CYP2C9 genotype requiring non-steroidal anti-inflammatory drugs (NSAIDs)",
+      "url": "https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/"
+     },
+     {
+      "title": "CYP2C9 NSAID guideline final CPIC review",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CYP2C9_NSAID_guideline_final_CPIC-review.docx"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/n/gtrbook/celecoxib/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/flurbiprofen/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/ibuprofen/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/celecoxib/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/meloxicam/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/piroxicam/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** Standard use. CPIC's NSAID guideline says an intermediate metabolizer with activity score 1.5 (mildly reduced CYP2C9 function) can start at the recommended starting dose, with no dose reduction. For comparison, an activity score of 1.0 calls for a lower starting dose. Drugs.com's flurbiprofen monograph, citing CPIC, says the same thing.\n\n**2. Strength:** I could not confirm this. The sources I found don't state the classification. I believe CPIC classified the CYP2C9 NSAID recommendations as \"Optional,\" but I have not verified that, so check the guideline table before relying on it.\n\n**3. Source:** CPIC Guideline for NSAIDs and CYP2C9 (2020). I did not retrieve the primary guideline text. The guidance above comes from secondary summaries: the [NHS Genomics Education page](https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/), the [Drugs.com flurbiprofen monograph](https://www.drugs.com/monograph/flurbiprofen.html), and the [UK Clinical Pharmacy handbook flurbiprofen entry](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/flurbiprofen/). The primary source is the [CPIC NSAID preprint](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf).\n\nSources:\n- [CPIC NSAID preprint](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf)\n- [NHS Genomics Education: CYP2C9 and NSAIDs](https://www.genomicseducation.hee.nhs.uk/genotes/in-the-clinic/results-patient-with-a-known-cyp2c9-genotype-requiring-non-steroidal-anti-inflammatory-drugs-nsaids/)\n- [Drugs.com flurbiprofen monograph](https://www.drugs.com/monograph/flurbiprofen.html)\n- [UK Clinical Pharmacy pharmacogenomics handbook: flurbiprofen](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/flurbiprofen/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis inicial estándar sin reducción para AS 1.5, igual que la referencia, y lo atribuye a la guía CPIC de AINEs y CYP2C9 (2020); la incertidumbre sobre la fuerza de la recomendación está declarada y no inventa datos."
+ }
+}

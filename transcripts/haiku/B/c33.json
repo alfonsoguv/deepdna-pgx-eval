@@ -1,0 +1,34 @@
+{
+ "case_id": "c33",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Function for SLCO1B1 with regards to taking pitavastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "SLCO1B1",
+    "drug": "pitavastatin"
+   },
+   "result": "{\"pair\":{\"gene\":\"SLCO1B1\",\"drug\":\"pitavastatin\",\"guideline\":\"CPIC\",\"level\":\"CPIC A\",\"summary\":\"CPIC 2022: for SLCO1B1 decreased function, a starting dose of ≤2 mg; for poor function, a starting dose of ≤1 mg; if a higher dose is needed, an alternative statin or combination therapy (moderate recommendations).\",\"phenotypes\":[\"Increased function (*14/*14)\",\"Normal function (e.g. *1/*1, *1/*14; rs4149056 T/T)\",\"Decreased function (one no-function allele, e.g. *1/*5, *1/*15; rs4149056 T/C)\",\"Possible decreased function (one no-function plus one uncertain-function allele)\",\"Poor function (two no-function alleles, e.g. *5/*5, *5/*15, *15/*15; rs4149056 C/C)\",\"Indeterminate\"],\"sources\":[{\"label\":\"CPIC — SLCO1B1 gene page\",\"url\":\"https://cpicpgx.org/gene/slco1b1/\"},{\"label\":\"PharmGKB SLCO1B1 (PA134865839)\",\"url\":\"https://www.pharmgkb.org/gene/PA134865839\"},{\"label\":\"Cooper-DeHoff et al., Clin Pharmacol Ther 2022 (CPIC SLCO1B1/ABCG2/CYP2C9–statin guideline)\",\"url\":\"https://pubmed.ncbi.nlm.nih.gov/35152405/\"}]},\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "**1. Recommendation (poor function):** Start pitavastatin at no more than 1 mg daily. If a higher dose is needed, use an alternative statin or a combination therapy instead of increasing the pitavastatin dose. This is a dose adjustment with a switch option, not an outright avoid.\n\n**2. Strength:** CPIC evidence level A, with a moderate recommendation strength.\n\n**3. Source:** CPIC 2022 guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and statin therapy (Cooper-DeHoff et al., *Clin Pharmacol Ther* 2022; PMID 35152405). The CPIC SLCO1B1 gene page and PharmGKB (PA134865839) also cover this pair.\n\nThis is educational information. The prescriber makes the final dosing decision.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda iniciar pitavastatina a ≤1 mg y usar otra estatina o terapia combinada si se necesita más dosis, igual que la referencia CPIC; la cita (Cooper-DeHoff 2022, PMID 35152405) es correcta."
+ }
+}

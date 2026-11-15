@@ -1,0 +1,167 @@
+{
+ "case_id": "c35",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Variable for G6PD with regards to taking dapsone?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline G6PD dapsone recommendation phenotype variable",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "g6pd cpic apr 2022 002",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/04/g6pd-cpic-apr-2022-002.pdf"
+     },
+     {
+      "title": "g6pd cpic nov 2021",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "CPIC call 10022025",
+      "url": "https://cpicpgx.org/wp-content/uploads/2025/10/CPIC-call-10022025.pdf"
+     },
+     {
+      "title": "g6pd competency",
+      "url": "https://stjude.org/content/dam/en_US/shared/www/research/g6pd-competency.pdf"
+     },
+     {
+      "title": "Guideline overview presentation",
+      "url": "https://cpicpgx.org/?p=3367"
+     },
+     {
+      "title": "livrepository.liverpool.ac.uk",
+      "url": "https://livrepository.liverpool.ac.uk/id/eprint/3170528"
+     },
+     {
+      "title": "Supplement to:",
+      "url": "https://cpicpgx.org/wp-content/uploads/2022/05/CPIC-G6PD-Update-SUPPLEMENT_4.27.2022-for-CPIC-review.docx"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://cpicpgx.org/?s=quinine"
+     },
+     {
+      "title": "www.peeref.com",
+      "url": "https://www.peeref.com/works/8499332"
+     },
+     {
+      "title": "Disclaimers and Other Information",
+      "url": "https://pharmcat.org/Disclaimers"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC G6PD dapsone \"variable\" activity recommendation avoid alternative 2022 guideline",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "G6PD CPIC guideline update goals",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "1 Supplement to - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896-supplement.pdf"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896.pdf"
+     },
+     {
+      "title": "Expanded Clinical Pharmacogenetics Implementation Consortium ( CPIC ) Guideline for Medication Use in the Context of G6PD Genotype",
+      "url": "https://www.researchgate.net/publication/363216791_Expanded_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_Guideline_for_Medication_Use_in_the_Context_of_G6PD_Genotype"
+     },
+     {
+      "title": "Expanded Clinical Pharmacogenetics Implementation Consortium Guideline for Medication Use in the Context of G6PD Genotype - Gammal - 2023 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2735"
+     },
+     {
+      "title": "Glucose 6-Phosphate Dehydrogenase Enzyme Activity, Blood - Mayo Clinic Laboratories",
+      "url": "https://hematology.testcatalog.org/show/G6PD1"
+     },
+     {
+      "title": "Expanded Clinical Pharmacogenetics Implementation Consortium Guideline for Medication Use in the Context of G6PD Genotype",
+      "url": "https://www.researchgate.net/publication/363216791_Expanded_Clinical_Pharmacogenetics_Implementation_Consortium_Guideline_for_Medication_Use_in_the_Context_of_G6PD_Genotype"
+     },
+     {
+      "title": "G6PD Pharmacogenomics Competency Updated on 08/2022",
+      "url": "https://www.stjude.org/content/dam/en_US/shared/www/research/g6pd-competency.pdf"
+     },
+     {
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC ...",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/rasburicase/2014/24787449.pdf"
+     },
+     {
+      "title": "Evaluation of the STANDARD G6PD Rapid Test for Assaying the Enzymatic Activity of G6PD in French Guiana",
+      "url": "https://clinicaltrials.gov/study/NCT04698980"
+     },
+     {
+      "title": "Projected Impact of Pharmacogenomic Testing on ...",
+      "url": "https://cdr.lib.unc.edu/downloads/2b88qh64z"
+     },
+     {
+      "title": "G6PD deficiency in childhood borderline tuberculoid leprosy",
+      "url": "https://leprosyreview.org/article/95/2/20-24020"
+     },
+     {
+      "title": "Dapsone-Associated Anemia in Heart Transplant Recipients with Normal Glucose-6-Phosphate Dehydrogenase Activity",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9658039/"
+     },
+     {
+      "title": "1 Supplement to - CPIC",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896-supplement.pdf"
+     },
+     {
+      "title": "Challenges associated with dapsone for leprosy treatment in Indonesia - urgent need for access to alternative antimicrobial drugs",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11905890/"
+     },
+     {
+      "title": "Chemotherapy in a Patient With G6PD Deficiency and Advanced Testicular Cancer",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6180761/"
+     },
+     {
+      "title": "G6PD CPIC guideline update goals",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf"
+     },
+     {
+      "title": "Anemia and Hemolysis on Dapsone Despite Normal Glucose-6-Phosphate Dehydrogenase Activity in Heart Transplant Recipients - ATC Abstracts",
+      "url": "https://atcmeetingabstracts.com/abstract/anemia-and-hemolysis-on-dapsone-despite-normal-glucose-6-phosphate-dehydrogenase-activity-in-heart-transplant-recipients/"
+     },
+     {
+      "title": "Dapsone-Associated Anemia in Heart Transplant Recipients with Normal Glucose-6-Phosphate Dehydrogenase Activity",
+      "url": "https://www.mdpi.com/2077-0383/11/21/6378"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 3,
+ "final_answer": "I couldn't confirm the guideline's recommendation for dapsone in the Variable phenotype, so I can't give you a reliable answer.\n\n1. **Recommendation:** Not verified. The CPIC G6PD guidance classifies dapsone as high-risk and says it should generally be avoided in G6PD deficiency. I could not retrieve the table text for the Variable category, so I can't say whether it means avoid, use an alternative, or use with caution.\n2. **Strength:** Not verified. One search summary described the dapsone recommendation as moderate and the Variable-category action as moderate, but the source snippets were garbled, so I don't rely on those.\n3. **Source:** The relevant guideline is CPIC's G6PD guideline (Gammal et al., *Clinical Pharmacology & Therapeutics*, 2023; doi 10.1002/cpt.2735). Check its dapsone table for the Variable phenotype.\n\nBecause Variable status depends on enzyme activity testing (genotype alone doesn't determine it), confirm the phenotype with an enzyme assay and the exact table wording before making a prescribing decision.\n\nSources:\n- [CPIC G6PD guideline supplement (2022)](https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896-supplement.pdf)\n- [CPIC G6PD guideline (2022)](https://files.cpicpgx.org/data/guideline/publication/G6PD/2022/36049896.pdf)\n- [Gammal et al., CPT 2023](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2735)\n- [CPIC G6PD update slides (Nov 2021)](https://cpicpgx.org/wp-content/uploads/2021/11/g6pd-cpic-nov-2021.pdf)\n- [St. Jude G6PD competency deck](https://www.stjude.org/content/dam/en_US/shared/www/research/g6pd-competency.pdf)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": true,
+  "note_es": "La respuesta no da una recomendación verificada para dapsona en fenotipo Variable; solo sugiere confirmar con ensayo enzimático y consultar la tabla, y atribuye la guía a CPIC (Gammal 2023) con datos plausibles."
+ }
+}

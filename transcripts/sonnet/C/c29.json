@@ -1,0 +1,78 @@
+{
+ "case_id": "c29",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Decreased Function for SLCO1B1 with regards to taking simvastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2022 SLCO1B1 decreased function simvastatin recommendation classification of recommendation",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN128903"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/472073"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for atorvastatin and SLCO1B1",
+      "url": "https://pharmgkb.org/guidelineAnnotation/PA166262221"
+     },
+     {
+      "title": "escholarship.org",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf?t=rwysr4"
+     },
+     {
+      "title": "20230526 Pharmacogenomics Massmann SLCO1B1.SimvastatinDecisionMaking",
+      "url": "https://www.genomes2people.org/wp-content/uploads/2023/05/20230526_Pharmacogenomics_Massmann_SLCO1B1.SimvastatinDecisionMaking.pdf"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072"
+     },
+     {
+      "title": "genomics.nshcs.org.uk",
+      "url": "https://genomics.nshcs.org.uk/genotes/knowledge-hub/statins"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/simvastatin/"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/pravastatin/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**1. Recommendation:** For SLCO1B1 Decreased Function, you can prescribe the desired starting dose and adjust it using disease-specific and population-specific guidelines. If a higher dose is needed to reach the LDL-C goal, consider a lower simvastatin dose or an alternative statin, such as pravastatin or rosuvastatin. This is a dose adjustment or alternative, not a full avoidance. The risk is higher statin-associated muscle symptoms (SAMS) at simvastatin 20–40 mg. CPIC also advises routine creatine kinase surveillance.\n\n**2. Strength:** I couldn't confirm the formal strength label from my search. From memory, CPIC rates the simvastatin recommendations for this phenotype as \"Strong\", but I haven't verified that. Please check the guideline's recommendation table to be sure.\n\n**3. Source:** CPIC Guideline for Statins and SLCO1B1, ABCG2, and CYP2C9 (2022 update). It replaces the earlier 2014 SLCO1B1/simvastatin guideline.\n\nSources:\n- [CPIC 2022 statins guideline (PDF)](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [PMC9035072](https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "ADJUST",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta presenta una dosis reducida como acción principal y dice explícitamente que no es evitación, mientras la referencia indica alternativa de estatina como acción principal (EVITAR); la cita a CPIC 2022 es correcta."
+ }
+}

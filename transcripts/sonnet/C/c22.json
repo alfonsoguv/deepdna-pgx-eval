@@ -1,0 +1,78 @@
+{
+ "case_id": "c22",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Poor Metabolizer and activity score = 0.5 for CYP2C9 with regards to taking piroxicam?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC guideline CYP2C9 NSAIDs piroxicam poor metabolizer activity score 0.5 recommendation classification strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882"
+     },
+     {
+      "title": "CPIC NSAID PREPRINT",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/CPIC_NSAID_PREPRINT.pdf"
+     },
+     {
+      "title": "[bookmark: _Hlk524607352]Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2019/11/CPIC-NSAIDs-SUPPLEMENT_final_CPIC-review.docx"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN258188"
+     },
+     {
+      "title": "32189324 supplement",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324-supplement.pdf"
+     },
+     {
+      "title": "CYP2C9 and Piroxicam",
+      "url": "https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-piroxicam/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK537367"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/piroxicam/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "**Guideline recommendation:** Avoid piroxicam. CYP2C9 poor metabolizers (activity score 0.5 or 0) should choose an alternative NSAID that CYP2C9 doesn't significantly metabolize. Examples are aspirin, naproxen, sulindac and ketorolac, and diclofenac is also cited as unaffected in one source. This is from my recollection of the CPIC guideline. The search results didn't show the exact text.\n\n**Strength:** I believe CPIC rates this \"moderate\", but I couldn't confirm it. Check the classification in the guideline tables.\n\n**Rationale:** Piroxicam is cleared mainly by CYP2C9. Poor metabolizers have markedly higher exposure and a prolonged half-life, which raises the risk of GI bleeding and other adverse effects. The FDA label only says to consider a dose reduction in known or suspected poor metabolizers. That is weaker than CPIC's advice.\n\n**Source:** CPIC Guideline for CYP2C9 and NSAIDs (Theken et al., Clin Pharmacol Ther, 2020). I could only partly verify this: the search confirmed the activity score cutoffs, but not the exact piroxicam wording or the strength rating.\n\nSources:\n- [CPIC NSAID guideline (2020)](https://files.cpicpgx.org/data/guideline/publication/NSAID/2020/32189324.pdf)\n- [PMC8080882](https://pmc.ncbi.nlm.nih.gov/articles/PMC8080882)\n- [UF Health: CYP2C9 and Piroxicam](https://precisionmedicine.ufhealth.org/how-to-interpret-results/cyp2c9-and-piroxicam/)\n- [UK Pharmacogenomics Handbook: Piroxicam](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/piroxicam/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "Recomienda evitar piroxicam y usar un AINE alternativo, igual que la referencia CPIC (Theken 2020, correcto). Sin embargo, la lista de ejemplos (aspirina, naproxeno, sulindaco, ketorolaco, diclofenaco) es dudosa y la fuerza 'moderada' está insegura; el enlace PMC8080882 parece dudoso."
+ }
+}

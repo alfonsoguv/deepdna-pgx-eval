@@ -1,0 +1,78 @@
+{
+ "case_id": "c14",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Normal Metabolizer for CYP2C19 with regards to taking lansoprazole?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC CYP2C19 proton pump inhibitors lansoprazole normal metabolizer recommendation strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10296543"
+     },
+     {
+      "title": "Back to Journals » Pharmacogenomics and Personalized Medicine » Volume 16",
+      "url": "https://www.dovepress.com/a-pharmacogenetics-based-approach-to-managing-gastroesophageal-reflux--peer-reviewed-fulltext-article-PGPM"
+     },
+     {
+      "title": "ACCP%20PPI%20Poster%202020 10.13.2020%20(FINAL)",
+      "url": "https://accp.confex.com/accp/2020am/mediafile/Handout/Paper54746/ACCP%20PPI%20Poster%202020_10.13.2020%20(FINAL).pdf"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7868475"
+     },
+     {
+      "title": "CYP2C19 proton pump inhibitors guideline revised",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf"
+     },
+     {
+      "title": "ncbi.nlm.nih.gov",
+      "url": "https://ncbi.nlm.nih.gov/medgen/1137997"
+     },
+     {
+      "title": "pharmaceuticals 16 00889 t003",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10302140/table/pharmaceuticals-16-00889-t003"
+     },
+     {
+      "title": "Record 0115%20Helix%20Pharmacogenomics%20(PGx)%20Proton%20Pump%20Inhibitors%20Panel",
+      "url": "https://info.helix.com/hubfs/Test%20Descriptions/Record-0115%20Helix%20Pharmacogenomics%20(PGx)%20Proton%20Pump%20Inhibitors%20Panel.pdf"
+     },
+     {
+      "title": "https.ncbi.nlm.nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/books/NBK100896/bin/20160308esompeprazole.pdf"
+     },
+     {
+      "title": "pharmacogenomics-handbook.ukclinicalpharmacy.org",
+      "url": "https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/lansoprazole/"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 1,
+ "final_answer": "1. **Recommendation:** Standard use. A CYP2C19 normal metabolizer should start lansoprazole at the standard daily dose. No genotype-based dose change is advised. These patients may be at somewhat higher risk of therapeutic failure than intermediate or poor metabolizers, so response should be monitored as usual.\n\n2. **Strength:** Moderate, according to a secondary summary table of the CPIC recommendations. That table's formatting was garbled, so I couldn't confirm the rating against the CPIC guideline text itself. Treat the strength as probable, not verified.\n\n3. **Source:** CPIC guideline for CYP2C19 and proton pump inhibitor dosing (Lima et al., 2020/2021). The UK Clinical Pharmacy Association handbook gives the same starting-dose advice. It also notes there is no UK recommendation for CYP2C19 testing to guide lansoprazole dosing.\n\nSources:\n- [CPIC CYP2C19 proton pump inhibitors guideline (PDF)](https://files.cpicpgx.org/data/guideline/publication/PPI/2020/CYP2C19_proton_pump_inhibitors_guideline_revised.pdf)\n- [2023 journal table summarizing CPIC PPI recommendations](https://pmc.ncbi.nlm.nih.gov/articles/PMC10302140/table/pharmaceuticals-16-00889-t003)\n- [UK Clinical Pharmacy Association pharmacogenomics handbook: lansoprazole](https://pharmacogenomics-handbook.ukclinicalpharmacy.org/drug/lansoprazole/)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NORMAL",
+  "action_correct": false,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": true,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda dosis estándar sin cambios, pero la referencia sugiere considerar aumentar la dosis 50-100% en H. pylori y esofagitis erosiva (AJUSTAR/OTRA); además cita una 'fuerza moderada' no verificada y atribuye mal el riesgo de fallo terapéutico a los normales frente a intermedios/pobres."
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "case_id": "c58",
+ "model": "sonnet",
+ "model_id": "claude-sonnet-5-5",
+ "arm": "B",
+ "arm_description": "DeepDNA MCP server only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Variable for G6PD with regards to taking mafenide?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "lookup_drug_gene",
+   "arguments": {
+    "gene": "G6PD",
+    "drug": "mafenide"
+   },
+   "result": "No guidance curated for G6PD and \"mafenide\". Curated drugs: rasburicase, primaquine, tafenoquine, dapsone, nitrofurantoin, methylene blue, sulfonamides, pegloticase, toluidine blue.",
+   "is_error": true
+  },
+  {
+   "name": "check_medications",
+   "arguments": {
+    "medications": [
+     "mafenide"
+    ]
+   },
+   "result": "{\"checked\":1,\"with_curated_records\":[],\"not_covered\":[\"mafenide\"],\"coverage_note\":\"Covers 84 curated drug–gene pairs across 16 genes, by generic name. basis says what each record rests on: a CPIC or DPWG guideline, a drug label, or the primary literature when no guideline recommendation or drug label applies. A drug listed under not_covered is not in this knowledge base; that does not mean it has no pharmacogenomic interaction. This lists what each record's source says; it does not say what this person should take.\",\"disclaimer\":\"Educational information only, not medical advice or diagnosis. Consult a clinician before acting on genetic information.\",\"data_as_of\":\"2026-11-08T12:09:46.225Z\"}",
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 0,
+ "final_answer": "I can't determine a guideline recommendation for this, so I'm not going to guess.\n\n1. **Recommendation:** The knowledge base has no G6PD–mafenide record. Mafenide is listed as not covered. That doesn't mean there is no interaction. It means no curated guidance exists here.\n2. **Strength:** Not applicable, because no recommendation was found.\n3. **Source:** None. The G6PD drugs the knowledge base does cover are rasburicase, primaquine, tafenoquine, dapsone, nitrofurantoin, methylene blue, sulfonamides, pegloticase and toluidine blue. I did not read the sulfonamides record as applying to mafenide.\n\n\"Variable\" is also not a standard G6PD phenotype in the CPIC terms I know. CPIC uses Normal, Deficient, Deficient with CNH, and Variable, and the Variable category depends on the specific genotype. A pharmacist or prescriber should review mafenide use, since the product labeling may mention G6PD deficiency or hemolysis. This is educational information only. The prescriber makes the decision.",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "NO_ANSWER",
+  "action_correct": false,
+  "guideline_cited": "NONE",
+  "citation_correct": false,
+  "citation_suspect": false,
+  "states_no_record": true,
+  "abstains": true,
+  "note_es": "La respuesta dice que no hay registro de G6PD-mafenida y no da recomendación; la referencia indica no evitar a dosis estándar (NORMAL)."
+ }
+}

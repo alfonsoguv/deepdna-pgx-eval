@@ -1,0 +1,127 @@
+{
+ "case_id": "c29",
+ "model": "haiku",
+ "model_id": "claude-haiku-5-5",
+ "arm": "C",
+ "arm_description": "web search only",
+ "system_prompt": "You are a helpful assistant.",
+ "prompt": "What would be the clinical guidance for someone who is Decreased Function for SLCO1B1 with regards to taking simvastatin?\n\nAnswer briefly (under 200 words) with:\n1. The guideline recommendation for this specific phenotype (avoid the drug / use an alternative / adjust the dose / standard use / no recommendation).\n2. The strength or level of the recommendation, if known.\n3. The source (which guideline).\n\nIf you have tools available, use them to check before answering. If you cannot determine the answer, say so rather than guessing.\n",
+ "answered": true,
+ "tool_calls": [
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC SLCO1B1 simvastatin decreased function recommendation classification strength",
+    "mode": "standard"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "www.blackhealth.org",
+      "url": "https://www.blackhealth.org/genes/SLCO1B1/"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/medgen/472073"
+     },
+     {
+      "title": "nih.gov",
+      "url": "https://https.ncbi.nlm.nih.gov/gtr/conditions/CN128903"
+     },
+     {
+      "title": "Annotation of CPIC Guideline for atorvastatin and SLCO1B1",
+      "url": "https://pharmgkb.org/guidelineAnnotation/PA166262221"
+     },
+     {
+      "title": "Supplemental Material",
+      "url": "https://cpicpgx.org/wp-content/uploads/2021/10/SLCO1B1-supplement-2021-update-CPIC-review.docx"
+     },
+     {
+      "title": "genomics.nshcs.org.uk",
+      "url": "https://genomics.nshcs.org.uk/genotes/knowledge-hub/statins"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3384438"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "cpicpgx.org",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  },
+  {
+   "name": "WebSearch",
+   "arguments": {
+    "query": "CPIC 2022 statin guideline SLCO1B1 intermediate function simvastatin \"moderate\" myopathy risk prescribe lower dose or alternative statin",
+    "mode": "extended"
+   },
+   "result": {
+    "links": [
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for SLCO1B1, ABCG2, and CYP2C9 and statin‐associated musculoskeletal symptoms",
+      "url": "https://www.researchgate.net/publication/358571798_The_Clinical_Pharmacogenetics_Implementation_Consortium_CPIC_guideline_for_SLCO1B1_ABCG2_and_CYP2C9_and_statin-associated_musculoskeletal_symptoms"
+     },
+     {
+      "title": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium Guideline for SLCO1B1, ABCG2, and CYP2C9 genotypes and Statin‐Associated Musculoskeletal Symptoms - Cooper‐DeHoff - 2022 - Clinical Pharmacology & Therapeutics - Wiley Online Library",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557"
+     },
+     {
+      "title": "1 CPIC guidelines for SLCO1B1 and statin-induced myopathy- Supplement v3.0",
+      "url": "https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf"
+     },
+     {
+      "title": "The Clinical Pharmacogenetics Implementation Consortium",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0_noSplash_ec38d44d0b3c312e84f585ef38f5d267.pdf"
+     },
+     {
+      "title": "PharmGKB Blog: CPIC Publishes Guideline for SLCO1B1, ABCG2, CYP2C9 and Statin Therapy",
+      "url": "https://pharmgkb.blogspot.com/2022/02/cpic-publishes-guideline-for-slco1b1.html"
+     },
+     {
+      "title": "UCSF UC San Francisco Previously Published Works Title",
+      "url": "https://escholarship.org/content/qt5f06w9b0/qt5f06w9b0.pdf"
+     },
+     {
+      "title": "CPIC Publishes Guideline for SLCO1B1, ABCG2, CYP2C9 and Statin Therapy",
+      "url": "https://blog.clinpgx.org/cpic-publishes-guideline-for-slco1b1/"
+     },
+     {
+      "title": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9035072"
+     }
+    ],
+    "content_omitted": true
+   },
+   "is_error": false
+  }
+ ],
+ "web_search_requests": 2,
+ "final_answer": "**1. Recommendation:** CPIC's 2022 SLCO1B1/statin guideline advises choosing an **alternative statin** rather than simvastatin for decreased function. The alternative is chosen by the desired statin potency. I could not confirm whether the guideline also allows simvastatin at a reduced dose, so check the full text before relying on that.\n\n**2. Strength:** I could not confirm the strength classification for this phenotype. One search result listed simvastatin under a CPIC \"A\" (strong) label, but the excerpt did not say which phenotype that applies to.\n\n**3. Source:** Cooper-DeHoff RM et al., CPIC guideline for SLCO1B1, ABCG2, and CYP2C9 and statin-associated musculoskeletal symptoms (Clin Pharmacol Ther, 2022). This replaces the 2012 and 2014 simvastatin guidance.\n\nSources:\n- [CPIC 2022 statin guideline (publication)](https://files.cpicpgx.org/data/guideline/publication/statins/2022/publication.pdf)\n- [CPIC 2022 supplement](https://files.cpicpgx.org/data/guideline/publication/statins/2022/supplement.pdf)\n- [Cooper-DeHoff et al., Clin Pharmacol Ther (Wiley)](https://ascpt.onlinelibrary.wiley.com/doi/full/10.1002/cpt.2557)\n- [PharmGKB annotation of CPIC atorvastatin/SLCO1B1 guideline](https://pharmgkb.org/guidelineAnnotation/PA166262221)",
+ "judge": {
+  "model": "sonnet",
+  "answer_action": "AVOID",
+  "action_correct": true,
+  "guideline_cited": "CPIC",
+  "citation_correct": true,
+  "citation_suspect": false,
+  "states_no_record": false,
+  "abstains": false,
+  "note_es": "La respuesta recomienda una estatina alternativa según la potencia deseada, igual que la referencia, y cita la guía CPIC 2022 (Cooper-DeHoff) correctamente; solo no confirma la opción de dosis reducida."
+ }
+}
